@@ -3,11 +3,6 @@ import 'package:flutter/material.dart';
 import 'app_color.dart';
 
 abstract class AppText {
-  static const textstyle40Viga = TextStyle(
-    fontSize: 40,
-    fontFamily: 'Viga',
-    color: AppColors.kPrimaryColor,
-  );
 
   static const textstyle30Bold = TextStyle(
     fontSize: 30,
@@ -38,14 +33,6 @@ abstract class AppText {
     fontFamily: 'BentonSans Regular',
   );
 
-  static const textStyle12Thickness = TextStyle(
-    fontSize: 12,
-    decoration: TextDecoration.underline,
-    decorationColor: AppColors.kPrimaryColor,
-    decorationThickness: 3,
-    color: AppColors.kPrimaryColor,
-    fontFamily: 'BentonSans Medium',
-  );
 
   static const textStyle12Bold = TextStyle(
     fontSize: 12,

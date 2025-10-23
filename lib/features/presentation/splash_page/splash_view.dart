@@ -1,10 +1,7 @@
 // ignore_for_file: use_build_context_synchronously
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_ninja/core/constant/app_color.dart';
 import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/constant/app_svgs.dart';
-import 'package:food_ninja/core/constant/app_text.dart';
 import 'package:food_ninja/core/extension/extension.dart';
 import 'package:food_ninja/features/presentation/onboarding_page/onboarding_page.dart';
 
@@ -40,11 +37,14 @@ class _SplashViewState extends State<SplashView> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset(AppSvgs.kLogo),
-                const Text(
+                Image.asset(AppImages.kLogo),
+                Text(
                   textAlign: TextAlign.center,
                   'FoodNinja',
-                  style: AppText.textstyle40Viga,
+                  style: context.kTextTheme.displayMedium!.copyWith(
+                    color: AppColors.kPrimaryColor,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
                 Text(
                   textAlign: TextAlign.center,

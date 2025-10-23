@@ -4,7 +4,7 @@ import '../../../core/components/custom_primary_button.dart';
 import '../../../core/components/custom_success_notification_widget.dart';
 import '../../../core/constant/app_color.dart';
 import '../../../core/extension/extension.dart';
-import '../sign_in_page/sign_in_page.dart';
+import '../login_in_page/view/login_page.dart';
 
 class SuccessNotificationPage extends StatelessWidget {
   const SuccessNotificationPage({super.key});
@@ -15,38 +15,35 @@ class SuccessNotificationPage extends StatelessWidget {
       body: Column(
         children: [
           const CustomSuccessNotificationWidget(),
-          SizedBox(
-            height: context.height * 0.033,
-          ),
+          SizedBox(height: context.height * 0.033),
           Text(
             'Congrats!',
-            style: context.kTextTheme.headlineMedium!
-                .copyWith(fontWeight: FontWeight.w700),
+            style: context.kTextTheme.headlineMedium!.copyWith(
+              fontWeight: FontWeight.w700,
+            ),
           ),
-          SizedBox(
-            height: context.height * 0.012,
-          ),
+          SizedBox(height: context.height * 0.012),
           Text(
             'Password reset succesful',
-            style: context.kTextTheme.titleLarge!
-                .copyWith(fontWeight: FontWeight.w700),
-          ),
-          SizedBox(
-            height: context.height * 0.192,
-          ),
-          GestureDetector(
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => const SignInPage(),
-              ),
+            style: context.kTextTheme.titleLarge!.copyWith(
+              fontWeight: FontWeight.w700,
             ),
+          ),
+          SizedBox(height: context.height * 0.192),
+          GestureDetector(
+            onTap: () => Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (context) => const LoginPage())),
             child: CustomPrimaryButton(
               title: 'Back',
-              style: context.kTextTheme.titleSmall!
-                  .copyWith(color: Colors.white, fontWeight: FontWeight.w700),
+              style: context.kTextTheme.titleSmall!.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.w700,
+              ),
               padding: EdgeInsets.symmetric(
-                  horizontal: context.height * 0.060,
-                  vertical: context.height * 0.018),
+                horizontal: context.height * 0.060,
+                vertical: context.height * 0.018,
+              ),
               backGroundColor: AppColors.kPrimaryColor,
               borderRadius: BorderRadius.circular(context.height * 0.015),
             ),

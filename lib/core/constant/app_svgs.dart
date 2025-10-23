@@ -17,6 +17,7 @@ class AppSvgs {
   static const kCallLogo = 'assets/svg/call-logo.svg';
   static const kCamera = 'assets/svg/camera.svg';
   static const kChat = 'assets/svg/chat.svg';
+  static const kSignupProfile = 'assets/svg/signup-profile.svg';
   static const kCheckedOne = 'assets/svg/checked-one.svg';
   static const kCongrats = 'assets/svg/congrats.svg';
   static const kEditIcon = 'assets/svg/edit-icon.svg';

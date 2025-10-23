@@ -25,7 +25,7 @@ class FoodNinja extends StatelessWidget {
               cardColor: AppColors.kWhite,
               focusColor: AppColors.kWhite,
               primaryColor: AppColors.kWhite,
-              hintColor: Colors.black,
+              hintColor: AppColors.kBlack,
             ),
             themeMode: themeSaved ?? themeIsDark
                 ? ThemeMode.dark
