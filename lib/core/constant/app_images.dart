@@ -8,5 +8,5 @@ class AppImages {
   static const kPatternBackground = 'assets/images/background-pattern.png';
   static const kPatternButtonSheet = 'assets/images/pattern-button-sheet.png';
   static const kFrameSpecialDealForOctoberOne =
-      'assets/images/frame-special-deal-for-october-one.png';
+      'assets/images/frame-special_deal-for-october-one.png';
 }

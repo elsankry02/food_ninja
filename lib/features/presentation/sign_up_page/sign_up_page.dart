@@ -42,7 +42,18 @@ class _SignUpPageState extends State<SignUpPage> {
           SizedBox(height: context.height * 0.040),
           CustomTextFormField(
             hintText: 'Anamwp . . |',
-            suffixIcon: SvgPicture.asset(AppSvgs.kProfile),
+            hintStyle: context.kTextTheme.labelLarge!.copyWith(
+              color: Colors.grey,
+            ),
+            suffixIcon: SvgPicture.asset(
+              height: context.height * 0.024,
+              width: context.height * 0.024,
+              AppSvgs.kProfile,
+              colorFilter: ColorFilter.mode(
+                AppColors.kPrimaryColor,
+                BlendMode.colorBurn,
+              ),
+            ),
             controller: usernameController,
           ),
           SizedBox(height: context.height * 0.012),
