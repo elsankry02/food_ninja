@@ -26,8 +26,7 @@ class SocialConnectionWidget extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           border: Border.all(color: AppColors.kBorder),
-          color: context.kChangeTheme.primaryColor,
-          borderRadius: BorderRadius.circular(context.height * 0.015),
+          borderRadius: BorderRadius.circular(context.height * 0.022),
         ),
         child: Row(
           children: [

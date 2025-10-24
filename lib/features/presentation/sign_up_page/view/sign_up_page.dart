@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:food_ninja/core/constant/app_images.dart';
 import 'package:food_ninja/core/constant/app_svgs.dart';
+import 'package:food_ninja/features/presentation/verification_code_page/view/verification_code_page.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/components/custom_text_form_field.dart';
 import '../../../../core/constant/app_color.dart';
 import '../../../../core/extension/extension.dart';
 import '../../login_in_page/view/login_page.dart';
-import '../../signup_process_page/signup_process_page.dart';
 import '../widget/check_box_widget.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -19,14 +19,12 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-  final usernameController = TextEditingController();
+  bool isPassword = false;
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
-  bool isPassword = false;
 
   @override
   void dispose() {
-    usernameController.dispose();
     emailController.dispose();
     passwordController.dispose();
     super.dispose();
@@ -42,7 +40,7 @@ class _SignUpPageState extends State<SignUpPage> {
           Stack(
             children: [
               Image.asset(
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
                 AppImages.kOnboardingPattern,
                 width: double.infinity,
               ),
@@ -77,18 +75,6 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                       ),
                       SizedBox(height: context.height * 0.040),
-                      CustomTextFormField(
-                        hintText: 'Anamwp . . |',
-                        hintStyle: context.kTextTheme.labelLarge!.copyWith(
-                          color: Colors.grey,
-                        ),
-                        prefixIcon: SvgPicture.asset(
-                          AppSvgs.kSignupProfile,
-                          fit: BoxFit.scaleDown,
-                        ),
-                        controller: usernameController,
-                      ),
-                      SizedBox(height: context.height * 0.012),
                       CustomTextFormField(
                         hintText: 'Email',
                         prefixIcon: SvgPicture.asset(
@@ -163,7 +149,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => const SignupProcessPage(),
+                            builder: (context) =>
+                                const VerificationCodePage(isSelected: true),
                           ),
                         ),
                       ),

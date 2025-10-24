@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:food_ninja/core/components/custom_show_top_snakbar.dart';
 import 'package:food_ninja/core/components/custom_text_form_field.dart';
 import 'package:food_ninja/core/constant/app_images.dart';
 import 'package:food_ninja/core/constant/app_svgs.dart';
 import 'package:food_ninja/features/presentation/sign_up_page/view/sign_up_page.dart';
-import 'package:food_ninja/features/presentation/signup_success_notification/signup_success_notification.dart';
+import 'package:food_ninja/features/presentation/verification_code_page/view/verification_code_page.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_color.dart';
@@ -41,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
           Stack(
             children: [
               Image.asset(
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
                 AppImages.kOnboardingPattern,
                 width: double.infinity,
               ),
@@ -131,13 +132,15 @@ class _LoginPageState extends State<LoginPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SocialConnectionWidget(
-                            onTap: () {},
+                            onTap: () =>
+                                ErrorMessage(context, message: "COMING SOON"),
                             titleSocial: 'Facebook',
                             imageSocial: AppSvgs.kFacebook,
                           ),
                           SizedBox(width: context.height * 0.021),
                           SocialConnectionWidget(
-                            onTap: () {},
+                            onTap: () =>
+                                ErrorMessage(context, message: "COMING SOON"),
                             titleSocial: 'Google',
                             imageSocial: AppSvgs.kGoogle,
                           ),
@@ -156,14 +159,21 @@ class _LoginPageState extends State<LoginPage> {
                         padding: EdgeInsets.symmetric(
                           vertical: context.height * 0.018,
                         ),
-                        backGroundColor: AppColors.kPrimaryColor,
+                        gradient: const LinearGradient(
+                          begin: AlignmentGeometry.topLeft,
+                          end: AlignmentGeometry.bottomRight,
+                          colors: [
+                            AppColors.kPrimaryColor,
+                            AppColors.kSecondColor,
+                          ],
+                        ),
                         borderRadius: BorderRadius.circular(
                           context.height * 0.015,
                         ),
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) =>
-                                const SignupSuccessNotificationPage(),
+                                const VerificationCodePage(isSelected: false),
                           ),
                         ),
                       ),

@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja/core/components/custom_icon_back.dart';
-import 'package:food_ninja/core/components/custom_payment_widget.dart';
-import 'package:food_ninja/core/components/custom_primary_button.dart';
-import 'package:food_ninja/core/components/custom_show_top_snakbar.dart';
 import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/constant/app_svgs.dart';
-import 'package:food_ninja/features/presentation/set_location_page/view/set_location_page.dart';
+import 'package:food_ninja/features/presentation/set_location_page/widget/set_location_widget.dart';
 
+import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_color.dart';
 import '../../../../core/extension/extension.dart';
+import '../../navbar_page/navbar_page.dart';
 
-class PaymentMethodPage extends StatelessWidget {
-  const PaymentMethodPage({super.key});
+class SetLocationPage extends StatelessWidget {
+  const SetLocationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +41,7 @@ class PaymentMethodPage extends StatelessWidget {
               ),
               SizedBox(height: context.height * 0.020),
               Text(
-                'Payment Method',
+                'Set Your Location',
                 style: context.kTextTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w700,
                   color: AppColors.kTitle,
@@ -54,22 +52,9 @@ class PaymentMethodPage extends StatelessWidget {
                 'This data will be displayed in your account \nprofile for security',
                 style: context.kTextTheme.labelMedium,
               ),
-              SizedBox(height: context.height * 0.047),
-              PaymentsContainer(
-                payment: AppSvgs.kPaypal,
-                onTap: () => ErrorMessage(context, message: "COMING SOON"),
-              ),
               SizedBox(height: context.height * 0.020),
-              PaymentsContainer(
-                payment: AppSvgs.kVisa,
-                onTap: () => ErrorMessage(context, message: "COMING SOON"),
-              ),
-              SizedBox(height: context.height * 0.020),
-              PaymentsContainer(
-                payment: AppSvgs.kPayoneer,
-                onTap: () => ErrorMessage(context, message: "COMING SOON"),
-              ),
-              SizedBox(height: context.height * 0.190),
+              SetLocationWidget(),
+              SizedBox(height: context.height * 0.040),
               CustomPrimaryButton(
                 title: 'Next',
                 style: context.kTextTheme.titleSmall!.copyWith(
@@ -77,7 +62,7 @@ class PaymentMethodPage extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                 ),
                 margin: EdgeInsets.symmetric(
-                  horizontal: context.height * 0.109,
+                  horizontal: context.height * 0.115,
                 ),
                 padding: EdgeInsets.symmetric(vertical: context.height * 0.018),
                 gradient: const LinearGradient(
@@ -87,9 +72,7 @@ class PaymentMethodPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(context.height * 0.015),
                 onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const SetLocationPage(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const NavBarPage()),
                 ),
               ),
             ],

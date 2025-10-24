@@ -43,7 +43,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   Image.asset(
                     onboardingItems[index].image,
                     width: double.infinity,
-                    fit: BoxFit.fill,
+                    fit: BoxFit.cover,
                   ),
                   SizedBox(height: context.height * 0.059),
                   Text(
@@ -72,7 +72,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               fontWeight: FontWeight.w700,
             ),
             margin: EdgeInsetsDirectional.symmetric(
-              horizontal: context.height * 0.109,
+              horizontal: context.height * 0.120,
             ),
             padding: EdgeInsets.symmetric(vertical: context.height * 0.018),
             gradient: const LinearGradient(

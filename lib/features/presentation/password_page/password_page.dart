@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/components/custom_primary_button.dart';
-import '../../../core/components/custom_top_appbar_widget.dart';
 import '../../../core/constant/app_color.dart';
 import '../../../core/constant/app_text.dart';
 import '../../../core/extension/extension.dart';
@@ -26,13 +25,11 @@ class _PasswordPageState extends State<PasswordPage> {
         child: ListView(
           physics: const BouncingScrollPhysics(),
           children: [
-            const CustomTopAppBarBackNavigator(
-                titel: 'Reset your password \nhere',
-                supTitel:
-                    'Select which contact details should we \nuse to reset your password'),
-            const SizedBox(
-              height: 40,
-            ),
+            // const CustomTopAppBarBackNavigator(
+            //     titel: 'Reset your password \nhere',
+            //     supTitel:
+            //         'Select which contact details should we \nuse to reset your password'),
+            const SizedBox(height: 40),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
               child: TextField(
@@ -60,9 +57,7 @@ class _PasswordPageState extends State<PasswordPage> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
               child: TextField(
@@ -70,11 +65,9 @@ class _PasswordPageState extends State<PasswordPage> {
                 decoration: InputDecoration(
                   suffixIcon: GestureDetector(
                     onTap: () {
-                      setState(
-                        () {
-                          isPassword = !isPassword;
-                        },
-                      );
+                      setState(() {
+                        isPassword = !isPassword;
+                      });
                     },
                     child: Icon(
                       isPassword ? Icons.visibility : Icons.visibility_off,
@@ -92,9 +85,7 @@ class _PasswordPageState extends State<PasswordPage> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 290,
-            ),
+            const SizedBox(height: 290),
             GestureDetector(
               onTap: () => Navigator.of(context).push(
                 MaterialPageRoute(
@@ -105,10 +96,13 @@ class _PasswordPageState extends State<PasswordPage> {
                 child: CustomPrimaryButton(
                   title: 'Next',
                   style: context.kTextTheme.titleSmall!.copyWith(
-                      color: Colors.white, fontWeight: FontWeight.w700),
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700,
+                  ),
                   padding: EdgeInsets.symmetric(
-                      horizontal: context.height * 0.060,
-                      vertical: context.height * 0.018),
+                    horizontal: context.height * 0.060,
+                    vertical: context.height * 0.018,
+                  ),
                   backGroundColor: AppColors.kPrimaryColor,
                   borderRadius: BorderRadius.circular(15),
                 ),
@@ -124,8 +118,6 @@ class _PasswordPageState extends State<PasswordPage> {
 OutlineInputBorder outlineInputBorder(Color theme) {
   return OutlineInputBorder(
     borderRadius: BorderRadius.circular(22),
-    borderSide: BorderSide(
-      color: theme,
-    ),
+    borderSide: BorderSide(color: theme),
   );
 }

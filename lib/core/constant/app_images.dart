@@ -8,6 +8,10 @@ class AppImages {
   static const kPatternBackground = 'assets/images/background-pattern.png';
   static const kPatternButtonSheet = 'assets/images/pattern-button-sheet.png';
   static const kLogo = 'assets/images/Logo.png';
+  static const kIconBack = 'assets/images/Icon-back.png';
+  static const kDefultPhoto = 'assets/images/defult_photo.png';
+  static const kMintDark = 'assets/images/Mint_Dark.png';
   static const kFrameSpecialDealForOctoberOne =
       'assets/images/frame-special_deal-for-october-one.png';
+  static const kIconLocation = 'assets/images/icon-location.png';
 }
