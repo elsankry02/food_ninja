@@ -11,7 +11,7 @@ import 'package:food_ninja/features/presentation/sign_up_page/widget/upload_phot
 import 'package:image_picker/image_picker.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
-import '../../../../core/constant/app_color.dart';
+import '../../../../core/constant/app_colors.dart';
 import '../../../../core/extension/extension.dart';
 
 class SignupProcessPage extends StatefulWidget {

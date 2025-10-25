@@ -7,7 +7,7 @@ import 'package:food_ninja/core/constant/app_images.dart';
 import 'package:food_ninja/core/constant/app_svgs.dart';
 import 'package:food_ninja/features/presentation/set_location_page/view/set_location_page.dart';
 
-import '../../../../core/constant/app_color.dart';
+import '../../../../core/constant/app_colors.dart';
 import '../../../../core/extension/extension.dart';
 
 class PaymentMethodPage extends StatelessWidget {

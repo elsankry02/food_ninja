@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../core/constant/app_color.dart';
+import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_text.dart';
 import '../../../../core/extension/extension.dart';
 import 'track_order_screen.dart';

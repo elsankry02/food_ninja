@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/constant/app_color.dart';
+import 'package:food_ninja/core/constant/app_colors.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final String hintText;

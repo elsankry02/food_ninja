@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../core/constant/app_color.dart';
+import '../../../../core/constant/app_colors.dart';
 import '../../../../core/extension/extension.dart';
 import '../../../data/model/populer_restaurant_card_model.dart';
 import '../../popular_menu_page/widget/populer_restaurant_card_widget.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/components/custom_primary_button.dart';
-import '../../../core/constant/app_color.dart';
+import '../../../core/constant/app_colors.dart';
 import '../../../core/extension/extension.dart';
 import '../../data/model/onboarding_model.dart';
 import '../sign_up_page/view/sign_up_page.dart';

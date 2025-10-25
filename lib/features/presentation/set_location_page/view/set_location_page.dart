@@ -4,7 +4,7 @@ import 'package:food_ninja/core/constant/app_images.dart';
 import 'package:food_ninja/features/presentation/set_location_page/widget/set_location_widget.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
-import '../../../../core/constant/app_color.dart';
+import '../../../../core/constant/app_colors.dart';
 import '../../../../core/extension/extension.dart';
 import '../../navbar_page/navbar_page.dart';
 

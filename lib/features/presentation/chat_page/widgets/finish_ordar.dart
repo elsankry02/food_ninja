@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/components/custom_chat_call_widget.dart';
 import '../../../../core/components/custom_primary_button.dart';
-import '../../../../core/constant/app_color.dart';
+import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_text.dart';
 import '../../../../core/extension/extension.dart';
 import '../views/chat_page.dart';

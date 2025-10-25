@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/components/custom_primary_button.dart';
 import '../../../core/components/custom_success_notification_widget.dart';
-import '../../../core/constant/app_color.dart';
+import '../../../core/constant/app_colors.dart';
 import '../../../core/extension/extension.dart';
 import '../login_in_page/view/login_page.dart';
 

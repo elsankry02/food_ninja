@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:food_ninja/core/constant/app_images.dart';
 import 'package:food_ninja/core/constant/app_svgs.dart';
-import 'package:food_ninja/features/presentation/verification_code_page/view/verification_code_page.dart';
+import 'package:food_ninja/features/presentation/otp_page/view/otp_page.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/components/custom_text_form_field.dart';
-import '../../../../core/constant/app_color.dart';
+import '../../../../core/constant/app_colors.dart';
 import '../../../../core/extension/extension.dart';
 import '../../login_in_page/view/login_page.dart';
 import '../widget/check_box_widget.dart';

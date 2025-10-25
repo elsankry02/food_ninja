@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
-import '../../../core/constant/app_color.dart';
+import '../../../core/constant/app_colors.dart';
 import '../../../core/constant/app_text.dart';
 import '../cart_page/view/cart_page.dart';
 import '../chat_page/views/chat_page.dart';
