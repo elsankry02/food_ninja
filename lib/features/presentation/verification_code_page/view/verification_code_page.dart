@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja/core/components/custom_icon_back.dart';
 import 'package:food_ninja/core/constant/app_images.dart';
+import 'package:food_ninja/features/presentation/navbar_page/navbar_page.dart';
+import 'package:food_ninja/features/presentation/sign_up_page/view/signup_process_page.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_color.dart';
 import '../../../../core/extension/extension.dart';
-import '../../password_page/password_page.dart';
 import '../widget/verification_code_widget.dart';
 
 class VerificationCodePage extends StatelessWidget {
@@ -73,29 +74,37 @@ class VerificationCodePage extends StatelessWidget {
               SizedBox(height: context.height * 0.040),
               const VerificationCodeWidget(),
               SizedBox(height: context.height * 0.040),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const PasswordPage()),
+              CustomPrimaryButton(
+                title: 'Next',
+                style: context.kTextTheme.titleSmall!.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700,
                 ),
-                child: CustomPrimaryButton(
-                  title: 'Next',
-                  style: context.kTextTheme.titleSmall!.copyWith(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w700,
-                  ),
-                  margin: EdgeInsets.symmetric(
-                    horizontal: context.height * 0.115,
-                  ),
-                  padding: EdgeInsets.symmetric(
-                    vertical: context.height * 0.018,
-                  ),
-                  gradient: const LinearGradient(
-                    begin: AlignmentGeometry.topLeft,
-                    end: AlignmentGeometry.bottomRight,
-                    colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
-                  ),
-                  borderRadius: BorderRadius.circular(context.height * 0.015),
+                margin: EdgeInsets.symmetric(
+                  horizontal: context.height * 0.115,
                 ),
+                padding: EdgeInsets.symmetric(vertical: context.height * 0.018),
+                gradient: const LinearGradient(
+                  begin: AlignmentGeometry.topLeft,
+                  end: AlignmentGeometry.bottomRight,
+                  colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
+                ),
+                borderRadius: BorderRadius.circular(context.height * 0.015),
+                onTap: () {
+                  if (isSelected == false) {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const NavBarPage(),
+                      ),
+                    );
+                  } else {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const SignupProcessPage(),
+                      ),
+                    );
+                  }
+                },
               ),
             ],
           ),

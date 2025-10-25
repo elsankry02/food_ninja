@@ -10,7 +10,6 @@ import 'package:food_ninja/features/presentation/verification_code_page/view/ver
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_color.dart';
 import '../../../../core/extension/extension.dart';
-import '../../via_method_page/via_method_page.dart';
 import '../widget/social_connection_widget.dart';
 
 class LoginPage extends StatefulWidget {
@@ -201,11 +200,8 @@ class _LoginPageState extends State<LoginPage> {
                           decorationColor: AppColors.kPrimaryColor,
                           decorationThickness: 1,
                         ),
-                        onTap: () => Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const ViaMethodPage(),
-                          ),
-                        ),
+                        onTap: () =>
+                            ErrorMessage(context, message: "COMING SOON"),
                       ),
                     ],
                   ),

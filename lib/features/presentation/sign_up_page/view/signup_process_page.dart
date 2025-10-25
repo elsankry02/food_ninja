@@ -6,13 +6,13 @@ import 'package:food_ninja/core/components/custom_icon_back.dart';
 import 'package:food_ninja/core/components/custom_text_form_field.dart';
 import 'package:food_ninja/core/constant/app_images.dart';
 import 'package:food_ninja/core/constant/app_svgs.dart';
+import 'package:food_ninja/features/presentation/navbar_page/navbar_page.dart';
 import 'package:food_ninja/features/presentation/sign_up_page/widget/upload_photo_widget.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_color.dart';
 import '../../../../core/extension/extension.dart';
-import '../../payment_method_page/view/payment_method_page.dart';
 
 class SignupProcessPage extends StatefulWidget {
   const SignupProcessPage({super.key});
@@ -168,9 +168,7 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
                 ),
                 borderRadius: BorderRadius.circular(context.height * 0.015),
                 onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const PaymentMethodPage(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const NavBarPage()),
                 ),
               ),
             ],
