@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../core/extension/extension.dart';
 
+import '../../../../core/extension/extension.dart';
 import '../../../data/model/populer_restaurant_card_model.dart';
 import '../../popular_menu_page/widget/populer_restaurant_card_widget.dart';
 import '../widgets/show_model_bottom_sheet_widget.dart';
@@ -31,14 +31,13 @@ class _CartPageState extends State<CartPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(
-                      height: 60,
-                    ),
+                    const SizedBox(height: 60),
                     Text(
                       'Cart',
                       style: context.kTextTheme.headlineSmall!.copyWith(
-                          fontWeight: FontWeight.w700,
-                          color: context.kChangeTheme.hintColor),
+                        fontWeight: FontWeight.w700,
+                        color: context.kChangeTheme.hintColor,
+                      ),
                     ),
                     SizedBox(
                       height: 700,
@@ -46,16 +45,14 @@ class _CartPageState extends State<CartPage> {
                         scrollDirection: Axis.vertical,
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 2),
+                              crossAxisCount: 2,
+                            ),
                         itemCount: populerRestaurantCardModel.length,
                         itemBuilder: (context, index) {
-                          return PopulerRestaurantCardWidget(
-                            index: index,
-                            right: 0,
-                          );
+                          return PopulerRestaurantCardWidget(index: index);
                         },
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),

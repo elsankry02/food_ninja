@@ -1,0 +1,84 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:food_ninja/core/components/custom_show_top_snakbar.dart';
+import 'package:food_ninja/core/components/custom_text_form_field.dart';
+import 'package:food_ninja/core/constant/app_colors.dart';
+import 'package:food_ninja/core/constant/app_images.dart';
+import 'package:food_ninja/core/constant/app_svgs.dart';
+import 'package:food_ninja/core/extension/extension.dart';
+import 'package:food_ninja/features/presentation/notifiaction_page/view/notifiaction_page.dart';
+
+class CustomHomeAppbar extends StatelessWidget {
+  final TextEditingController searchController;
+  const CustomHomeAppbar({super.key, required this.searchController});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        ListTile(
+          contentPadding: EdgeInsets.zero,
+          title: Text(
+            'Find Your \nFavorite Food',
+            style: context.kTextTheme.headlineLarge!.copyWith(
+              fontWeight: FontWeight.w700,
+              color: AppColors.kTitle,
+            ),
+          ),
+          trailing: GestureDetector(
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const Notifiactionpage()),
+            ),
+            child: Container(
+              padding: EdgeInsets.symmetric(
+                horizontal: context.height * 0.014,
+                vertical: context.height * 0.014,
+              ),
+              decoration: BoxDecoration(
+                color: AppColors.kWhite,
+                borderRadius: BorderRadius.circular(context.height * 0.015),
+              ),
+              child: Image.asset(
+                AppImages.kIconNotification,
+                fit: BoxFit.scaleDown,
+                height: context.height * 0.023,
+                width: context.height * 0.019,
+              ),
+            ),
+          ),
+        ),
+        ListTile(
+          contentPadding: EdgeInsets.zero,
+          title: CustomTextFormField(
+            hintText: "What do you want to order?",
+            hintStyle: context.kTextTheme.labelMedium!.copyWith(
+              color: AppColors.kArowBackground,
+            ),
+            prefixIcon: Icon(
+              FontAwesomeIcons.magnifyingGlass,
+              color: AppColors.kArowBack,
+            ),
+            filled: true,
+            fillColor: AppColors.kTextFiledColor,
+            controller: searchController,
+          ),
+          trailing: GestureDetector(
+            onTap: () => ErrorMessage(context, message: "COMING SOON"),
+            child: Container(
+              padding: EdgeInsets.symmetric(
+                horizontal: context.height * 0.016,
+                vertical: context.height * 0.018,
+              ),
+              decoration: BoxDecoration(
+                color: AppColors.kTextFiledColor,
+                borderRadius: BorderRadius.circular(context.height * 0.015),
+              ),
+              child: SvgPicture.asset(AppSvgs.kFilter),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}

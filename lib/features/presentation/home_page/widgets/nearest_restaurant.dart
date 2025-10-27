@@ -95,7 +95,6 @@ class ExploreRestaurantScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 return PopulerRestaurantCardWidget(
                   index: index,
-                  right: 0,
                 );
               },
             ),

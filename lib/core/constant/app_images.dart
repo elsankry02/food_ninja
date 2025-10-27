@@ -1,7 +1,8 @@
 class AppImages {
   static const kFrameSpecialDealForOctoberTwo =
       'assets/images/frame-special-deal-for-october-two.png';
-  static const kImageIcecream = 'assets/images/image-icecream.png';
+  static const kFrameSpecialDealForOctoberthree =
+      'assets/images/frame-special_deal-for-october-three.png';
   static const kOnboardingOne = 'assets/images/onboarding-one.png';
   static const kOnboardingTwo = 'assets/images/onboarding-two.png';
   static const kOnboardingPattern = 'assets/images/onboarding-pattern.png';
@@ -11,6 +12,8 @@ class AppImages {
   static const kIconBack = 'assets/images/Icon-back.png';
   static const kDefultPhoto = 'assets/images/defult_photo.png';
   static const kMintDark = 'assets/images/Mint_Dark.png';
+  static const kIconNotification = 'assets/images/Icon-Notifiaction.png';
+  static const kIconSearch = 'assets/images/Icon-Search.png';
   static const kFrameSpecialDealForOctoberOne =
       'assets/images/frame-special_deal-for-october-one.png';
   static const kIconLocation = 'assets/images/icon-location.png';

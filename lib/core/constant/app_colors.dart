@@ -9,9 +9,11 @@ abstract class AppColors {
   static const kGold = Color(0xffFEAD1D);
   static const kBorder = Color(0xffF4F4F4);
   static const kArowBack = Color(0xffDA6317);
+  static final kTextFiledColor = Colors.orange[50];
   static const kArowBackground = Color(0xffF9A84D);
   static const kSubTitle = Color(0xff3B3B3B);
   static const kTitle = Color(0xff09051c);
   static const kBlack = Color(0xff000000);
   static const kRed = Color(0xffFF4B4B);
+  static const kOrderNowTwo = Color(0xff6B3A5B);
 }

@@ -4,6 +4,7 @@ import 'package:food_ninja/core/constant/app_colors.dart';
 class CustomTextFormField extends StatelessWidget {
   final String hintText;
   final bool obscureText;
+  final bool? filled;
   final AutovalidateMode? autovalidateMode;
   final TextInputType? keyboardType;
   final TextStyle? hintStyle;
@@ -12,7 +13,7 @@ class CustomTextFormField extends StatelessWidget {
   final TextEditingController controller;
   final Function(String value)? onChanged, onFieldSubmitted;
   final String? Function(String? value)? validator;
-  final Color? cursorColor, suffixIconColor, prefixIconColor;
+  final Color? cursorColor, suffixIconColor, prefixIconColor, fillColor;
   const CustomTextFormField({
     super.key,
     required this.hintText,
@@ -30,6 +31,8 @@ class CustomTextFormField extends StatelessWidget {
     this.suffixIconColor,
     this.prefixIconColor,
     this.obscureText = false,
+    this.filled,
+    this.fillColor,
   });
   @override
   Widget build(BuildContext context) {
@@ -45,6 +48,8 @@ class CustomTextFormField extends StatelessWidget {
       cursorColor: cursorColor,
       keyboardType: keyboardType,
       decoration: InputDecoration(
+        filled: filled,
+        fillColor: fillColor,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
         prefixIconColor: prefixIconColor,
