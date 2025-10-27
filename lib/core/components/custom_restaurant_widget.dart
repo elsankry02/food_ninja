@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../constant/app_colors.dart';
 
+import '../constant/app_colors.dart';
 import '../extension/extension.dart';
 
 class CustomRestaurantWidget extends StatelessWidget {

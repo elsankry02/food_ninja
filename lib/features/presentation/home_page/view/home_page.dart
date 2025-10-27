@@ -10,9 +10,9 @@ import '../../../../core/components/custom_show_top_snakbar.dart';
 import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/extension/extension.dart';
-import '../../nearest_restaurant_page/view/nearest_restaurant_page.dart';
-import '../../popular_menu_page/view/popular_menu_page.dart';
 import '../widgets/carousel_slider_widget.dart';
+import 'nearest_restaurant_page.dart';
+import 'popular_menu_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -36,9 +36,10 @@ class _HomePageState extends State<HomePage> {
         children: [
           Image.asset(AppImages.kPatternBackground),
           ListView(
-            padding: EdgeInsets.symmetric(
-              horizontal: context.height * 0.020,
-              vertical: context.height * 0.050,
+            padding: EdgeInsetsDirectional.only(
+              start: context.height * 0.020,
+              end: context.height * 0.020,
+              top: context.height * 0.060,
             ),
             physics: BouncingScrollPhysics(),
             children: [
@@ -57,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                   CustomPrimaryButton(
                     title: 'View More',
                     style: context.kTextTheme.labelMedium!.copyWith(
-                      color: AppColors.kArowBack,
+                      color: AppColors.kSecondaryGold,
                     ),
                     onTap: () => Navigator.of(context).push(
                       MaterialPageRoute(
@@ -105,7 +106,7 @@ class _HomePageState extends State<HomePage> {
                   CustomPrimaryButton(
                     title: 'View More',
                     style: context.kTextTheme.labelMedium!.copyWith(
-                      color: AppColors.kArowBack,
+                      color: AppColors.kSecondaryGold,
                     ),
                     onTap: () => Navigator.of(context).push(
                       MaterialPageRoute(
@@ -134,32 +135,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-
-      //     const SizedBox(height: 20),
-
-      //     const SizedBox(height: 20),
-      // const PopularCardMenuWidget(
-      //   imageCard: 'assets/images/Green_Noddle.png',
-      //   titelText: 'Green Noddle',
-      //   supTitel: 'Noodle Home',
-      //   price: r'$15',
-      // ),
-      //     const SizedBox(height: 20),
-      //     const PopularCardMenuWidget(
-      //       imageCard: 'assets/images/Fruit_Salad.png',
-      //       titelText: 'Fruit Salad',
-      //       supTitel: 'Wijie Resto',
-      //       price: r'$5',
-      //     ),
-      //     const SizedBox(height: 20),
-      //     const PopularCardMenuWidget(
-      //       imageCard: 'assets/images/Herbal_Pancake.png',
-      //       titelText: 'Herbal Pancake',
-      //       supTitel: 'Warung Herbal',
-      //       price: r'$7',
-      //     ),
-      //   ],
-      // ),
     );
   }
 }

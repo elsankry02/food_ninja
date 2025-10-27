@@ -37,19 +37,17 @@ class CustomPopularMenuWidget extends StatelessWidget {
         ),
         subtitle: Text(
           subTitle,
-          style: context.kTextTheme.labelLarge!.copyWith(
-            color: AppColors.kGrey,
-          ),
+          style: context.kTextTheme.labelMedium!.copyWith(color: Colors.grey),
         ),
         leading: ClipRRect(
           borderRadius: BorderRadiusGeometry.circular(10),
           child: Image.asset(image, fit: BoxFit.cover),
         ),
         trailing: Text(
-          "$price",
+          "\$$price",
           style: context.kTextTheme.titleLarge!.copyWith(
             fontWeight: FontWeight.w700,
-            color: AppColors.kArowBackground,
+            color: AppColors.kSecondaryGold,
           ),
         ),
       ),

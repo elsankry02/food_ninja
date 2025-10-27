@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+
 import '../../../../core/components/custom_icon_back.dart';
 import '../../../../core/components/custom_payment_widget.dart';
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/components/custom_show_top_snakbar.dart';
+import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/constant/app_svgs.dart';
-import '../../set_location_page/view/set_location_page.dart';
-
-import '../../../../core/constant/app_colors.dart';
 import '../../../../core/extension/extension.dart';
+import '../../set_location_page/view/set_location_page.dart';
 
 class PaymentMethodPage extends StatelessWidget {
   const PaymentMethodPage({super.key});
@@ -30,7 +30,7 @@ class PaymentMethodPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  CustomIconBack(
+                  CustomIconButton(
                     icon: Image.asset(
                       AppImages.kIconBack,
                       fit: BoxFit.scaleDown,

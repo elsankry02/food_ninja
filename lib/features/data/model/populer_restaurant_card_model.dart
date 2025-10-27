@@ -22,13 +22,13 @@ List<PopulerRestaurantCardModel> populerRestaurantCardModel = [
     image: AppImages.kDefultPhoto,
     title: 'Smart Resto',
     subTitle: '17 Mins',
-    price: 16.0,
+    price: 16,
   ),
   PopulerRestaurantCardModel(
     image: AppImages.kDefultPhoto,
     title: 'Vegan Resto',
     subTitle: '19 Mins',
-    price: 21.0,
+    price: 21,
   ),
   PopulerRestaurantCardModel(
     image: AppImages.kDefultPhoto,
@@ -40,6 +40,6 @@ List<PopulerRestaurantCardModel> populerRestaurantCardModel = [
     image: AppImages.kDefultPhoto,
     title: 'Pizza',
     subTitle: '6 Mins',
-    price: 25.0,
+    price: 25,
   ),
 ];

@@ -32,7 +32,6 @@ class AppSvgs {
   static const kGirlTwo = 'assets/svg/girl-two.svg';
   static const kGoogle = 'assets/svg/google.svg';
   static const kHome = 'assets/svg/home.svg';
-  static const kIconCart = 'assets/svg/icon-cart.svg';
   static const kIconClock = 'assets/svg/icon-clock.svg';
   static const kIconFailure = 'assets/svg/icon-failure.svg';
   static const kIconMapPin = 'assets/svg/icon-map-pin.svg';
@@ -41,7 +40,6 @@ class AppSvgs {
   static const kIconNotification = 'assets/svg/icon-notifiaction.svg';
   static const kIconPlus = 'assets/svg/icon-plus.svg';
   static const kIconProfile = 'assets/svg/icon-profile.svg';
-  static const kIconSearch = 'assets/svg/icon-search.svg';
   static const kIconSend = 'assets/svg/icon-send.svg';
   static const kIconStar = 'assets/svg/icon-star.svg';
   static const kIconStarTwo = 'assets/svg/icon-star-two.svg';

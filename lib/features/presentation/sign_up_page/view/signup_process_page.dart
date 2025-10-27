@@ -2,17 +2,17 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../../../core/components/custom_icon_back.dart';
-import '../../../../core/components/custom_text_form_field.dart';
-import '../../../../core/constant/app_images.dart';
-import '../../../../core/constant/app_svgs.dart';
-import '../../navbar_page/navbar_page.dart';
-import '../widget/upload_photo_widget.dart';
 import 'package:image_picker/image_picker.dart';
 
+import '../../../../core/components/custom_icon_back.dart';
 import '../../../../core/components/custom_primary_button.dart';
+import '../../../../core/components/custom_text_form_field.dart';
 import '../../../../core/constant/app_colors.dart';
+import '../../../../core/constant/app_images.dart';
+import '../../../../core/constant/app_svgs.dart';
 import '../../../../core/extension/extension.dart';
+import '../../navbar_page/navbar_page.dart';
+import '../widget/upload_photo_widget.dart';
 
 class SignupProcessPage extends StatefulWidget {
   const SignupProcessPage({super.key});
@@ -67,7 +67,7 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  CustomIconBack(
+                  CustomIconButton(
                     icon: Image.asset(
                       AppImages.kIconBack,
                       fit: BoxFit.scaleDown,

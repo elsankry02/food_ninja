@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../../../core/components/custom_icon_back.dart';
-import '../../../../core/constant/app_images.dart';
-import '../widget/set_location_widget.dart';
 
+import '../../../../core/components/custom_icon_back.dart';
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_colors.dart';
+import '../../../../core/constant/app_images.dart';
 import '../../../../core/extension/extension.dart';
 import '../../navbar_page/navbar_page.dart';
+import '../widget/set_location_widget.dart';
 
 class SetLocationPage extends StatelessWidget {
   const SetLocationPage({super.key});
@@ -28,7 +28,7 @@ class SetLocationPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  CustomIconBack(
+                  CustomIconButton(
                     icon: Image.asset(
                       AppImages.kIconBack,
                       fit: BoxFit.scaleDown,

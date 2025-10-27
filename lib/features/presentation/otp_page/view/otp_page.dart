@@ -1,14 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import '../../../../core/components/custom_icon_back.dart';
-import '../../../../core/constant/app_images.dart';
-import '../../navbar_page/navbar_page.dart';
-import '../../sign_up_page/view/signup_process_page.dart';
 
+import '../../../../core/components/custom_icon_back.dart';
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_colors.dart';
+import '../../../../core/constant/app_images.dart';
 import '../../../../core/extension/extension.dart';
+import '../../navbar_page/navbar_page.dart';
+import '../../sign_up_page/view/signup_process_page.dart';
 import '../widget/otp_pin_put_widget.dart';
 
 class VerificationCodePage extends StatefulWidget {
@@ -72,7 +72,7 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    CustomIconBack(
+                    CustomIconButton(
                       icon: Image.asset(
                         AppImages.kIconBack,
                         fit: BoxFit.scaleDown,

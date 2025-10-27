@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:food_ninja/core/constant/app_images.dart';
+import 'package:food_ninja/core/constant/app_svgs.dart';
+import 'package:food_ninja/core/extension/extension.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 import '../../../core/constant/app_colors.dart';
@@ -20,77 +23,82 @@ class _NavBarPageState extends State<NavBarPage> {
 
   List<Widget> tabs = [
     const HomePage(),
+    const Profile(),
     const CartPage(),
     const Chat(),
-    const Profile(),
   ];
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return Scaffold(
       body: tabs.elementAt(currentIndex),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+        padding: EdgeInsets.all(context.height * 0.010),
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(22),
+          borderRadius: BorderRadius.circular(context.height * 0.022),
           child: SalomonBottomBar(
-            margin: const EdgeInsets.all(10),
-            itemPadding: const EdgeInsets.symmetric(
-              horizontal: 20,
-              vertical: 15,
+            margin: EdgeInsets.all(context.height * 0.010),
+            itemPadding: EdgeInsets.symmetric(
+              horizontal: context.height * 0.020,
+              vertical: context.height * 0.015,
             ),
-            onTap: (int value) {
+            onTap: (value) {
               setState(() {
                 currentIndex = value;
               });
             },
             currentIndex: currentIndex,
-            backgroundColor: theme.primaryColor,
+            backgroundColor: AppColors.kWhite,
+            selectedItemColor: AppColors.kSecondColor,
+            unselectedItemColor: Color(0xffA5EEC5),
             items: [
               SalomonBottomBarItem(
-                selectedColor: AppColors.kPrimaryColor,
-                icon: SvgPicture.asset('assets/svg/Home.svg'),
-                title: Text(
-                  'Home',
-                  // style: AppText.textStyle12Bold.copyWith(
-                  //   color: theme.hintColor,
-                  // ),
-                ),
-              ),
-              SalomonBottomBarItem(
-                selectedColor: AppColors.kPrimaryColor,
-                icon: SvgPicture.asset('assets/svg/Icon_Profile.svg'),
-                title: Text(
-                  'Profile',
-                  // style: AppText.textStyle12Bold.copyWith(
-                  //   color: theme.hintColor,
-                  // ),
-                ),
-              ),
-              SalomonBottomBarItem(
-                selectedColor: AppColors.kPrimaryColor,
-                icon: SvgPicture.asset('assets/svg/Icon_Cart.svg'),
-                title: Text(
-                  'Cart',
-                  // style: AppText.textStyle12Bold.copyWith(
-                  //   color: theme.hintColor,
-                  // ),
-                ),
-              ),
-              SalomonBottomBarItem(
-                selectedColor: AppColors.kPrimaryColor,
                 icon: SvgPicture.asset(
-                  'assets/svg/Chat.svg',
-                  colorFilter: const ColorFilter.mode(
-                    AppColors.kPrimaryColor,
+                  AppSvgs.kHome,
+                  colorFilter: ColorFilter.mode(
+                    AppColors.kIconColor,
                     BlendMode.srcIn,
                   ),
                 ),
                 title: Text(
+                  'Home',
+                  style: context.kTextTheme.labelMedium!.copyWith(
+                    color: AppColors.kTitle,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+              SalomonBottomBarItem(
+                icon: SvgPicture.asset(AppSvgs.kProfile),
+                title: Text(
+                  'Profile',
+                  style: context.kTextTheme.labelMedium!.copyWith(
+                    color: AppColors.kTitle,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+              SalomonBottomBarItem(
+                icon: Image.asset(
+                  AppImages.kIconCart,
+                  height: context.height * 0.024,
+                  width: context.height * 0.024,
+                ),
+                title: Text(
+                  'Cart',
+                  style: context.kTextTheme.labelMedium!.copyWith(
+                    color: AppColors.kTitle,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+              SalomonBottomBarItem(
+                icon: SvgPicture.asset(AppSvgs.kChat),
+                title: Text(
                   'Chat',
-                  // style: AppText.textStyle12Bold.copyWith(
-                  //   color: theme.hintColor,
-                  // ),
+                  style: context.kTextTheme.labelMedium!.copyWith(
+                    color: AppColors.kTitle,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
             ],
