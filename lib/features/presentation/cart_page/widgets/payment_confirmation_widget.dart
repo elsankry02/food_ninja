@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/constant/app_colors.dart';
-import '../../../../core/constant/app_text.dart';
 import '../../../../core/extension/extension.dart';
 import 'payment_cart_screen.dart';
 
@@ -44,27 +43,23 @@ class PaymentConfirmationWidget extends StatelessWidget {
               Text(r'20 $', style: style),
             ],
           ),
-          const SizedBox(
-            height: 20,
-          ),
+          const SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 'Total',
-                style:
-                    AppText.textstyle19Bold.copyWith(color: AppColors.kWhite),
+                // style:
+                // AppText.textstyle19Bold.copyWith(color: AppColors.kWhite),
               ),
               Text(
                 r'150$',
-                style:
-                    AppText.textstyle19Bold.copyWith(color: AppColors.kWhite),
+                // style:
+                // AppText.textstyle19Bold.copyWith(color: AppColors.kWhite),
               ),
             ],
           ),
-          const SizedBox(
-            height: 15,
-          ),
+          const SizedBox(height: 15),
           GestureDetector(
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(
@@ -82,8 +77,9 @@ class PaymentConfirmationWidget extends StatelessWidget {
                 child: Text(
                   'Place My Order',
                   style: context.kTextTheme.titleSmall!.copyWith(
-                      fontWeight: FontWeight.w700,
-                      color: AppColors.kPrimaryColor),
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.kPrimaryColor,
+                  ),
                 ),
               ),
             ),

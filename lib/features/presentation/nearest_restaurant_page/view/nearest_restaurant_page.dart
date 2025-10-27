@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/components/custom_populer_menu_widget.dart';
+import 'package:food_ninja/core/components/custom_restaurant_widget.dart';
+import 'package:food_ninja/features/data/model/nearest_restaurant_model.dart';
 
 import '../../../../core/components/custom_home_appbar.dart';
 import '../../../../core/components/custom_show_top_snakbar.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/extension/extension.dart';
-import '../../../data/model/populer_restaurant_card_model.dart';
 
-class PopularMenuPage extends StatefulWidget {
-  const PopularMenuPage({super.key});
+class NearestRestaurantPage extends StatefulWidget {
+  const NearestRestaurantPage({super.key});
 
   @override
-  State<PopularMenuPage> createState() => _PopularMenuPageState();
+  State<NearestRestaurantPage> createState() => _NearestRestaurantPageState();
 }
 
-class _PopularMenuPageState extends State<PopularMenuPage> {
+class _NearestRestaurantPageState extends State<NearestRestaurantPage> {
   final searchController = TextEditingController();
   @override
   void dispose() {
@@ -47,18 +47,22 @@ class _PopularMenuPageState extends State<PopularMenuPage> {
                 ),
                 SizedBox(height: context.height * 0.010),
                 Expanded(
-                  child: ListView.builder(
+                  child: GridView.builder(
                     physics: BouncingScrollPhysics(),
-                    itemCount: populerRestaurantCardModel.length,
+                    itemCount: nearestRestaurantitem.length,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: context.height * 0.010,
+                      crossAxisSpacing: context.height * 0.020,
+                    ),
                     itemBuilder: (context, index) {
-                      final data = populerRestaurantCardModel[index];
-                      return CustomPopularMenuWidget(
+                      final data = nearestRestaurantitem[index];
+                      return CustomRestaurantWidget(
                         title: data.title,
                         subTitle: data.subTitle,
                         image: data.image,
                         onTap: () =>
                             ErrorMessage(context, message: "COMING SOON"),
-                        price: data.price,
                       );
                     },
                   ),

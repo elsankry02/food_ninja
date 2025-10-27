@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 import '../../../core/constant/app_colors.dart';
-import '../../../core/constant/app_text.dart';
 import '../cart_page/view/cart_page.dart';
 import '../chat_page/views/chat_page.dart';
 import '../home_page/view/home_page.dart';
@@ -53,9 +52,9 @@ class _NavBarPageState extends State<NavBarPage> {
                 icon: SvgPicture.asset('assets/svg/Home.svg'),
                 title: Text(
                   'Home',
-                  style: AppText.textStyle12Bold.copyWith(
-                    color: theme.hintColor,
-                  ),
+                  // style: AppText.textStyle12Bold.copyWith(
+                  //   color: theme.hintColor,
+                  // ),
                 ),
               ),
               SalomonBottomBarItem(
@@ -63,9 +62,9 @@ class _NavBarPageState extends State<NavBarPage> {
                 icon: SvgPicture.asset('assets/svg/Icon_Profile.svg'),
                 title: Text(
                   'Profile',
-                  style: AppText.textStyle12Bold.copyWith(
-                    color: theme.hintColor,
-                  ),
+                  // style: AppText.textStyle12Bold.copyWith(
+                  //   color: theme.hintColor,
+                  // ),
                 ),
               ),
               SalomonBottomBarItem(
@@ -73,9 +72,9 @@ class _NavBarPageState extends State<NavBarPage> {
                 icon: SvgPicture.asset('assets/svg/Icon_Cart.svg'),
                 title: Text(
                   'Cart',
-                  style: AppText.textStyle12Bold.copyWith(
-                    color: theme.hintColor,
-                  ),
+                  // style: AppText.textStyle12Bold.copyWith(
+                  //   color: theme.hintColor,
+                  // ),
                 ),
               ),
               SalomonBottomBarItem(
@@ -89,9 +88,9 @@ class _NavBarPageState extends State<NavBarPage> {
                 ),
                 title: Text(
                   'Chat',
-                  style: AppText.textStyle12Bold.copyWith(
-                    color: theme.hintColor,
-                  ),
+                  // style: AppText.textStyle12Bold.copyWith(
+                  //   color: theme.hintColor,
+                  // ),
                 ),
               ),
             ],

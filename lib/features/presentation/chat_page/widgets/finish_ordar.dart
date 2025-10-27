@@ -4,7 +4,6 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../core/components/custom_chat_call_widget.dart';
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_colors.dart';
-import '../../../../core/constant/app_text.dart';
 import '../../../../core/extension/extension.dart';
 import '../views/chat_page.dart';
 import 'rate_food.dart';
@@ -36,52 +35,40 @@ class FinishOrdar extends StatelessWidget {
                     image: "AppImages.kOrderFinishedImage",
                     titel: 'Thank You!\nOrder Completed',
                     subtitel: 'Please rate your last Driver',
-                    style: AppText.textstyle14Regular,
+                    // style: AppText.textstyle14Regular,
                   ),
-                  const SizedBox(
-                    height: 40,
-                  ),
+                  const SizedBox(height: 40),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       UnconstrainedBox(
                         child: SvgPicture.asset('assets/svg/Star.svg'),
                       ),
-                      const SizedBox(
-                        width: 23,
-                      ),
+                      const SizedBox(width: 23),
                       UnconstrainedBox(
                         child: SvgPicture.asset('assets/svg/Star.svg'),
                       ),
-                      const SizedBox(
-                        width: 23,
-                      ),
+                      const SizedBox(width: 23),
                       UnconstrainedBox(
                         child: SvgPicture.asset('assets/svg/Group_774.svg'),
                       ),
-                      const SizedBox(
-                        width: 23,
-                      ),
+                      const SizedBox(width: 23),
                       UnconstrainedBox(
                         child: SvgPicture.asset('assets/svg/Star_oppacty.svg'),
                       ),
-                      const SizedBox(
-                        width: 23,
-                      ),
+                      const SizedBox(width: 23),
                       UnconstrainedBox(
                         child: SvgPicture.asset('assets/svg/Star_oppacty.svg'),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 77,
-                  ),
+                  const SizedBox(height: 77),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 25),
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: 'Leave feedback',
-                        hintStyle: AppText.textstyle14Regular,
+                        // hintStyle: AppText.textstyle14Regular,
                         prefixIcon: UnconstrainedBox(
                           child: SvgPicture.asset('assets/svg/edit_Icon.svg'),
                         ),
@@ -92,9 +79,7 @@ class FinishOrdar extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  const SizedBox(height: 20),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 25),
                     child: Row(
@@ -109,11 +94,13 @@ class FinishOrdar extends StatelessWidget {
                           child: CustomPrimaryButton(
                             title: 'Submit',
                             style: context.kTextTheme.titleSmall!.copyWith(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w700),
+                              color: Colors.white,
+                              fontWeight: FontWeight.w700,
+                            ),
                             padding: EdgeInsets.symmetric(
-                                horizontal: context.height * 0.020,
-                                vertical: context.height * 0.018),
+                              horizontal: context.height * 0.020,
+                              vertical: context.height * 0.018,
+                            ),
                             backGroundColor: AppColors.kPrimaryColor,
                             borderRadius: BorderRadius.circular(15),
                           ),
@@ -135,8 +122,9 @@ class FinishOrdar extends StatelessWidget {
                               child: Text(
                                 'Skip',
                                 style: context.kTextTheme.titleSmall!.copyWith(
-                                    fontWeight: FontWeight.w600,
-                                    color: AppColors.kPrimaryColor),
+                                  fontWeight: FontWeight.w600,
+                                  color: AppColors.kPrimaryColor,
+                                ),
                               ),
                             ),
                           ),
@@ -145,7 +133,7 @@ class FinishOrdar extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ],
@@ -156,9 +144,7 @@ class FinishOrdar extends StatelessWidget {
   OutlineInputBorder outlineBorder(Color theme) {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(15),
-      borderSide: BorderSide(
-        color: theme,
-      ),
+      borderSide: BorderSide(color: theme),
     );
   }
 }

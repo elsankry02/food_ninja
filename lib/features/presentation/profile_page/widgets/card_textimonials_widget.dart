@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/constant/app_colors.dart';
-import '../../../../core/constant/app_text.dart';
 import '../../../../core/extension/extension.dart';
 
 class CardTextimonialsWidget extends StatefulWidget {
@@ -34,14 +33,8 @@ class _CardTextimonialsWidgetState extends State<CardTextimonialsWidget> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(
-            widget.imageAssets,
-            width: 64,
-            height: 64,
-          ),
-          const SizedBox(
-            width: 20,
-          ),
+          Image.asset(widget.imageAssets, width: 64, height: 64),
+          const SizedBox(width: 20),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -50,11 +43,13 @@ class _CardTextimonialsWidgetState extends State<CardTextimonialsWidget> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(widget.titel,
-                          style: context.kTextTheme.titleSmall!.copyWith(
-                            fontWeight: FontWeight.w600,
-                            color: theme.hintColor,
-                          )),
+                      Text(
+                        widget.titel,
+                        style: context.kTextTheme.titleSmall!.copyWith(
+                          fontWeight: FontWeight.w600,
+                          color: theme.hintColor,
+                        ),
+                      ),
                       Text(
                         '12 April 2021',
                         style: context.kTextTheme.labelMedium!.copyWith(
@@ -63,9 +58,7 @@ class _CardTextimonialsWidgetState extends State<CardTextimonialsWidget> {
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    width: 80,
-                  ),
+                  const SizedBox(width: 80),
                   GestureDetector(
                     onTap: () {
                       setState(() {
@@ -92,18 +85,16 @@ class _CardTextimonialsWidgetState extends State<CardTextimonialsWidget> {
                           ),
                           Text(
                             '5',
-                            style: AppText.textstyle17Bold
-                                .copyWith(color: AppColors.kPrimaryColor),
-                          )
+                            // style: AppText.textstyle17Bold
+                            //     .copyWith(color: AppColors.kPrimaryColor),
+                          ),
                         ],
                       ),
                     ),
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 20,
-              ),
+              const SizedBox(height: 20),
               Text(
                 'This Is great, So delicious! You Must\n Here, With Your family . . ',
                 style: context.kTextTheme.labelMedium!.copyWith(

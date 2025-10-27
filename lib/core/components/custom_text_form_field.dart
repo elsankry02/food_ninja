@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
+import '../constant/app_colors.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final String hintText;
@@ -14,6 +14,7 @@ class CustomTextFormField extends StatelessWidget {
   final Function(String value)? onChanged, onFieldSubmitted;
   final String? Function(String? value)? validator;
   final Color? cursorColor, suffixIconColor, prefixIconColor, fillColor;
+  final bool autofocus;
   const CustomTextFormField({
     super.key,
     required this.hintText,
@@ -33,12 +34,13 @@ class CustomTextFormField extends StatelessWidget {
     this.obscureText = false,
     this.filled,
     this.fillColor,
+    required this.autofocus,
   });
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       autovalidateMode: autovalidateMode,
-      autofocus: true,
+      autofocus: autofocus,
       validator: validator,
       obscureText: obscureText,
       controller: controller,

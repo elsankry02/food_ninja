@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../core/constant/app_text.dart';
-
 class PaymentCart extends StatelessWidget {
   final String imagePayment;
   final Color titelcolor;
@@ -32,9 +30,9 @@ class PaymentCart extends StatelessWidget {
           SvgPicture.asset(imagePayment),
           Text(
             titelPassword,
-            style: AppText.textstyle14Regular.copyWith(
-              color: titelcolor,
-            ),
+            // style: AppText.textstyle14Regular.copyWith(
+            //   color: titelcolor,
+            // ),
           ),
         ],
       ),

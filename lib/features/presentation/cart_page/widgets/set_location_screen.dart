@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/constant/app_colors.dart';
-import '../../../../core/constant/app_text.dart';
 import '../../../../core/extension/extension.dart';
 import 'track_order_screen.dart';
 
@@ -26,18 +25,17 @@ class SetLocationScreen extends StatelessWidget {
                   fit: BoxFit.fill,
                 ),
                 Positioned(
-                    top: 260,
-                    left: 90,
-                    child: Image.asset('assets/images/Pin_Radar.png')),
+                  top: 260,
+                  left: 90,
+                  child: Image.asset('assets/images/Pin_Radar.png'),
+                ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: Column(
                     children: [
                       const SizedBox(height: 20),
                       TextField(
-                        style: const TextStyle(
-                          color: AppColors.kArowBack,
-                        ),
+                        style: const TextStyle(color: AppColors.kArowBack),
                         cursorColor: AppColors.kArowBack,
                         decoration: InputDecoration(
                           hintText: 'FInd Your Location',
@@ -45,23 +43,27 @@ class SetLocationScreen extends StatelessWidget {
                             color: AppColors.kArowBack,
                           ),
                           prefixIcon: UnconstrainedBox(
-                            child:
-                                SvgPicture.asset('assets/svg/Icon_Search.svg'),
+                            child: SvgPicture.asset(
+                              'assets/svg/Icon_Search.svg',
+                            ),
                           ),
                           filled: true,
                           fillColor: theme.primaryColor,
-                          focusedBorder:
-                              outLineInputBorder(theme: theme.primaryColor),
-                          enabledBorder:
-                              outLineInputBorder(theme: theme.primaryColor),
+                          focusedBorder: outLineInputBorder(
+                            theme: theme.primaryColor,
+                          ),
+                          enabledBorder: outLineInputBorder(
+                            theme: theme.primaryColor,
+                          ),
                         ),
                       ),
-                      const SizedBox(
-                        height: 545,
-                      ),
+                      const SizedBox(height: 545),
                       Container(
-                        padding:
-                            const EdgeInsets.only(top: 24, left: 10, right: 10),
+                        padding: const EdgeInsets.only(
+                          top: 24,
+                          left: 10,
+                          right: 10,
+                        ),
                         height: 181,
                         width: double.infinity,
                         decoration: BoxDecoration(
@@ -73,7 +75,7 @@ class SetLocationScreen extends StatelessWidget {
                           children: [
                             const Text(
                               'Deliver To',
-                              style: AppText.textstyle14Regular,
+                              // style: AppText.textstyle14Regular,
                             ),
                             const SizedBox(height: 14),
                             Row(
@@ -81,21 +83,21 @@ class SetLocationScreen extends StatelessWidget {
                               children: [
                                 UnconstrainedBox(
                                   child: SvgPicture.asset(
-                                      'assets/svg/Icon_Location.svg'),
+                                    'assets/svg/Icon_Location.svg',
+                                  ),
                                 ),
                                 const SizedBox(width: 14),
                                 Text(
                                   '8502 Preston Rd. Inglewood,\n Maine 98380',
                                   style: context.kTextTheme.titleSmall!
                                       .copyWith(
-                                          fontWeight: FontWeight.w500,
-                                          color: theme.hintColor),
+                                        fontWeight: FontWeight.w500,
+                                        color: theme.hintColor,
+                                      ),
                                 ),
                               ],
                             ),
-                            const SizedBox(
-                              height: 20,
-                            ),
+                            const SizedBox(height: 20),
                             GestureDetector(
                               onTap: () => Navigator.of(context).push(
                                 MaterialPageRoute(
@@ -107,15 +109,17 @@ class SetLocationScreen extends StatelessWidget {
                                 width: double.infinity,
                                 height: 51,
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(15),
-                                    color: AppColors.kPrimaryColor),
+                                  borderRadius: BorderRadius.circular(15),
+                                  color: AppColors.kPrimaryColor,
+                                ),
                                 child: Center(
                                   child: Text(
                                     'Set Location',
                                     style: context.kTextTheme.titleSmall!
                                         .copyWith(
-                                            fontWeight: FontWeight.w700,
-                                            color: AppColors.kWhite),
+                                          fontWeight: FontWeight.w700,
+                                          color: AppColors.kWhite,
+                                        ),
                                   ),
                                 ),
                               ),
@@ -138,8 +142,6 @@ class SetLocationScreen extends StatelessWidget {
 OutlineInputBorder outLineInputBorder({required Color theme}) {
   return OutlineInputBorder(
     borderRadius: BorderRadius.circular(15),
-    borderSide: BorderSide(
-      color: theme,
-    ),
+    borderSide: BorderSide(color: theme),
   );
 }

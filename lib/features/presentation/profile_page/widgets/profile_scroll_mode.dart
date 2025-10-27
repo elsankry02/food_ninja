@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/constant/app_colors.dart';
-import '../../../../core/constant/app_text.dart';
 import '../../../../core/extension/extension.dart';
 import 'card_profile.dart';
 
@@ -42,16 +41,13 @@ class ProfileScrollMode extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SizedBox(
-                          height: 20,
-                        ),
+                        const SizedBox(height: 20),
                         Center(
-                          child:
-                              SvgPicture.asset('assets/svg/Scrooll_Tools.svg'),
+                          child: SvgPicture.asset(
+                            'assets/svg/Scrooll_Tools.svg',
+                          ),
                         ),
-                        const SizedBox(
-                          height: 32,
-                        ),
+                        const SizedBox(height: 32),
                         Container(
                           height: 34,
                           width: 111,
@@ -63,14 +59,13 @@ class ProfileScrollMode extends StatelessWidget {
                             child: Text(
                               'Member Gold',
                               style: context.kTextTheme.labelMedium!.copyWith(
-                                  fontWeight: FontWeight.w600,
-                                  color: AppColors.kGold),
+                                fontWeight: FontWeight.w600,
+                                color: AppColors.kGold,
+                              ),
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          height: 32,
-                        ),
+                        const SizedBox(height: 32),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -78,22 +73,24 @@ class ProfileScrollMode extends StatelessWidget {
                               'Anam Wusono',
                               style: context.kTextTheme.headlineMedium!
                                   .copyWith(
-                                      fontWeight: FontWeight.w700,
-                                      color: context.kChangeTheme.hintColor),
+                                    fontWeight: FontWeight.w700,
+                                    color: context.kChangeTheme.hintColor,
+                                  ),
                             ),
                             SvgPicture.asset('assets/svg/edit_Icon.svg'),
                           ],
                         ),
                         const Text(
                           'anamwp66@gmail.com',
-                          style: AppText.textstyle14Regular,
+                          // style: AppText.textstyle14Regular,
                         ),
-                        const SizedBox(
-                          height: 20,
-                        ),
+                        const SizedBox(height: 20),
                         Container(
                           padding: const EdgeInsets.only(
-                              left: 16, top: 13, bottom: 8),
+                            left: 16,
+                            top: 13,
+                            bottom: 8,
+                          ),
                           height: 64,
                           width: double.infinity,
                           decoration: BoxDecoration(
@@ -103,50 +100,41 @@ class ProfileScrollMode extends StatelessWidget {
                           child: Row(
                             children: [
                               SvgPicture.asset('assets/svg/Voucher_Icon.svg'),
-                              const SizedBox(
-                                width: 20,
-                              ),
+                              const SizedBox(width: 20),
                               Text(
                                 'You Have 3 Voucher',
-                                style: context.kTextTheme.titleSmall!
-                                    .copyWith(fontWeight: FontWeight.w600),
+                                style: context.kTextTheme.titleSmall!.copyWith(
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ],
                           ),
                         ),
-                        const SizedBox(
-                          height: 20,
-                        ),
+                        const SizedBox(height: 20),
                         Text(
                           'Favorite',
-                          style: context.kTextTheme.titleSmall!
-                              .copyWith(fontWeight: FontWeight.w600),
+                          style: context.kTextTheme.titleSmall!.copyWith(
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                        const SizedBox(
-                          height: 20,
-                        ),
+                        const SizedBox(height: 20),
                         const CardProfile(
                           image: 'assets/images/Photo_Soup.png',
                         ),
-                        const SizedBox(
-                          height: 20,
-                        ),
+                        const SizedBox(height: 20),
                         const CardProfile(
-                            image: 'assets/images/Photo_Salad.png'),
-                        const SizedBox(
-                          height: 20,
+                          image: 'assets/images/Photo_Salad.png',
                         ),
+                        const SizedBox(height: 20),
                         const CardProfile(
-                            image: 'assets/images/Photo_Shawirma.png'),
-                        const SizedBox(
-                          height: 20,
+                          image: 'assets/images/Photo_Shawirma.png',
                         ),
+                        const SizedBox(height: 20),
                         const CardProfile(image: 'assets/images/Photo_Veg.png'),
-                        const SizedBox(
-                          height: 20,
-                        ),
+                        const SizedBox(height: 20),
                         const CardProfile(
-                            image: 'assets/images/Photo_Menu_profile.png'),
+                          image: 'assets/images/Photo_Menu_profile.png',
+                        ),
                       ],
                     ),
                   ),

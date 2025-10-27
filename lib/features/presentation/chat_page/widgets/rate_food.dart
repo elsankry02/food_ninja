@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/constant/app_colors.dart';
-import '../../../../core/constant/app_text.dart';
 import '../../../../core/extension/extension.dart';
 import '../views/chat_page.dart';
 import 'rate_restaurant.dart';
@@ -32,9 +31,7 @@ class RateFood extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 40,
-            ),
+            const SizedBox(height: 40),
             Text(
               textAlign: TextAlign.center,
               'Thank You!\nOrder Completed',
@@ -42,58 +39,44 @@ class RateFood extends StatelessWidget {
                 fontWeight: FontWeight.w700,
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             const Text(
               textAlign: TextAlign.center,
               'Please rate your Food',
-              style: AppText.textstyle14Regular,
+              // style: AppText.textstyle14Regular,
             ),
-            const SizedBox(
-              height: 40,
-            ),
+            const SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 UnconstrainedBox(
                   child: SvgPicture.asset('assets/svg/Star.svg'),
                 ),
-                const SizedBox(
-                  width: 23,
-                ),
+                const SizedBox(width: 23),
                 UnconstrainedBox(
                   child: SvgPicture.asset('assets/svg/Star.svg'),
                 ),
-                const SizedBox(
-                  width: 23,
-                ),
+                const SizedBox(width: 23),
                 UnconstrainedBox(
                   child: SvgPicture.asset('assets/svg/Group_774.svg'),
                 ),
-                const SizedBox(
-                  width: 23,
-                ),
+                const SizedBox(width: 23),
                 UnconstrainedBox(
                   child: SvgPicture.asset('assets/svg/Star_oppacty.svg'),
                 ),
-                const SizedBox(
-                  width: 23,
-                ),
+                const SizedBox(width: 23),
                 UnconstrainedBox(
                   child: SvgPicture.asset('assets/svg/Star_oppacty.svg'),
                 ),
               ],
             ),
-            const SizedBox(
-              height: 77,
-            ),
+            const SizedBox(height: 77),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: TextField(
                 decoration: InputDecoration(
                   hintText: 'Leave feedback',
-                  hintStyle: AppText.textstyle14Regular,
+                  // hintStyle: AppText.textstyle14Regular,
                   prefixIcon: UnconstrainedBox(
                     child: SvgPicture.asset('assets/svg/edit_Icon.svg'),
                   ),
@@ -104,9 +87,7 @@ class RateFood extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Row(
@@ -129,17 +110,16 @@ class RateFood extends StatelessWidget {
                         child: Text(
                           'Submit',
                           style: context.kTextTheme.titleSmall!.copyWith(
-                              fontWeight: FontWeight.w600,
-                              color: AppColors.kWhite),
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.kWhite,
+                          ),
                         ),
                       ),
                     ),
                   ),
                   GestureDetector(
                     onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const Chat(),
-                      ),
+                      MaterialPageRoute(builder: (context) => const Chat()),
                     ),
                     child: Container(
                       width: 82,
@@ -152,8 +132,9 @@ class RateFood extends StatelessWidget {
                         child: Text(
                           'Skip',
                           style: context.kTextTheme.titleSmall!.copyWith(
-                              fontWeight: FontWeight.w600,
-                              color: AppColors.kPrimaryColor),
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.kPrimaryColor,
+                          ),
                         ),
                       ),
                     ),
@@ -170,9 +151,7 @@ class RateFood extends StatelessWidget {
   OutlineInputBorder outlineBorder({required Color theme}) {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(15),
-      borderSide: BorderSide(
-        color: theme,
-      ),
+      borderSide: BorderSide(color: theme),
     );
   }
 }

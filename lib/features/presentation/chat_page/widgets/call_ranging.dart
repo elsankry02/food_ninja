@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/components/custom_chat_call_widget.dart';
-import '../../../../core/constant/app_text.dart';
 import 'call.dart';
 
 class CallRanging extends StatefulWidget {
@@ -27,15 +26,16 @@ class _CallRangingState extends State<CallRanging> {
                 width: double.infinity,
               ),
               const Padding(
-                  padding: EdgeInsets.only(top: 250),
-                  //! Custom ChatCall Widget
-                  child: CustomChatCallWidget(
-                    image: "AppImages.kDeliveryMan",
-                    titel: 'Delivery Man',
-                    subtitel: 'Ringing . . .',
-                    style: AppText.textstyle19Regular,
-                    height: 177,
-                  )),
+                padding: EdgeInsets.only(top: 250),
+                //! Custom ChatCall Widget
+                child: CustomChatCallWidget(
+                  image: "AppImages.kDeliveryMan",
+                  titel: 'Delivery Man',
+                  subtitel: 'Ringing . . .',
+                  // style: AppText.textstyle19Regular,
+                  height: 177,
+                ),
+              ),
             ],
           ),
           Row(
@@ -47,19 +47,17 @@ class _CallRangingState extends State<CallRanging> {
                     isSelected = !isSelected;
                   });
                 },
-                child: SvgPicture.asset(isSelected
-                    ? 'assets/svg/Mute_Icon.svg'
-                    : 'assets/svg/Speaker_Icon.svg'),
-              ),
-              const SizedBox(
-                width: 20,
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const Call(),
-                  ),
+                child: SvgPicture.asset(
+                  isSelected
+                      ? 'assets/svg/Mute_Icon.svg'
+                      : 'assets/svg/Speaker_Icon.svg',
                 ),
+              ),
+              const SizedBox(width: 20),
+              GestureDetector(
+                onTap: () => Navigator.of(
+                  context,
+                ).push(MaterialPageRoute(builder: (context) => const Call())),
                 child: SvgPicture.asset('assets/svg/Close_Icon2.svg'),
               ),
             ],

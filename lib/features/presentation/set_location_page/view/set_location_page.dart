@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/components/custom_icon_back.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/features/presentation/set_location_page/widget/set_location_widget.dart';
+import '../../../../core/components/custom_icon_back.dart';
+import '../../../../core/constant/app_images.dart';
+import '../widget/set_location_widget.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_colors.dart';

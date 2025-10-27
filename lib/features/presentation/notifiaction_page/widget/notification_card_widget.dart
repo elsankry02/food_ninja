@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../core/constant/app_text.dart';
 import '../../../../core/extension/extension.dart';
 
 class NotifiactionCardWidget extends StatelessWidget {
@@ -46,7 +45,7 @@ class NotifiactionCardWidget extends StatelessWidget {
                 ),
                 Text(
                   subTitel,
-                  style: AppText.textstyle14Regular,
+                  // style: AppText.textstyle14Regular,
                 ),
               ],
             )

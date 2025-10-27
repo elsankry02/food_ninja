@@ -1,66 +1,45 @@
-import 'package:food_ninja/core/constant/app_images.dart';
+import '../../../core/constant/app_images.dart';
 
 class PopulerRestaurantCardModel {
-  final String imageCard;
-  final String titelText;
-  final String subTitel;
-
+  final String image, title, subTitle;
+  final double price;
   PopulerRestaurantCardModel({
-    required this.imageCard,
-    required this.titelText,
-    required this.subTitel,
+    required this.price,
+    required this.image,
+    required this.title,
+    required this.subTitle,
   });
 }
 
 List<PopulerRestaurantCardModel> populerRestaurantCardModel = [
   PopulerRestaurantCardModel(
-    imageCard: AppImages.kIconLocation,
-    titelText: 'Good Food',
-    subTitel: '22 Mins',
+    image: AppImages.kDefultPhoto,
+    title: 'Healthy Food',
+    subTitle: '18 Mins',
+    price: 17.5,
   ),
   PopulerRestaurantCardModel(
-    imageCard: AppImages.kIconLocation,
-    titelText: 'Healthy Food',
-    subTitel: '24 Mins',
+    image: AppImages.kDefultPhoto,
+    title: 'Smart Resto',
+    subTitle: '17 Mins',
+    price: 16.0,
   ),
   PopulerRestaurantCardModel(
-    imageCard: AppImages.kIconLocation,
-    titelText: 'Smart Resto',
-    subTitel: '5 Mins',
+    image: AppImages.kDefultPhoto,
+    title: 'Vegan Resto',
+    subTitle: '19 Mins',
+    price: 21.0,
   ),
   PopulerRestaurantCardModel(
-    imageCard: AppImages.kIconLocation,
-    titelText: 'Vegan Resto',
-    subTitel: '9 Mins',
+    image: AppImages.kDefultPhoto,
+    title: 'Good Food',
+    subTitle: '8 Mins',
+    price: 14.5,
   ),
   PopulerRestaurantCardModel(
-    imageCard: AppImages.kIconLocation,
-    titelText: 'Good Food',
-    subTitel: '13 Mins',
-  ),
-  PopulerRestaurantCardModel(
-    imageCard: AppImages.kIconLocation,
-    titelText: 'Healthy Food',
-    subTitel: '18 Mins',
-  ),
-  PopulerRestaurantCardModel(
-    imageCard: AppImages.kIconLocation,
-    titelText: 'Smart Resto',
-    subTitel: '17 Mins',
-  ),
-  PopulerRestaurantCardModel(
-    imageCard: AppImages.kIconLocation,
-    titelText: 'Vegan Resto',
-    subTitel: '19 Mins',
-  ),
-  PopulerRestaurantCardModel(
-    imageCard: AppImages.kIconLocation,
-    titelText: 'Good Food',
-    subTitel: '8 Mins',
-  ),
-  PopulerRestaurantCardModel(
-    imageCard: AppImages.kIconLocation,
-    titelText: 'pizza',
-    subTitel: '6 Mins',
+    image: AppImages.kDefultPhoto,
+    title: 'Pizza',
+    subTitle: '6 Mins',
+    price: 25.0,
   ),
 ];

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../core/components/custom_primary_button.dart';
 import '../../../core/components/custom_success_notification_widget.dart';
 import '../../../core/constant/app_colors.dart';
-import '../../../core/constant/app_text.dart';
 import '../../../core/extension/extension.dart';
 import '../navbar_page/navbar_page.dart';
 
@@ -16,36 +15,37 @@ class SignupSuccessNotificationPage extends StatelessWidget {
       body: Column(
         children: [
           const CustomSuccessNotificationWidget(),
-          SizedBox(
-            height: context.height * 0.033,
-          ),
-          const Text(
+          SizedBox(height: context.height * 0.033),
+          Text(
             'Congrats!',
-            style: AppText.textstyle30Bold,
-          ),
-          SizedBox(
-            height: context.height * 0.012,
-          ),
-          Text('Your Profile Is Ready To Use',
-              style: context.kTextTheme.titleLarge!
-                  .copyWith(fontWeight: FontWeight.w700)),
-          SizedBox(
-            height: context.height * 0.192,
-          ),
-          GestureDetector(
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => const NavBarPage(),
-              ),
+            style: context.kTextTheme.headlineLarge!.copyWith(
+              color: AppColors.kTitle,
+              fontWeight: FontWeight.w600,
             ),
+          ),
+          SizedBox(height: context.height * 0.012),
+          Text(
+            'Your Profile Is Ready To Use',
+            style: context.kTextTheme.titleLarge!.copyWith(
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          SizedBox(height: context.height * 0.192),
+          GestureDetector(
+            onTap: () => Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (context) => const NavBarPage())),
             child: UnconstrainedBox(
               child: CustomPrimaryButton(
                 title: 'Try Order',
-                style: context.kTextTheme.titleSmall!
-                    .copyWith(color: Colors.white, fontWeight: FontWeight.w700),
+                style: context.kTextTheme.titleSmall!.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700,
+                ),
                 padding: EdgeInsets.symmetric(
-                    horizontal: context.height * 0.060,
-                    vertical: context.height * 0.018),
+                  horizontal: context.height * 0.060,
+                  vertical: context.height * 0.018,
+                ),
                 backGroundColor: AppColors.kPrimaryColor,
                 borderRadius: BorderRadius.circular(context.height * 0.015),
               ),

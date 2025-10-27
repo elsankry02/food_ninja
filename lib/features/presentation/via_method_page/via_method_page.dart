@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/features/presentation/password_page/password_page.dart';
+import '../password_page/password_page.dart';
 
 import '../../../core/components/custom_primary_button.dart';
 import '../../../core/constant/app_colors.dart';

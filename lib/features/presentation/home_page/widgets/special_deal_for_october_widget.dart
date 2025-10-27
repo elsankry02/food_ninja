@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/components/custom_primary_button.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/extension/extension.dart';
-import 'package:food_ninja/features/data/model/special_deal_model.dart';
+import '../../../../core/components/custom_primary_button.dart';
+import '../../../../core/constant/app_colors.dart';
+import '../../../../core/extension/extension.dart';
+import '../../../data/model/special_deal_model.dart';
 
 class SpecialDealForOctoberWidget extends StatelessWidget {
   final void Function()? onTap;

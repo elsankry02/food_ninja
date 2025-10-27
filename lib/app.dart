@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/features/presentation/navbar_page/navbar_page.dart';
+
+import 'features/presentation/navbar_page/navbar_page.dart';
 
 class FoodNinja extends StatelessWidget {
   const FoodNinja({super.key});

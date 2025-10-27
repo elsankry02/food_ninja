@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/components/custom_contanier_pop_widget.dart';
 import '../../../../core/constant/app_colors.dart';
-import '../../../../core/constant/app_text.dart';
 import '../../../../core/extension/extension.dart';
 
 class TrackOrderScreen extends StatefulWidget {
@@ -36,11 +35,7 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                       padding: const EdgeInsets.only(top: 25, left: 25),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          CustomContainerPopupWidget(
-                            theme: theme,
-                          ),
-                        ],
+                        children: [CustomContainerPopupWidget(theme: theme)],
                       ),
                     ),
                     Positioned(
@@ -59,7 +54,9 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                       child: UnconstrainedBox(
                         child: Container(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 16, vertical: 14),
+                            horizontal: 16,
+                            vertical: 14,
+                          ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(22),
                             color: theme.primaryColor,
@@ -67,13 +64,11 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                           child: Row(
                             children: [
                               SvgPicture.asset('assets/svg/Icon_clock.svg'),
-                              const SizedBox(
-                                width: 8,
-                              ),
+                              const SizedBox(width: 8),
                               Text(
                                 '25 min',
-                                style: AppText.textstyle14Regular
-                                    .copyWith(color: theme.hintColor),
+                                // style: AppText.textstyle14Regular
+                                //     .copyWith(color: theme.hintColor),
                               ),
                             ],
                           ),
@@ -102,9 +97,7 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                       fit: BoxFit.fill,
                       width: double.infinity,
                     ),
-                    const Column(
-                      children: [],
-                    ),
+                    const Column(children: []),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
                       child: Column(
@@ -112,16 +105,17 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(
-                                top: 20, left: 10, right: 10),
+                              top: 20,
+                              left: 10,
+                              right: 10,
+                            ),
                             child: Text(
                               'Track Orders',
-                              style: AppText.textstyle17Bold
-                                  .copyWith(color: theme.hintColor),
+                              // style: AppText.textstyle17Bold
+                              //     .copyWith(color: theme.hintColor),
                             ),
                           ),
-                          const SizedBox(
-                            height: 20,
-                          ),
+                          const SizedBox(height: 20),
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 10),
                             width: double.infinity,
@@ -142,28 +136,28 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                                       'Mr Kemplas',
                                       style: context.kTextTheme.titleSmall!
                                           .copyWith(
-                                              fontWeight: FontWeight.w500,
-                                              color: theme.hintColor),
+                                            fontWeight: FontWeight.w500,
+                                            color: theme.hintColor,
+                                          ),
                                     ),
                                     Row(
                                       children: [
                                         SvgPicture.asset(
-                                            'assets/svg/Icon_maps.svg'),
+                                          'assets/svg/Icon_maps.svg',
+                                        ),
                                         const SizedBox(width: 10),
                                         const Text(
                                           '25 minutes on the way',
-                                          style: AppText.textstyle14Regular,
-                                        )
+                                          // style: AppText.textstyle14Regular,
+                                        ),
                                       ],
                                     ),
                                   ],
-                                )
+                                ),
                               ],
                             ),
                           ),
-                          const SizedBox(
-                            height: 10,
-                          ),
+                          const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -197,12 +191,12 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                                         'Call',
                                         style: context.kTextTheme.titleSmall!
                                             .copyWith(
-                                          fontWeight: FontWeight.w700,
-                                          color: isSelected
-                                              ? AppColors.kPrimaryColor
-                                              : AppColors.kWhite,
-                                        ),
-                                      )
+                                              fontWeight: FontWeight.w700,
+                                              color: isSelected
+                                                  ? AppColors.kPrimaryColor
+                                                  : AppColors.kWhite,
+                                            ),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -224,7 +218,8 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                                     ),
                                     child: Center(
                                       child: SvgPicture.asset(
-                                          'assets/svg/Path_down.svg'),
+                                        'assets/svg/Path_down.svg',
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -233,7 +228,7 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                           ),
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),

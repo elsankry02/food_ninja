@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/components/custom_main_appbar_widget.dart';
-import '../../../../core/constant/app_colors.dart';
-import '../../../../core/constant/app_text.dart';
 import '../../../../core/extension/extension.dart';
 import 'set_location_screen.dart';
 
@@ -24,42 +22,46 @@ class EditLocationScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                    padding:
-                        const EdgeInsets.only(left: 12, right: 20, top: 19),
+                    padding: const EdgeInsets.only(
+                      left: 12,
+                      right: 20,
+                      top: 19,
+                    ),
                     width: double.infinity,
                     height: 108,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(22),
-                        color: theme.primaryColor),
+                      borderRadius: BorderRadius.circular(22),
+                      color: theme.primaryColor,
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
                           'Order Location',
-                          style: AppText.textstyle14Regular,
+                          // style: AppText.textstyle14Regular,
                         ),
                         const SizedBox(height: 14),
                         Row(
                           children: [
                             UnconstrainedBox(
                               child: SvgPicture.asset(
-                                  'assets/svg/Icon_Location.svg'),
+                                'assets/svg/Icon_Location.svg',
+                              ),
                             ),
                             const SizedBox(width: 14),
                             Text(
                               '8502 Preston Rd. Inglewood,\n Maine 98380',
                               style: context.kTextTheme.titleSmall!.copyWith(
-                                  fontWeight: FontWeight.w500,
-                                  color: theme.hintColor),
+                                fontWeight: FontWeight.w500,
+                                color: theme.hintColor,
+                              ),
                             ),
                           ],
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  const SizedBox(height: 20),
                   Container(
                     padding: const EdgeInsets.only(left: 12, top: 17),
                     width: double.infinity,
@@ -73,7 +75,7 @@ class EditLocationScreen extends StatelessWidget {
                       children: [
                         const Text(
                           'Deliver To',
-                          style: AppText.textstyle14Regular,
+                          // style: AppText.textstyle14Regular,
                         ),
                         const SizedBox(height: 14),
                         Row(
@@ -81,7 +83,8 @@ class EditLocationScreen extends StatelessWidget {
                           children: [
                             UnconstrainedBox(
                               child: SvgPicture.asset(
-                                  'assets/svg/Icon_Location.svg'),
+                                'assets/svg/Icon_Location.svg',
+                              ),
                             ),
                             const SizedBox(width: 14),
                             Column(
@@ -91,8 +94,9 @@ class EditLocationScreen extends StatelessWidget {
                                   '8502 Preston Rd. Inglewood,\n Maine 98380',
                                   style: context.kTextTheme.titleSmall!
                                       .copyWith(
-                                          fontWeight: FontWeight.w500,
-                                          color: theme.hintColor),
+                                        fontWeight: FontWeight.w500,
+                                        color: theme.hintColor,
+                                      ),
                                 ),
                                 const SizedBox(height: 20),
                                 GestureDetector(
@@ -104,16 +108,16 @@ class EditLocationScreen extends StatelessWidget {
                                   ),
                                   child: Text(
                                     'set location',
-                                    style: AppText.textstyle14Regular.copyWith(
-                                      color: AppColors.kPrimaryColor,
-                                      decoration: TextDecoration.underline,
-                                      decorationColor: AppColors.kPrimaryColor,
-                                      decorationThickness: 3,
-                                    ),
+                                    // style: AppText.textstyle14Regular.copyWith(
+                                    //   color: AppColors.kPrimaryColor,
+                                    //   decoration: TextDecoration.underline,
+                                    //   decorationColor: AppColors.kPrimaryColor,
+                                    //   decorationThickness: 3,
+                                    // ),
                                   ),
                                 ),
                               ],
-                            )
+                            ),
                           ],
                         ),
                       ],
@@ -121,7 +125,7 @@ class EditLocationScreen extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

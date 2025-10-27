@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/constant/app_text.dart';
 import '../../../../core/extension/extension.dart';
 
 class MassageChatWidget extends StatefulWidget {
@@ -35,15 +34,9 @@ class _MassageChatWidgetState extends State<MassageChatWidget> {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(50),
-            child: Image.asset(
-              widget.image,
-              width: 64,
-              height: 64,
-            ),
+            child: Image.asset(widget.image, width: 64, height: 64),
           ),
-          const SizedBox(
-            width: 15,
-          ),
+          const SizedBox(width: 15),
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -55,17 +48,19 @@ class _MassageChatWidgetState extends State<MassageChatWidget> {
                     Text(
                       widget.titel,
                       style: context.kTextTheme.titleSmall!.copyWith(
-                          fontWeight: FontWeight.w600, color: theme.hintColor),
+                        fontWeight: FontWeight.w600,
+                        color: theme.hintColor,
+                      ),
                     ),
                     const Text(
                       '20:00',
-                      style: AppText.textstyle14Regular,
+                      // style: AppText.textstyle14Regular,
                     ),
                   ],
                 ),
                 const Text(
                   'Your Order Just Arrived!',
-                  style: AppText.textstyle14Regular,
+                  // style: AppText.textstyle14Regular,
                 ),
               ],
             ),

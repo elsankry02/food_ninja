@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/constant/app_colors.dart';
-import '../../../../core/constant/app_text.dart';
 import '../../../../core/extension/extension.dart';
 import 'card_textimonials_widget.dart';
 import 'populer_menu_profile_widget.dart';
@@ -48,40 +47,32 @@ class _DetailproductState extends State<Detailproduct> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const SizedBox(
-                              height: 20,
-                            ),
+                            const SizedBox(height: 20),
                             Center(
                               child: SvgPicture.asset(
-                                  'assets/svg/Scrooll_Tools.svg'),
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            const TopDetailsWidget(),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            Text(
-                              'Wijie Bar and Resto',
-                              style:
-                                  context.kTextTheme.headlineMedium!.copyWith(
-                                fontWeight: FontWeight.w700,
+                                'assets/svg/Scrooll_Tools.svg',
                               ),
                             ),
-                            const SizedBox(
-                              height: 20,
+                            const SizedBox(height: 20),
+                            const TopDetailsWidget(),
+                            const SizedBox(height: 20),
+                            Text(
+                              'Wijie Bar and Resto',
+                              style: context.kTextTheme.headlineMedium!
+                                  .copyWith(fontWeight: FontWeight.w700),
                             ),
+                            const SizedBox(height: 20),
                             Row(
                               children: [
                                 Row(
                                   children: [
                                     SvgPicture.asset(
-                                        'assets/svg/Icon_map_pin.svg'),
+                                      'assets/svg/Icon_map_pin.svg',
+                                    ),
                                     const SizedBox(width: 10),
                                     const Text(
                                       '19 Km',
-                                      style: AppText.textstyle14Regular,
+                                      // style: AppText.textstyle14Regular,
                                     ),
                                   ],
                                 ),
@@ -89,24 +80,21 @@ class _DetailproductState extends State<Detailproduct> {
                                 Row(
                                   children: [
                                     SvgPicture.asset(
-                                        'assets/svg/Icon_Star.svg'),
+                                      'assets/svg/Icon_Star.svg',
+                                    ),
                                     const SizedBox(width: 10),
-                                    const Text('4,8 Rating',
-                                        style: AppText.textstyle14Regular),
+                                    const Text('4,8 Rating'),
+                                    // style: AppText.textstyle14Regular),
                                   ],
                                 ),
                               ],
                             ),
-                            const SizedBox(
-                              height: 20,
-                            ),
+                            const SizedBox(height: 20),
                             Text(
                               'Most whole Alaskan Red King Crabs get broken down into\n legs, claws, and lump meat. We offer all of these options\n as well in our online shop, but there is nothing like getting\n the whole . . . .',
                               style: context.kTextTheme.labelMedium,
                             ),
-                            const SizedBox(
-                              height: 20,
-                            ),
+                            const SizedBox(height: 20),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -119,13 +107,12 @@ class _DetailproductState extends State<Detailproduct> {
                                   'ViewAll',
                                   style: context.kTextTheme.labelMedium!
                                       .copyWith(
-                                          color: AppColors.kArowBackground),
+                                        color: AppColors.kArowBackground,
+                                      ),
                                 ),
                               ],
                             ),
-                            const SizedBox(
-                              height: 20,
-                            ),
+                            const SizedBox(height: 20),
                             SizedBox(
                               height: 171,
                               child: ListView(
@@ -139,9 +126,7 @@ class _DetailproductState extends State<Detailproduct> {
                                     title: 'Spacy fresh crab',
                                     subTitle: r'12 $',
                                   ),
-                                  SizedBox(
-                                    width: 20,
-                                  ),
+                                  SizedBox(width: 20),
                                   PopulerMenuProfileWidget(
                                     blurImage:
                                         'assets/images/image_opacity_pizza.png',
@@ -150,9 +135,7 @@ class _DetailproductState extends State<Detailproduct> {
                                     title: 'Spacy fresh crab',
                                     subTitle: r'16 $',
                                   ),
-                                  SizedBox(
-                                    width: 20,
-                                  ),
+                                  SizedBox(width: 20),
                                   PopulerMenuProfileWidget(
                                     blurImage:
                                         'assets/images/image_opacity_meat.png',
@@ -160,9 +143,7 @@ class _DetailproductState extends State<Detailproduct> {
                                     title: 'Spacy fresh crab',
                                     subTitle: r'12 $',
                                   ),
-                                  SizedBox(
-                                    width: 20,
-                                  ),
+                                  SizedBox(width: 20),
                                   PopulerMenuProfileWidget(
                                     blurImage:
                                         'assets/images/image_opacity_pizza.png',
@@ -174,31 +155,24 @@ class _DetailproductState extends State<Detailproduct> {
                                 ],
                               ),
                             ),
-                            const SizedBox(
-                              height: 20,
-                            ),
+                            const SizedBox(height: 20),
                             Text(
                               'Testimonials',
-                              style: context.kTextTheme.titleSmall!
-                                  .copyWith(fontWeight: FontWeight.w700),
+                              style: context.kTextTheme.titleSmall!.copyWith(
+                                fontWeight: FontWeight.w700,
+                              ),
                             ),
-                            const SizedBox(
-                              height: 20,
-                            ),
+                            const SizedBox(height: 20),
                             const CardTextimonialsWidget(
                               titel: 'Assel',
                               imageAssets: 'assets/images/Assel.png',
                             ),
-                            const SizedBox(
-                              height: 20,
-                            ),
+                            const SizedBox(height: 20),
                             const CardTextimonialsWidget(
                               titel: 'Qassem',
                               imageAssets: 'assets/images/Qassem.png',
                             ),
-                            const SizedBox(
-                              height: 20,
-                            ),
+                            const SizedBox(height: 20),
                             const CardTextimonialsWidget(
                               titel: 'Zain',
                               imageAssets: 'assets/images/Zain.png',

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/extension/extension.dart';
+import '../../../../core/constant/app_colors.dart';
+import '../../../../core/extension/extension.dart';
 import 'package:pinput/pinput.dart';
 
 class OtpPinPutWidget extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/extension/extension.dart';
+import '../../../../core/constant/app_colors.dart';
+import '../../../../core/constant/app_images.dart';
+import '../../../../core/extension/extension.dart';
 
 class SetLocationWidget extends StatelessWidget {
   const SetLocationWidget({super.key});

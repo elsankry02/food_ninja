@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:food_ninja/core/components/custom_show_top_snakbar.dart';
-import 'package:food_ninja/core/components/custom_text_form_field.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/constant/app_svgs.dart';
-import 'package:food_ninja/core/extension/extension.dart';
-import 'package:food_ninja/features/presentation/notifiaction_page/view/notifiaction_page.dart';
+import 'custom_show_top_snakbar.dart';
+import 'custom_text_form_field.dart';
+import '../constant/app_colors.dart';
+import '../constant/app_images.dart';
+import '../constant/app_svgs.dart';
+import '../extension/extension.dart';
+import '../../features/presentation/notifiaction_page/view/notifiaction_page.dart';
 
 class CustomHomeAppbar extends StatelessWidget {
   final TextEditingController searchController;
@@ -62,6 +62,7 @@ class CustomHomeAppbar extends StatelessWidget {
             filled: true,
             fillColor: AppColors.kTextFiledColor,
             controller: searchController,
+            autofocus: false,
           ),
           trailing: GestureDetector(
             onTap: () => ErrorMessage(context, message: "COMING SOON"),

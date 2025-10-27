@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:food_ninja/core/components/custom_show_top_snakbar.dart';
-import 'package:food_ninja/core/components/custom_text_form_field.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/constant/app_svgs.dart';
-import 'package:food_ninja/features/presentation/sign_up_page/view/sign_up_page.dart';
-import 'package:food_ninja/features/presentation/otp_page/view/otp_page.dart';
+import '../../../../core/components/custom_show_top_snakbar.dart';
+import '../../../../core/components/custom_text_form_field.dart';
+import '../../../../core/constant/app_images.dart';
+import '../../../../core/constant/app_svgs.dart';
+import '../../otp_page/view/otp_page.dart';
+import '../../sign_up_page/view/sign_up_page.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_colors.dart';
@@ -87,6 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                           color: Colors.grey,
                         ),
                         controller: emailController,
+                        autofocus: true,
                       ),
                       SizedBox(height: context.height * 0.012),
                       CustomTextFormField(
@@ -101,6 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                         cursorColor: AppColors.kGrey,
                         controller: passwordController,
                         obscureText: isPassword ? false : true,
+                        autofocus: true,
                         suffixIcon: GestureDetector(
                           onTap: () {
                             setState(() {

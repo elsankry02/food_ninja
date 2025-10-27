@@ -1,10 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/components/custom_show_top_snakbar.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/extension/extension.dart';
-import 'package:food_ninja/features/data/model/special_deal_model.dart';
-import 'package:food_ninja/features/presentation/home_page/widgets/special_deal_for_october_widget.dart';
+import '../../../../core/components/custom_show_top_snakbar.dart';
+import '../../../../core/constant/app_colors.dart';
+import '../../../../core/extension/extension.dart';
+import '../../../data/model/special_deal_model.dart';
+import 'special_deal_for_october_widget.dart';
 
 class CarouselSliderWidget extends StatefulWidget {
   const CarouselSliderWidget({super.key});

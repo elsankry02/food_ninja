@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/components/custom_main_appbar_widget.dart';
 import '../../../../core/constant/app_colors.dart';
-import '../../../../core/constant/app_text.dart';
 import '../../../../core/extension/extension.dart';
 import 'edit_location_screen.dart';
 import 'edit_payments_screen.dart';
@@ -19,16 +18,17 @@ class PaymentCartScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            const MainAppBarWidget(
-              titelAppBarPage: 'Confirm Order',
-            ),
+            const MainAppBarWidget(titelAppBarPage: 'Confirm Order'),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Column(
                 children: [
                   Container(
-                    padding:
-                        const EdgeInsets.only(left: 12, right: 20, top: 19),
+                    padding: const EdgeInsets.only(
+                      left: 12,
+                      right: 20,
+                      top: 19,
+                    ),
                     width: double.infinity,
                     height: 108,
                     decoration: BoxDecoration(
@@ -40,9 +40,11 @@ class PaymentCartScreen extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text(
+                            Text(
                               'Deliver To',
-                              style: AppText.textstyle14Regular,
+                              style: context.kTextTheme.labelLarge!.copyWith(
+                                color: AppColors.kGrey,
+                              ),
                             ),
                             GestureDetector(
                               onTap: () => Navigator.of(context).push(
@@ -53,11 +55,12 @@ class PaymentCartScreen extends StatelessWidget {
                               ),
                               child: Text(
                                 'Edit',
-                                style: AppText.textstyle14Regular.copyWith(
-                                    color: AppColors.kPrimaryColor,
-                                    decoration: TextDecoration.underline,
-                                    decorationThickness: 3,
-                                    decorationColor: AppColors.kPrimaryColor),
+                                style: context.kTextTheme.labelLarge!.copyWith(
+                                  color: AppColors.kPrimaryColor,
+                                  decoration: TextDecoration.underline,
+                                  decorationThickness: 3,
+                                  decorationColor: AppColors.kPrimaryColor,
+                                ),
                               ),
                             ),
                           ],
@@ -67,39 +70,45 @@ class PaymentCartScreen extends StatelessWidget {
                           children: [
                             UnconstrainedBox(
                               child: SvgPicture.asset(
-                                  'assets/svg/Icon_Location.svg'),
+                                'assets/svg/Icon_Location.svg',
+                              ),
                             ),
                             const SizedBox(width: 14),
                             Text(
                               '4517 Washington Ave. Manchester,\n Kentucky 39495',
                               style: context.kTextTheme.titleSmall!.copyWith(
-                                  fontWeight: FontWeight.w500,
-                                  color: theme.hintColor),
+                                fontWeight: FontWeight.w500,
+                                color: theme.hintColor,
+                              ),
                             ),
                           ],
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  const SizedBox(height: 20),
                   Container(
-                    padding:
-                        const EdgeInsets.only(left: 12, right: 20, top: 19),
+                    padding: const EdgeInsets.only(
+                      left: 12,
+                      right: 20,
+                      top: 19,
+                    ),
                     width: double.infinity,
                     height: 108,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(22),
-                        color: theme.primaryColor),
+                      borderRadius: BorderRadius.circular(22),
+                      color: theme.primaryColor,
+                    ),
                     child: Column(
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text(
+                            Text(
                               'Payment Method',
-                              style: AppText.textstyle14Regular,
+                              style: context.kTextTheme.labelLarge!.copyWith(
+                                color: AppColors.kGrey,
+                              ),
                             ),
                             GestureDetector(
                               onTap: () => Navigator.of(context).push(
@@ -110,11 +119,12 @@ class PaymentCartScreen extends StatelessWidget {
                               ),
                               child: Text(
                                 'Edit',
-                                style: AppText.textstyle14Regular.copyWith(
-                                    color: AppColors.kPrimaryColor,
-                                    decoration: TextDecoration.underline,
-                                    decorationThickness: 3,
-                                    decorationColor: AppColors.kPrimaryColor),
+                                style: context.kTextTheme.labelLarge!.copyWith(
+                                  color: AppColors.kPrimaryColor,
+                                  decoration: TextDecoration.underline,
+                                  decorationThickness: 3,
+                                  decorationColor: AppColors.kPrimaryColor,
+                                ),
                               ),
                             ),
                           ],
@@ -129,8 +139,9 @@ class PaymentCartScreen extends StatelessWidget {
                             const SizedBox(width: 14),
                             Text(
                               '2121 6352 8465 ****',
-                              style: AppText.textstyle14Regular
-                                  .copyWith(color: theme.hintColor),
+                              style: context.kTextTheme.labelLarge!.copyWith(
+                                color: AppColors.kGrey,
+                              ),
                             ),
                           ],
                         ),

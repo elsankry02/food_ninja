@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/components/custom_icon_back.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/features/presentation/navbar_page/navbar_page.dart';
-import 'package:food_ninja/features/presentation/sign_up_page/view/signup_process_page.dart';
+import '../../../../core/components/custom_icon_back.dart';
+import '../../../../core/constant/app_images.dart';
+import '../../navbar_page/navbar_page.dart';
+import '../../sign_up_page/view/signup_process_page.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_colors.dart';

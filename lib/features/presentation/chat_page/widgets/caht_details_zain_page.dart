@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/constant/app_colors.dart';
-import '../../../../core/constant/app_text.dart';
 import '../../../../core/extension/extension.dart';
 import 'call_ranging.dart';
 import 'chat_widget.dart';
@@ -15,8 +14,9 @@ class CahtDetailsDianneRussellPage extends StatelessWidget {
     return Scaffold(
       body: CustomChatDetailsWidget(
         onTapCall: () {
-          Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const CallRanging()));
+          Navigator.of(
+            context,
+          ).push(MaterialPageRoute(builder: (context) => const CallRanging()));
         },
         titelPerson: 'Zain',
         assetNamePerson: 'assets/images/Zain.png',
@@ -26,11 +26,12 @@ class CahtDetailsDianneRussellPage extends StatelessWidget {
 }
 
 class CustomChatDetailsWidget extends StatelessWidget {
-  const CustomChatDetailsWidget(
-      {super.key,
-      required this.titelPerson,
-      required this.assetNamePerson,
-      this.onTapCall});
+  const CustomChatDetailsWidget({
+    super.key,
+    required this.titelPerson,
+    required this.assetNamePerson,
+    this.onTapCall,
+  });
   final String titelPerson;
   final String assetNamePerson;
   final void Function()? onTapCall;
@@ -55,21 +56,20 @@ class CustomChatDetailsWidget extends StatelessWidget {
                     onTap: Navigator.of(context).pop,
                     child: SvgPicture.asset('assets/svg/Icon_Back.svg'),
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  const SizedBox(height: 20),
                   Text(
                     'Chat',
                     style: context.kTextTheme.headlineSmall!.copyWith(
-                        fontWeight: FontWeight.w700,
-                        color: context.kChangeTheme.hintColor),
+                      fontWeight: FontWeight.w700,
+                      color: context.kChangeTheme.hintColor,
+                    ),
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  const SizedBox(height: 20),
                   Container(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 13, vertical: 20),
+                      horizontal: 13,
+                      vertical: 20,
+                    ),
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(22),
@@ -87,18 +87,17 @@ class CustomChatDetailsWidget extends StatelessWidget {
                         children: [
                           Text(
                             titelPerson,
-                            style: context.kTextTheme.titleSmall!
-                                .copyWith(fontWeight: FontWeight.w500),
+                            style: context.kTextTheme.titleSmall!.copyWith(
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                           Row(
                             children: [
                               SvgPicture.asset('assets/svg/Ellipse_184.svg'),
-                              const SizedBox(
-                                width: 4,
-                              ),
+                              const SizedBox(width: 4),
                               const Text(
                                 'Online',
-                                style: AppText.textstyle14Regular,
+                                // style: AppText.textstyle14Regular,
                               ),
                             ],
                           ),
@@ -110,17 +109,13 @@ class CustomChatDetailsWidget extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 40,
-                  ),
+                  const SizedBox(height: 40),
                   ChatWidget(
                     titel: 'Just to order',
                     textColor: theme.hintColor,
                     containerColor: theme.primaryColor,
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  const SizedBox(height: 20),
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -131,17 +126,13 @@ class CustomChatDetailsWidget extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  const SizedBox(height: 20),
                   ChatWidget(
                     titel: 'Okay, wait a minute 👍',
                     textColor: theme.hintColor,
                     containerColor: theme.primaryColor,
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  const SizedBox(height: 20),
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -155,7 +146,9 @@ class CustomChatDetailsWidget extends StatelessWidget {
                   const Spacer(),
                   Container(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 25, vertical: 20),
+                      horizontal: 25,
+                      vertical: 20,
+                    ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(22),
                       color: theme.primaryColor,
@@ -165,8 +158,8 @@ class CustomChatDetailsWidget extends StatelessWidget {
                       children: [
                         Text(
                           "Okay I'm waiting  👍",
-                          style: AppText.textstyle14Regular
-                              .copyWith(color: theme.hintColor),
+                          // style: AppText.textstyle14Regular
+                          //     .copyWith(color: theme.hintColor),
                         ),
                         SvgPicture.asset('assets/svg/Icon_Send.svg'),
                       ],

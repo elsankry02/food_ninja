@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/components/custom_restaurant_widget.dart';
 import '../../../../core/extension/extension.dart';
 import '../../../data/model/populer_restaurant_card_model.dart';
-import '../../popular_menu_page/widget/populer_restaurant_card_widget.dart';
 import '../widgets/show_model_bottom_sheet_widget.dart';
 
 class CartPage extends StatefulWidget {
@@ -49,7 +49,11 @@ class _CartPageState extends State<CartPage> {
                             ),
                         itemCount: populerRestaurantCardModel.length,
                         itemBuilder: (context, index) {
-                          return PopulerRestaurantCardWidget(index: index);
+                          return CustomRestaurantWidget(
+                            title: '',
+                            subTitle: '',
+                            image: '',
+                          );
                         },
                       ),
                     ),

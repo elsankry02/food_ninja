@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../core/components/custom_primary_button.dart';
 import '../../../core/constant/app_colors.dart';
-import '../../../core/constant/app_text.dart';
 import '../../../core/extension/extension.dart';
 import '../success_notification_page/success_notification_page.dart';
 
@@ -49,7 +48,9 @@ class _PasswordPageState extends State<PasswordPage> {
                     ),
                   ),
                   hintText: 'New Password',
-                  hintStyle: AppText.textstyle14Regular,
+                  hintStyle: context.kTextTheme.labelLarge!.copyWith(
+                    color: AppColors.kGrey,
+                  ),
                   filled: true,
                   fillColor: theme.primaryColor,
                   enabledBorder: outlineInputBorder(theme.primaryColor),
@@ -77,7 +78,9 @@ class _PasswordPageState extends State<PasswordPage> {
                     ),
                   ),
                   hintText: 'Confirm Password',
-                  hintStyle: AppText.textstyle14Regular,
+                  hintStyle: context.kTextTheme.labelLarge!.copyWith(
+                    color: AppColors.kGrey,
+                  ),
                   filled: true,
                   fillColor: theme.primaryColor,
                   enabledBorder: outlineInputBorder(theme.primaryColor),

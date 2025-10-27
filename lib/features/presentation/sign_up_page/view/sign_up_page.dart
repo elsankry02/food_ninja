@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/constant/app_svgs.dart';
-import 'package:food_ninja/features/presentation/otp_page/view/otp_page.dart';
+import '../../../../core/constant/app_images.dart';
+import '../../../../core/constant/app_svgs.dart';
+import '../../otp_page/view/otp_page.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/components/custom_text_form_field.dart';
@@ -81,6 +81,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           AppSvgs.kMessage,
                           fit: BoxFit.scaleDown,
                         ),
+                        autofocus: true,
                         cursorColor: AppColors.kGrey,
                         hintStyle: context.kTextTheme.labelLarge!.copyWith(
                           color: Colors.grey,
@@ -90,6 +91,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       SizedBox(height: context.height * 0.012),
                       CustomTextFormField(
                         hintText: 'Password',
+                        autofocus: true,
                         hintStyle: context.kTextTheme.labelLarge!.copyWith(
                           color: Colors.grey,
                         ),

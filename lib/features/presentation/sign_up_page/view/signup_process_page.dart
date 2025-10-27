@@ -2,12 +2,12 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:food_ninja/core/components/custom_icon_back.dart';
-import 'package:food_ninja/core/components/custom_text_form_field.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/constant/app_svgs.dart';
-import 'package:food_ninja/features/presentation/navbar_page/navbar_page.dart';
-import 'package:food_ninja/features/presentation/sign_up_page/widget/upload_photo_widget.dart';
+import '../../../../core/components/custom_icon_back.dart';
+import '../../../../core/components/custom_text_form_field.dart';
+import '../../../../core/constant/app_images.dart';
+import '../../../../core/constant/app_svgs.dart';
+import '../../navbar_page/navbar_page.dart';
+import '../widget/upload_photo_widget.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
@@ -126,6 +126,7 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
               SizedBox(height: context.height * 0.020),
               CustomTextFormField(
                 hintText: 'Name',
+                autofocus: true,
                 prefixIcon: SvgPicture.asset(
                   AppSvgs.kProfile,
                   fit: BoxFit.scaleDown,
@@ -138,6 +139,7 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
               ),
               SizedBox(height: context.height * 0.020),
               CustomTextFormField(
+                autofocus: true,
                 hintText: 'User Name',
                 prefixIcon: SvgPicture.asset(
                   AppSvgs.kProfile,

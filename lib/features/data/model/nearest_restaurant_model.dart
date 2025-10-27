@@ -1,33 +1,64 @@
-class NearestRestaurantModel {
-  final String imageCard;
-  final String titelText;
-  final String supTitel;
+import '../../../core/constant/app_images.dart';
 
-  NearestRestaurantModel(
-      {required this.imageCard,
-      required this.titelText,
-      required this.supTitel});
+class NearestRestaurantModel {
+  final String image, title, subTitle;
+
+  NearestRestaurantModel({
+    required this.image,
+    required this.title,
+    required this.subTitle,
+  });
 }
 
-List<NearestRestaurantModel> restaurantList = [
+List<NearestRestaurantModel> nearestRestaurantitem = [
   NearestRestaurantModel(
-    imageCard: 'assets/images/ResturantVagan.png',
-    titelText: 'Vegan Resto',
-    supTitel: '12 Mins',
+    image: AppImages.kDefultPhoto,
+    title: 'Good Food',
+    subTitle: '22 Mins',
   ),
   NearestRestaurantModel(
-    imageCard: 'assets/images/Restaurant_Cheef.png',
-    titelText: 'Vegan Resto',
-    supTitel: '8 Mins',
+    image: AppImages.kDefultPhoto,
+    title: 'Healthy Food',
+    subTitle: '24 Mins',
   ),
   NearestRestaurantModel(
-    imageCard: 'assets/images/ResturantVagan.png',
-    titelText: 'Vegan Resto',
-    supTitel: '12 Mins',
+    image: AppImages.kDefultPhoto,
+    title: 'Smart Resto',
+    subTitle: '5 Mins',
   ),
   NearestRestaurantModel(
-    imageCard: 'assets/images/Restaurant_Cheef.png',
-    titelText: 'Vegan Resto',
-    supTitel: '8 Mins',
+    image: AppImages.kDefultPhoto,
+    title: 'Vegan Resto',
+    subTitle: '9 Mins',
+  ),
+  NearestRestaurantModel(
+    image: AppImages.kDefultPhoto,
+    title: 'Good Food',
+    subTitle: '13 Mins',
+  ),
+  NearestRestaurantModel(
+    image: AppImages.kDefultPhoto,
+    title: 'Healthy Food',
+    subTitle: '18 Mins',
+  ),
+  NearestRestaurantModel(
+    image: AppImages.kDefultPhoto,
+    title: 'Smart Resto',
+    subTitle: '17 Mins',
+  ),
+  NearestRestaurantModel(
+    image: AppImages.kDefultPhoto,
+    title: 'Vegan Resto',
+    subTitle: '19 Mins',
+  ),
+  NearestRestaurantModel(
+    image: AppImages.kDefultPhoto,
+    title: 'Good Food',
+    subTitle: '8 Mins',
+  ),
+  NearestRestaurantModel(
+    image: AppImages.kDefultPhoto,
+    title: 'pizza',
+    subTitle: '6 Mins',
   ),
 ];

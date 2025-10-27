@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/constant/app_text.dart';
 import '../../../../core/extension/extension.dart';
 
 class MassageProfileWidget extends StatefulWidget {
@@ -24,16 +23,16 @@ class _MassageProfileWidgetState extends State<MassageProfileWidget> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return ListTile(
-      leading: Image.asset(
-        widget.image,
-      ),
+      leading: Image.asset(widget.image),
       title: Row(
         children: [
           Expanded(
             child: Text(
               widget.title,
               style: context.kTextTheme.titleSmall!.copyWith(
-                  fontWeight: FontWeight.w600, color: theme.hintColor),
+                fontWeight: FontWeight.w600,
+                color: theme.hintColor,
+              ),
             ),
           ),
           GestureDetector(
@@ -62,7 +61,7 @@ class _MassageProfileWidgetState extends State<MassageProfileWidget> {
       ),
       subtitle: const Text(
         'Display Now !',
-        style: AppText.textstyle14Regular,
+        // style: AppText.textstyle14Regular,
       ),
     );
   }
