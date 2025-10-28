@@ -7,7 +7,7 @@ import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/extension/extension.dart';
-import '../../navbar_page/navbar_page.dart';
+import '../../main_page/main_page.dart';
 import '../../sign_up_page/view/signup_process_page.dart';
 import '../widget/otp_pin_put_widget.dart';
 
@@ -178,7 +178,7 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
                       if (widget.isSelected == false) {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => const NavBarPage(),
+                            builder: (context) => const MainPage(),
                           ),
                         );
                       } else {

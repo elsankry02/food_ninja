@@ -4,7 +4,7 @@ import '../../../core/components/custom_primary_button.dart';
 import '../../../core/components/custom_success_notification_widget.dart';
 import '../../../core/constant/app_colors.dart';
 import '../../../core/extension/extension.dart';
-import '../navbar_page/navbar_page.dart';
+import '../main_page/main_page.dart';
 
 class SignupSuccessNotificationPage extends StatelessWidget {
   const SignupSuccessNotificationPage({super.key});
@@ -34,7 +34,7 @@ class SignupSuccessNotificationPage extends StatelessWidget {
           GestureDetector(
             onTap: () => Navigator.of(
               context,
-            ).push(MaterialPageRoute(builder: (context) => const NavBarPage())),
+            ).push(MaterialPageRoute(builder: (context) => const MainPage())),
             child: UnconstrainedBox(
               child: CustomPrimaryButton(
                 title: 'Try Order',

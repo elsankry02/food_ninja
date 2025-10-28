@@ -11,7 +11,7 @@ import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/constant/app_svgs.dart';
 import '../../../../core/extension/extension.dart';
-import '../../navbar_page/navbar_page.dart';
+import '../../main_page/main_page.dart';
 import '../widget/upload_photo_widget.dart';
 
 class SignupProcessPage extends StatefulWidget {
@@ -170,7 +170,7 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
                 ),
                 borderRadius: BorderRadius.circular(context.height * 0.015),
                 onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const NavBarPage()),
+                  MaterialPageRoute(builder: (context) => const MainPage()),
                 ),
               ),
             ],

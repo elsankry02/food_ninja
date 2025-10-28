@@ -5,7 +5,7 @@ import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/extension/extension.dart';
-import '../../navbar_page/navbar_page.dart';
+import '../../main_page/main_page.dart';
 import '../widget/set_location_widget.dart';
 
 class SetLocationPage extends StatelessWidget {
@@ -72,7 +72,7 @@ class SetLocationPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(context.height * 0.015),
                 onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const NavBarPage()),
+                  MaterialPageRoute(builder: (context) => const MainPage()),
                 ),
               ),
             ],

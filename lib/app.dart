@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'features/presentation/navbar_page/navbar_page.dart';
+import 'features/presentation/main_page/main_page.dart';
 
 class FoodNinja extends StatelessWidget {
   const FoodNinja({super.key});
@@ -10,7 +10,7 @@ class FoodNinja extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: "Viga"),
-      home: const NavBarPage(),
+      home: const MainPage(),
     );
   }
 }
