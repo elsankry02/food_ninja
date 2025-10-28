@@ -48,6 +48,7 @@ class _PopularMenuPageState extends State<PopularMenuPage> {
                 SizedBox(height: context.height * 0.010),
                 Expanded(
                   child: ListView.builder(
+                    padding: EdgeInsets.zero,
                     physics: BouncingScrollPhysics(),
                     itemCount: populerRestaurantCardModel.length,
                     itemBuilder: (context, index) {

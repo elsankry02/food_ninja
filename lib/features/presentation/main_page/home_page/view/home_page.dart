@@ -41,7 +41,6 @@ class _HomePageState extends State<HomePage> {
               end: context.height * 0.020,
               top: context.height * 0.060,
             ),
-            physics: BouncingScrollPhysics(),
             children: [
               CustomHomeAppbar(searchController: searchController),
               CarouselSliderWidget(),
@@ -58,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                   CustomPrimaryButton(
                     title: 'View More',
                     style: context.kTextTheme.labelMedium!.copyWith(
-                      color: AppColors.kSecondaryGold,
+                      color: AppColors.kSecondColor,
                     ),
                     onTap: () => Navigator.of(context).push(
                       MaterialPageRoute(
@@ -106,7 +105,7 @@ class _HomePageState extends State<HomePage> {
                   CustomPrimaryButton(
                     title: 'View More',
                     style: context.kTextTheme.labelMedium!.copyWith(
-                      color: AppColors.kSecondaryGold,
+                      color: AppColors.kSecondColor,
                     ),
                     onTap: () => Navigator.of(context).push(
                       MaterialPageRoute(

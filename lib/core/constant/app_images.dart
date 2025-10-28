@@ -7,6 +7,8 @@ class AppImages {
   static const kPatternBackground = 'assets/images/background-pattern.png';
   static const kPatternButtonSheet = 'assets/images/pattern-button-sheet.png';
   static const kLogo = 'assets/images/Logo.png';
+  static const kIconPlus = 'assets/images/Icon-plus.png';
+  static const kIconMinus = 'assets/images/Icon-minus.png';
   static const kIconBack = 'assets/images/Icon-back.png';
   static const kDefultPhoto = 'assets/images/defult_photo.png';
   static const kMintDark = 'assets/images/Mint_Dark.png';

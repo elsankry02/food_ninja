@@ -1,86 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja/core/constant/app_colors.dart';
+import 'package:food_ninja/core/constant/app_images.dart';
 
 import '../../../../../core/extension/extension.dart';
-import '../widgets/caht_details_qassem_page.dart';
-import '../widgets/caht_details_zain_page.dart';
-import '../widgets/chat_details_lillian_page.dart';
-import '../widgets/massage_widget.dart';
 
-class Chat extends StatelessWidget {
+class Chat extends StatefulWidget {
   const Chat({super.key});
 
   @override
+  State<Chat> createState() => _ChatState();
+}
+
+class _ChatState extends State<Chat> {
+  int count = 1;
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Stack(
         children: [
-          Stack(
+          Image.asset(AppImages.kPatternBackground, fit: BoxFit.cover),
+          ListView(
+            padding: EdgeInsetsDirectional.only(
+              start: context.height * 0.020,
+              end: context.height * 0.020,
+              top: context.height * 0.060,
+            ),
             children: [
-              Image.asset(
-                'assets/images/PatternTopRight.png',
-                width: double.infinity,
-                fit: BoxFit.fill,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(
-                      height: 60,
-                    ),
-                    Text(
-                      'Chat',
-                      style: context.kTextTheme.headlineSmall!
-                          .copyWith(fontWeight: FontWeight.w700),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    GestureDetector(
-                      onTap: () => Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              const CahtDetailsDianneRussellPage(),
-                        ),
-                      ),
-                      child: const MassageChatWidget(
-                        image: 'assets/images/Zain.png',
-                        titel: 'Zain',
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    GestureDetector(
-                      onTap: () => Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => const CahtDetailsQassemPage(),
-                        ),
-                      ),
-                      child: const MassageChatWidget(
-                        image: 'assets/images/Qassem.png',
-                        titel: 'Qassem',
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    GestureDetector(
-                      onTap: () => Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              const ChatDetailsLesliealexanderPage(),
-                        ),
-                      ),
-                      child: const MassageChatWidget(
-                        image: 'assets/images/Lillian.png',
-                        titel: 'Lillian',
-                      ),
-                    ),
-                  ],
+              Text(
+                'chat',
+                style: context.kTextTheme.headlineLarge!.copyWith(
+                  fontWeight: FontWeight.w700,
+                  color: AppColors.kTitle,
                 ),
               ),
+              SizedBox(height: context.height * 0.020),
             ],
           ),
         ],

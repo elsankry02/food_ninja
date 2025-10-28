@@ -4,8 +4,7 @@ import '../constant/app_colors.dart';
 import '../extension/extension.dart';
 
 class CustomPopularMenuWidget extends StatelessWidget {
-  final String image, title, subTitle;
-  final double price;
+  final String image, title, subTitle, price;
   final void Function()? onTap;
   const CustomPopularMenuWidget({
     super.key,
@@ -44,10 +43,10 @@ class CustomPopularMenuWidget extends StatelessWidget {
           child: Image.asset(image, fit: BoxFit.cover),
         ),
         trailing: Text(
-          "\$$price",
+          "\$ $price",
           style: context.kTextTheme.titleLarge!.copyWith(
             fontWeight: FontWeight.w700,
-            color: AppColors.kSecondaryGold,
+            color: AppColors.kSecondColor,
           ),
         ),
       ),

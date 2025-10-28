@@ -48,11 +48,11 @@ class _NearestRestaurantPageState extends State<NearestRestaurantPage> {
                 SizedBox(height: context.height * 0.010),
                 Expanded(
                   child: GridView.builder(
-                    physics: BouncingScrollPhysics(),
+                    padding: EdgeInsets.zero,
                     itemCount: nearestRestaurantitem.length,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      mainAxisSpacing: context.height * 0.010,
+                      mainAxisSpacing: context.height * 0.020,
                       crossAxisSpacing: context.height * 0.020,
                     ),
                     itemBuilder: (context, index) {

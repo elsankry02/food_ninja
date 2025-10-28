@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja/core/constant/app_colors.dart';
+import 'package:food_ninja/core/constant/app_images.dart';
+import 'package:food_ninja/features/presentation/main_page/cart_page/widgets/cart_details_widget.dart';
+import 'package:food_ninja/features/presentation/main_page/cart_page/widgets/cart_summary_widget.dart';
 
-import '../../../../../core/components/custom_restaurant_widget.dart';
 import '../../../../../core/extension/extension.dart';
-import '../../../../data/model/populer_restaurant_card_model.dart';
-import '../widgets/show_model_bottom_sheet_widget.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({super.key});
@@ -13,58 +14,61 @@ class CartPage extends StatefulWidget {
 }
 
 class _CartPageState extends State<CartPage> {
+  int count = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: Stack(
         children: [
-          Stack(
+          Image.asset(AppImages.kPatternBackground, fit: BoxFit.cover),
+          ListView(
+            padding: EdgeInsetsDirectional.only(
+              start: context.height * 0.020,
+              end: context.height * 0.020,
+              top: context.height * 0.060,
+            ),
             children: [
-              Image.asset(
-                'assets/images/PatternTopRight.png',
-                width: double.infinity,
-                fit: BoxFit.cover,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(height: 60),
-                    Text(
-                      'Cart',
-                      style: context.kTextTheme.headlineSmall!.copyWith(
-                        fontWeight: FontWeight.w700,
-                        color: context.kChangeTheme.hintColor,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 700,
-                      child: GridView.builder(
-                        scrollDirection: Axis.vertical,
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2,
-                            ),
-                        itemCount: populerRestaurantCardModel.length,
-                        itemBuilder: (context, index) {
-                          return CustomRestaurantWidget(
-                            title: '',
-                            subTitle: '',
-                            image: '',
-                          );
-                        },
-                      ),
-                    ),
-                  ],
+              Text(
+                'Cart',
+                style: context.kTextTheme.headlineLarge!.copyWith(
+                  fontWeight: FontWeight.w700,
+                  color: AppColors.kTitle,
                 ),
               ),
+              SizedBox(height: context.height * 0.020),
+              SizedBox(
+                height: context.height * 0.500,
+                child: ListView.builder(
+                  padding: EdgeInsets.zero,
+                  itemCount: 6,
+                  itemBuilder: (context, index) {
+                    return CartDetailsWidget(
+                      image: AppImages.kDefultPhoto,
+                      title: "Spacy fresh crab",
+                      subtitle: "Waroenk kita",
+                      price: "35",
+                      count: "$count",
+                      plusOnTap: () {
+                        setState(() {
+                          count++;
+                        });
+                      },
+                      minusOnTap: () {
+                        if (count > 1) {
+                          setState(() {
+                            count--;
+                          });
+                        }
+                      },
+                    );
+                  },
+                ),
+              ),
+              SizedBox(height: context.height * 0.020),
+              CartSummaryWidget(),
+              SizedBox(height: context.height * 0.020),
             ],
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: ShowModalBottomSheetWidget(),
           ),
         ],
       ),
