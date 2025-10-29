@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/components/custom_populer_menu_widget.dart';
-import 'package:food_ninja/features/data/model/nearest_restaurant_model.dart';
-import 'package:food_ninja/features/data/model/populer_restaurant_card_model.dart';
+import '../../../../../core/components/custom_populer_menu_widget.dart';
+import '../../../../data/model/nearest_restaurant_model.dart';
+import '../../../../data/model/populer_restaurant_card_model.dart';
 
 import '../../../../../core/components/custom_home_appbar.dart';
 import '../../../../../core/components/custom_primary_button.dart';

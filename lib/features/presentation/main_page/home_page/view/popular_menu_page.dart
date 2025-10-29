@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/components/custom_populer_menu_widget.dart';
+import '../../../../../core/components/custom_populer_menu_widget.dart';
 
 import '../../../../../core/components/custom_home_appbar.dart';
 import '../../../../../core/components/custom_show_top_snakbar.dart';

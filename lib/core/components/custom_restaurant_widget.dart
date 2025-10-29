@@ -33,12 +33,7 @@ class CustomRestaurantWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              image,
-              height: context.height * 0.073,
-              width: context.height * 0.096,
-              fit: BoxFit.cover,
-            ),
+            Image.asset(image, fit: BoxFit.cover),
             SizedBox(height: context.height * 0.017),
             Text(
               title,

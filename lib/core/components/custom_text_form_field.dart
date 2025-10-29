@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+
 import '../constant/app_colors.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final String hintText;
-  final bool obscureText;
+  final bool obscureText, autofocus;
   final bool? filled;
   final AutovalidateMode? autovalidateMode;
   final TextInputType? keyboardType;
@@ -14,7 +15,7 @@ class CustomTextFormField extends StatelessWidget {
   final Function(String value)? onChanged, onFieldSubmitted;
   final String? Function(String? value)? validator;
   final Color? cursorColor, suffixIconColor, prefixIconColor, fillColor;
-  final bool autofocus;
+
   const CustomTextFormField({
     super.key,
     required this.hintText,
@@ -34,7 +35,7 @@ class CustomTextFormField extends StatelessWidget {
     this.obscureText = false,
     this.filled,
     this.fillColor,
-    required this.autofocus,
+    this.autofocus = false,
   });
   @override
   Widget build(BuildContext context) {

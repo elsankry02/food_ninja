@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/extension/extension.dart';
+import '../../../../../core/constant/app_colors.dart';
+import '../../../../../core/constant/app_images.dart';
+import '../../../../../core/extension/extension.dart';
 
 class CartDetailsWidget extends StatelessWidget {
   final String image, title, subtitle, price, count;
@@ -21,10 +21,7 @@ class CartDetailsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsetsDirectional.only(bottom: context.height * 0.010),
-      padding: EdgeInsets.symmetric(
-        vertical: context.height * 0.010,
-        horizontal: context.height * 0.010,
-      ),
+      padding: EdgeInsets.symmetric(horizontal: context.height * 0.010),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(context.height * 0.022),
         color: AppColors.kWhite,

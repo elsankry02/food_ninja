@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/constant/app_svgs.dart';
-import 'package:food_ninja/core/extension/extension.dart';
+import '../../../core/constant/app_images.dart';
+import '../../../core/constant/app_svgs.dart';
+import '../../../core/extension/extension.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 import '../../../core/constant/app_colors.dart';

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/features/presentation/main_page/cart_page/widgets/cart_details_widget.dart';
-import 'package:food_ninja/features/presentation/main_page/cart_page/widgets/cart_summary_widget.dart';
+import '../../../../../core/constant/app_colors.dart';
+import '../../../../../core/constant/app_images.dart';
+import '../widgets/cart_details_widget.dart';
+import '../widgets/cart_summary_widget.dart';
 
 import '../../../../../core/extension/extension.dart';
 

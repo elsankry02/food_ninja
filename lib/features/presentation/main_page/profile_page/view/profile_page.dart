@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/components/custom_show_top_snakbar.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/features/presentation/main_page/profile_page/widget/list_tile_items.dart';
-import 'package:food_ninja/features/presentation/main_page/profile_page/widget/profile_list_tile_widget.dart';
+import '../../../../../core/components/custom_show_top_snakbar.dart';
+import '../../../../../core/constant/app_colors.dart';
+import '../../../../../core/constant/app_images.dart';
+import '../widget/list_tile_items.dart';
+import '../widget/profile_list_tile_widget.dart';
 
 import '../../../../../core/extension/extension.dart';
 

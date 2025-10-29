@@ -13,31 +13,31 @@ class PopulerRestaurantCardModel {
 
 List<PopulerRestaurantCardModel> populerRestaurantCardModel = [
   PopulerRestaurantCardModel(
-    image: AppImages.kDefultPhoto,
+    image: AppImages.kMeat,
     title: 'Healthy Food',
     subTitle: '18 Mins',
     price: "17.5",
   ),
   PopulerRestaurantCardModel(
-    image: AppImages.kDefultPhoto,
+    image: AppImages.kMeat,
     title: 'Smart Resto',
     subTitle: '17 Mins',
     price: "16",
   ),
   PopulerRestaurantCardModel(
-    image: AppImages.kDefultPhoto,
+    image: AppImages.kMeat,
     title: 'Vegan Resto',
     subTitle: '19 Mins',
     price: "21",
   ),
   PopulerRestaurantCardModel(
-    image: AppImages.kDefultPhoto,
+    image: AppImages.kMeat,
     title: 'Good Food',
     subTitle: '8 Mins',
     price: "14.5",
   ),
   PopulerRestaurantCardModel(
-    image: AppImages.kDefultPhoto,
+    image: AppImages.kMeat,
     title: 'Pizza',
     subTitle: '6 Mins',
     price: "25",

@@ -5,6 +5,7 @@ import '../extension/extension.dart';
 class CustomPrimaryButton extends StatelessWidget {
   final String title;
   final BoxBorder? border;
+  final TextAlign? textAlign;
   final Color? backGroundColor;
   final EdgeInsetsGeometry? margin, padding;
   final BorderRadiusGeometry? borderRadius;
@@ -24,6 +25,7 @@ class CustomPrimaryButton extends StatelessWidget {
     this.isLoading = false,
     this.border,
     this.borderRadius,
+    this.textAlign = TextAlign.center,
   });
   @override
   Widget build(BuildContext context) {
@@ -53,7 +55,7 @@ class CustomPrimaryButton extends StatelessWidget {
                     ),
                   ),
                 )
-              : Text(title, textAlign: TextAlign.center, style: style),
+              : Text(title, textAlign: textAlign, style: style),
         ),
       ),
     );
