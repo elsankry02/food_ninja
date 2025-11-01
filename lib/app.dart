@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'features/presentation/main_page/main_page.dart';
+import 'package:food_ninja/features/presentation/splash_page/splash_page.dart';
 
 class FoodNinja extends StatelessWidget {
   const FoodNinja({super.key});
@@ -10,7 +9,7 @@ class FoodNinja extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: "Viga"),
-      home: const MainPage(),
+      home: const SplashPage(),
     );
   }
 }

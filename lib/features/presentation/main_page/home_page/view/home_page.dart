@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/components/custom_populer_menu_widget.dart';
-import '../../../../data/model/nearest_restaurant_model.dart';
-import '../../../../data/model/populer_restaurant_card_model.dart';
 
 import '../../../../../core/components/custom_home_appbar.dart';
+import '../../../../../core/components/custom_populer_menu_widget.dart';
 import '../../../../../core/components/custom_primary_button.dart';
 import '../../../../../core/components/custom_restaurant_widget.dart';
 import '../../../../../core/components/custom_show_top_snakbar.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
+import '../../../../data/model/nearest_restaurant_model.dart';
+import '../../../../data/model/populer_restaurant_card_model.dart';
 import '../widgets/carousel_slider_widget.dart';
 import 'nearest_restaurant_page.dart';
 import 'popular_menu_page.dart';

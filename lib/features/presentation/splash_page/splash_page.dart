@@ -5,14 +5,14 @@ import 'package:food_ninja/core/constant/app_images.dart';
 import 'package:food_ninja/core/extension/extension.dart';
 import 'package:food_ninja/features/presentation/onboarding_page/onboarding_page.dart';
 
-class SplashView extends StatefulWidget {
-  const SplashView({super.key});
+class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
 
   @override
-  State<SplashView> createState() => _SplashViewState();
+  State<SplashPage> createState() => _SplashPageState();
 }
 
-class _SplashViewState extends State<SplashView> {
+class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     splashFoodNinja();

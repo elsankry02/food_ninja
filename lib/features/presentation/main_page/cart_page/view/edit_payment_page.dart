@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/components/custom_icon_back.dart';
+import '../../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../../core/components/custom_payment_widget.dart';
 import '../../../../../core/components/custom_show_top_snakbar.dart';
 import '../../../../../core/constant/app_colors.dart';
@@ -44,7 +44,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  CustomIconButton(
+                  CustomIconButtonPop(
                     icon: Image.asset(
                       AppImages.kIconBack,
                       fit: BoxFit.scaleDown,

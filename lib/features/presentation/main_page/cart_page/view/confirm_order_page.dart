@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../../../core/components/custom_icon_back.dart';
+
+import '../../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../../core/components/custom_primary_button.dart';
+import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/constant/app_svgs.dart';
-import 'edit_payment_page.dart';
-import 'edit_location_page.dart';
-
-import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/extension/extension.dart';
+import 'edit_location_page.dart';
+import 'edit_payment_page.dart';
 
 class ConfirmOrderPage extends StatelessWidget {
   const ConfirmOrderPage({super.key});
@@ -25,12 +25,11 @@ class ConfirmOrderPage extends StatelessWidget {
               end: context.height * 0.020,
               top: context.height * 0.060,
             ),
-            physics: const BouncingScrollPhysics(),
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  CustomIconButton(
+                  CustomIconButtonPop(
                     icon: Image.asset(
                       AppImages.kIconBack,
                       fit: BoxFit.scaleDown,

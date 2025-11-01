@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import '../../../../core/components/custom_icon_back.dart';
+import '../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
@@ -72,7 +72,7 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    CustomIconButton(
+                    CustomIconButtonPop(
                       icon: Image.asset(
                         AppImages.kIconBack,
                         fit: BoxFit.scaleDown,

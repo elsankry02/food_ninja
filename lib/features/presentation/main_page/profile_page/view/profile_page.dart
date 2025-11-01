@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+
 import '../../../../../core/components/custom_show_top_snakbar.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
+import '../../../../../core/extension/extension.dart';
 import '../widget/list_tile_items.dart';
 import '../widget/profile_list_tile_widget.dart';
-
-import '../../../../../core/extension/extension.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});

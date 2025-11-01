@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'custom_text_form_field.dart';
 
 import '../constant/app_colors.dart';
 import '../extension/extension.dart';
+import 'custom_text_form_field.dart';
 
 class PaymentsContainer extends StatelessWidget {
   final TextEditingController controller;

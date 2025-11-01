@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pinput/pinput.dart';
+
 import '../../../../core/constant/app_colors.dart';
 import '../../../../core/extension/extension.dart';
-import 'package:pinput/pinput.dart';
 
 class OtpPinPutWidget extends StatelessWidget {
   final TextEditingController? pinputController;

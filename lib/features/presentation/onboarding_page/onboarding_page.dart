@@ -65,34 +65,36 @@ class _OnboardingPageState extends State<OnboardingPage> {
               ),
             ),
           ),
-          CustomPrimaryButton(
-            title: 'Next',
-            style: context.kTextTheme.titleSmall!.copyWith(
-              color: AppColors.kWhite,
-              fontWeight: FontWeight.w700,
-            ),
-            margin: EdgeInsetsDirectional.symmetric(
-              horizontal: context.height * 0.120,
-            ),
-            padding: EdgeInsets.symmetric(vertical: context.height * 0.018),
-            gradient: const LinearGradient(
-              begin: AlignmentGeometry.topLeft,
-              end: AlignmentGeometry.bottomRight,
-              colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
-            ),
-            borderRadius: BorderRadius.circular(context.height * 0.015),
-            onTap: () {
-              if (currentIndex == onboardingItems.length - 1) {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const SignUpPage()),
+          UnconstrainedBox(
+            child: CustomPrimaryButton(
+              title: 'Next',
+              style: context.kTextTheme.titleSmall!.copyWith(
+                color: AppColors.kWhite,
+                fontWeight: FontWeight.w700,
+              ),
+              padding: EdgeInsets.symmetric(
+                horizontal: context.height * 0.060,
+                vertical: context.height * 0.018,
+              ),
+              gradient: const LinearGradient(
+                begin: AlignmentGeometry.topLeft,
+                end: AlignmentGeometry.bottomRight,
+                colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
+              ),
+              borderRadius: BorderRadius.circular(context.height * 0.015),
+              onTap: () {
+                if (currentIndex == onboardingItems.length - 1) {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const SignUpPage()),
+                  );
+                }
+                pageController.animateToPage(
+                  ++currentIndex,
+                  duration: const Duration(milliseconds: 300),
+                  curve: Curves.linear,
                 );
-              }
-              pageController.animateToPage(
-                ++currentIndex,
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.linear,
-              );
-            },
+              },
+            ),
           ),
           SizedBox(height: context.height * 0.050),
         ],

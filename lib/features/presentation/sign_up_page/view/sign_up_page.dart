@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../../core/constant/app_images.dart';
-import '../../../../core/constant/app_svgs.dart';
-import '../../otp_page/view/otp_page.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/components/custom_text_form_field.dart';
 import '../../../../core/constant/app_colors.dart';
+import '../../../../core/constant/app_images.dart';
+import '../../../../core/constant/app_svgs.dart';
 import '../../../../core/extension/extension.dart';
 import '../../login_in_page/view/login_page.dart';
+import '../../otp_page/view/otp_page.dart';
 import '../widget/check_box_widget.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -126,33 +126,33 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       SizedBox(height: context.height * 0.040),
                       // Create Account Button
-                      CustomPrimaryButton(
-                        title: 'Create Account',
-                        style: context.kTextTheme.titleSmall!.copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
-                        ),
-                        margin: EdgeInsets.symmetric(
-                          horizontal: context.height * 0.100,
-                        ),
-                        padding: EdgeInsets.symmetric(
-                          vertical: context.height * 0.018,
-                        ),
-                        gradient: const LinearGradient(
-                          begin: AlignmentGeometry.topLeft,
-                          end: AlignmentGeometry.bottomRight,
-                          colors: [
-                            AppColors.kPrimaryColor,
-                            AppColors.kSecondColor,
-                          ],
-                        ),
-                        borderRadius: BorderRadius.circular(
-                          context.height * 0.015,
-                        ),
-                        onTap: () => Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const VerificationCodePage(isSelected: true),
+                      UnconstrainedBox(
+                        child: CustomPrimaryButton(
+                          title: 'Create Account',
+                          style: context.kTextTheme.titleSmall!.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w700,
+                          ),
+                          padding: EdgeInsets.symmetric(
+                            horizontal: context.height * 0.060,
+                            vertical: context.height * 0.018,
+                          ),
+                          gradient: const LinearGradient(
+                            begin: AlignmentGeometry.topLeft,
+                            end: AlignmentGeometry.bottomRight,
+                            colors: [
+                              AppColors.kPrimaryColor,
+                              AppColors.kSecondColor,
+                            ],
+                          ),
+                          borderRadius: BorderRadius.circular(
+                            context.height * 0.015,
+                          ),
+                          onTap: () => Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  const VerificationCodePage(isSelected: true),
+                            ),
                           ),
                         ),
                       ),

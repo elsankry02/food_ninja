@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/components/custom_icon_back.dart';
+
+import '../../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../../core/components/custom_primary_button.dart';
 import '../../../../../core/components/custom_show_top_snakbar.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
-
 import '../../../../../core/extension/extension.dart';
 
 class EditLocationPage extends StatelessWidget {
@@ -22,12 +22,11 @@ class EditLocationPage extends StatelessWidget {
               end: context.height * 0.020,
               top: context.height * 0.060,
             ),
-            physics: const BouncingScrollPhysics(),
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  CustomIconButton(
+                  CustomIconButtonPop(
                     icon: Image.asset(
                       AppImages.kIconBack,
                       fit: BoxFit.scaleDown,
