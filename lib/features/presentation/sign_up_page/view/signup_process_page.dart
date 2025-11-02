@@ -62,12 +62,11 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
               end: context.height * 0.020,
               top: context.height * 0.050,
             ),
-            physics: const BouncingScrollPhysics(),
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  CustomIconButtonPop(
+                  CustomIconButton(
                     icon: Image.asset(
                       AppImages.kIconBack,
                       fit: BoxFit.scaleDown,

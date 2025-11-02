@@ -36,9 +36,6 @@ class AppSvgs {
   static const kIconFailure = 'assets/svg/icon-failure.svg';
   static const kIconMapPin = 'assets/svg/icon-map-pin.svg';
   static const kIconMaps = 'assets/svg/icon-maps.svg';
-  static const kIconMinus = 'assets/svg/icon-minus.svg';
-  static const kIconNotification = 'assets/svg/icon-notifiaction.svg';
-  static const kIconPlus = 'assets/svg/icon-plus.svg';
   static const kIconProfile = 'assets/svg/icon-profile.svg';
   static const kIconSend = 'assets/svg/icon-send.svg';
   static const kIconStar = 'assets/svg/icon-star.svg';
@@ -46,5 +43,4 @@ class AppSvgs {
   static const kLock = 'assets/svg/lock.svg';
   static const kMeat = 'assets/svg/meat.svg';
   static const kMessage = 'assets/svg/message.svg';
-  static const kLogo = 'assets/svg/logo.svg';
 }

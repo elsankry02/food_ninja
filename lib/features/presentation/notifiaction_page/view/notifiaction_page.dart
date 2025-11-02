@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+
 import '../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/extension/extension.dart';
-
 import '../widget/notification_card_widget.dart';
 
 class Notifiactionpage extends StatelessWidget {
@@ -25,7 +25,7 @@ class Notifiactionpage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  CustomIconButtonPop(
+                  CustomIconButton(
                     icon: Image.asset(
                       AppImages.kIconBack,
                       fit: BoxFit.scaleDown,

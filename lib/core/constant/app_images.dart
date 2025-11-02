@@ -18,6 +18,7 @@ class AppImages {
   static const kMintDark = 'assets/images/Mint_Dark.png';
   static const kIconNotification = 'assets/images/Icon-Notifiaction.png';
   static const kIconSearch = 'assets/images/Icon-Search.png';
+  static const kCallLogo = 'assets/images/call-logo.png';
   static const kIconCart = 'assets/images/Icon_Cart.png';
   static const kFrameSpecialDealForOctoberOne =
       'assets/images/frame-special_deal-for-october-one.png';

@@ -35,7 +35,6 @@ class _SignUpPageState extends State<SignUpPage> {
     return Scaffold(
       body: ListView(
         padding: EdgeInsets.zero,
-        physics: const BouncingScrollPhysics(),
         children: [
           Stack(
             children: [

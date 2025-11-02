@@ -72,7 +72,7 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    CustomIconButtonPop(
+                    CustomIconButton(
                       icon: Image.asset(
                         AppImages.kIconBack,
                         fit: BoxFit.scaleDown,

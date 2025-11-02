@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../core/components/custom_list_tile_widget.dart';
-import '../../../../core/constant/app_colors.dart';
 
+import '../../../../core/constant/app_colors.dart';
 import '../../../../core/extension/extension.dart';
 
 class NotifiactionCardWidget extends StatelessWidget {
@@ -23,7 +22,8 @@ class NotifiactionCardWidget extends StatelessWidget {
         color: AppColors.kWhite,
         border: Border.all(color: AppColors.kBorder),
       ),
-      child: CustomListTileWidget(
+      child: ListTile(
+        contentPadding: EdgeInsets.zero,
         leading: Image.asset(image, fit: BoxFit.cover),
         title: Text(
           titel,

@@ -43,8 +43,9 @@ class _HomePageState extends State<HomePage> {
             ),
             children: [
               CustomHomeAppbar(searchController: searchController),
+              SizedBox(height: context.height * 0.020),
               CarouselSliderWidget(),
-              SizedBox(height: context.height * 0.025),
+              SizedBox(height: context.height * 0.020),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
