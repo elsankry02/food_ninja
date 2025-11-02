@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/features/presentation/main_page/chat_page/views/chat_details_page.dart';
-import 'package:food_ninja/features/presentation/main_page/chat_page/widgets/message_tile_widget.dart';
+import 'chat_details_page.dart';
+import '../widgets/message_tile_widget.dart';
 
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';

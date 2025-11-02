@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/extension/extension.dart';
+import '../../../../../core/constant/app_images.dart';
+import '../../../../../core/extension/extension.dart';
 
 class MessageTileWidget extends StatelessWidget {
   final String title, subTitle, time;

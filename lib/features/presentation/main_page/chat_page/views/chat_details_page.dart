@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/components/custom_icon_button_pop.dart';
-import 'package:food_ninja/core/components/custom_text_form_field.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/extension/extension.dart';
-import 'package:food_ninja/features/presentation/main_page/chat_page/widgets/chat_app_bar_widget.dart';
+import '../../../../../core/components/custom_icon_button_pop.dart';
+import '../../../../../core/components/custom_show_top_snakbar.dart';
+import '../../../../../core/components/custom_text_form_field.dart';
+import '../../../../../core/constant/app_colors.dart';
+import '../../../../../core/constant/app_images.dart';
+import '../../../../../core/extension/extension.dart';
+import '../widgets/chat_app_bar_widget.dart';
 
 class ChatDetailsPage extends StatefulWidget {
   const ChatDetailsPage({super.key});
@@ -54,19 +55,18 @@ class _ChatDetailsPageState extends State<ChatDetailsPage> {
           Positioned(
             left: context.height * 0.020,
             right: context.height * 0.020,
-            bottom: context.height * 0.020,
+            bottom: context.height * 0.010,
             child: CustomTextFormField(
               hintText: "Message",
               hintStyle: context.kTextTheme.labelLarge!.copyWith(
                 color: AppColors.kGrey,
               ),
-              autofocus: true,
               filled: true,
               fillColor: AppColors.kWhite,
               controller: messageController,
-              suffixIcon: Icon(
-                Icons.send_rounded,
-                color: AppColors.kSecondColor,
+              suffixIcon: CustomIconButton(
+                icon: Icon(Icons.send_rounded, color: AppColors.kSecondColor),
+                onPressed: () => ErrorMessage(context, message: "COMING SOON"),
               ),
             ),
           ),

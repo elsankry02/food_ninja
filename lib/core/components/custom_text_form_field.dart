@@ -59,19 +59,19 @@ class CustomTextFormField extends StatelessWidget {
         suffixIconColor: suffixIconColor,
         hintText: hintText,
         hintStyle: hintStyle,
-        enabledBorder: outlineInputBorder(borderColor: AppColors.kBorder),
-        focusedBorder: outlineInputBorder(borderColor: AppColors.kBorder),
-        focusedErrorBorder: outlineInputBorder(borderColor: AppColors.kRed),
-        errorBorder: outlineInputBorder(borderColor: AppColors.kRed),
+        enabledBorder: outlineInputBorder(color: AppColors.kBorder),
+        focusedBorder: outlineInputBorder(color: AppColors.kBorder),
+        focusedErrorBorder: outlineInputBorder(color: AppColors.kRed),
+        errorBorder: outlineInputBorder(color: AppColors.kRed),
       ),
     );
   }
 
-  OutlineInputBorder outlineInputBorder({required Color borderColor}) {
+  OutlineInputBorder outlineInputBorder({required Color color}) {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(12),
       // borderColor
-      borderSide: BorderSide(color: borderColor),
+      borderSide: BorderSide(color: color),
     );
   }
 }
