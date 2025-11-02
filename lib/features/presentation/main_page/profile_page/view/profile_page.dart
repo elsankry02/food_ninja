@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/components/custom_show_top_snakbar.dart';
@@ -7,8 +8,9 @@ import '../../../../../core/extension/extension.dart';
 import '../widget/list_tile_items.dart';
 import '../widget/profile_list_tile_widget.dart';
 
-class Profile extends StatelessWidget {
-  const Profile({super.key});
+@RoutePage()
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {

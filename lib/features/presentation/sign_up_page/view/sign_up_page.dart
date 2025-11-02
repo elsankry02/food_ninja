@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:food_ninja/core/router/router.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/components/custom_text_form_field.dart';
@@ -7,10 +9,8 @@ import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/constant/app_svgs.dart';
 import '../../../../core/extension/extension.dart';
-import '../../login_in_page/view/login_page.dart';
-import '../../otp_page/view/otp_page.dart';
-import '../widget/check_box_widget.dart';
 
+@RoutePage()
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
 
@@ -80,7 +80,6 @@ class _SignUpPageState extends State<SignUpPage> {
                           AppSvgs.kMessage,
                           fit: BoxFit.scaleDown,
                         ),
-                        autofocus: true,
                         cursorColor: AppColors.kGrey,
                         hintStyle: context.kTextTheme.labelLarge!.copyWith(
                           color: Colors.grey,
@@ -90,7 +89,6 @@ class _SignUpPageState extends State<SignUpPage> {
                       SizedBox(height: context.height * 0.012),
                       CustomTextFormField(
                         hintText: 'Password',
-                        autofocus: true,
                         hintStyle: context.kTextTheme.labelLarge!.copyWith(
                           color: Colors.grey,
                         ),
@@ -117,14 +115,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
                         ),
                       ),
-                      SizedBox(height: context.height * 0.019),
-                      const CheckBoxWidget(title: 'Keep Me Signed In'),
-                      SizedBox(height: context.height * 0.012),
-                      const CheckBoxWidget(
-                        title: 'Email Me About Special Pricing',
-                      ),
-                      SizedBox(height: context.height * 0.040),
-                      // Create Account Button
+                      SizedBox(height: context.height * 0.060),
                       UnconstrainedBox(
                         child: CustomPrimaryButton(
                           title: 'Create Account',
@@ -147,12 +138,8 @@ class _SignUpPageState extends State<SignUpPage> {
                           borderRadius: BorderRadius.circular(
                             context.height * 0.015,
                           ),
-                          onTap: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  const VerificationCodePage(isSelected: true),
-                            ),
-                          ),
+                          onTap: () =>
+                              context.router.push(OtpRoute(isSelected: true)),
                         ),
                       ),
                       SizedBox(height: context.height * 0.020),
@@ -164,11 +151,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           decorationColor: AppColors.kPrimaryColor,
                           decorationThickness: 1,
                         ),
-                        onTap: () => Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const LoginPage(),
-                          ),
-                        ),
+                        onTap: () => context.router.replace(LoginRoute()),
                       ),
                     ],
                   ),

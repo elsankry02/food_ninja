@@ -1,16 +1,18 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../../core/constant/app_images.dart';
-import '../../../core/constant/app_svgs.dart';
-import '../../../core/extension/extension.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 import '../../../core/constant/app_colors.dart';
+import '../../../core/constant/app_images.dart';
+import '../../../core/constant/app_svgs.dart';
+import '../../../core/extension/extension.dart';
 import 'cart_page/view/cart_page.dart';
 import 'chat_page/views/chat_page.dart';
 import 'home_page/view/home_page.dart';
 import 'profile_page/view/profile_page.dart';
 
+@RoutePage()
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
 
@@ -23,9 +25,9 @@ class _MainPageState extends State<MainPage> {
 
   List<Widget> tabs = [
     const HomePage(),
-    const Profile(),
+    const ProfilePage(),
     const CartPage(),
-    const Chat(),
+    const ChatPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -63,7 +65,7 @@ class _MainPageState extends State<MainPage> {
                   'Home',
                   style: context.kTextTheme.labelMedium!.copyWith(
                     color: AppColors.kTitle,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
               ),
@@ -73,7 +75,7 @@ class _MainPageState extends State<MainPage> {
                   'Profile',
                   style: context.kTextTheme.labelMedium!.copyWith(
                     color: AppColors.kTitle,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
               ),
@@ -87,7 +89,7 @@ class _MainPageState extends State<MainPage> {
                   'Cart',
                   style: context.kTextTheme.labelMedium!.copyWith(
                     color: AppColors.kTitle,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
               ),
@@ -97,7 +99,7 @@ class _MainPageState extends State<MainPage> {
                   'Chat',
                   style: context.kTextTheme.labelMedium!.copyWith(
                     color: AppColors.kTitle,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
               ),

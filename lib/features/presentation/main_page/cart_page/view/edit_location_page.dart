@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/components/custom_icon_button_pop.dart';
@@ -7,6 +8,7 @@ import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
 
+@RoutePage()
 class EditLocationPage extends StatelessWidget {
   const EditLocationPage({super.key});
 
@@ -33,7 +35,7 @@ class EditLocationPage extends StatelessWidget {
                       height: context.height * 0.045,
                       width: context.height * 0.045,
                     ),
-                    onPressed: () => Navigator.of(context).pop(),
+                    onPressed: () => context.router.maybePop(),
                   ),
                 ],
               ),

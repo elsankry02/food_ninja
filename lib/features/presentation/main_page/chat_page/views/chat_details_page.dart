@@ -1,4 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+
 import '../../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../../core/components/custom_show_top_snakbar.dart';
 import '../../../../../core/components/custom_text_form_field.dart';
@@ -7,6 +9,7 @@ import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
 import '../widgets/chat_app_bar_widget.dart';
 
+@RoutePage()
 class ChatDetailsPage extends StatefulWidget {
   const ChatDetailsPage({super.key});
 
@@ -26,31 +29,31 @@ class _ChatDetailsPageState extends State<ChatDetailsPage> {
             AppImages.kOnboardingPattern,
             width: double.infinity,
           ),
-          ListView(
+          Padding(
             padding: EdgeInsetsDirectional.only(
               start: context.height * 0.020,
               end: context.height * 0.020,
               top: context.height * 0.060,
             ),
-            children: [
-              Row(
-                children: [
-                  CustomIconButton(
-                    icon: Image.asset(
-                      AppImages.kIconBack,
-                      height: context.height * 0.045,
-                      width: context.height * 0.045,
-                      fit: BoxFit.scaleDown,
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    CustomIconButton(
+                      icon: Image.asset(
+                        AppImages.kIconBack,
+                        height: context.height * 0.045,
+                        width: context.height * 0.045,
+                        fit: BoxFit.scaleDown,
+                      ),
+                      onPressed: () => context.router.maybePop(),
                     ),
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                  SizedBox(width: context.height * 0.015),
-                  ChatAppBarWidget(),
-                ],
-              ),
-            ],
+                    SizedBox(width: context.height * 0.015),
+                    ChatAppBarWidget(),
+                  ],
+                ),
+              ],
+            ),
           ),
           Positioned(
             left: context.height * 0.020,

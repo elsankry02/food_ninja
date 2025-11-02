@@ -1,12 +1,14 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import '../../../../../core/components/custom_restaurant_widget.dart';
-import '../../../../data/model/nearest_restaurant_model.dart';
 
 import '../../../../../core/components/custom_home_appbar.dart';
+import '../../../../../core/components/custom_restaurant_widget.dart';
 import '../../../../../core/components/custom_show_top_snakbar.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
+import '../../../../data/model/nearest_restaurant_model.dart';
 
+@RoutePage()
 class NearestRestaurantPage extends StatefulWidget {
   const NearestRestaurantPage({super.key});
 

@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/components/custom_home_appbar.dart';
@@ -7,6 +8,7 @@ import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
 import '../../../../data/model/populer_restaurant_card_model.dart';
 
+@RoutePage()
 class PopularMenuPage extends StatefulWidget {
   const PopularMenuPage({super.key});
 

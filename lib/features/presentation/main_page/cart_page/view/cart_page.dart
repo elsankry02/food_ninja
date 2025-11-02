@@ -1,11 +1,13 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/core/constant/app_colors.dart';
 
-import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
 import '../widgets/cart_details_widget.dart';
 import '../widgets/cart_summary_widget.dart';
 
+@RoutePage()
 class CartPage extends StatefulWidget {
   const CartPage({super.key});
 
@@ -29,11 +31,10 @@ class _CartPageState extends State<CartPage> {
               top: context.height * 0.060,
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Cart',
-                  style: context.kTextTheme.headlineLarge!.copyWith(
+                  "My Cart",
+                  style: context.kTextTheme.headlineSmall!.copyWith(
                     fontWeight: FontWeight.w700,
                     color: AppColors.kTitle,
                   ),
@@ -42,15 +43,15 @@ class _CartPageState extends State<CartPage> {
                 Expanded(
                   child: ListView.builder(
                     padding: EdgeInsetsDirectional.only(
-                      top: 0,
-                      bottom: context.height * 0.25,
+                      top: context.height * 0.0,
+                      bottom: context.height * 0.250,
                     ),
                     itemCount: 6,
                     itemBuilder: (context, index) {
                       return CartDetailsWidget(
-                        image: AppImages.kDefultPhoto,
-                        title: "Spacy fresh crab",
-                        subtitle: "Waroenk kita",
+                        image: AppImages.kMeat,
+                        title: "Meat",
+                        subtitle: "1k",
                         price: "35",
                         count: "$count",
                         plusOnTap: () {

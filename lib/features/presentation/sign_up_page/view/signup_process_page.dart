@@ -1,7 +1,9 @@
 import 'dart:io';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:food_ninja/core/router/router.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../../../core/components/custom_icon_button_pop.dart';
@@ -11,9 +13,9 @@ import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/constant/app_svgs.dart';
 import '../../../../core/extension/extension.dart';
-import '../../main_page/main_page.dart';
 import '../widget/upload_photo_widget.dart';
 
+@RoutePage()
 class SignupProcessPage extends StatefulWidget {
   const SignupProcessPage({super.key});
 
@@ -125,7 +127,6 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
               SizedBox(height: context.height * 0.020),
               CustomTextFormField(
                 hintText: 'Name',
-                autofocus: true,
                 prefixIcon: SvgPicture.asset(
                   AppSvgs.kProfile,
                   fit: BoxFit.scaleDown,
@@ -138,7 +139,6 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
               ),
               SizedBox(height: context.height * 0.020),
               CustomTextFormField(
-                autofocus: true,
                 hintText: 'User Name',
                 prefixIcon: SvgPicture.asset(
                   AppSvgs.kProfile,
@@ -168,9 +168,7 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
                   colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
                 ),
                 borderRadius: BorderRadius.circular(context.height * 0.015),
-                onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const MainPage()),
-                ),
+                onTap: () => context.router.push(MainRoute()),
               ),
             ],
           ),

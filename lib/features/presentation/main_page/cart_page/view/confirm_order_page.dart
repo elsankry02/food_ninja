@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:food_ninja/core/router/router.dart';
 
 import '../../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../../core/components/custom_primary_button.dart';
@@ -7,9 +9,8 @@ import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/constant/app_svgs.dart';
 import '../../../../../core/extension/extension.dart';
-import 'edit_location_page.dart';
-import 'edit_payment_page.dart';
 
+@RoutePage()
 class ConfirmOrderPage extends StatelessWidget {
   const ConfirmOrderPage({super.key});
 
@@ -36,7 +37,7 @@ class ConfirmOrderPage extends StatelessWidget {
                       height: context.height * 0.045,
                       width: context.height * 0.045,
                     ),
-                    onPressed: () => Navigator.of(context).pop(),
+                    onPressed: () => context.router.maybePop(),
                   ),
                 ],
               ),
@@ -71,11 +72,7 @@ class ConfirmOrderPage extends StatelessWidget {
                           style: context.kTextTheme.labelLarge!.copyWith(
                             color: AppColors.kSecondColor,
                           ),
-                          onTap: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => const EditLocationPage(),
-                            ),
-                          ),
+                          onTap: () => context.router.push(EditLocationRoute()),
                         ),
                       ],
                     ),
@@ -122,11 +119,8 @@ class ConfirmOrderPage extends StatelessWidget {
                           style: context.kTextTheme.labelLarge!.copyWith(
                             color: AppColors.kSecondColor,
                           ),
-                          onTap: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => const PaymentMethodPage(),
-                            ),
-                          ),
+                          onTap: () =>
+                              context.router.push(PaymentMethodRoute()),
                         ),
                       ],
                     ),

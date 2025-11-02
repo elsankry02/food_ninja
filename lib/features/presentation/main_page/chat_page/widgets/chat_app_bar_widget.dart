@@ -1,9 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/core/router/router.dart';
+
 import '../../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
-import '../views/call_ranging_page.dart';
 
 class ChatAppBarWidget extends StatelessWidget {
   const ChatAppBarWidget({super.key});
@@ -41,9 +43,7 @@ class ChatAppBarWidget extends StatelessWidget {
             width: context.height * 0.045,
             fit: BoxFit.scaleDown,
           ),
-          onPressed: () => Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => const CallRangingPage()),
-          ),
+          onPressed: () => context.router.push(CallRangingRoute()),
         ),
       ),
     );

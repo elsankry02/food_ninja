@@ -1,19 +1,21 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'chat_details_page.dart';
-import '../widgets/message_tile_widget.dart';
+import 'package:food_ninja/core/router/router.dart';
 
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
+import '../widgets/message_tile_widget.dart';
 
-class Chat extends StatefulWidget {
-  const Chat({super.key});
+@RoutePage()
+class ChatPage extends StatefulWidget {
+  const ChatPage({super.key});
 
   @override
-  State<Chat> createState() => _ChatState();
+  State<ChatPage> createState() => _ChatPageState();
 }
 
-class _ChatState extends State<Chat> {
+class _ChatPageState extends State<ChatPage> {
   int count = 1;
   @override
   Widget build(BuildContext context) {
@@ -47,11 +49,7 @@ class _ChatState extends State<Chat> {
                         title: "Mohamed Ibrahim",
                         subTitle: "Message yourself",
                         time: "9:01 AM",
-                        onTap: () => Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const ChatDetailsPage(),
-                          ),
-                        ),
+                        onTap: () => context.router.push(ChatDetailsRoute()),
                       );
                     },
                   ),

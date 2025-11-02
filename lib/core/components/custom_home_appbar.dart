@@ -1,8 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:food_ninja/core/router/router.dart';
 
-import '../../features/presentation/notifiaction_page/view/notifiaction_page.dart';
 import '../constant/app_colors.dart';
 import '../constant/app_images.dart';
 import '../constant/app_svgs.dart';
@@ -28,9 +29,7 @@ class CustomHomeAppbar extends StatelessWidget {
             ),
           ),
           trailing: GestureDetector(
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const Notifiactionpage()),
-            ),
+            onTap: () => context.router.push(NotifiactionRoute()),
             child: Container(
               padding: EdgeInsets.symmetric(
                 horizontal: context.height * 0.014,

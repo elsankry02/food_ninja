@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'features/presentation/main_page/main_page.dart';
+import 'package:food_ninja/core/router/router.dart';
 
 class FoodNinja extends StatelessWidget {
   const FoodNinja({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: router.config(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: "Viga"),
-      home: const MainPage(),
     );
   }
 }

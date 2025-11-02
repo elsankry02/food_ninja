@@ -1,13 +1,14 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/extension/extension.dart';
-import '../widget/notification_card_widget.dart';
 
-class Notifiactionpage extends StatelessWidget {
-  const Notifiactionpage({super.key});
+@RoutePage()
+class NotifiactionPage extends StatelessWidget {
+  const NotifiactionPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,54 +16,48 @@ class Notifiactionpage extends StatelessWidget {
       body: Stack(
         children: [
           Image.asset(AppImages.kPatternBackground),
-          ListView(
+          Padding(
             padding: EdgeInsetsDirectional.only(
               start: context.height * 0.020,
               end: context.height * 0.020,
               top: context.height * 0.060,
             ),
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  CustomIconButton(
-                    icon: Image.asset(
-                      AppImages.kIconBack,
-                      fit: BoxFit.scaleDown,
-                      height: context.height * 0.045,
-                      width: context.height * 0.045,
-                    ),
-                    onPressed: () => Navigator.of(context).pop(),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CustomIconButton(
+                  icon: Image.asset(
+                    AppImages.kIconBack,
+                    fit: BoxFit.scaleDown,
+                    height: context.height * 0.045,
+                    width: context.height * 0.045,
                   ),
-                ],
-              ),
-              SizedBox(height: context.height * 0.020),
-              Text(
-                "Notification",
-                style: context.kTextTheme.headlineSmall!.copyWith(
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.kTitle,
+                  onPressed: () => context.router.maybePop(),
                 ),
-              ),
-              SizedBox(height: context.height * 0.020),
-              NotifiactionCardWidget(
-                image: AppImages.kTakenByTheDriver,
-                titel: 'Your order has been taken by\n the driver',
-                subTitel: 'Recently',
-              ),
-              SizedBox(height: context.height * 0.020),
-              NotifiactionCardWidget(
-                image: AppImages.kSuccessful,
-                titel: r'Topup for $100 was successful',
-                subTitel: '10.00 Am',
-              ),
-              SizedBox(height: context.height * 0.020),
-              NotifiactionCardWidget(
-                titel: 'Your order has been canceled',
-                image: AppImages.kCanceled,
-                subTitel: '22 Juny 2021',
-              ),
-            ],
+                SizedBox(height: context.height * 0.010),
+                Text(
+                  "Notification",
+                  style: context.kTextTheme.headlineSmall!.copyWith(
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.kTitle,
+                  ),
+                ),
+                SizedBox(height: context.height * 0.020),
+                Expanded(
+                  child: ListView(
+                    children: [
+                      Text(
+                        "No notification",
+                        textAlign: TextAlign.center,
+                        style: context.kTextTheme.titleMedium!.copyWith(
+                          color: AppColors.kGrey,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

@@ -1,9 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/core/router/router.dart';
+
 import '../../../../../core/components/custom_primary_button.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
-import '../view/confirm_order_page.dart';
 
 class CartSummaryWidget extends StatelessWidget {
   const CartSummaryWidget({super.key});
@@ -76,9 +78,7 @@ class CartSummaryWidget extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: context.height * 0.022),
             backGroundColor: AppColors.kWhite,
             borderRadius: BorderRadius.circular(context.height * 0.015),
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const ConfirmOrderPage()),
-            ),
+            onTap: () => context.router.push(ConfirmOrderRoute()),
           ),
         ],
       ),

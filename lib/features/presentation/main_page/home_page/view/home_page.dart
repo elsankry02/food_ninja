@@ -1,4 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/core/router/router.dart';
 
 import '../../../../../core/components/custom_home_appbar.dart';
 import '../../../../../core/components/custom_populer_menu_widget.dart';
@@ -11,9 +13,8 @@ import '../../../../../core/extension/extension.dart';
 import '../../../../data/model/nearest_restaurant_model.dart';
 import '../../../../data/model/populer_restaurant_card_model.dart';
 import '../widgets/carousel_slider_widget.dart';
-import 'nearest_restaurant_page.dart';
-import 'popular_menu_page.dart';
 
+@RoutePage()
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -60,11 +61,7 @@ class _HomePageState extends State<HomePage> {
                     style: context.kTextTheme.labelMedium!.copyWith(
                       color: AppColors.kSecondColor,
                     ),
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const NearestRestaurantPage(),
-                      ),
-                    ),
+                    onTap: () => context.router.push(NearestRestaurantRoute()),
                   ),
                 ],
               ),
@@ -108,11 +105,7 @@ class _HomePageState extends State<HomePage> {
                     style: context.kTextTheme.labelMedium!.copyWith(
                       color: AppColors.kSecondColor,
                     ),
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const PopularMenuPage(),
-                      ),
-                    ),
+                    onTap: () => context.router.push(PopularMenuRoute()),
                   ),
                 ],
               ),

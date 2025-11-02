@@ -1,10 +1,12 @@
 // ignore_for_file: use_build_context_synchronously
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:food_ninja/core/constant/app_colors.dart';
 import 'package:food_ninja/core/constant/app_images.dart';
 import 'package:food_ninja/core/extension/extension.dart';
-import 'package:food_ninja/features/presentation/onboarding_page/onboarding_page.dart';
+import 'package:food_ninja/core/router/router.dart';
 
+@RoutePage()
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
 
@@ -21,9 +23,7 @@ class _SplashPageState extends State<SplashPage> {
 
   splashFoodNinja() {
     Future.delayed(const Duration(seconds: 2), () {
-      Navigator.of(
-        context,
-      ).push(MaterialPageRoute(builder: (context) => const OnboardingPage()));
+      context.router.replace(OnboardingRoute());
     });
   }
 

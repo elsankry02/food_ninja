@@ -1,25 +1,26 @@
 import 'dart:async';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/core/router/router.dart';
 
 import '../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/extension/extension.dart';
-import '../../main_page/main_page.dart';
-import '../../sign_up_page/view/signup_process_page.dart';
 import '../widget/otp_pin_put_widget.dart';
 
-class VerificationCodePage extends StatefulWidget {
+@RoutePage()
+class OtpPage extends StatefulWidget {
   final bool isSelected;
-  const VerificationCodePage({super.key, required this.isSelected});
+  const OtpPage({super.key, required this.isSelected});
 
   @override
-  State<VerificationCodePage> createState() => _VerificationCodePageState();
+  State<OtpPage> createState() => _OtpPageState();
 }
 
-class _VerificationCodePageState extends State<VerificationCodePage> {
+class _OtpPageState extends State<OtpPage> {
   final formKey = GlobalKey<FormState>();
   final pinputController = TextEditingController();
 
@@ -65,9 +66,8 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
               padding: EdgeInsetsDirectional.only(
                 start: context.height * 0.020,
                 end: context.height * 0.020,
-                top: context.height * 0.050,
+                top: context.height * 0.060,
               ),
-              physics: const BouncingScrollPhysics(),
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -79,7 +79,7 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
                         height: context.height * 0.045,
                         width: context.height * 0.045,
                       ),
-                      onPressed: () => Navigator.of(context).pop(),
+                      onPressed: () => context.router.maybePop(),
                     ),
                   ],
                 ),
@@ -148,9 +148,7 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
                           style: context.kTextTheme.titleSmall!.copyWith(
                             color: AppColors.kSecondaryGold,
                           ),
-                          onTap: () {
-                            startTimer();
-                          },
+                          onTap: () => startTimer(),
                         ),
                       ),
 
@@ -176,17 +174,9 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
                   onTap: () {
                     if (formKey.currentState!.validate()) {
                       if (widget.isSelected == false) {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const MainPage(),
-                          ),
-                        );
+                        context.router.replace(MainRoute());
                       } else {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const SignupProcessPage(),
-                          ),
-                        );
+                        context.router.push(SignupProcessRoute());
                       }
                     }
                   },

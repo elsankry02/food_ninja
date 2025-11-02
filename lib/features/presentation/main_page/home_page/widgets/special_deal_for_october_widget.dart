@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../../../core/components/custom_primary_button.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/extension/extension.dart';
@@ -29,7 +30,6 @@ class SpecialDealForOctoberWidget extends StatelessWidget {
                     end: context.height * 0.020,
                   ),
                   title: data.title,
-
                   style: context.kTextTheme.titleMedium!.copyWith(
                     color: data.specialColor,
                     fontWeight: FontWeight.w700,

@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/components/custom_icon_button_pop.dart';
@@ -8,6 +9,7 @@ import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/constant/app_svgs.dart';
 import '../../../../../core/extension/extension.dart';
 
+@RoutePage()
 class PaymentMethodPage extends StatefulWidget {
   const PaymentMethodPage({super.key});
 
@@ -39,7 +41,6 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
               end: context.height * 0.020,
               top: context.height * 0.060,
             ),
-            physics: const BouncingScrollPhysics(),
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -51,7 +52,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                       height: context.height * 0.045,
                       width: context.height * 0.045,
                     ),
-                    onPressed: () => Navigator.of(context).pop(),
+                    onPressed: () => context.router.maybePop(),
                   ),
                 ],
               ),

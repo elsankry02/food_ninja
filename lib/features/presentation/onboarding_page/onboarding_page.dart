@@ -1,11 +1,13 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/core/router/router.dart';
 
 import '../../../core/components/custom_primary_button.dart';
 import '../../../core/constant/app_colors.dart';
 import '../../../core/extension/extension.dart';
 import '../../data/model/onboarding_model.dart';
-import '../sign_up_page/view/sign_up_page.dart';
 
+@RoutePage()
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({super.key});
 
@@ -37,7 +39,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
               },
               itemCount: onboardingItems.length,
               itemBuilder: (context, index) => ListView(
-                physics: BouncingScrollPhysics(),
                 children: [
                   SizedBox(height: context.height * 0.040),
                   Image.asset(
@@ -84,9 +85,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               borderRadius: BorderRadius.circular(context.height * 0.015),
               onTap: () {
                 if (currentIndex == onboardingItems.length - 1) {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const SignUpPage()),
-                  );
+                  context.router.push(SignUpRoute());
                 }
                 pageController.animateToPage(
                   ++currentIndex,

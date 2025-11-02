@@ -1,13 +1,15 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/core/router/router.dart';
 
 import '../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/extension/extension.dart';
-import '../../main_page/main_page.dart';
 import '../widget/set_location_widget.dart';
 
+@RoutePage()
 class SetLocationPage extends StatelessWidget {
   const SetLocationPage({super.key});
 
@@ -71,9 +73,7 @@ class SetLocationPage extends StatelessWidget {
                   colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
                 ),
                 borderRadius: BorderRadius.circular(context.height * 0.015),
-                onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const MainPage()),
-                ),
+                onTap: () => context.router.push(MainRoute()),
               ),
             ],
           ),

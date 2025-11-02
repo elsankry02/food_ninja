@@ -30,16 +30,4 @@ List<PopulerRestaurantCardModel> populerRestaurantCardModel = [
     subTitle: '19 Mins',
     price: "21",
   ),
-  PopulerRestaurantCardModel(
-    image: AppImages.kMeat,
-    title: 'Good Food',
-    subTitle: '8 Mins',
-    price: "14.5",
-  ),
-  PopulerRestaurantCardModel(
-    image: AppImages.kMeat,
-    title: 'Pizza',
-    subTitle: '6 Mins',
-    price: "25",
-  ),
 ];

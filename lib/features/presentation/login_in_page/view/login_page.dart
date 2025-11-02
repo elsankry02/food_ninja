@@ -1,17 +1,18 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../../core/components/custom_show_top_snakbar.dart';
-import '../../../../core/components/custom_text_form_field.dart';
-import '../../../../core/constant/app_images.dart';
-import '../../../../core/constant/app_svgs.dart';
-import '../../otp_page/view/otp_page.dart';
-import '../../sign_up_page/view/sign_up_page.dart';
+import 'package:food_ninja/core/router/router.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
+import '../../../../core/components/custom_show_top_snakbar.dart';
+import '../../../../core/components/custom_text_form_field.dart';
 import '../../../../core/constant/app_colors.dart';
+import '../../../../core/constant/app_images.dart';
+import '../../../../core/constant/app_svgs.dart';
 import '../../../../core/extension/extension.dart';
 import '../widget/social_connection_widget.dart';
 
+@RoutePage()
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -102,7 +103,6 @@ class _LoginPageState extends State<LoginPage> {
                         cursorColor: AppColors.kGrey,
                         controller: passwordController,
                         obscureText: isPassword ? false : true,
-                        autofocus: true,
                         suffixIcon: GestureDetector(
                           onTap: () {
                             setState(() {
@@ -171,12 +171,8 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.circular(
                           context.height * 0.015,
                         ),
-                        onTap: () => Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const VerificationCodePage(isSelected: false),
-                          ),
-                        ),
+                        onTap: () =>
+                            context.router.push(OtpRoute(isSelected: false)),
                       ),
                       SizedBox(height: context.height * 0.020),
                       CustomPrimaryButton(
@@ -187,23 +183,7 @@ class _LoginPageState extends State<LoginPage> {
                           decorationColor: AppColors.kPrimaryColor,
                           decorationThickness: 1,
                         ),
-                        onTap: () => Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const SignUpPage(),
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: context.height * 0.020),
-                      CustomPrimaryButton(
-                        title: "Forgot Your Password?",
-                        style: context.kTextTheme.labelMedium!.copyWith(
-                          color: AppColors.kPrimaryColor,
-                          decoration: TextDecoration.underline,
-                          decorationColor: AppColors.kPrimaryColor,
-                          decorationThickness: 1,
-                        ),
-                        onTap: () =>
-                            ErrorMessage(context, message: "COMING SOON"),
+                        onTap: () => context.router.replace(SignUpRoute()),
                       ),
                     ],
                   ),
