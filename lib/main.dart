@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:food_ninja/app.dart';
+import 'package:food_ninja/boot.dart';
 
-import 'app.dart';
-import 'core/cache/cache_helper.dart';
-
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await CacheHelper.cacheIntialzation();
-  runApp(const FoodNinja());
+void main() async {
+  final override = await getOverrides();
+  runApp(ProviderScope(overrides: override, child: FoodNinja()));
 }

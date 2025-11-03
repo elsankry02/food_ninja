@@ -44,7 +44,8 @@ dependencies:
   font_awesome_flutter: ^10.12.0
   carousel_slider: ^5.1.1
   auto_route: ^10.2.0
-  riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+  flutter_riverpod: ^2.6.1
 
 dev_dependencies:
   flutter_test:

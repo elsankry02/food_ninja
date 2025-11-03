@@ -350,6 +350,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.32"
+  flutter_riverpod:
+    dependency: "direct main"
+    description:
+      name: flutter_riverpod
+      sha256: "9532ee6db4a943a1ed8383072a2e3eeda041db5657cdf6d2acecf3c21ecbe7e1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.1"
   flutter_svg:
     dependency: "direct main"
     description:
@@ -721,10 +729,18 @@ packages:
     source: hosted
     version: "1.5.0"
   riverpod:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: riverpod
       sha256: "59062512288d3056b2321804332a13ffdd1bf16df70dcc8e506e411280a72959"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.1"
+  riverpod_annotation:
+    dependency: "direct main"
+    description:
+      name: riverpod_annotation
+      sha256: e14b0bf45b71326654e2705d462f21b958f987087be850afd60578fcd502d1b8
       url: "https://pub.dev"
     source: hosted
     version: "2.6.1"
