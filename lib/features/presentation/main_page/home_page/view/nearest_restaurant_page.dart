@@ -6,7 +6,7 @@ import '../../../../../core/components/custom_restaurant_widget.dart';
 import '../../../../../core/components/custom_show_top_snakbar.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
-import '../../../../data/model/nearest_restaurant_model.dart';
+import '../../../../data/models/nearest_restaurant_model.dart';
 
 @RoutePage()
 class NearestRestaurantPage extends StatefulWidget {

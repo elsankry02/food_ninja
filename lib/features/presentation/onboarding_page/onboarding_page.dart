@@ -5,7 +5,7 @@ import 'package:food_ninja/core/router/router.dart';
 import '../../../core/components/custom_primary_button.dart';
 import '../../../core/constant/app_colors.dart';
 import '../../../core/extension/extension.dart';
-import '../../data/model/onboarding_model.dart';
+import '../../data/models/onboarding_model.dart';
 
 @RoutePage()
 class OnboardingPage extends StatefulWidget {

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/components/custom_primary_button.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/extension/extension.dart';
-import '../../../../data/model/special_deal_model.dart';
+import '../../../../data/models/special_deal_model.dart';
 
 class SpecialDealForOctoberWidget extends StatelessWidget {
   final void Function()? onTap;

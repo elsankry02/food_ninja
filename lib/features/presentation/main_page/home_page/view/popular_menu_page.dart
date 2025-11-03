@@ -6,7 +6,7 @@ import '../../../../../core/components/custom_populer_menu_widget.dart';
 import '../../../../../core/components/custom_show_top_snakbar.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
-import '../../../../data/model/populer_restaurant_card_model.dart';
+import '../../../../data/models/populer_restaurant_card_model.dart';
 
 @RoutePage()
 class PopularMenuPage extends StatefulWidget {

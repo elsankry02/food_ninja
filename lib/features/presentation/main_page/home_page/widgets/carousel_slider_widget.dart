@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/components/custom_show_top_snakbar.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/extension/extension.dart';
-import '../../../../data/model/special_deal_model.dart';
+import '../../../../data/models/special_deal_model.dart';
 import 'special_deal_for_october_widget.dart';
 
 class CarouselSliderWidget extends StatefulWidget {
