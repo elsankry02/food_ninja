@@ -23,14 +23,14 @@ class ProfileListTileWidget extends StatelessWidget {
       ),
       title: Text(
         "Afsar Hossen",
-        style: context.kTextTheme.titleMedium!.copyWith(
+        style: context.kTextTheme.titleLarge!.copyWith(
           color: AppColors.kTitle,
           fontWeight: FontWeight.w400,
         ),
       ),
       subtitle: Text(
         "Imshuvo97@gmail.com",
-        style: context.kTextTheme.titleSmall!.copyWith(
+        style: context.kTextTheme.titleMedium!.copyWith(
           color: AppColors.kGrey,
           fontWeight: FontWeight.w400,
         ),

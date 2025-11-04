@@ -22,9 +22,8 @@ class ProfilePage extends StatelessWidget {
             padding: EdgeInsetsDirectional.only(
               start: context.height * 0.020,
               end: context.height * 0.020,
-              top: context.height * 0.065,
+              top: context.height * 0.060,
             ),
-            physics: const BouncingScrollPhysics(),
             children: [
               ProfileListTileWidget(),
               SizedBox(height: context.height * 0.033),

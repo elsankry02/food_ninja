@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../../core/constant/app_colors.dart';
 
+import '../../../../core/constant/app_colors.dart';
 import '../../../../core/extension/extension.dart';
 
 class SocialConnectionWidget extends StatelessWidget {
@@ -35,7 +35,8 @@ class SocialConnectionWidget extends StatelessWidget {
             Text(
               titleSocial,
               style: context.kTextTheme.titleSmall!.copyWith(
-                color: context.kChangeTheme.hintColor,
+                fontWeight: FontWeight.w500,
+                color: AppColors.kTitle,
               ),
             ),
           ],

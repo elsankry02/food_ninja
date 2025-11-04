@@ -26,7 +26,12 @@ class SetLocationWidget extends StatelessWidget {
               children: [
                 Image.asset(AppImages.kIconLocation),
                 SizedBox(width: context.height * 0.014),
-                Text('Your Location', style: context.kTextTheme.titleSmall),
+                Text(
+                  'Your Location',
+                  style: context.kTextTheme.titleSmall!.copyWith(
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
               ],
             ),
           ),
@@ -40,7 +45,9 @@ class SetLocationWidget extends StatelessWidget {
             child: Center(
               child: Text(
                 'Set Location',
-                style: context.kTextTheme.titleSmall!,
+                style: context.kTextTheme.titleSmall!.copyWith(
+                  fontWeight: FontWeight.w400,
+                ),
               ),
             ),
           ),

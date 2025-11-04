@@ -65,7 +65,7 @@ class _MainPageState extends State<MainPage> {
                   'Home',
                   style: context.kTextTheme.labelMedium!.copyWith(
                     color: AppColors.kTitle,
-                    fontWeight: FontWeight.w400,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
@@ -75,7 +75,7 @@ class _MainPageState extends State<MainPage> {
                   'Profile',
                   style: context.kTextTheme.labelMedium!.copyWith(
                     color: AppColors.kTitle,
-                    fontWeight: FontWeight.w400,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
@@ -89,7 +89,7 @@ class _MainPageState extends State<MainPage> {
                   'Cart',
                   style: context.kTextTheme.labelMedium!.copyWith(
                     color: AppColors.kTitle,
-                    fontWeight: FontWeight.w400,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
@@ -99,7 +99,7 @@ class _MainPageState extends State<MainPage> {
                   'Chat',
                   style: context.kTextTheme.labelMedium!.copyWith(
                     color: AppColors.kTitle,
-                    fontWeight: FontWeight.w400,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),

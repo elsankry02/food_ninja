@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../../../core/extension/extension.dart';
 
 class ListTileItems extends StatelessWidget {
@@ -26,7 +27,7 @@ class ListTileItems extends StatelessWidget {
         title,
         style: context.kTextTheme.titleMedium!.copyWith(
           color: titleColor,
-          fontWeight: FontWeight.w400,
+          fontWeight: FontWeight.w600,
         ),
       ),
       trailing: Icon(trailingIcon, color: iconColor, size: 20),

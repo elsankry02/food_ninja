@@ -53,12 +53,15 @@ class CustomHomeAppbar extends StatelessWidget {
           title: CustomTextFormField(
             hintText: "What do you want to order?",
             hintStyle: context.kTextTheme.labelMedium!.copyWith(
+              fontWeight: FontWeight.w500,
               color: AppColors.kArowBackground,
             ),
             prefixIcon: Icon(
               FontAwesomeIcons.magnifyingGlass,
               color: AppColors.kArowBack,
             ),
+            enabledBorderColor: AppColors.kTextFiledColor ?? Colors.transparent,
+            focusedBorderColor: AppColors.kTextFiledColor ?? Colors.transparent,
             filled: true,
             fillColor: AppColors.kTextFiledColor,
             controller: searchController,

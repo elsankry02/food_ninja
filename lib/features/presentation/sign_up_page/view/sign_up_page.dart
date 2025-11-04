@@ -55,14 +55,14 @@ class _SignUpPageState extends State<SignUpPage> {
                         'FoodNinja',
                         style: context.kTextTheme.displayMedium!.copyWith(
                           color: AppColors.kPrimaryColor,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w700,
                         ),
                       ),
                       Text(
                         textAlign: TextAlign.center,
                         'Deliever Favorite Food',
-                        style: context.kTextTheme.titleSmall!.copyWith(
-                          fontWeight: FontWeight.w700,
+                        style: context.kTextTheme.labelMedium!.copyWith(
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                       SizedBox(height: context.height * 0.060),
@@ -82,16 +82,22 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                         cursorColor: AppColors.kGrey,
                         hintStyle: context.kTextTheme.labelLarge!.copyWith(
+                          fontWeight: FontWeight.w400,
                           color: Colors.grey,
                         ),
+                        enabledBorderColor: AppColors.kBorder,
+                        focusedBorderColor: AppColors.kBorder,
                         controller: emailController,
                       ),
                       SizedBox(height: context.height * 0.012),
                       CustomTextFormField(
                         hintText: 'Password',
                         hintStyle: context.kTextTheme.labelLarge!.copyWith(
+                          fontWeight: FontWeight.w400,
                           color: Colors.grey,
                         ),
+                        enabledBorderColor: AppColors.kBorder,
+                        focusedBorderColor: AppColors.kBorder,
                         prefixIcon: SvgPicture.asset(
                           AppSvgs.kLock,
                           fit: BoxFit.scaleDown,
@@ -119,12 +125,12 @@ class _SignUpPageState extends State<SignUpPage> {
                       UnconstrainedBox(
                         child: CustomPrimaryButton(
                           title: 'Create Account',
-                          style: context.kTextTheme.titleSmall!.copyWith(
+                          style: context.kTextTheme.titleMedium!.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.w700,
                           ),
                           padding: EdgeInsets.symmetric(
-                            horizontal: context.height * 0.060,
+                            horizontal: context.height * 0.026,
                             vertical: context.height * 0.018,
                           ),
                           gradient: const LinearGradient(
@@ -146,6 +152,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       CustomPrimaryButton(
                         title: "Already have an account? Login",
                         style: context.kTextTheme.labelMedium!.copyWith(
+                          fontWeight: FontWeight.w500,
                           color: AppColors.kPrimaryColor,
                           decoration: TextDecoration.underline,
                           decorationColor: AppColors.kPrimaryColor,

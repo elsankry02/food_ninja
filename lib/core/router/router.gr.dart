@@ -11,6 +11,22 @@
 part of 'router.dart';
 
 /// generated route for
+/// [BeveragesPage]
+class BeveragesRoute extends PageRouteInfo<void> {
+  const BeveragesRoute({List<PageRouteInfo>? children})
+    : super(BeveragesRoute.name, initialChildren: children);
+
+  static const String name = 'BeveragesRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const BeveragesPage();
+    },
+  );
+}
+
+/// generated route for
 /// [CallRangingPage]
 class CallRangingRoute extends PageRouteInfo<void> {
   const CallRangingRoute({List<PageRouteInfo>? children})
@@ -107,6 +123,22 @@ class EditLocationRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [GroceriesPage]
+class GroceriesRoute extends PageRouteInfo<void> {
+  const GroceriesRoute({List<PageRouteInfo>? children})
+    : super(GroceriesRoute.name, initialChildren: children);
+
+  static const String name = 'GroceriesRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const GroceriesPage();
+    },
+  );
+}
+
+/// generated route for
 /// [HomePage]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
@@ -150,22 +182,6 @@ class MainRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const MainPage();
-    },
-  );
-}
-
-/// generated route for
-/// [NearestRestaurantPage]
-class NearestRestaurantRoute extends PageRouteInfo<void> {
-  const NearestRestaurantRoute({List<PageRouteInfo>? children})
-    : super(NearestRestaurantRoute.name, initialChildren: children);
-
-  static const String name = 'NearestRestaurantRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const NearestRestaurantPage();
     },
   );
 }
@@ -258,22 +274,6 @@ class PaymentMethodRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const PaymentMethodPage();
-    },
-  );
-}
-
-/// generated route for
-/// [PopularMenuPage]
-class PopularMenuRoute extends PageRouteInfo<void> {
-  const PopularMenuRoute({List<PageRouteInfo>? children})
-    : super(PopularMenuRoute.name, initialChildren: children);
-
-  static const String name = 'PopularMenuRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const PopularMenuPage();
     },
   );
 }

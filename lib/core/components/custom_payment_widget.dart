@@ -36,6 +36,8 @@ class PaymentsContainer extends StatelessWidget {
             SizedBox(
               width: context.height * 0.250,
               child: CustomTextFormField(
+                enabledBorderColor: AppColors.kBorder,
+                focusedBorderColor: AppColors.kBorder,
                 hintText: "2121 6352 8465 ****",
                 controller: controller,
               ),

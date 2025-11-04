@@ -1,22 +1,22 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/features/data/models/groceries_model.dart';
 
 import '../../../../../core/components/custom_home_appbar.dart';
-import '../../../../../core/components/custom_populer_menu_widget.dart';
+import '../../../../../core/components/custom_product_card_widget.dart';
 import '../../../../../core/components/custom_show_top_snakbar.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
-import '../../../../data/models/populer_restaurant_card_model.dart';
 
 @RoutePage()
-class PopularMenuPage extends StatefulWidget {
-  const PopularMenuPage({super.key});
+class GroceriesPage extends StatefulWidget {
+  const GroceriesPage({super.key});
 
   @override
-  State<PopularMenuPage> createState() => _PopularMenuPageState();
+  State<GroceriesPage> createState() => _GroceriesPageState();
 }
 
-class _PopularMenuPageState extends State<PopularMenuPage> {
+class _GroceriesPageState extends State<GroceriesPage> {
   final searchController = TextEditingController();
   @override
   void dispose() {
@@ -42,26 +42,33 @@ class _PopularMenuPageState extends State<PopularMenuPage> {
                 CustomHomeAppbar(searchController: searchController),
                 SizedBox(height: context.height * 0.020),
                 Text(
-                  'Nearest Restaurant',
-                  style: context.kTextTheme.titleSmall!.copyWith(
+                  'Groceries',
+                  style: context.kTextTheme.headlineSmall!.copyWith(
                     fontWeight: FontWeight.w600,
                   ),
                 ),
                 SizedBox(height: context.height * 0.010),
                 Expanded(
-                  child: ListView.builder(
-                    padding: EdgeInsets.zero,
+                  child: GridView.builder(
                     physics: BouncingScrollPhysics(),
-                    itemCount: populerRestaurantCardModel.length,
+                    padding: EdgeInsets.zero,
+                    itemCount: groceriesModel.length,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisExtent: context.height * 0.280,
+
+                      mainAxisSpacing: context.height * 0.015,
+                      crossAxisSpacing: context.height * 0.015,
+                    ),
                     itemBuilder: (context, index) {
-                      final data = populerRestaurantCardModel[index];
-                      return CustomPopularMenuWidget(
+                      final data = groceriesModel[index];
+                      return CustomProductCardWidget(
+                        image: data.image,
                         title: data.title,
                         subTitle: data.subTitle,
-                        image: data.image,
+                        price: data.price,
                         onTap: () =>
                             ErrorMessage(context, message: "COMING SOON"),
-                        price: data.price,
                       );
                     },
                   ),

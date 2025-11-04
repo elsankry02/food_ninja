@@ -1,22 +1,22 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/core/components/custom_product_card_widget.dart';
+import 'package:food_ninja/features/data/models/beverages_model.dart';
 
 import '../../../../../core/components/custom_home_appbar.dart';
-import '../../../../../core/components/custom_restaurant_widget.dart';
 import '../../../../../core/components/custom_show_top_snakbar.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
-import '../../../../data/models/nearest_restaurant_model.dart';
 
 @RoutePage()
-class NearestRestaurantPage extends StatefulWidget {
-  const NearestRestaurantPage({super.key});
+class BeveragesPage extends StatefulWidget {
+  const BeveragesPage({super.key});
 
   @override
-  State<NearestRestaurantPage> createState() => _NearestRestaurantPageState();
+  State<BeveragesPage> createState() => _BeveragesPageState();
 }
 
-class _NearestRestaurantPageState extends State<NearestRestaurantPage> {
+class _BeveragesPageState extends State<BeveragesPage> {
   final searchController = TextEditingController();
   @override
   void dispose() {
@@ -42,27 +42,30 @@ class _NearestRestaurantPageState extends State<NearestRestaurantPage> {
                 CustomHomeAppbar(searchController: searchController),
                 SizedBox(height: context.height * 0.020),
                 Text(
-                  'Nearest Restaurant',
-                  style: context.kTextTheme.titleSmall!.copyWith(
+                  'Beverages',
+                  style: context.kTextTheme.headlineSmall!.copyWith(
                     fontWeight: FontWeight.w600,
                   ),
                 ),
                 SizedBox(height: context.height * 0.010),
                 Expanded(
                   child: GridView.builder(
+                    physics: BouncingScrollPhysics(),
                     padding: EdgeInsets.zero,
-                    itemCount: nearestRestaurantitem.length,
+                    itemCount: beveragesItems.length,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      mainAxisSpacing: context.height * 0.020,
-                      crossAxisSpacing: context.height * 0.020,
+                      mainAxisExtent: context.height * 0.280,
+                      mainAxisSpacing: context.height * 0.015,
+                      crossAxisSpacing: context.height * 0.015,
                     ),
                     itemBuilder: (context, index) {
-                      final data = nearestRestaurantitem[index];
-                      return CustomRestaurantWidget(
+                      final data = beveragesItems[index];
+                      return CustomProductCardWidget(
+                        image: data.image,
                         title: data.title,
                         subTitle: data.subTitle,
-                        image: data.image,
+                        price: data.price,
                         onTap: () =>
                             ErrorMessage(context, message: "COMING SOON"),
                       );

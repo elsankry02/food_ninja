@@ -85,8 +85,11 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         cursorColor: AppColors.kGrey,
                         hintStyle: context.kTextTheme.labelLarge!.copyWith(
+                          fontWeight: FontWeight.w400,
                           color: Colors.grey,
                         ),
+                        enabledBorderColor: AppColors.kBorder,
+                        focusedBorderColor: AppColors.kBorder,
                         controller: emailController,
                         autofocus: true,
                       ),
@@ -94,8 +97,11 @@ class _LoginPageState extends State<LoginPage> {
                       CustomTextFormField(
                         hintText: 'Password',
                         hintStyle: context.kTextTheme.labelLarge!.copyWith(
+                          fontWeight: FontWeight.w400,
                           color: Colors.grey,
                         ),
+                        enabledBorderColor: AppColors.kBorder,
+                        focusedBorderColor: AppColors.kBorder,
                         prefixIcon: SvgPicture.asset(
                           AppSvgs.kLock,
                           fit: BoxFit.scaleDown,
@@ -148,36 +154,37 @@ class _LoginPageState extends State<LoginPage> {
                         ],
                       ),
                       SizedBox(height: context.height * 0.020),
-                      CustomPrimaryButton(
-                        title: 'Login',
-                        style: context.kTextTheme.titleSmall!.copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
+                      UnconstrainedBox(
+                        child: CustomPrimaryButton(
+                          title: 'Login',
+                          style: context.kTextTheme.titleSmall!.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w700,
+                          ),
+                          padding: EdgeInsets.symmetric(
+                            horizontal: context.height * 0.060,
+                            vertical: context.height * 0.018,
+                          ),
+                          gradient: const LinearGradient(
+                            begin: AlignmentGeometry.topLeft,
+                            end: AlignmentGeometry.bottomRight,
+                            colors: [
+                              AppColors.kPrimaryColor,
+                              AppColors.kSecondColor,
+                            ],
+                          ),
+                          borderRadius: BorderRadius.circular(
+                            context.height * 0.015,
+                          ),
+                          onTap: () =>
+                              context.router.push(OtpRoute(isSelected: false)),
                         ),
-                        margin: EdgeInsets.symmetric(
-                          horizontal: context.height * 0.117,
-                        ),
-                        padding: EdgeInsets.symmetric(
-                          vertical: context.height * 0.018,
-                        ),
-                        gradient: const LinearGradient(
-                          begin: AlignmentGeometry.topLeft,
-                          end: AlignmentGeometry.bottomRight,
-                          colors: [
-                            AppColors.kPrimaryColor,
-                            AppColors.kSecondColor,
-                          ],
-                        ),
-                        borderRadius: BorderRadius.circular(
-                          context.height * 0.015,
-                        ),
-                        onTap: () =>
-                            context.router.push(OtpRoute(isSelected: false)),
                       ),
                       SizedBox(height: context.height * 0.020),
                       CustomPrimaryButton(
                         title: "Dont have an account? Sign up",
                         style: context.kTextTheme.labelMedium!.copyWith(
+                          fontWeight: FontWeight.w500,
                           color: AppColors.kPrimaryColor,
                           decoration: TextDecoration.underline,
                           decorationColor: AppColors.kPrimaryColor,

@@ -15,7 +15,7 @@ class CustomTextFormField extends StatelessWidget {
   final Function(String value)? onChanged, onFieldSubmitted;
   final String? Function(String? value)? validator;
   final Color? cursorColor, suffixIconColor, prefixIconColor, fillColor;
-
+  final Color enabledBorderColor, focusedBorderColor;
   const CustomTextFormField({
     super.key,
     required this.hintText,
@@ -36,6 +36,8 @@ class CustomTextFormField extends StatelessWidget {
     this.filled,
     this.fillColor,
     this.autofocus = false,
+    required this.enabledBorderColor,
+    required this.focusedBorderColor,
   });
   @override
   Widget build(BuildContext context) {
@@ -59,8 +61,8 @@ class CustomTextFormField extends StatelessWidget {
         suffixIconColor: suffixIconColor,
         hintText: hintText,
         hintStyle: hintStyle,
-        enabledBorder: outlineInputBorder(color: AppColors.kBorder),
-        focusedBorder: outlineInputBorder(color: AppColors.kBorder),
+        enabledBorder: outlineInputBorder(color: enabledBorderColor),
+        focusedBorder: outlineInputBorder(color: focusedBorderColor),
         focusedErrorBorder: outlineInputBorder(color: AppColors.kRed),
         errorBorder: outlineInputBorder(color: AppColors.kRed),
       ),

@@ -59,7 +59,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   Text(
                     textAlign: TextAlign.center,
                     onboardingItems[index].titel,
-                    style: context.kTextTheme.labelMedium!.copyWith(),
+                    style: context.kTextTheme.labelMedium!.copyWith(
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
                   SizedBox(height: context.height * 0.042),
                 ],
@@ -69,7 +71,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
           UnconstrainedBox(
             child: CustomPrimaryButton(
               title: 'Next',
-              style: context.kTextTheme.titleSmall!.copyWith(
+              style: context.kTextTheme.titleMedium!.copyWith(
                 color: AppColors.kWhite,
                 fontWeight: FontWeight.w700,
               ),

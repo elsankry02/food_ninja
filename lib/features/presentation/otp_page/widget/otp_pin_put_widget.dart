@@ -20,7 +20,12 @@ class OtpPinPutWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("OTP Code", style: context.kTextTheme.titleSmall!.copyWith()),
+        Text(
+          "OTP Code",
+          style: context.kTextTheme.titleSmall!.copyWith(
+            fontWeight: FontWeight.w700,
+          ),
+        ),
         SizedBox(height: context.height * 0.010),
         Center(
           child: Pinput(

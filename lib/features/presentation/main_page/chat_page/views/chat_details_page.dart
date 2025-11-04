@@ -64,6 +64,8 @@ class _ChatDetailsPageState extends State<ChatDetailsPage> {
               hintStyle: context.kTextTheme.labelLarge!.copyWith(
                 color: AppColors.kGrey,
               ),
+              enabledBorderColor: AppColors.kBorder,
+              focusedBorderColor: AppColors.kBorder,
               filled: true,
               fillColor: AppColors.kWhite,
               controller: messageController,

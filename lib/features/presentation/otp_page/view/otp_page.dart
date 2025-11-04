@@ -123,9 +123,7 @@ class _OtpPageState extends State<OtpPage> {
                   },
                   pinputController: pinputController,
                 ),
-
                 SizedBox(height: context.height * 0.180),
-
                 time > 0
                     ? Text(
                         textAlign: TextAlign.center,
@@ -146,6 +144,7 @@ class _OtpPageState extends State<OtpPage> {
                           border: Border.all(color: AppColors.kBorder),
                           title: "Resend OTP",
                           style: context.kTextTheme.titleSmall!.copyWith(
+                            fontWeight: FontWeight.w600,
                             color: AppColors.kSecondaryGold,
                           ),
                           onTap: () => startTimer(),
@@ -153,33 +152,33 @@ class _OtpPageState extends State<OtpPage> {
                       ),
 
                 SizedBox(height: context.height * 0.020),
-                CustomPrimaryButton(
-                  title: 'Verify',
-                  style: context.kTextTheme.titleSmall!.copyWith(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w700,
-                  ),
-                  margin: EdgeInsets.symmetric(
-                    horizontal: context.height * 0.115,
-                  ),
-                  padding: EdgeInsets.symmetric(
-                    vertical: context.height * 0.018,
-                  ),
-                  gradient: const LinearGradient(
-                    begin: AlignmentGeometry.topLeft,
-                    end: AlignmentGeometry.bottomRight,
-                    colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
-                  ),
-                  borderRadius: BorderRadius.circular(context.height * 0.015),
-                  onTap: () {
-                    if (formKey.currentState!.validate()) {
-                      if (widget.isSelected == false) {
-                        context.router.replace(MainRoute());
-                      } else {
-                        context.router.push(SignupProcessRoute());
+                UnconstrainedBox(
+                  child: CustomPrimaryButton(
+                    title: 'Verify',
+                    style: context.kTextTheme.titleSmall!.copyWith(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                    ),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: context.height * 0.060,
+                      vertical: context.height * 0.018,
+                    ),
+                    gradient: const LinearGradient(
+                      begin: AlignmentGeometry.topLeft,
+                      end: AlignmentGeometry.bottomRight,
+                      colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
+                    ),
+                    borderRadius: BorderRadius.circular(context.height * 0.015),
+                    onTap: () {
+                      if (formKey.currentState!.validate()) {
+                        if (widget.isSelected == false) {
+                          context.router.replace(MainRoute());
+                        } else {
+                          context.router.push(SignupProcessRoute());
+                        }
                       }
-                    }
-                  },
+                    },
+                  ),
                 ),
               ],
             ),

@@ -57,23 +57,26 @@ class SetLocationPage extends StatelessWidget {
               SizedBox(height: context.height * 0.020),
               SetLocationWidget(),
               SizedBox(height: context.height * 0.040),
-              CustomPrimaryButton(
-                title: 'Next',
-                style: context.kTextTheme.titleSmall!.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w700,
+              UnconstrainedBox(
+                child: CustomPrimaryButton(
+                  title: 'Next',
+                  style: context.kTextTheme.titleSmall!.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700,
+                  ),
+
+                  padding: EdgeInsets.symmetric(
+                    horizontal: context.height * 0.060,
+                    vertical: context.height * 0.018,
+                  ),
+                  gradient: const LinearGradient(
+                    begin: AlignmentGeometry.topLeft,
+                    end: AlignmentGeometry.bottomRight,
+                    colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
+                  ),
+                  borderRadius: BorderRadius.circular(context.height * 0.015),
+                  onTap: () => context.router.push(MainRoute()),
                 ),
-                margin: EdgeInsets.symmetric(
-                  horizontal: context.height * 0.115,
-                ),
-                padding: EdgeInsets.symmetric(vertical: context.height * 0.018),
-                gradient: const LinearGradient(
-                  begin: AlignmentGeometry.topLeft,
-                  end: AlignmentGeometry.bottomRight,
-                  colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
-                ),
-                borderRadius: BorderRadius.circular(context.height * 0.015),
-                onTap: () => context.router.push(MainRoute()),
               ),
             ],
           ),

@@ -41,16 +41,16 @@ class _SplashPageState extends State<SplashPage> {
                 Text(
                   textAlign: TextAlign.center,
                   'FoodNinja',
-                  style: context.kTextTheme.displayMedium!.copyWith(
+                  style: context.kTextTheme.displayLarge!.copyWith(
                     color: AppColors.kPrimaryColor,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w900,
                   ),
                 ),
                 Text(
                   textAlign: TextAlign.center,
                   'Deliever Favorite Food',
-                  style: context.kTextTheme.titleSmall!.copyWith(
-                    fontWeight: FontWeight.w700,
+                  style: context.kTextTheme.labelMedium!.copyWith(
+                    fontWeight: FontWeight.w600,
                     color: AppColors.kTitle,
                   ),
                 ),

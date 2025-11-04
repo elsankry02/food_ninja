@@ -8,9 +8,9 @@ import 'package:food_ninja/features/presentation/main_page/cart_page/view/edit_p
 import 'package:food_ninja/features/presentation/main_page/chat_page/views/call_ranging_page.dart';
 import 'package:food_ninja/features/presentation/main_page/chat_page/views/chat_details_page.dart';
 import 'package:food_ninja/features/presentation/main_page/chat_page/views/chat_page.dart';
+import 'package:food_ninja/features/presentation/main_page/home_page/view/beverages_page.dart';
+import 'package:food_ninja/features/presentation/main_page/home_page/view/groceries_page.dart';
 import 'package:food_ninja/features/presentation/main_page/home_page/view/home_page.dart';
-import 'package:food_ninja/features/presentation/main_page/home_page/view/nearest_restaurant_page.dart';
-import 'package:food_ninja/features/presentation/main_page/home_page/view/popular_menu_page.dart';
 import 'package:food_ninja/features/presentation/main_page/main_page.dart';
 import 'package:food_ninja/features/presentation/main_page/profile_page/view/profile_page.dart';
 import 'package:food_ninja/features/presentation/notifiaction_page/view/notifiaction_page.dart';
@@ -29,7 +29,7 @@ final router = AppRouter();
 class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
-    AutoRoute(page: SplashRoute.page, initial: true),
+    AutoRoute(page: SplashRoute.page),
     AutoRoute(page: SignUpRoute.page),
     AutoRoute(page: SignupProcessRoute.page),
     AutoRoute(page: SetLocationRoute.page),
@@ -37,8 +37,8 @@ class AppRouter extends RootStackRouter {
     AutoRoute(page: OnboardingRoute.page),
     AutoRoute(page: ProfileRoute.page),
     AutoRoute(page: HomeRoute.page),
-    AutoRoute(page: NearestRestaurantRoute.page),
-    AutoRoute(page: PopularMenuRoute.page),
+    AutoRoute(page: GroceriesRoute.page),
+    AutoRoute(page: BeveragesRoute.page),
     AutoRoute(page: ChatRoute.page),
     AutoRoute(page: CallRangingRoute.page),
     AutoRoute(page: CartRoute.page),
@@ -46,7 +46,7 @@ class AppRouter extends RootStackRouter {
     AutoRoute(page: EditLocationRoute.page),
     AutoRoute(page: PaymentMethodRoute.page),
     AutoRoute(page: LoginRoute.page),
-    AutoRoute(page: MainRoute.page),
+    AutoRoute(page: MainRoute.page, initial: true),
     AutoRoute(page: NotifiactionRoute.page),
   ];
 }

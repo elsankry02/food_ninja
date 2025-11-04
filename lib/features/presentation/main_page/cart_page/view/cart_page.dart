@@ -49,7 +49,7 @@ class _CartPageState extends State<CartPage> {
                     itemCount: 6,
                     itemBuilder: (context, index) {
                       return CartDetailsWidget(
-                        image: AppImages.kMeat,
+                        image: AppImages.kAppleGrapeJuice,
                         title: "Meat",
                         subtitle: "1k",
                         price: "35",
