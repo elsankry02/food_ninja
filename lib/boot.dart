@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:food_ninja/features/data/providers/provider.dart';
+import 'features/data/providers/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<List<Override>> getOverrides() async {

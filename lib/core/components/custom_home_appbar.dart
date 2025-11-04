@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:food_ninja/core/router/router.dart';
+import '../router/router.dart';
 
 import '../constant/app_colors.dart';
 import '../constant/app_images.dart';

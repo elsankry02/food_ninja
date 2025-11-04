@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:food_ninja/core/router/router.dart';
+import '../../../../core/router/router.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../../../core/components/custom_icon_button_pop.dart';

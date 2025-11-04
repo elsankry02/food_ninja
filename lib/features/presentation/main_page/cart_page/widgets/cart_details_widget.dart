@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja/core/components/custom_icon_button_pop.dart';
 
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
@@ -6,7 +7,7 @@ import '../../../../../core/extension/extension.dart';
 
 class CartDetailsWidget extends StatelessWidget {
   final String image, title, subtitle, price, count;
-  final void Function()? minusOnTap, plusOnTap;
+  final void Function()? minusOnTap, plusOnTap, onPressed;
   const CartDetailsWidget({
     super.key,
     required this.image,
@@ -16,13 +17,14 @@ class CartDetailsWidget extends StatelessWidget {
     this.minusOnTap,
     this.plusOnTap,
     required this.count,
+    this.onPressed,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsetsDirectional.only(bottom: context.height * 0.010),
-      padding: EdgeInsets.symmetric(horizontal: context.height * 0.010),
+      padding: EdgeInsets.symmetric(horizontal: context.height * 0.015),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(context.height * 0.022),
         color: AppColors.kWhite,
@@ -32,26 +34,47 @@ class CartDetailsWidget extends StatelessWidget {
         contentPadding: EdgeInsets.zero,
         leading: ClipRRect(
           borderRadius: BorderRadiusGeometry.circular(context.height * 0.016),
-          child: Image.asset(image, fit: BoxFit.cover),
-        ),
-        title: Text(
-          title,
-          style: context.kTextTheme.titleSmall!.copyWith(
-            color: AppColors.kTitle,
+          child: Image.asset(
+            image,
+            fit: BoxFit.scaleDown,
+            width: context.height * 0.085,
+            height: context.height * 0.085,
           ),
         ),
-        subtitle: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        title: Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  subtitle,
-                  style: context.kTextTheme.titleSmall!.copyWith(
-                    color: AppColors.kGrey,
-                  ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      title,
+                      style: context.kTextTheme.titleMedium!.copyWith(
+                        color: AppColors.kTitle,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      subtitle,
+                      style: context.kTextTheme.labelLarge!.copyWith(
+                        color: AppColors.kGrey,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ],
                 ),
+                CustomIconButton(
+                  icon: Icon(Icons.close, size: context.height * 0.024),
+                  onPressed: onPressed,
+                ),
+              ],
+            ),
+            SizedBox(height: context.height * 0.012),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
                 Row(
                   children: [
                     GestureDetector(
@@ -59,7 +82,13 @@ class CartDetailsWidget extends StatelessWidget {
                       child: Image.asset(AppImages.kIconMinus),
                     ),
                     SizedBox(width: context.height * 0.016),
-                    Text(count),
+                    Text(
+                      count,
+                      style: context.kTextTheme.titleMedium!.copyWith(
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.kTitle,
+                      ),
+                    ),
                     SizedBox(width: context.height * 0.016),
                     GestureDetector(
                       onTap: plusOnTap,
@@ -67,14 +96,14 @@ class CartDetailsWidget extends StatelessWidget {
                     ),
                   ],
                 ),
+                Text(
+                  price,
+                  style: context.kTextTheme.titleMedium!.copyWith(
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.kTitle,
+                  ),
+                ),
               ],
-            ),
-            Text(
-              "\$ $price",
-              style: context.kTextTheme.titleMedium!.copyWith(
-                fontWeight: FontWeight.w700,
-                color: AppColors.kSecondColor,
-              ),
             ),
           ],
         ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/components/custom_icon_add.dart';
 
 import '../constant/app_colors.dart';
 import '../extension/extension.dart';
+import 'custom_icon_add.dart';
 
 class CustomProductCardWidget extends StatelessWidget {
   final void Function()? onTap;

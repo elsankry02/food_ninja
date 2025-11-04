@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/extension/extension.dart';
+import '../constant/app_colors.dart';
+import '../extension/extension.dart';
 
 class CustomIconAdd extends StatelessWidget {
   final void Function()? onTap;

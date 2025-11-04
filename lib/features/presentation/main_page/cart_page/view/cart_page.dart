@@ -1,7 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
+import 'package:food_ninja/core/components/custom_primary_button.dart';
+import 'package:food_ninja/core/components/custom_show_top_snakbar.dart';
+import 'package:food_ninja/features/data/models/groceries_model.dart';
 
+import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
 import '../widgets/cart_details_widget.dart';
@@ -32,27 +35,35 @@ class _CartPageState extends State<CartPage> {
             ),
             child: Column(
               children: [
-                Text(
-                  "My Cart",
-                  style: context.kTextTheme.headlineSmall!.copyWith(
+                CustomPrimaryButton(
+                  title: "My Cart",
+                  padding: EdgeInsetsDirectional.only(
+                    bottom: context.height * 0.025,
+                  ),
+                  border: Border(
+                    bottom: BorderSide(color: AppColors.kBorder, width: 2),
+                  ),
+                  style: context.kTextTheme.titleLarge!.copyWith(
                     fontWeight: FontWeight.w700,
                     color: AppColors.kTitle,
                   ),
                 ),
-                SizedBox(height: context.height * 0.020),
                 Expanded(
                   child: ListView.builder(
                     padding: EdgeInsetsDirectional.only(
                       top: context.height * 0.0,
                       bottom: context.height * 0.250,
                     ),
-                    itemCount: 6,
+                    itemCount: groceriesModel.length,
                     itemBuilder: (context, index) {
+                      final data = groceriesModel[index];
                       return CartDetailsWidget(
-                        image: AppImages.kAppleGrapeJuice,
-                        title: "Meat",
-                        subtitle: "1k",
-                        price: "35",
+                        onPressed: () =>
+                            ErrorMessage(context, message: "COMING SOON"),
+                        image: data.image,
+                        title: data.title,
+                        subtitle: data.subTitle,
+                        price: data.price,
                         count: "$count",
                         plusOnTap: () {
                           setState(() {

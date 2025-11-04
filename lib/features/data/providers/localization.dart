@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:food_ninja/core/constant/app_enums.dart';
-import 'package:food_ninja/features/data/providers/provider.dart';
+import '../../../core/constant/app_enums.dart';
+import 'provider.dart';
 
 abstract class LocalizationState {}
 

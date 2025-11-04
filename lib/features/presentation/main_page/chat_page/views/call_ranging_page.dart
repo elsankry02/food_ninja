@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:food_ninja/core/router/router.dart';
+import '../../../../../core/router/router.dart';
 
 import '../../../../../core/components/custom_show_top_snakbar.dart';
 import '../../../../../core/constant/app_colors.dart';

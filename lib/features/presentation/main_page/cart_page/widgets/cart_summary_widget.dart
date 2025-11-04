@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/router/router.dart';
 
 import '../../../../../core/components/custom_primary_button.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
+import '../../../../../core/router/router.dart';
 
 class CartSummaryWidget extends StatelessWidget {
   const CartSummaryWidget({super.key});
@@ -29,53 +29,60 @@ class CartSummaryWidget extends StatelessWidget {
           BuildRowWidget(
             title: 'Sub-Total',
             subTitle: '120',
-            titleStyle: context.kTextTheme.bodyMedium!.copyWith(
+            titleStyle: context.kTextTheme.titleSmall!.copyWith(
+              fontWeight: FontWeight.w600,
               color: AppColors.kWhite,
             ),
-            subTitleStyle: context.kTextTheme.bodyMedium!.copyWith(
+            subTitleStyle: context.kTextTheme.titleSmall!.copyWith(
+              fontWeight: FontWeight.w600,
               color: AppColors.kWhite,
             ),
           ),
           BuildRowWidget(
             title: 'Delivery Charge',
             subTitle: '10',
-            titleStyle: context.kTextTheme.bodyMedium!.copyWith(
+            titleStyle: context.kTextTheme.titleSmall!.copyWith(
+              fontWeight: FontWeight.w600,
               color: AppColors.kWhite,
             ),
-            subTitleStyle: context.kTextTheme.bodyMedium!.copyWith(
+            subTitleStyle: context.kTextTheme.titleSmall!.copyWith(
+              fontWeight: FontWeight.w600,
               color: AppColors.kWhite,
             ),
           ),
           BuildRowWidget(
             title: 'Discount',
             subTitle: '20',
-            titleStyle: context.kTextTheme.bodyMedium!.copyWith(
+            titleStyle: context.kTextTheme.titleSmall!.copyWith(
+              fontWeight: FontWeight.w600,
               color: AppColors.kWhite,
             ),
-            subTitleStyle: context.kTextTheme.bodyMedium!.copyWith(
+            subTitleStyle: context.kTextTheme.titleSmall!.copyWith(
+              fontWeight: FontWeight.w600,
               color: AppColors.kWhite,
             ),
           ),
-          SizedBox(height: context.height * 0.020),
+          SizedBox(height: context.height * 0.010),
           BuildRowWidget(
             title: 'Total',
             subTitle: '150',
-            titleStyle: context.kTextTheme.titleLarge!.copyWith(
-              fontWeight: FontWeight.w700,
+            titleStyle: context.kTextTheme.headlineSmall!.copyWith(
+              fontWeight: FontWeight.w600,
               color: AppColors.kWhite,
             ),
-            subTitleStyle: context.kTextTheme.titleLarge!.copyWith(
-              fontWeight: FontWeight.w700,
+            subTitleStyle: context.kTextTheme.headlineSmall!.copyWith(
+              fontWeight: FontWeight.w600,
               color: AppColors.kWhite,
             ),
           ),
           SizedBox(height: context.height * 0.020),
           CustomPrimaryButton(
             title: "Confirm Order",
-            style: context.kTextTheme.titleSmall!.copyWith(
+            style: context.kTextTheme.titleMedium!.copyWith(
+              fontWeight: FontWeight.w600,
               color: AppColors.kSecondColor,
             ),
-            padding: EdgeInsets.symmetric(vertical: context.height * 0.022),
+            padding: EdgeInsets.symmetric(vertical: context.height * 0.020),
             backGroundColor: AppColors.kWhite,
             borderRadius: BorderRadius.circular(context.height * 0.015),
             onTap: () => context.router.push(ConfirmOrderRoute()),
