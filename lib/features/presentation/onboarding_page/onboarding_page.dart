@@ -1,21 +1,23 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import '../../../core/router/router.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:food_ninja/features/data/providers/provider.dart';
 
 import '../../../core/components/custom_primary_button.dart';
 import '../../../core/constant/app_colors.dart';
 import '../../../core/extension/extension.dart';
+import '../../../core/router/router.dart';
 import '../../data/models/onboarding_model.dart';
 
 @RoutePage()
-class OnboardingPage extends StatefulWidget {
+class OnboardingPage extends ConsumerStatefulWidget {
   const OnboardingPage({super.key});
 
   @override
-  State<OnboardingPage> createState() => _OnboardingPageState();
+  ConsumerState<OnboardingPage> createState() => _OnboardingPageState();
 }
 
-class _OnboardingPageState extends State<OnboardingPage> {
+class _OnboardingPageState extends ConsumerState<OnboardingPage> {
   final pageController = PageController(initialPage: 0);
   int currentIndex = 0;
   @override
@@ -43,7 +45,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   SizedBox(height: context.height * 0.040),
                   Image.asset(
                     onboardingItems[index].image,
-                    width: double.infinity,
+                    height: context.height * 0.5,
                     fit: BoxFit.cover,
                   ),
                   SizedBox(height: context.height * 0.059),
@@ -88,6 +90,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               onTap: () {
                 if (currentIndex == onboardingItems.length - 1) {
                   context.router.push(SignUpRoute());
+                  ref.read(prefsProvider).setBool("isSaved", true);
                 }
                 pageController.animateToPage(
                   ++currentIndex,

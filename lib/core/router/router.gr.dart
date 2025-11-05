@@ -279,6 +279,22 @@ class PaymentMethodRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [PersonalDetailsPage]
+class PersonalDetailsRoute extends PageRouteInfo<void> {
+  const PersonalDetailsRoute({List<PageRouteInfo>? children})
+    : super(PersonalDetailsRoute.name, initialChildren: children);
+
+  static const String name = 'PersonalDetailsRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const PersonalDetailsPage();
+    },
+  );
+}
+
+/// generated route for
 /// [ProfilePage]
 class ProfileRoute extends PageRouteInfo<void> {
   const ProfileRoute({List<PageRouteInfo>? children})

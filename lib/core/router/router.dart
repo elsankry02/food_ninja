@@ -1,5 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/features/presentation/main_page/profile_page/view/personal_details_page.dart';
+
 import '../../features/presentation/login_in_page/view/login_page.dart';
 import '../../features/presentation/main_page/cart_page/view/cart_page.dart';
 import '../../features/presentation/main_page/cart_page/view/confirm_order_page.dart';
@@ -29,7 +31,7 @@ final router = AppRouter();
 class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
-    AutoRoute(page: SplashRoute.page),
+    AutoRoute(page: SplashRoute.page, initial: true),
     AutoRoute(page: SignUpRoute.page),
     AutoRoute(page: SignupProcessRoute.page),
     AutoRoute(page: SetLocationRoute.page),
@@ -40,13 +42,15 @@ class AppRouter extends RootStackRouter {
     AutoRoute(page: GroceriesRoute.page),
     AutoRoute(page: BeveragesRoute.page),
     AutoRoute(page: ChatRoute.page),
+    AutoRoute(page: ChatDetailsRoute.page),
     AutoRoute(page: CallRangingRoute.page),
     AutoRoute(page: CartRoute.page),
+    AutoRoute(page: PersonalDetailsRoute.page),
     AutoRoute(page: ConfirmOrderRoute.page),
     AutoRoute(page: EditLocationRoute.page),
     AutoRoute(page: PaymentMethodRoute.page),
     AutoRoute(page: LoginRoute.page),
-    AutoRoute(page: MainRoute.page, initial: true),
+    AutoRoute(page: MainRoute.page),
     AutoRoute(page: NotifiactionRoute.page),
   ];
 }

@@ -11,9 +11,8 @@ class ProfileListTileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       contentPadding: EdgeInsets.zero,
-
       leading: ClipRRect(
-        borderRadius: BorderRadiusGeometry.circular(15),
+        borderRadius: BorderRadius.circular(context.height * 0.015),
         child: Image.asset(
           AppImages.kDefultPhoto,
           height: context.height * 0.070,
@@ -25,14 +24,14 @@ class ProfileListTileWidget extends StatelessWidget {
         "Afsar Hossen",
         style: context.kTextTheme.titleLarge!.copyWith(
           color: AppColors.kTitle,
-          fontWeight: FontWeight.w400,
+          fontWeight: FontWeight.w600,
         ),
       ),
       subtitle: Text(
         "Imshuvo97@gmail.com",
         style: context.kTextTheme.titleMedium!.copyWith(
           color: AppColors.kGrey,
-          fontWeight: FontWeight.w400,
+          fontWeight: FontWeight.w600,
         ),
       ),
     );

@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../../core/router/router.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/components/custom_text_form_field.dart';
@@ -9,6 +8,7 @@ import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/constant/app_svgs.dart';
 import '../../../../core/extension/extension.dart';
+import '../../../../core/router/router.dart';
 
 @RoutePage()
 class SignUpPage extends StatefulWidget {
@@ -89,7 +89,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         focusedBorderColor: AppColors.kBorder,
                         controller: emailController,
                       ),
-                      SizedBox(height: context.height * 0.012),
+                      SizedBox(height: context.height * 0.020),
                       CustomTextFormField(
                         hintText: 'Password',
                         hintStyle: context.kTextTheme.labelLarge!.copyWith(

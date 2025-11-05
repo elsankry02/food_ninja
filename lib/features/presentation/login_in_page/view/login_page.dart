@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../../core/router/router.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/components/custom_show_top_snakbar.dart';
@@ -10,6 +9,7 @@ import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/constant/app_svgs.dart';
 import '../../../../core/extension/extension.dart';
+import '../../../../core/router/router.dart';
 import '../widget/social_connection_widget.dart';
 
 @RoutePage()
@@ -93,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
                         controller: emailController,
                         autofocus: true,
                       ),
-                      SizedBox(height: context.height * 0.012),
+                      SizedBox(height: context.height * 0.020),
                       CustomTextFormField(
                         hintText: 'Password',
                         hintStyle: context.kTextTheme.labelLarge!.copyWith(

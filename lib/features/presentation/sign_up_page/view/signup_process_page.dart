@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../../../core/router/router.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../../../core/components/custom_icon_button_pop.dart';
@@ -13,6 +12,7 @@ import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/constant/app_svgs.dart';
 import '../../../../core/extension/extension.dart';
+import '../../../../core/router/router.dart';
 import '../widget/upload_photo_widget.dart';
 
 @RoutePage()
@@ -24,13 +24,13 @@ class SignupProcessPage extends StatefulWidget {
 }
 
 class _SignupProcessPageState extends State<SignupProcessPage> {
-  final nameController = TextEditingController();
   final usernameController = TextEditingController();
+  final fullNameController = TextEditingController();
   File? file;
   @override
   void dispose() {
-    nameController.dispose();
     usernameController.dispose();
+    fullNameController.dispose();
     super.dispose();
   }
 
@@ -126,22 +126,6 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
               ),
               SizedBox(height: context.height * 0.020),
               CustomTextFormField(
-                hintText: 'Name',
-                prefixIcon: SvgPicture.asset(
-                  AppSvgs.kProfile,
-                  fit: BoxFit.scaleDown,
-                ),
-                cursorColor: AppColors.kGrey,
-                hintStyle: context.kTextTheme.labelLarge!.copyWith(
-                  fontWeight: FontWeight.w400,
-                  color: Colors.grey,
-                ),
-                enabledBorderColor: AppColors.kBorder,
-                focusedBorderColor: AppColors.kBorder,
-                controller: nameController,
-              ),
-              SizedBox(height: context.height * 0.020),
-              CustomTextFormField(
                 hintText: 'User Name',
                 prefixIcon: SvgPicture.asset(
                   AppSvgs.kProfile,
@@ -155,6 +139,22 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
                 enabledBorderColor: AppColors.kBorder,
                 focusedBorderColor: AppColors.kBorder,
                 controller: usernameController,
+              ),
+              SizedBox(height: context.height * 0.020),
+              CustomTextFormField(
+                hintText: 'Full Name',
+                prefixIcon: SvgPicture.asset(
+                  AppSvgs.kProfile,
+                  fit: BoxFit.scaleDown,
+                ),
+                cursorColor: AppColors.kGrey,
+                hintStyle: context.kTextTheme.labelLarge!.copyWith(
+                  fontWeight: FontWeight.w400,
+                  color: Colors.grey,
+                ),
+                enabledBorderColor: AppColors.kBorder,
+                focusedBorderColor: AppColors.kBorder,
+                controller: fullNameController,
               ),
               SizedBox(height: context.height * 0.040),
               UnconstrainedBox(
