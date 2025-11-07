@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/components/custom_show_top_snakbar.dart';
+import '../../../../../core/components/custom_snakbar.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/extension/extension.dart';
 import '../../../../data/models/special_deal_model.dart';

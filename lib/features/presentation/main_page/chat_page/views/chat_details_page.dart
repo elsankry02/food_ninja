@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/components/custom_icon_button_pop.dart';
-import '../../../../../core/components/custom_show_top_snakbar.dart';
+import '../../../../../core/components/custom_snakbar.dart';
 import '../../../../../core/components/custom_text_form_field.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';

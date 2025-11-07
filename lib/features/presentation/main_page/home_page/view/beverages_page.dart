@@ -4,7 +4,7 @@ import '../../../../../core/components/custom_product_card_widget.dart';
 import '../../../../data/models/beverages_model.dart';
 
 import '../../../../../core/components/custom_home_appbar.dart';
-import '../../../../../core/components/custom_show_top_snakbar.dart';
+import '../../../../../core/components/custom_snakbar.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
 
