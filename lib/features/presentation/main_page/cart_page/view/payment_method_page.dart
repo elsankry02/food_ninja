@@ -58,7 +58,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
               ),
               SizedBox(height: context.height * 0.020),
               Text(
-                'Confirm Order',
+                'Payment Method',
                 style: context.kTextTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w700,
                   color: AppColors.kTitle,

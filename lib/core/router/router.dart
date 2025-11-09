@@ -1,12 +1,13 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/features/presentation/main_page/profile_page/view/orders_page.dart';
 import 'package:food_ninja/features/presentation/main_page/profile_page/view/personal_details_page.dart';
 
 import '../../features/presentation/login_in_page/view/login_page.dart';
 import '../../features/presentation/main_page/cart_page/view/cart_page.dart';
 import '../../features/presentation/main_page/cart_page/view/confirm_order_page.dart';
-import '../../features/presentation/main_page/cart_page/view/edit_location_page.dart';
-import '../../features/presentation/main_page/cart_page/view/edit_payment_page.dart';
+import '../../features/presentation/main_page/cart_page/view/order_location_page.dart';
+import '../../features/presentation/main_page/cart_page/view/payment_method_page.dart';
 import '../../features/presentation/main_page/chat_page/views/call_ranging_page.dart';
 import '../../features/presentation/main_page/chat_page/views/chat_details_page.dart';
 import '../../features/presentation/main_page/chat_page/views/chat_page.dart';
@@ -36,6 +37,7 @@ class AppRouter extends RootStackRouter {
     AutoRoute(page: SignupProcessRoute.page),
     AutoRoute(page: SetLocationRoute.page),
     AutoRoute(page: OtpRoute.page),
+    AutoRoute(page: OrdersRoute.page),
     AutoRoute(page: OnboardingRoute.page),
     AutoRoute(page: ProfileRoute.page),
     AutoRoute(page: HomeRoute.page),
@@ -47,7 +49,7 @@ class AppRouter extends RootStackRouter {
     AutoRoute(page: CartRoute.page),
     AutoRoute(page: PersonalDetailsRoute.page),
     AutoRoute(page: ConfirmOrderRoute.page),
-    AutoRoute(page: EditLocationRoute.page),
+    AutoRoute(page: OrderLocationRoute.page),
     AutoRoute(page: PaymentMethodRoute.page),
     AutoRoute(page: LoginRoute.page),
     AutoRoute(page: MainRoute.page),

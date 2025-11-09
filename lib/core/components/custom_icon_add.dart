@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../constant/app_colors.dart';
 import '../extension/extension.dart';
 
@@ -15,8 +16,6 @@ class CustomIconAdd extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
-            end: Alignment.bottomRight,
-            begin: Alignment.topLeft,
           ),
 
           borderRadius: BorderRadius.circular(context.height * 0.017),

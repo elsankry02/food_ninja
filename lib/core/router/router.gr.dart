@@ -107,22 +107,6 @@ class ConfirmOrderRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [EditLocationPage]
-class EditLocationRoute extends PageRouteInfo<void> {
-  const EditLocationRoute({List<PageRouteInfo>? children})
-    : super(EditLocationRoute.name, initialChildren: children);
-
-  static const String name = 'EditLocationRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const EditLocationPage();
-    },
-  );
-}
-
-/// generated route for
 /// [GroceriesPage]
 class GroceriesRoute extends PageRouteInfo<void> {
   const GroceriesRoute({List<PageRouteInfo>? children})
@@ -214,6 +198,38 @@ class OnboardingRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const OnboardingPage();
+    },
+  );
+}
+
+/// generated route for
+/// [OrderLocationPage]
+class OrderLocationRoute extends PageRouteInfo<void> {
+  const OrderLocationRoute({List<PageRouteInfo>? children})
+    : super(OrderLocationRoute.name, initialChildren: children);
+
+  static const String name = 'OrderLocationRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const OrderLocationPage();
+    },
+  );
+}
+
+/// generated route for
+/// [OrdersPage]
+class OrdersRoute extends PageRouteInfo<void> {
+  const OrdersRoute({List<PageRouteInfo>? children})
+    : super(OrdersRoute.name, initialChildren: children);
+
+  static const String name = 'OrdersRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const OrdersPage();
     },
   );
 }

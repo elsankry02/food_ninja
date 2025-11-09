@@ -12,83 +12,91 @@ class CartSummaryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(context.height * 0.015),
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage(AppImages.kPatternButtonSheet),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Container(
+          padding: EdgeInsets.all(context.height * 0.015),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              fit: BoxFit.cover,
+              image: AssetImage(AppImages.kPatternButtonSheet),
+            ),
+            gradient: LinearGradient(
+              colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
+            ),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(context.height * 0.022),
+              topRight: Radius.circular(context.height * 0.022),
+            ),
+          ),
+          child: Column(
+            children: [
+              BuildRowWidget(
+                title: 'Sub-Total',
+                subTitle: '120',
+                titleStyle: context.kTextTheme.titleSmall!.copyWith(
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.kWhite,
+                ),
+                subTitleStyle: context.kTextTheme.titleSmall!.copyWith(
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.kWhite,
+                ),
+              ),
+              BuildRowWidget(
+                title: 'Delivery Charge',
+                subTitle: '10',
+                titleStyle: context.kTextTheme.titleSmall!.copyWith(
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.kWhite,
+                ),
+                subTitleStyle: context.kTextTheme.titleSmall!.copyWith(
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.kWhite,
+                ),
+              ),
+              BuildRowWidget(
+                title: 'Discount',
+                subTitle: '20',
+                titleStyle: context.kTextTheme.titleSmall!.copyWith(
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.kWhite,
+                ),
+                subTitleStyle: context.kTextTheme.titleSmall!.copyWith(
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.kWhite,
+                ),
+              ),
+              SizedBox(height: context.height * 0.010),
+              BuildRowWidget(
+                title: 'Total',
+                subTitle: '150',
+                titleStyle: context.kTextTheme.headlineSmall!.copyWith(
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.kWhite,
+                ),
+                subTitleStyle: context.kTextTheme.headlineSmall!.copyWith(
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.kWhite,
+                ),
+              ),
+              SizedBox(height: context.height * 0.020),
+              CustomPrimaryButton(
+                title: "Confirm Order",
+                style: context.kTextTheme.titleMedium!.copyWith(
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.kSecondColor,
+                ),
+                padding: EdgeInsets.symmetric(vertical: context.height * 0.020),
+                backGroundColor: AppColors.kWhite,
+                borderRadius: BorderRadius.circular(context.height * 0.015),
+                onTap: () => context.router.push(ConfirmOrderRoute()),
+              ),
+            ],
+          ),
         ),
-        gradient: LinearGradient(
-          colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
-        ),
-        borderRadius: BorderRadius.circular(context.height * 0.016),
-      ),
-      child: Column(
-        children: [
-          BuildRowWidget(
-            title: 'Sub-Total',
-            subTitle: '120',
-            titleStyle: context.kTextTheme.titleSmall!.copyWith(
-              fontWeight: FontWeight.w600,
-              color: AppColors.kWhite,
-            ),
-            subTitleStyle: context.kTextTheme.titleSmall!.copyWith(
-              fontWeight: FontWeight.w600,
-              color: AppColors.kWhite,
-            ),
-          ),
-          BuildRowWidget(
-            title: 'Delivery Charge',
-            subTitle: '10',
-            titleStyle: context.kTextTheme.titleSmall!.copyWith(
-              fontWeight: FontWeight.w600,
-              color: AppColors.kWhite,
-            ),
-            subTitleStyle: context.kTextTheme.titleSmall!.copyWith(
-              fontWeight: FontWeight.w600,
-              color: AppColors.kWhite,
-            ),
-          ),
-          BuildRowWidget(
-            title: 'Discount',
-            subTitle: '20',
-            titleStyle: context.kTextTheme.titleSmall!.copyWith(
-              fontWeight: FontWeight.w600,
-              color: AppColors.kWhite,
-            ),
-            subTitleStyle: context.kTextTheme.titleSmall!.copyWith(
-              fontWeight: FontWeight.w600,
-              color: AppColors.kWhite,
-            ),
-          ),
-          SizedBox(height: context.height * 0.010),
-          BuildRowWidget(
-            title: 'Total',
-            subTitle: '150',
-            titleStyle: context.kTextTheme.headlineSmall!.copyWith(
-              fontWeight: FontWeight.w600,
-              color: AppColors.kWhite,
-            ),
-            subTitleStyle: context.kTextTheme.headlineSmall!.copyWith(
-              fontWeight: FontWeight.w600,
-              color: AppColors.kWhite,
-            ),
-          ),
-          SizedBox(height: context.height * 0.020),
-          CustomPrimaryButton(
-            title: "Confirm Order",
-            style: context.kTextTheme.titleMedium!.copyWith(
-              fontWeight: FontWeight.w600,
-              color: AppColors.kSecondColor,
-            ),
-            padding: EdgeInsets.symmetric(vertical: context.height * 0.020),
-            backGroundColor: AppColors.kWhite,
-            borderRadius: BorderRadius.circular(context.height * 0.015),
-            onTap: () => context.router.push(ConfirmOrderRoute()),
-          ),
-        ],
-      ),
+      ],
     );
   }
 }

@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:food_ninja/core/components/custom_primary_button.dart';
 import 'package:food_ninja/core/components/custom_snakbar.dart';
 import 'package:food_ninja/features/data/models/groceries_model.dart';
+import 'package:food_ninja/features/presentation/main_page/cart_page/widgets/cart_summary_widget.dart';
 
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
 import '../widgets/cart_details_widget.dart';
-import '../widgets/cart_summary_widget.dart';
 
 @RoutePage()
 class CartPage extends StatefulWidget {
@@ -50,9 +50,10 @@ class _CartPageState extends State<CartPage> {
                 ),
                 Expanded(
                   child: ListView.builder(
+                    physics: BouncingScrollPhysics(),
                     padding: EdgeInsetsDirectional.only(
                       top: context.height * 0.0,
-                      bottom: context.height * 0.250,
+                      bottom: context.height * 0.080,
                     ),
                     itemCount: groceriesModel.length,
                     itemBuilder: (context, index) {
@@ -88,7 +89,24 @@ class _CartPageState extends State<CartPage> {
             left: 20,
             right: 20,
             bottom: 0,
-            child: CartSummaryWidget(),
+            child: CustomPrimaryButton(
+              title: "Go to Checkout",
+              padding: EdgeInsets.symmetric(vertical: context.height * 0.020),
+              gradient: LinearGradient(
+                colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
+              ),
+              style: context.kTextTheme.titleMedium!.copyWith(
+                fontWeight: FontWeight.w600,
+                color: AppColors.kWhite,
+              ),
+              borderRadius: BorderRadius.circular(context.height * 0.015),
+              onTap: () => showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  return CartSummaryWidget();
+                },
+              ),
+            ),
           ),
         ],
       ),

@@ -9,8 +9,8 @@ import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
 
 @RoutePage()
-class EditLocationPage extends StatelessWidget {
-  const EditLocationPage({super.key});
+class OrderLocationPage extends StatelessWidget {
+  const OrderLocationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class EditLocationPage extends StatelessWidget {
               ),
               SizedBox(height: context.height * 0.020),
               Text(
-                'Confirm Order',
+                'Order Location',
                 style: context.kTextTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w700,
                   color: AppColors.kTitle,

@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:food_ninja/core/components/custom_appbar_stack.dart';
+import 'package:food_ninja/core/components/custom_icon_button_pop.dart';
 import 'package:food_ninja/core/components/custom_primary_button.dart';
 import 'package:food_ninja/core/components/custom_text_form_field.dart';
 import 'package:food_ninja/core/constant/app_colors.dart';
@@ -43,8 +43,27 @@ class _PersonalDetailsPageState extends State<PersonalDetailsPage> {
               top: context.height * 0.060,
             ),
             children: [
-              CustomAppbarStack(title: "Personal Details"),
-              SizedBox(height: context.height * 0.040),
+              Align(
+                alignment: AlignmentDirectional.bottomStart,
+                child: CustomIconButton(
+                  icon: Image.asset(
+                    AppImages.kIconBack,
+                    fit: BoxFit.scaleDown,
+                    height: context.height * 0.045,
+                    width: context.height * 0.045,
+                  ),
+                  onPressed: () => context.router.maybePop(),
+                ),
+              ),
+              SizedBox(height: context.height * 0.010),
+              Text(
+                "Personal Details",
+                style: context.kTextTheme.headlineSmall!.copyWith(
+                  fontWeight: FontWeight.w700,
+                  color: AppColors.kTitle,
+                ),
+              ),
+              SizedBox(height: context.height * 0.020),
               ProfileImagePickerWidget(
                 image: AppImages.kMintDark,
                 onPressed: () {},
