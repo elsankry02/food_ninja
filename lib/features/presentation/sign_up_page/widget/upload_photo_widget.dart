@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
 import '../../../../core/constant/app_colors.dart';
 import '../../../../core/extension/extension.dart';
 
@@ -14,14 +15,18 @@ class UploadPhotoWidget extends StatelessWidget {
       onTap: onTap,
       child: Container(
         padding: EdgeInsets.symmetric(
-          horizontal: context.height * 0.050,
+          horizontal: context.height * 0.040,
           vertical: context.height * 0.016,
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(context.height * 0.022),
           border: Border.all(color: AppColors.kBorder),
         ),
-        child: SvgPicture.asset(image),
+        child: SvgPicture.asset(
+          image,
+          height: context.height * 0.045,
+          width: context.height * 0.045,
+        ),
       ),
     );
   }

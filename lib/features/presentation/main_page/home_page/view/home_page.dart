@@ -77,12 +77,16 @@ class _HomePageState extends State<HomePage> {
                       image: data.image,
                       title: data.title,
                       subTitle: data.subTitle,
+
                       price: data.price,
                       margin: EdgeInsetsDirectional.only(
                         end: context.height * 0.015,
                       ),
                       onTap: () =>
                           ErrorMessage(context, message: "COMING SOON"),
+                      containerOnTap: () => context.router.push(
+                        ProductDetailsRoute(image: data.image),
+                      ),
                     );
                   },
                 ),
@@ -122,6 +126,9 @@ class _HomePageState extends State<HomePage> {
                       price: data.price,
                       margin: EdgeInsetsDirectional.only(
                         end: context.height * 0.015,
+                      ),
+                      containerOnTap: () => context.router.push(
+                        ProductDetailsRoute(image: data.image),
                       ),
                       onTap: () =>
                           ErrorMessage(context, message: "COMING SOON"),

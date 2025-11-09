@@ -1,6 +1,7 @@
 class AppSvgs {
   static const kMessageTwo = 'assets/svg/message-two.svg';
   static const kMoneyOne = 'assets/svg/money-one.svg';
+  static const kShare = 'assets/svg/share.svg';
   static const kPayoneer = 'assets/svg/payoneer.svg';
   static const kPaypal = 'assets/svg/paypal.svg';
   static const kPizza = 'assets/svg/pizza.svg';

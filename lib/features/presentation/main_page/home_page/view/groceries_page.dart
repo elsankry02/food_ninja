@@ -1,12 +1,13 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import '../../../../data/models/groceries_model.dart';
+import 'package:food_ninja/core/router/router.dart';
 
 import '../../../../../core/components/custom_home_appbar.dart';
 import '../../../../../core/components/custom_product_card_widget.dart';
 import '../../../../../core/components/custom_snakbar.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
+import '../../../../data/models/groceries_model.dart';
 
 @RoutePage()
 class GroceriesPage extends StatefulWidget {
@@ -56,7 +57,6 @@ class _GroceriesPageState extends State<GroceriesPage> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       mainAxisExtent: context.height * 0.280,
-
                       mainAxisSpacing: context.height * 0.015,
                       crossAxisSpacing: context.height * 0.015,
                     ),
@@ -67,6 +67,9 @@ class _GroceriesPageState extends State<GroceriesPage> {
                         title: data.title,
                         subTitle: data.subTitle,
                         price: data.price,
+                        containerOnTap: () => context.router.push(
+                          ProductDetailsRoute(image: data.image),
+                        ),
                         onTap: () =>
                             ErrorMessage(context, message: "COMING SOON"),
                       );

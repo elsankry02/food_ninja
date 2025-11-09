@@ -311,6 +311,53 @@ class PersonalDetailsRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [ProductDetailsPage]
+class ProductDetailsRoute extends PageRouteInfo<ProductDetailsRouteArgs> {
+  ProductDetailsRoute({
+    Key? key,
+    required String image,
+    List<PageRouteInfo>? children,
+  }) : super(
+         ProductDetailsRoute.name,
+         args: ProductDetailsRouteArgs(key: key, image: image),
+         initialChildren: children,
+       );
+
+  static const String name = 'ProductDetailsRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<ProductDetailsRouteArgs>();
+      return ProductDetailsPage(key: args.key, image: args.image);
+    },
+  );
+}
+
+class ProductDetailsRouteArgs {
+  const ProductDetailsRouteArgs({this.key, required this.image});
+
+  final Key? key;
+
+  final String image;
+
+  @override
+  String toString() {
+    return 'ProductDetailsRouteArgs{key: $key, image: $image}';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other is! ProductDetailsRouteArgs) return false;
+    return key == other.key && image == other.image;
+  }
+
+  @override
+  int get hashCode => key.hashCode ^ image.hashCode;
+}
+
+/// generated route for
 /// [ProfilePage]
 class ProfileRoute extends PageRouteInfo<void> {
   const ProfileRoute({List<PageRouteInfo>? children})

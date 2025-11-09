@@ -116,6 +116,7 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
                 children: [
                   UploadPhotoWidget(
                     image: AppSvgs.kGallery,
+                    
                     onTap: () => fromGallery(),
                   ),
                   UploadPhotoWidget(
