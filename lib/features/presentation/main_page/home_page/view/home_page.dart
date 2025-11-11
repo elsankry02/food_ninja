@@ -85,7 +85,13 @@ class _HomePageState extends State<HomePage> {
                       onTap: () =>
                           ErrorMessage(context, message: "COMING SOON"),
                       containerOnTap: () => context.router.push(
-                        ProductDetailsRoute(image: data.image),
+                        ProductDetailsRoute(
+                          image: data.image,
+                          title: data.title,
+                          subTitle: data.subTitle,
+                          price: data.price,
+                          description: data.description,
+                        ),
                       ),
                     );
                   },
@@ -128,7 +134,13 @@ class _HomePageState extends State<HomePage> {
                         end: context.height * 0.015,
                       ),
                       containerOnTap: () => context.router.push(
-                        ProductDetailsRoute(image: data.image),
+                        ProductDetailsRoute(
+                          image: data.image,
+                          title: data.title,
+                          subTitle: data.subTitle,
+                          price: data.price,
+                          description: data.description,
+                        ),
                       ),
                       onTap: () =>
                           ErrorMessage(context, message: "COMING SOON"),

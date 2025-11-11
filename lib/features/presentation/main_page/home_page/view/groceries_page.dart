@@ -68,7 +68,13 @@ class _GroceriesPageState extends State<GroceriesPage> {
                         subTitle: data.subTitle,
                         price: data.price,
                         containerOnTap: () => context.router.push(
-                          ProductDetailsRoute(image: data.image),
+                          ProductDetailsRoute(
+                            image: data.image,
+                            title: data.title,
+                            subTitle: data.subTitle,
+                            price: data.price,
+                            description: data.description,
+                          ),
                         ),
                         onTap: () =>
                             ErrorMessage(context, message: "COMING SOON"),

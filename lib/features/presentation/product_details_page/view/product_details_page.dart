@@ -1,14 +1,34 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/core/components/custom_icon_button_pop.dart';
+import 'package:food_ninja/core/components/custom_plus_and_minus.dart';
+import 'package:food_ninja/core/components/custom_primary_button.dart';
+import 'package:food_ninja/core/components/custom_snakbar.dart';
+import 'package:food_ninja/core/constant/app_colors.dart';
 import 'package:food_ninja/core/constant/app_images.dart';
 import 'package:food_ninja/core/extension/extension.dart';
 import 'package:food_ninja/features/presentation/product_details_page/widget/product_details_appbar_widget.dart';
+import 'package:readmore/readmore.dart';
 
 @RoutePage()
-class ProductDetailsPage extends StatelessWidget {
-  final String image;
-  const ProductDetailsPage({super.key, required this.image});
+class ProductDetailsPage extends StatefulWidget {
+  final String image, title, subTitle, price, description;
+  const ProductDetailsPage({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.subTitle,
+    required this.price,
+    required this.description,
+  });
 
+  @override
+  State<ProductDetailsPage> createState() => _ProductDetailsPageState();
+}
+
+class _ProductDetailsPageState extends State<ProductDetailsPage> {
+  bool isSelected = false;
+  int count = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,13 +44,117 @@ class ProductDetailsPage extends StatelessWidget {
             children: [
               ProductDetailsAppbarWidget(),
               Image.asset(
-                image,
+                widget.image,
                 fit: BoxFit.fitHeight,
                 height: context.height * 0.200,
                 width: context.height * 0.230,
               ),
               SizedBox(height: context.height * 0.020),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    widget.title,
+                    style: context.kTextTheme.headlineSmall!.copyWith(
+                      color: AppColors.kTitle,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  CustomIconButton(
+                    icon: Icon(
+                      isSelected ? Icons.favorite : Icons.favorite_border,
+                      color: isSelected ? AppColors.kRed : AppColors.kTitle,
+                    ),
+                    onPressed: () {
+                      if (isSelected) {
+                        SuccessMessage(
+                          context,
+                          message: "Removed from favorites",
+                        );
+                      } else {
+                        SuccessMessage(context, message: "Added to favorites");
+                      }
+                      setState(() {
+                        isSelected = !isSelected;
+                      });
+                    },
+                  ),
+                ],
+              ),
+              Text(
+                widget.subTitle,
+                style: context.kTextTheme.bodyLarge!.copyWith(
+                  color: AppColors.kGrey,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              SizedBox(height: context.height * 0.030),
+              CustomPlusAndMinus(
+                count: "$count",
+                plusOnTap: () {
+                  setState(() {
+                    count++;
+                  });
+                },
+                minusOnTap: () {
+                  if (count > 1) {
+                    setState(() {
+                      count--;
+                    });
+                  }
+                },
+                price: widget.price,
+              ),
+              SizedBox(height: context.height * 0.020),
+              Divider(color: AppColors.kBorder),
+              SizedBox(height: context.height * 0.020),
+              Text(
+                "Product Detail",
+                style: context.kTextTheme.bodyLarge!.copyWith(
+                  color: AppColors.kTitle,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              DefaultTextStyle(
+                style: context.kTextTheme.labelMedium!.copyWith(
+                  color: AppColors.kGrey,
+                  fontWeight: FontWeight.w500,
+                ),
+                child: ReadMoreText(
+                  widget.description,
+                  trimMode: TrimMode.Line,
+                  trimLines: 2,
+                  lessStyle: context.kTextTheme.labelMedium!.copyWith(
+                    color: AppColors.kSecondColor,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  trimCollapsedText: 'Show more',
+                  trimExpandedText: ' Show less',
+                  moreStyle: context.kTextTheme.labelMedium!.copyWith(
+                    color: AppColors.kSecondColor,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
             ],
+          ),
+          Positioned(
+            left: 20,
+            right: 20,
+            bottom: 20,
+            child: CustomPrimaryButton(
+              title: "Add To Basket",
+              style: context.kTextTheme.titleMedium!.copyWith(
+                fontWeight: FontWeight.w600,
+                color: AppColors.kWhite,
+              ),
+              padding: EdgeInsets.symmetric(vertical: context.height * 0.020),
+              gradient: LinearGradient(
+                colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
+              ),
+              borderRadius: BorderRadius.circular(context.height * 0.015),
+              onTap: () => ErrorMessage(context, message: "COMING SOON"),
+            ),
           ),
         ],
       ),

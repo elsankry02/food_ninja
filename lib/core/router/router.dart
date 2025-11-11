@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/features/presentation/main_page/favourite_page/view/favourite_page.dart';
 import 'package:food_ninja/features/presentation/main_page/profile_page/view/orders_page.dart';
 import 'package:food_ninja/features/presentation/main_page/profile_page/view/personal_details_page.dart';
 import 'package:food_ninja/features/presentation/product_details_page/view/product_details_page.dart';
@@ -35,6 +36,7 @@ class AppRouter extends RootStackRouter {
   List<AutoRoute> get routes => [
     AutoRoute(page: SplashRoute.page, initial: true),
     AutoRoute(page: SignUpRoute.page),
+    AutoRoute(page: FavouriteRoute.page),
     AutoRoute(page: SignupProcessRoute.page),
     AutoRoute(page: SetLocationRoute.page),
     AutoRoute(page: OtpRoute.page),

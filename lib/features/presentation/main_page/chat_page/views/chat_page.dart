@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/core/components/custom_primary_button.dart';
 
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
@@ -32,18 +33,23 @@ class _ChatPageState extends State<ChatPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Chat Message',
-                  style: context.kTextTheme.headlineLarge!.copyWith(
-                    fontWeight: FontWeight.w500,
-                    color: AppColors.kSecondColor,
+                CustomPrimaryButton(
+                  title: "Chat Message",
+                  padding: EdgeInsetsDirectional.only(
+                    bottom: context.height * 0.025,
+                  ),
+                  border: Border(
+                    bottom: BorderSide(color: AppColors.kBorder, width: 2),
+                  ),
+                  style: context.kTextTheme.titleLarge!.copyWith(
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.kTitle,
                   ),
                 ),
-                SizedBox(height: context.height * 0.020),
                 Expanded(
                   child: ListView.builder(
                     padding: EdgeInsets.zero,
-                    itemCount: 1,
+                    itemCount: 2,
                     itemBuilder: (context, index) {
                       return MessageTileWidget(
                         title: "Mohamed Ibrahim",

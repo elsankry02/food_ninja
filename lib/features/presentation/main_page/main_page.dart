@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:food_ninja/features/presentation/main_page/favourite_page/view/favourite_page.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 import '../../../core/constant/app_colors.dart';
@@ -25,9 +26,10 @@ class _MainPageState extends State<MainPage> {
 
   List<Widget> tabs = [
     const HomePage(),
-    const ProfilePage(),
-    const CartPage(),
     const ChatPage(),
+    const CartPage(),
+    const FavouritePage(),
+    const ProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -70,9 +72,9 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
               SalomonBottomBarItem(
-                icon: SvgPicture.asset(AppSvgs.kProfile),
+                icon: SvgPicture.asset(AppSvgs.kChat),
                 title: Text(
-                  'Profile',
+                  'Chat',
                   style: context.kTextTheme.labelMedium!.copyWith(
                     color: AppColors.kTitle,
                     fontWeight: FontWeight.w600,
@@ -94,9 +96,19 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
               SalomonBottomBarItem(
-                icon: SvgPicture.asset(AppSvgs.kChat),
+                icon: Icon(Icons.favorite, color: AppColors.kIconColor),
                 title: Text(
-                  'Chat',
+                  'Favourite',
+                  style: context.kTextTheme.labelMedium!.copyWith(
+                    color: AppColors.kTitle,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+              SalomonBottomBarItem(
+                icon: SvgPicture.asset(AppSvgs.kProfile),
+                title: Text(
+                  'Profile',
                   style: context.kTextTheme.labelMedium!.copyWith(
                     color: AppColors.kTitle,
                     fontWeight: FontWeight.w600,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_ninja/core/components/custom_icon_button_pop.dart';
+import 'package:food_ninja/core/components/custom_plus_and_minus.dart';
 
 import '../../../../../core/constant/app_colors.dart';
-import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
 
 class CartDetailsWidget extends StatelessWidget {
@@ -72,38 +72,11 @@ class CartDetailsWidget extends StatelessWidget {
               ],
             ),
             SizedBox(height: context.height * 0.012),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    GestureDetector(
-                      onTap: minusOnTap,
-                      child: Image.asset(AppImages.kIconMinus),
-                    ),
-                    SizedBox(width: context.height * 0.016),
-                    Text(
-                      count,
-                      style: context.kTextTheme.titleMedium!.copyWith(
-                        fontWeight: FontWeight.w600,
-                        color: AppColors.kTitle,
-                      ),
-                    ),
-                    SizedBox(width: context.height * 0.016),
-                    GestureDetector(
-                      onTap: plusOnTap,
-                      child: Image.asset(AppImages.kIconPlus),
-                    ),
-                  ],
-                ),
-                Text(
-                  price,
-                  style: context.kTextTheme.titleMedium!.copyWith(
-                    fontWeight: FontWeight.w600,
-                    color: AppColors.kTitle,
-                  ),
-                ),
-              ],
+            CustomPlusAndMinus(
+              minusOnTap: minusOnTap,
+              count: count,
+              plusOnTap: plusOnTap,
+              price: price,
             ),
           ],
         ),

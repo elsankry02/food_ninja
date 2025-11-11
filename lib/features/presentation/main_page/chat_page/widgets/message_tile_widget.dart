@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_ninja/core/constant/app_colors.dart';
+
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
 
@@ -15,31 +17,38 @@ class MessageTileWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      onTap: onTap,
-      contentPadding: EdgeInsets.zero,
-      leading: ClipRRect(
-        borderRadius: BorderRadius.circular(context.height * 0.090),
-        child: Image.asset(AppImages.kDefultPhoto),
+    return Container(
+      decoration: BoxDecoration(
+        border: Border(bottom: BorderSide(color: AppColors.kBorder)),
       ),
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            title,
-            style: context.kTextTheme.titleSmall!.copyWith(
-              fontWeight: FontWeight.w700,
+      child: ListTile(
+        onTap: onTap,
+        contentPadding: EdgeInsets.zero,
+        leading: ClipRRect(
+          borderRadius: BorderRadius.circular(context.height * 0.090),
+          child: Image.asset(AppImages.kDefultPhoto),
+        ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              title,
+              style: context.kTextTheme.titleSmall!.copyWith(
+                fontWeight: FontWeight.w700,
+              ),
             ),
-          ),
-          Text(
-            time,
-            style: context.kTextTheme.labelMedium!.copyWith(color: Colors.grey),
-          ),
-        ],
-      ),
-      subtitle: Text(
-        subTitle,
-        style: context.kTextTheme.labelMedium!.copyWith(color: Colors.grey),
+            Text(
+              time,
+              style: context.kTextTheme.labelMedium!.copyWith(
+                color: Colors.grey,
+              ),
+            ),
+          ],
+        ),
+        subtitle: Text(
+          subTitle,
+          style: context.kTextTheme.labelMedium!.copyWith(color: Colors.grey),
+        ),
       ),
     );
   }

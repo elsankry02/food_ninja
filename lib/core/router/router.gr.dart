@@ -107,6 +107,22 @@ class ConfirmOrderRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [FavouritePage]
+class FavouriteRoute extends PageRouteInfo<void> {
+  const FavouriteRoute({List<PageRouteInfo>? children})
+    : super(FavouriteRoute.name, initialChildren: children);
+
+  static const String name = 'FavouriteRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const FavouritePage();
+    },
+  );
+}
+
+/// generated route for
 /// [GroceriesPage]
 class GroceriesRoute extends PageRouteInfo<void> {
   const GroceriesRoute({List<PageRouteInfo>? children})
@@ -316,10 +332,21 @@ class ProductDetailsRoute extends PageRouteInfo<ProductDetailsRouteArgs> {
   ProductDetailsRoute({
     Key? key,
     required String image,
+    required String title,
+    required String subTitle,
+    required String price,
+    required String description,
     List<PageRouteInfo>? children,
   }) : super(
          ProductDetailsRoute.name,
-         args: ProductDetailsRouteArgs(key: key, image: image),
+         args: ProductDetailsRouteArgs(
+           key: key,
+           image: image,
+           title: title,
+           subTitle: subTitle,
+           price: price,
+           description: description,
+         ),
          initialChildren: children,
        );
 
@@ -329,32 +356,65 @@ class ProductDetailsRoute extends PageRouteInfo<ProductDetailsRouteArgs> {
     name,
     builder: (data) {
       final args = data.argsAs<ProductDetailsRouteArgs>();
-      return ProductDetailsPage(key: args.key, image: args.image);
+      return ProductDetailsPage(
+        key: args.key,
+        image: args.image,
+        title: args.title,
+        subTitle: args.subTitle,
+        price: args.price,
+        description: args.description,
+      );
     },
   );
 }
 
 class ProductDetailsRouteArgs {
-  const ProductDetailsRouteArgs({this.key, required this.image});
+  const ProductDetailsRouteArgs({
+    this.key,
+    required this.image,
+    required this.title,
+    required this.subTitle,
+    required this.price,
+    required this.description,
+  });
 
   final Key? key;
 
   final String image;
 
+  final String title;
+
+  final String subTitle;
+
+  final String price;
+
+  final String description;
+
   @override
   String toString() {
-    return 'ProductDetailsRouteArgs{key: $key, image: $image}';
+    return 'ProductDetailsRouteArgs{key: $key, image: $image, title: $title, subTitle: $subTitle, price: $price, description: $description}';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     if (other is! ProductDetailsRouteArgs) return false;
-    return key == other.key && image == other.image;
+    return key == other.key &&
+        image == other.image &&
+        title == other.title &&
+        subTitle == other.subTitle &&
+        price == other.price &&
+        description == other.description;
   }
 
   @override
-  int get hashCode => key.hashCode ^ image.hashCode;
+  int get hashCode =>
+      key.hashCode ^
+      image.hashCode ^
+      title.hashCode ^
+      subTitle.hashCode ^
+      price.hashCode ^
+      description.hashCode;
 }
 
 /// generated route for
