@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:food_ninja/core/constant/app_strings.dart';
 
 import 'core/router/router.dart';
+import 'l10n/app_localizations.dart';
 
 class FoodNinja extends ConsumerWidget {
   const FoodNinja({super.key});
@@ -14,6 +15,9 @@ class FoodNinja extends ConsumerWidget {
     return MaterialApp.router(
       routerConfig: router.config(),
       debugShowCheckedModeBanner: false,
+      locale: Locale("en"),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       theme: ThemeData(fontFamily: kGilroy),
     );
   }

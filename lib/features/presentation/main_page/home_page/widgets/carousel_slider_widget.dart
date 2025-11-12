@@ -21,7 +21,7 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
     return Column(
       children: [
         CarouselSlider.builder(
-          itemCount: specialDealItems.length,
+          itemCount: specialDealItems(context).length,
           itemBuilder: (context, index, _) {
             return SpecialDealForOctoberWidget(
               index: index,
@@ -42,7 +42,7 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ...List.generate(specialDealItems.length, (index) {
+            ...List.generate(specialDealItems(context).length, (index) {
               return Container(
                 margin: EdgeInsetsDirectional.only(end: 5),
                 height: 8,

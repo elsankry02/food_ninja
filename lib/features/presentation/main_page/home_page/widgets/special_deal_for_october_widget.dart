@@ -15,7 +15,7 @@ class SpecialDealForOctoberWidget extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    final data = specialDealItems[index];
+    final data = specialDealItems(context)[index];
     return Stack(
       children: [
         Image.asset(data.image),

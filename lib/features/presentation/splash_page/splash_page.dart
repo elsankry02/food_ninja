@@ -19,7 +19,7 @@ class SplashPage extends ConsumerStatefulWidget {
 class _SplashPageState extends ConsumerState<SplashPage> {
   @override
   void initState() {
-    splashFoodNinja();
+    // splashFoodNinja();
     super.initState();
   }
 
@@ -40,7 +40,7 @@ class _SplashPageState extends ConsumerState<SplashPage> {
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset(AppImages.kOnboardingPattern, fit: BoxFit.fill),
+          Image.asset(AppImages.kOnboardingPattern, fit: BoxFit.cover),
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

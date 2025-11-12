@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../core/constant/app_colors.dart';
 import '../../../core/constant/app_images.dart';
 
@@ -17,19 +18,21 @@ class SpecialDealModel {
   });
 }
 
-List<SpecialDealModel> specialDealItems = [
-  SpecialDealModel(
-    image: AppImages.kFrameSpecialDealForOctoberOne,
-    title: "Special Deal For \nOctober",
-    buttonTitle: "Buy Now",
-    ordernowColor: AppColors.kSecondColor,
-    specialColor: AppColors.kWhite,
-  ),
-  SpecialDealModel(
-    image: AppImages.kFrameSpecialDealForOctoberTwo,
-    title: "Special Deal For \nOctober",
-    buttonTitle: "Order Now",
-    ordernowColor: AppColors.kOrderNowTwo,
-    specialColor: AppColors.kOrderNowTwo,
-  ),
-];
+List<SpecialDealModel> specialDealItems(BuildContext context) {
+  return [
+    SpecialDealModel(
+      image: AppImages.kFrameSpecialDealForOctoberOne,
+      title: "Special Deal For \nOctober",
+      buttonTitle: "Buy Now",
+      ordernowColor: AppColors.kSecondColor,
+      specialColor: AppColors.kWhite,
+    ),
+    SpecialDealModel(
+      image: AppImages.kFrameSpecialDealForOctoberTwo,
+      title: "Special Deal For \nOctober",
+      buttonTitle: "Order Now",
+      ordernowColor: AppColors.kOrderNowTwo,
+      specialColor: AppColors.kOrderNowTwo,
+    ),
+  ];
+}
