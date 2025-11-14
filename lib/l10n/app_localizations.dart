@@ -95,6 +95,887 @@ abstract class AppLocalizations {
     Locale('en')
   ];
 
+  /// No description provided for @delieverfavoritefood.
+  ///
+  /// In en, this message translates to:
+  /// **'Deliver your favorite food'**
+  String get delieverfavoritefood;
+
+  /// No description provided for @foodninja.
+  ///
+  /// In en, this message translates to:
+  /// **'Food Ninja'**
+  String get foodninja;
+
+  /// No description provided for @signupforfree.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up for free'**
+  String get signupforfree;
+
+  /// No description provided for @email.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get email;
+
+  /// No description provided for @password.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get password;
+
+  /// No description provided for @createaccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Account'**
+  String get createaccount;
+
+  /// No description provided for @alreadyhaveanaccountlogin.
+  ///
+  /// In en, this message translates to:
+  /// **'Already have an account? Login'**
+  String get alreadyhaveanaccountlogin;
+
+  /// No description provided for @fillinyourbiotogetstarted.
+  ///
+  /// In en, this message translates to:
+  /// **'Fill in your bio to get started'**
+  String get fillinyourbiotogetstarted;
+
+  /// No description provided for @thisdatawillbedisplayedyouraccountprofileforsecurity.
+  ///
+  /// In en, this message translates to:
+  /// **'This data will be displayed in your account profile for security'**
+  String get thisdatawillbedisplayedyouraccountprofileforsecurity;
+
+  /// No description provided for @username.
+  ///
+  /// In en, this message translates to:
+  /// **'Username'**
+  String get username;
+
+  /// No description provided for @fullname.
+  ///
+  /// In en, this message translates to:
+  /// **'Full Name'**
+  String get fullname;
+
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// No description provided for @setyourlocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Set your location'**
+  String get setyourlocation;
+
+  /// No description provided for @yourlocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Your location'**
+  String get yourlocation;
+
+  /// No description provided for @setlocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Set location'**
+  String get setlocation;
+
+  /// No description provided for @comingsoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Coming soon'**
+  String get comingsoon;
+
+  /// No description provided for @removedfromfavorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Removed from favorites'**
+  String get removedfromfavorites;
+
+  /// No description provided for @addedtofavorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Added to favorites'**
+  String get addedtofavorites;
+
+  /// No description provided for @productdetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Product detail'**
+  String get productdetail;
+
+  /// No description provided for @showmore.
+  ///
+  /// In en, this message translates to:
+  /// **'Show more'**
+  String get showmore;
+
+  /// No description provided for @showless.
+  ///
+  /// In en, this message translates to:
+  /// **'Show less'**
+  String get showless;
+
+  /// No description provided for @addtobasket.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to basket'**
+  String get addtobasket;
+
+  /// No description provided for @otpcode.
+  ///
+  /// In en, this message translates to:
+  /// **'OTP Code'**
+  String get otpcode;
+
+  /// No description provided for @enter6digitverifycode.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter 6-digit verification code'**
+  String get enter6digitverifycode;
+
+  /// No description provided for @entertheotpcode_senttoyouremail.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the OTP code sent to your email'**
+  String get entertheotpcode_senttoyouremail;
+
+  /// No description provided for @codemustbe6digits.
+  ///
+  /// In en, this message translates to:
+  /// **'Code must be 6 digits'**
+  String get codemustbe6digits;
+
+  /// No description provided for @resendotp.
+  ///
+  /// In en, this message translates to:
+  /// **'Resend OTP'**
+  String get resendotp;
+
+  /// No description provided for @resendotpin.
+  ///
+  /// In en, this message translates to:
+  /// **'Resend OTP in'**
+  String get resendotpin;
+
+  /// No description provided for @verify.
+  ///
+  /// In en, this message translates to:
+  /// **'Verify'**
+  String get verify;
+
+  /// No description provided for @notification.
+  ///
+  /// In en, this message translates to:
+  /// **'Notification'**
+  String get notification;
+
+  /// No description provided for @nonotification.
+  ///
+  /// In en, this message translates to:
+  /// **'No notifications'**
+  String get nonotification;
+
+  /// No description provided for @home.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get home;
+
+  /// No description provided for @chat.
+  ///
+  /// In en, this message translates to:
+  /// **'Chat'**
+  String get chat;
+
+  /// No description provided for @cart.
+  ///
+  /// In en, this message translates to:
+  /// **'Cart'**
+  String get cart;
+
+  /// No description provided for @favourite.
+  ///
+  /// In en, this message translates to:
+  /// **'Favourite'**
+  String get favourite;
+
+  /// No description provided for @profile.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profile;
+
+  /// No description provided for @trackorder.
+  ///
+  /// In en, this message translates to:
+  /// **'Track order'**
+  String get trackorder;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @personaldetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Personal details'**
+  String get personaldetails;
+
+  /// No description provided for @orders.
+  ///
+  /// In en, this message translates to:
+  /// **'Orders'**
+  String get orders;
+
+  /// No description provided for @language.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get language;
+
+  /// No description provided for @paymentmethods.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment Methods'**
+  String get paymentmethods;
+
+  /// No description provided for @notifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notifications;
+
+  /// No description provided for @help.
+  ///
+  /// In en, this message translates to:
+  /// **'Help'**
+  String get help;
+
+  /// No description provided for @about.
+  ///
+  /// In en, this message translates to:
+  /// **'About'**
+  String get about;
+
+  /// No description provided for @deleteanaccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete an account'**
+  String get deleteanaccount;
+
+  /// No description provided for @logout.
+  ///
+  /// In en, this message translates to:
+  /// **'Logout'**
+  String get logout;
+
+  /// No description provided for @save.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get save;
+
+  /// No description provided for @beverages.
+  ///
+  /// In en, this message translates to:
+  /// **'Beverages'**
+  String get beverages;
+
+  /// No description provided for @groceries.
+  ///
+  /// In en, this message translates to:
+  /// **'Groceries'**
+  String get groceries;
+
+  /// No description provided for @see_all.
+  ///
+  /// In en, this message translates to:
+  /// **'See All'**
+  String get see_all;
+
+  /// No description provided for @add_all_to_cart.
+  ///
+  /// In en, this message translates to:
+  /// **'Add All to Cart'**
+  String get add_all_to_cart;
+
+  /// No description provided for @chatmessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Chat Messages'**
+  String get chatmessage;
+
+  /// No description provided for @callrangingpage.
+  ///
+  /// In en, this message translates to:
+  /// **'Calling'**
+  String get callrangingpage;
+
+  /// No description provided for @ringing.
+  ///
+  /// In en, this message translates to:
+  /// **'Ringing...'**
+  String get ringing;
+
+  /// No description provided for @volumeup.
+  ///
+  /// In en, this message translates to:
+  /// **'Volume Up'**
+  String get volumeup;
+
+  /// No description provided for @volumeoff.
+  ///
+  /// In en, this message translates to:
+  /// **'Volume Off'**
+  String get volumeoff;
+
+  /// No description provided for @subtotal.
+  ///
+  /// In en, this message translates to:
+  /// **'Subtotal'**
+  String get subtotal;
+
+  /// No description provided for @deliverycharge.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery Charge'**
+  String get deliverycharge;
+
+  /// No description provided for @discount.
+  ///
+  /// In en, this message translates to:
+  /// **'Discount'**
+  String get discount;
+
+  /// No description provided for @total.
+  ///
+  /// In en, this message translates to:
+  /// **'Total'**
+  String get total;
+
+  /// No description provided for @confirmorder.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Order'**
+  String get confirmorder;
+
+  /// No description provided for @paymentmethod.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment Method'**
+  String get paymentmethod;
+
+  /// No description provided for @orderlocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Order Location'**
+  String get orderlocation;
+
+  /// No description provided for @edit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get edit;
+
+  /// No description provided for @mycart.
+  ///
+  /// In en, this message translates to:
+  /// **'My Cart'**
+  String get mycart;
+
+  /// No description provided for @gotocheckout.
+  ///
+  /// In en, this message translates to:
+  /// **'Go to Checkout'**
+  String get gotocheckout;
+
+  /// No description provided for @logintoyouraccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Login to your account'**
+  String get logintoyouraccount;
+
+  /// No description provided for @orcontinuewith.
+  ///
+  /// In en, this message translates to:
+  /// **'Or continue with'**
+  String get orcontinuewith;
+
+  /// No description provided for @facebook.
+  ///
+  /// In en, this message translates to:
+  /// **'Facebook'**
+  String get facebook;
+
+  /// No description provided for @google.
+  ///
+  /// In en, this message translates to:
+  /// **'Google'**
+  String get google;
+
+  /// No description provided for @login.
+  ///
+  /// In en, this message translates to:
+  /// **'Login'**
+  String get login;
+
+  /// No description provided for @donthaveanaccountsignup.
+  ///
+  /// In en, this message translates to:
+  /// **'Don\'t have an account? Sign up'**
+  String get donthaveanaccountsignup;
+
+  /// No description provided for @pepsican.
+  ///
+  /// In en, this message translates to:
+  /// **'Pepsi Can'**
+  String get pepsican;
+
+  /// No description provided for @pepsicansubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'330ml, Price'**
+  String get pepsicansubtitle;
+
+  /// No description provided for @pepsicandescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Pepsi is a refreshing carbonated drink with bold cola flavor and just the right amount of sweetness. Perfect for cooling down on a hot day or with your favorite meal.'**
+  String get pepsicandescription;
+
+  /// No description provided for @cocacolacan.
+  ///
+  /// In en, this message translates to:
+  /// **'Coca Cola Can'**
+  String get cocacolacan;
+
+  /// No description provided for @cocacolacansubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'325ml, Price'**
+  String get cocacolacansubtitle;
+
+  /// No description provided for @cocacolacandescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Coca Cola delivers the classic cola taste with perfect balance of sweetness and carbonation. A favorite drink that refreshes and uplifts any occasion.'**
+  String get cocacolacandescription;
+
+  /// No description provided for @dietcoke.
+  ///
+  /// In en, this message translates to:
+  /// **'Diet Coke'**
+  String get dietcoke;
+
+  /// No description provided for @dietcokesubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'355ml, Price'**
+  String get dietcokesubtitle;
+
+  /// No description provided for @dietcokedescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Diet Coke offers the same great Coca-Cola taste with zero sugar and fewer calories. Light and refreshing anytime.'**
+  String get dietcokedescription;
+
+  /// No description provided for @spritecan.
+  ///
+  /// In en, this message translates to:
+  /// **'Sprite Can'**
+  String get spritecan;
+
+  /// No description provided for @spritecansubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'355ml, Price'**
+  String get spritecansubtitle;
+
+  /// No description provided for @spritecandescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Sprite is a lemon-lime soda that delivers a clean, crisp and refreshing experience. Perfect to quench your thirst with a citrus burst.'**
+  String get spritecandescription;
+
+  /// No description provided for @applegrapejuice.
+  ///
+  /// In en, this message translates to:
+  /// **'Apple & Grape Juice'**
+  String get applegrapejuice;
+
+  /// No description provided for @applegrapejuicesubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'2L, Price'**
+  String get applegrapejuicesubtitle;
+
+  /// No description provided for @applegrapejuicedescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Delicious blend of sweet apples and juicy grapes. 2L bottle full of vitamins, ideal for sharing with family or friends.'**
+  String get applegrapejuicedescription;
+
+  /// No description provided for @orangejuice.
+  ///
+  /// In en, this message translates to:
+  /// **'Orange Juice'**
+  String get orangejuice;
+
+  /// No description provided for @orangejuicesubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'2L, Price'**
+  String get orangejuicesubtitle;
+
+  /// No description provided for @orangejuicedescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Freshly squeezed orange juice packed with vitamin C and natural sweetness. Enjoy chilled for a refreshing healthy drink anytime.'**
+  String get orangejuicedescription;
+
+  /// No description provided for @specialdealforoctober.
+  ///
+  /// In en, this message translates to:
+  /// **'Special Deal for October'**
+  String get specialdealforoctober;
+
+  /// No description provided for @buynow.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy Now'**
+  String get buynow;
+
+  /// No description provided for @ordernow.
+  ///
+  /// In en, this message translates to:
+  /// **'Order Now'**
+  String get ordernow;
+
+  /// No description provided for @processing.
+  ///
+  /// In en, this message translates to:
+  /// **'Processing'**
+  String get processing;
+
+  /// No description provided for @orderprice.
+  ///
+  /// In en, this message translates to:
+  /// **'Price'**
+  String get orderprice;
+
+  /// No description provided for @orderitems.
+  ///
+  /// In en, this message translates to:
+  /// **'Number of items'**
+  String get orderitems;
+
+  /// No description provided for @ordercode.
+  ///
+  /// In en, this message translates to:
+  /// **'Order Code'**
+  String get ordercode;
+
+  /// No description provided for @findyourcomfortfoodhere.
+  ///
+  /// In en, this message translates to:
+  /// **'Find your comfort food here'**
+  String get findyourcomfortfoodhere;
+
+  /// No description provided for @hereyoucanfindacheforforalltasteandcolorenjoy.
+  ///
+  /// In en, this message translates to:
+  /// **'Here you can find a chef or dish for every taste and color. Enjoy!'**
+  String get hereyoucanfindacheforforalltasteandcolorenjoy;
+
+  /// No description provided for @foodninjaiswhereyourcomfortfoodlives.
+  ///
+  /// In en, this message translates to:
+  /// **'Food Ninja is where your comfort food lives'**
+  String get foodninjaiswhereyourcomfortfoodlives;
+
+  /// No description provided for @enjoyafastandsmoothfooddeliveryatyourdoorstep.
+  ///
+  /// In en, this message translates to:
+  /// **'Enjoy a fast and smooth food delivery at your doorstep'**
+  String get enjoyafastandsmoothfooddeliveryatyourdoorstep;
+
+  /// No description provided for @beefbone.
+  ///
+  /// In en, this message translates to:
+  /// **'Beef Bone'**
+  String get beefbone;
+
+  /// No description provided for @beefbonesubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'1kg, Price'**
+  String get beefbonesubtitle;
+
+  /// No description provided for @beefbonedescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Fresh beef bones rich in flavor, perfect for soups and broths. High in nutrients, ideal for slow-cooked recipes.'**
+  String get beefbonedescription;
+
+  /// No description provided for @broilerchicken.
+  ///
+  /// In en, this message translates to:
+  /// **'Broiler Chicken'**
+  String get broilerchicken;
+
+  /// No description provided for @broilerchickensubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'1kg, Price'**
+  String get broilerchickensubtitle;
+
+  /// No description provided for @broilerchickendescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Tender and juicy broiler chicken, great for roasting, grilling or frying. Sourced from premium quality farms for delicious meals.'**
+  String get broilerchickendescription;
+
+  /// No description provided for @rice.
+  ///
+  /// In en, this message translates to:
+  /// **'Rice'**
+  String get rice;
+
+  /// No description provided for @ricesubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'1kg, Price'**
+  String get ricesubtitle;
+
+  /// No description provided for @ricedescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Finest quality long-grain rice, fluffy and aromatic. Perfect for daily meals, biryani, or fried rice.'**
+  String get ricedescription;
+
+  /// No description provided for @pulses.
+  ///
+  /// In en, this message translates to:
+  /// **'Pulses'**
+  String get pulses;
+
+  /// No description provided for @pulsessubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'1kg, Price'**
+  String get pulsessubtitle;
+
+  /// No description provided for @pulsesdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'High-protein pulses packed with nutrients. Ideal for soups, salads, and traditional dishes. 100% natural and organic.'**
+  String get pulsesdescription;
+
+  /// No description provided for @eggchickenred.
+  ///
+  /// In en, this message translates to:
+  /// **'Egg Chicken Red'**
+  String get eggchickenred;
+
+  /// No description provided for @eggchickenredsubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'4pcs, Price'**
+  String get eggchickenredsubtitle;
+
+  /// No description provided for @eggchickenreddescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Farm-fresh red chicken eggs, rich in taste and nutrition. Perfect for breakfast, baking, or cooking.'**
+  String get eggchickenreddescription;
+
+  /// No description provided for @eggchickenwhite.
+  ///
+  /// In en, this message translates to:
+  /// **'Egg Chicken White'**
+  String get eggchickenwhite;
+
+  /// No description provided for @eggchickenwhitesubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'180g, Price'**
+  String get eggchickenwhitesubtitle;
+
+  /// No description provided for @eggchickenwhitedescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Fresh white chicken eggs with mild taste, ideal for daily meals and recipes. High in protein and essential nutrients.'**
+  String get eggchickenwhitedescription;
+
+  /// No description provided for @eggpasta.
+  ///
+  /// In en, this message translates to:
+  /// **'Egg Pasta'**
+  String get eggpasta;
+
+  /// No description provided for @eggpastasubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'30g, Price'**
+  String get eggpastasubtitle;
+
+  /// No description provided for @eggpastadescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Classic egg pasta made with real eggs for rich smooth texture. Cooks quickly and pairs perfectly with any sauce.'**
+  String get eggpastadescription;
+
+  /// No description provided for @eggnoodles.
+  ///
+  /// In en, this message translates to:
+  /// **'Egg Noodles'**
+  String get eggnoodles;
+
+  /// No description provided for @eggnoodlessubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'2L, Price'**
+  String get eggnoodlessubtitle;
+
+  /// No description provided for @eggnoodlesdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Delicious soft egg noodles made with high-quality ingredients. Perfect for stir-fries, soups, or Asian dishes.'**
+  String get eggnoodlesdescription;
+
+  /// No description provided for @mayonnaiseggless.
+  ///
+  /// In en, this message translates to:
+  /// **'Eggless Mayonnaise'**
+  String get mayonnaiseggless;
+
+  /// No description provided for @mayonnaisegglesssubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'325ml, Price'**
+  String get mayonnaisegglesssubtitle;
+
+  /// No description provided for @mayonnaisegglessdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Smooth creamy eggless mayonnaise, perfect for sandwiches, salads, and dips. Suitable for vegetarians.'**
+  String get mayonnaisegglessdescription;
+
+  /// No description provided for @roundcuteggnoodles.
+  ///
+  /// In en, this message translates to:
+  /// **'Round-Cut Egg Noodles'**
+  String get roundcuteggnoodles;
+
+  /// No description provided for @roundcuteggnoodlessubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'330ml, Price'**
+  String get roundcuteggnoodlessubtitle;
+
+  /// No description provided for @roundcuteggnoodlesdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Round-cut egg noodles for those who love rich flavor and firm texture. Great for soups or quick meals.'**
+  String get roundcuteggnoodlesdescription;
+
+  /// No description provided for @ginger.
+  ///
+  /// In en, this message translates to:
+  /// **'Ginger'**
+  String get ginger;
+
+  /// No description provided for @gingersubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'250g, Price'**
+  String get gingersubtitle;
+
+  /// No description provided for @gingerdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Fresh aromatic ginger root for cooking and natural remedies. Adds spice, flavor, and health benefits.'**
+  String get gingerdescription;
+
+  /// No description provided for @bellpeppered.
+  ///
+  /// In en, this message translates to:
+  /// **'Bell Pepper Red'**
+  String get bellpeppered;
+
+  /// No description provided for @bellpepperredsubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'1kg, Price'**
+  String get bellpepperredsubtitle;
+
+  /// No description provided for @bellpeppereddescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Bright red bell peppers full of vitamins and antioxidants. Sweet, crunchy, perfect for salads, grilling, or stir-fries.'**
+  String get bellpeppereddescription;
+
+  /// No description provided for @redapple.
+  ///
+  /// In en, this message translates to:
+  /// **'Red Apple'**
+  String get redapple;
+
+  /// No description provided for @redapplesubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'1kg, Price'**
+  String get redapplesubtitle;
+
+  /// No description provided for @redappledescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Crisp juicy red apples full of natural sweetness. Great for snacking, baking, or juicing.'**
+  String get redappledescription;
+
+  /// No description provided for @organicbananas.
+  ///
+  /// In en, this message translates to:
+  /// **'Organic Bananas'**
+  String get organicbananas;
+
+  /// No description provided for @organicbananassubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'12kg, Price'**
+  String get organicbananassubtitle;
+
+  /// No description provided for @organicbananasdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Naturally sweet organic bananas, rich in potassium and fiber. Ideal for smoothies, snacks, and desserts.'**
+  String get organicbananasdescription;
+
+  /// No description provided for @findyourfavoritefood.
+  ///
+  /// In en, this message translates to:
+  /// **'Find Your Favorite Food'**
+  String get findyourfavoritefood;
+
+  /// No description provided for @whatdoyouwanttoorder.
+  ///
+  /// In en, this message translates to:
+  /// **'What do you want to order?'**
+  String get whatdoyouwanttoorder;
+
+  /// No description provided for @online.
+  ///
+  /// In en, this message translates to:
+  /// **'Online'**
+  String get online;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

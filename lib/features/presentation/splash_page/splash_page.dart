@@ -19,7 +19,7 @@ class SplashPage extends ConsumerStatefulWidget {
 class _SplashPageState extends ConsumerState<SplashPage> {
   @override
   void initState() {
-    // splashFoodNinja();
+    splashFoodNinja();
     super.initState();
   }
 
@@ -48,7 +48,7 @@ class _SplashPageState extends ConsumerState<SplashPage> {
                 Image.asset(AppImages.kLogo),
                 Text(
                   textAlign: TextAlign.center,
-                  'FoodNinja',
+                  context.kAppLocalizations.foodninja,
                   style: context.kTextTheme.displayLarge!.copyWith(
                     color: AppColors.kPrimaryColor,
                     fontWeight: FontWeight.w900,
@@ -56,7 +56,7 @@ class _SplashPageState extends ConsumerState<SplashPage> {
                 ),
                 Text(
                   textAlign: TextAlign.center,
-                  'Deliever Favorite Food',
+                  context.kAppLocalizations.delieverfavoritefood,
                   style: context.kTextTheme.labelMedium!.copyWith(
                     fontWeight: FontWeight.w600,
                     color: AppColors.kTitle,
