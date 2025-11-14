@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/components/custom_primary_button.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/extension/extension.dart';
+import '../../../../../core/components/custom_primary_button.dart';
+import '../../../../../core/constant/app_colors.dart';
+import '../../../../../core/extension/extension.dart';
 
 class OrderStatusCardWidget extends StatelessWidget {
   final String imageOne, imageTwo, title, price, items, code;

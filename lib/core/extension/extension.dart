@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 extension App on BuildContext {
   double get height => MediaQuery.of(this).size.height;

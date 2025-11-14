@@ -1,12 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/components/custom_icon_button_pop.dart';
-import 'package:food_ninja/core/components/custom_snakbar.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/extension/extension.dart';
-import 'package:food_ninja/features/data/models/order_model.dart';
-import 'package:food_ninja/features/presentation/main_page/profile_page/widget/order_status_card_widget.dart';
+import '../../../../../core/components/custom_icon_button_pop.dart';
+import '../../../../../core/components/custom_snakbar.dart';
+import '../../../../../core/constant/app_colors.dart';
+import '../../../../../core/constant/app_images.dart';
+import '../../../../../core/extension/extension.dart';
+import '../../../../data/models/order_model.dart';
+import '../widget/order_status_card_widget.dart';
 
 @RoutePage()
 class OrdersPage extends StatelessWidget {

@@ -1,13 +1,13 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/components/custom_primary_button.dart';
-import 'package:food_ninja/core/components/custom_snakbar.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/extension/extension.dart';
-import 'package:food_ninja/core/router/router.dart';
-import 'package:food_ninja/features/data/models/beverages_model.dart';
-import 'package:food_ninja/features/presentation/main_page/favourite_page/widget/favourite_details_widget.dart';
+import '../../../../../core/components/custom_primary_button.dart';
+import '../../../../../core/components/custom_snakbar.dart';
+import '../../../../../core/constant/app_colors.dart';
+import '../../../../../core/constant/app_images.dart';
+import '../../../../../core/extension/extension.dart';
+import '../../../../../core/router/router.dart';
+import '../../../../data/models/beverages_model.dart';
+import '../widget/favourite_details_widget.dart';
 
 @RoutePage()
 class FavouritePage extends StatelessWidget {

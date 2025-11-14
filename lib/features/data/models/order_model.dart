@@ -1,4 +1,4 @@
-import 'package:food_ninja/core/constant/app_images.dart';
+import '../../../core/constant/app_images.dart';
 
 class OrderModel {
   final String imageOne, imageTwo, title, price, items, code;

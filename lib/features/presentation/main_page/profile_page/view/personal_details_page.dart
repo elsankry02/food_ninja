@@ -1,14 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:food_ninja/core/components/custom_icon_button_pop.dart';
-import 'package:food_ninja/core/components/custom_primary_button.dart';
-import 'package:food_ninja/core/components/custom_text_form_field.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/constant/app_svgs.dart';
-import 'package:food_ninja/core/extension/extension.dart';
-import 'package:food_ninja/features/presentation/main_page/profile_page/widget/profile_image_picker.dart';
+import '../../../../../core/components/custom_icon_button_pop.dart';
+import '../../../../../core/components/custom_primary_button.dart';
+import '../../../../../core/components/custom_text_form_field.dart';
+import '../../../../../core/constant/app_colors.dart';
+import '../../../../../core/constant/app_images.dart';
+import '../../../../../core/constant/app_svgs.dart';
+import '../../../../../core/extension/extension.dart';
+import '../widget/profile_image_picker.dart';
 
 @RoutePage()
 class PersonalDetailsPage extends StatefulWidget {

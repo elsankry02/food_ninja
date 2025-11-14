@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:food_ninja/features/presentation/main_page/favourite_page/view/favourite_page.dart';
-import 'package:food_ninja/features/presentation/main_page/profile_page/view/orders_page.dart';
-import 'package:food_ninja/features/presentation/main_page/profile_page/view/personal_details_page.dart';
-import 'package:food_ninja/features/presentation/product_details_page/view/product_details_page.dart';
+import '../../features/presentation/main_page/favourite_page/view/favourite_page.dart';
+import '../../features/presentation/main_page/profile_page/view/orders_page.dart';
+import '../../features/presentation/main_page/profile_page/view/personal_details_page.dart';
+import '../../features/presentation/product_details_page/view/product_details_page.dart';
 
 import '../../features/presentation/login_in_page/view/login_page.dart';
 import '../../features/presentation/main_page/cart_page/view/cart_page.dart';

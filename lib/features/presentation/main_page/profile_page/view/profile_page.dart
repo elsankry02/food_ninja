@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/router/router.dart';
+import '../../../../../core/constant/app_images.dart';
+import '../../../../../core/router/router.dart';
 
 import '../../../../../core/components/custom_snakbar.dart';
 import '../../../../../core/constant/app_colors.dart';
