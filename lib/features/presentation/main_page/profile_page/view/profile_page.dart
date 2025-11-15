@@ -1,12 +1,13 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../../../../../core/constant/app_images.dart';
-import '../../../../../core/router/router.dart';
+import 'package:food_ninja/features/presentation/main_page/profile_page/widget/language_widget.dart';
 
 import '../../../../../core/components/custom_snakbar.dart';
 import '../../../../../core/constant/app_colors.dart';
+import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
+import '../../../../../core/router/router.dart';
 import '../widget/list_tile_items.dart';
 import '../widget/profile_list_tile_widget.dart';
 
@@ -30,54 +31,68 @@ class ProfilePage extends StatelessWidget {
               ProfileListTileWidget(),
               SizedBox(height: context.height * 0.033),
               ListTileItems(
-                title: "Personal Details",
+                title: context.kAppLocalizations.personaldetails,
                 leadingIcon: Icons.person,
                 trailingIcon: Icons.arrow_forward_ios_rounded,
                 onTap: () => context.router.push(PersonalDetailsRoute()),
               ),
               ListTileItems(
-                title: "Orders",
+                title: context.kAppLocalizations.orders,
                 leadingIcon: FontAwesomeIcons.boxOpen,
                 trailingIcon: Icons.arrow_forward_ios_rounded,
                 onTap: () => context.router.push(OrdersRoute()),
               ),
               ListTileItems(
-                title: "Language",
+                title: context.kAppLocalizations.language,
                 leadingIcon: Icons.language,
                 trailingIcon: Icons.arrow_forward_ios_rounded,
-                onTap: () => ErrorMessage(context, message: "COMING SOON"),
+                onTap: () => showModalBottomSheet(
+                  context: context,
+                  builder: (context) {
+                    return LanguageWidget();
+                  },
+                ),
               ),
               ListTileItems(
-                title: "Payment Methods",
+                title: context.kAppLocalizations.paymentmethods,
                 leadingIcon: Icons.payment,
                 trailingIcon: Icons.arrow_forward_ios_rounded,
                 onTap: () => context.router.push(PaymentMethodRoute()),
               ),
               ListTileItems(
-                title: "Notifecations",
+                title: context.kAppLocalizations.notifications,
                 leadingIcon: Icons.notifications_none,
                 trailingIcon: Icons.arrow_forward_ios_rounded,
                 onTap: () => context.router.push(NotifiactionRoute()),
               ),
               ListTileItems(
-                title: "Help",
+                title: context.kAppLocalizations.help,
                 leadingIcon: Icons.help_outline,
                 trailingIcon: Icons.arrow_forward_ios_rounded,
-                onTap: () => ErrorMessage(context, message: "COMING SOON"),
+                onTap: () => ErrorMessage(
+                  context,
+                  message: context.kAppLocalizations.comingsoon,
+                ),
               ),
               ListTileItems(
-                title: "About",
+                title: context.kAppLocalizations.about,
                 leadingIcon: Icons.info_outline,
                 trailingIcon: Icons.arrow_forward_ios_rounded,
-                onTap: () => ErrorMessage(context, message: "COMING SOON"),
+                onTap: () => ErrorMessage(
+                  context,
+                  message: context.kAppLocalizations.comingsoon,
+                ),
               ),
               ListTileItems(
-                title: "Delete An Account",
+                title: context.kAppLocalizations.deleteanaccount,
                 leadingIcon: Icons.delete,
                 trailingIcon: Icons.arrow_forward_ios_rounded,
                 titleColor: AppColors.kRed,
                 iconColor: AppColors.kRed,
-                onTap: () => ErrorMessage(context, message: "COMING SOON"),
+                onTap: () => ErrorMessage(
+                  context,
+                  message: context.kAppLocalizations.comingsoon,
+                ),
               ),
             ],
           ),
@@ -86,7 +101,7 @@ class ProfilePage extends StatelessWidget {
             right: 20,
             bottom: 0,
             child: ListTileItems(
-              title: "Log Out",
+              title: context.kAppLocalizations.logout,
               backgroungColor: AppColors.kBorder,
               padding: EdgeInsets.only(left: context.height * 0.020),
               borderRadius: BorderRadius.circular(context.height * 0.019),
@@ -94,7 +109,10 @@ class ProfilePage extends StatelessWidget {
               leadingIcon: Icons.logout,
               titleColor: AppColors.kSecondColor,
               iconColor: AppColors.kSecondColor,
-              onTap: () => ErrorMessage(context, message: "COMING SOON"),
+              onTap: () => ErrorMessage(
+                context,
+                message: context.kAppLocalizations.comingsoon,
+              ),
             ),
           ),
         ],

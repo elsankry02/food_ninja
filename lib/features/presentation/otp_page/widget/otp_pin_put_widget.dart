@@ -21,7 +21,7 @@ class OtpPinPutWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "OTP Code",
+          context.kAppLocalizations.otpcode,
           style: context.kTextTheme.titleSmall!.copyWith(
             fontWeight: FontWeight.w700,
           ),

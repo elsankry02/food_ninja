@@ -52,7 +52,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       Image.asset(AppImages.kLogo),
                       Text(
                         textAlign: TextAlign.center,
-                        'FoodNinja',
+                        context.kAppLocalizations.foodninja,
                         style: context.kTextTheme.displayMedium!.copyWith(
                           color: AppColors.kPrimaryColor,
                           fontWeight: FontWeight.w700,
@@ -60,7 +60,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       Text(
                         textAlign: TextAlign.center,
-                        'Deliever Favorite Food',
+                        context.kAppLocalizations.delieverfavoritefood,
                         style: context.kTextTheme.labelMedium!.copyWith(
                           fontWeight: FontWeight.w600,
                         ),
@@ -68,14 +68,14 @@ class _SignUpPageState extends State<SignUpPage> {
                       SizedBox(height: context.height * 0.060),
                       Text(
                         textAlign: TextAlign.center,
-                        'Sign Up For Free',
+                        context.kAppLocalizations.signupforfree,
                         style: context.kTextTheme.titleLarge!.copyWith(
                           fontWeight: FontWeight.w700,
                         ),
                       ),
                       SizedBox(height: context.height * 0.040),
                       CustomTextFormField(
-                        hintText: 'Email',
+                        hintText: context.kAppLocalizations.email,
                         prefixIcon: SvgPicture.asset(
                           AppSvgs.kMessage,
                           fit: BoxFit.scaleDown,
@@ -91,7 +91,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       SizedBox(height: context.height * 0.020),
                       CustomTextFormField(
-                        hintText: 'Password',
+                        hintText: context.kAppLocalizations.password,
                         hintStyle: context.kTextTheme.labelLarge!.copyWith(
                           fontWeight: FontWeight.w400,
                           color: Colors.grey,
@@ -124,7 +124,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       SizedBox(height: context.height * 0.060),
                       UnconstrainedBox(
                         child: CustomPrimaryButton(
-                          title: 'Create Account',
+                          title: context.kAppLocalizations.createaccount,
                           style: context.kTextTheme.titleMedium!.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.w700,
@@ -150,7 +150,8 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       SizedBox(height: context.height * 0.020),
                       CustomPrimaryButton(
-                        title: "Already have an account? Login",
+                        title:
+                            context.kAppLocalizations.alreadyhaveanaccountlogin,
                         style: context.kTextTheme.labelMedium!.copyWith(
                           fontWeight: FontWeight.w500,
                           color: AppColors.kPrimaryColor,

@@ -25,7 +25,10 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
           itemBuilder: (context, index, _) {
             return SpecialDealForOctoberWidget(
               index: index,
-              onTap: () => ErrorMessage(context, message: "COMING SOON"),
+              onTap: () => ErrorMessage(
+                context,
+                message: context.kAppLocalizations.comingsoon,
+              ),
             );
           },
           options: CarouselOptions(
@@ -34,19 +37,23 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
                 curruntIndex = index;
               });
             },
+
             autoPlay: true,
             height: context.height * 0.150,
             enlargeCenterPage: true,
           ),
         ),
+        SizedBox(height: context.height * 0.020),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ...List.generate(specialDealItems(context).length, (index) {
               return Container(
                 margin: EdgeInsetsDirectional.only(end: 5),
-                height: 8,
-                width: curruntIndex == index ? 25 : 8,
+                height: context.height * 0.008,
+                width: curruntIndex == index
+                    ? context.height * 0.025
+                    : context.height * 0.008,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   gradient: curruntIndex == index

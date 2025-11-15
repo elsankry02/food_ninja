@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../core/extension/extension.dart';
 
 import '../../../core/constant/app_colors.dart';
 import '../../../core/constant/app_images.dart';
@@ -21,18 +22,25 @@ class SpecialDealModel {
 List<SpecialDealModel> specialDealItems(BuildContext context) {
   return [
     SpecialDealModel(
-      image: AppImages.kFrameSpecialDealForOctoberOne,
-      title: "Special Deal For \nOctober",
-      buttonTitle: "Buy Now",
+      image: AppImages.kEggChickenRed,
+      title: context.kAppLocalizations.specialdealforoctober,
+      buttonTitle: context.kAppLocalizations.buynow,
       ordernowColor: AppColors.kSecondColor,
-      specialColor: AppColors.kWhite,
+      specialColor: AppColors.kSecondColor,
     ),
     SpecialDealModel(
-      image: AppImages.kFrameSpecialDealForOctoberTwo,
-      title: "Special Deal For \nOctober",
-      buttonTitle: "Order Now",
+      image: AppImages.kRice,
+      title: context.kAppLocalizations.specialdealforoctober,
+      buttonTitle: context.kAppLocalizations.ordernow,
       ordernowColor: AppColors.kOrderNowTwo,
       specialColor: AppColors.kOrderNowTwo,
+    ),
+    SpecialDealModel(
+      image: AppImages.kPulses,
+      title: context.kAppLocalizations.specialdealforoctober,
+      buttonTitle: context.kAppLocalizations.buynow,
+      ordernowColor: AppColors.kSecondColor,
+      specialColor: AppColors.kSecondColor,
     ),
   ];
 }

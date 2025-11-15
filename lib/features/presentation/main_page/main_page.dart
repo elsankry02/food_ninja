@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'favourite_page/view/favourite_page.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 import '../../../core/constant/app_colors.dart';
@@ -10,6 +9,7 @@ import '../../../core/constant/app_svgs.dart';
 import '../../../core/extension/extension.dart';
 import 'cart_page/view/cart_page.dart';
 import 'chat_page/views/chat_page.dart';
+import 'favourite_page/view/favourite_page.dart';
 import 'home_page/view/home_page.dart';
 import 'profile_page/view/profile_page.dart';
 
@@ -64,7 +64,7 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ),
                 title: Text(
-                  'Home',
+                  context.kAppLocalizations.home,
                   style: context.kTextTheme.labelMedium!.copyWith(
                     color: AppColors.kTitle,
                     fontWeight: FontWeight.w600,
@@ -74,7 +74,7 @@ class _MainPageState extends State<MainPage> {
               SalomonBottomBarItem(
                 icon: SvgPicture.asset(AppSvgs.kChat),
                 title: Text(
-                  'Chat',
+                  context.kAppLocalizations.chat,
                   style: context.kTextTheme.labelMedium!.copyWith(
                     color: AppColors.kTitle,
                     fontWeight: FontWeight.w600,
@@ -88,7 +88,7 @@ class _MainPageState extends State<MainPage> {
                   width: context.height * 0.024,
                 ),
                 title: Text(
-                  'Cart',
+                  context.kAppLocalizations.cart,
                   style: context.kTextTheme.labelMedium!.copyWith(
                     color: AppColors.kTitle,
                     fontWeight: FontWeight.w600,
@@ -98,7 +98,7 @@ class _MainPageState extends State<MainPage> {
               SalomonBottomBarItem(
                 icon: Icon(Icons.favorite, color: AppColors.kIconColor),
                 title: Text(
-                  'Favourite',
+                  context.kAppLocalizations.favourite,
                   style: context.kTextTheme.labelMedium!.copyWith(
                     color: AppColors.kTitle,
                     fontWeight: FontWeight.w600,
@@ -108,7 +108,7 @@ class _MainPageState extends State<MainPage> {
               SalomonBottomBarItem(
                 icon: SvgPicture.asset(AppSvgs.kProfile),
                 title: Text(
-                  'Profile',
+                  context.kAppLocalizations.profile,
                   style: context.kTextTheme.labelMedium!.copyWith(
                     color: AppColors.kTitle,
                     fontWeight: FontWeight.w600,

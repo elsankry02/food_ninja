@@ -81,7 +81,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get enter6digitverifycode => 'Enter 6-digit verification code';
 
   @override
-  String get entertheotpcode_senttoyouremail => 'Enter the OTP code sent to your email';
+  String get entertheotpcodesenttoyouremail => 'Enter the OTP code sent to your email';
 
   @override
   String get codemustbe6digits => 'Code must be 6 digits';
@@ -159,10 +159,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get groceries => 'Groceries';
 
   @override
-  String get see_all => 'See All';
+  String get seeall => 'See All';
 
   @override
-  String get add_all_to_cart => 'Add All to Cart';
+  String get addalltocart => 'Add All to Cart';
 
   @override
   String get chatmessage => 'Chat Messages';
@@ -282,7 +282,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get orangejuicedescription => 'Freshly squeezed orange juice packed with vitamin C and natural sweetness. Enjoy chilled for a refreshing healthy drink anytime.';
 
   @override
-  String get specialdealforoctober => 'Special Deal for October';
+  String get specialdealforoctober => 'Special Deal for \nOctober';
 
   @override
   String get buynow => 'Buy Now';
@@ -441,11 +441,29 @@ class AppLocalizationsEn extends AppLocalizations {
   String get organicbananasdescription => 'Naturally sweet organic bananas, rich in potassium and fiber. Ideal for smoothies, snacks, and desserts.';
 
   @override
-  String get findyourfavoritefood => 'Find Your Favorite Food';
+  String get findyourfavoritefood => 'Find Your Favorite \nFood';
 
   @override
   String get whatdoyouwanttoorder => 'What do you want to order?';
 
   @override
   String get online => 'Online';
+
+  @override
+  String get deliverto => 'Deliver To';
+
+  @override
+  String get items => 'Items';
+
+  @override
+  String get message => 'Message';
+
+  @override
+  String get nomessageyet => 'No message yet';
+
+  @override
+  String get arabic => 'Arabic';
+
+  @override
+  String get english => 'English';
 }

@@ -58,7 +58,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
               ),
               SizedBox(height: context.height * 0.020),
               Text(
-                'Payment Method',
+                context.kAppLocalizations.paymentmethods,
                 style: context.kTextTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w700,
                   color: AppColors.kTitle,
@@ -67,19 +67,28 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
               SizedBox(height: context.height * 0.040),
               PaymentsContainer(
                 payment: AppSvgs.kPaypal,
-                onTap: () => ErrorMessage(context, message: "COMING SOON"),
+                onTap: () => ErrorMessage(
+                  context,
+                  message: context.kAppLocalizations.comingsoon,
+                ),
                 controller: paypalController,
               ),
               SizedBox(height: context.height * 0.020),
               PaymentsContainer(
                 payment: AppSvgs.kVisa,
-                onTap: () => ErrorMessage(context, message: "COMING SOON"),
+                onTap: () => ErrorMessage(
+                  context,
+                  message: context.kAppLocalizations.comingsoon,
+                ),
                 controller: visaController,
               ),
               SizedBox(height: context.height * 0.020),
               PaymentsContainer(
                 payment: AppSvgs.kPayoneer,
-                onTap: () => ErrorMessage(context, message: "COMING SOON"),
+                onTap: () => ErrorMessage(
+                  context,
+                  message: context.kAppLocalizations.comingsoon,
+                ),
                 controller: payyoneerController,
               ),
               SizedBox(height: context.height * 0.190),

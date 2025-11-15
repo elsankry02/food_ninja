@@ -50,13 +50,13 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CustomPrimaryButton(
-                    title: 'Beverages',
+                    title: context.kAppLocalizations.beverages,
                     style: context.kTextTheme.headlineSmall!.copyWith(
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                   CustomPrimaryButton(
-                    title: 'See all',
+                    title: context.kAppLocalizations.seeall,
                     style: context.kTextTheme.titleMedium!.copyWith(
                       fontWeight: FontWeight.w600,
                       color: AppColors.kSecondColor,
@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                   scrollDirection: Axis.horizontal,
                   itemCount: 3,
                   itemBuilder: (context, index) {
-                    final data = beveragesItems[index];
+                    final data = beveragesItems(context)[index];
                     return CustomProductCardWidget(
                       image: data.image,
                       title: data.title,
@@ -82,8 +82,10 @@ class _HomePageState extends State<HomePage> {
                       margin: EdgeInsetsDirectional.only(
                         end: context.height * 0.015,
                       ),
-                      onTap: () =>
-                          ErrorMessage(context, message: "COMING SOON"),
+                      onTap: () => ErrorMessage(
+                        context,
+                        message: context.kAppLocalizations.comingsoon,
+                      ),
                       containerOnTap: () => context.router.push(
                         ProductDetailsRoute(
                           image: data.image,
@@ -102,13 +104,13 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CustomPrimaryButton(
-                    title: 'Groceries',
+                    title: context.kAppLocalizations.groceries,
                     style: context.kTextTheme.headlineSmall!.copyWith(
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                   CustomPrimaryButton(
-                    title: 'See all',
+                    title: context.kAppLocalizations.seeall,
                     style: context.kTextTheme.titleMedium!.copyWith(
                       fontWeight: FontWeight.w600,
                       color: AppColors.kSecondColor,
@@ -124,7 +126,7 @@ class _HomePageState extends State<HomePage> {
                   scrollDirection: Axis.horizontal,
                   itemCount: 5,
                   itemBuilder: (context, index) {
-                    final data = groceriesModel[index];
+                    final data = groceriesModel(context)[index];
                     return CustomProductCardWidget(
                       image: data.image,
                       title: data.title,
@@ -142,8 +144,10 @@ class _HomePageState extends State<HomePage> {
                           description: data.description,
                         ),
                       ),
-                      onTap: () =>
-                          ErrorMessage(context, message: "COMING SOON"),
+                      onTap: () => ErrorMessage(
+                        context,
+                        message: context.kAppLocalizations.comingsoon,
+                      ),
                     );
                   },
                 ),

@@ -43,7 +43,7 @@ class ConfirmOrderPage extends StatelessWidget {
               ),
               SizedBox(height: context.height * 0.020),
               Text(
-                'Confirm Order',
+                context.kAppLocalizations.confirmorder,
                 style: context.kTextTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w700,
                   color: AppColors.kTitle,
@@ -62,13 +62,14 @@ class ConfirmOrderPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Deliver To",
+                          //  TODO
+                          context.kAppLocalizations.deliverto,
                           style: context.kTextTheme.labelLarge!.copyWith(
                             color: AppColors.kGrey,
                           ),
                         ),
                         CustomPrimaryButton(
-                          title: "Edit",
+                          title: context.kAppLocalizations.edit,
                           style: context.kTextTheme.labelLarge!.copyWith(
                             color: AppColors.kSecondColor,
                           ),
@@ -110,13 +111,13 @@ class ConfirmOrderPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Payment Method",
+                          context.kAppLocalizations.paymentmethod,
                           style: context.kTextTheme.labelLarge!.copyWith(
                             color: AppColors.kGrey,
                           ),
                         ),
                         CustomPrimaryButton(
-                          title: "Edit",
+                          title: context.kAppLocalizations.edit,
                           style: context.kTextTheme.labelLarge!.copyWith(
                             color: AppColors.kSecondColor,
                           ),

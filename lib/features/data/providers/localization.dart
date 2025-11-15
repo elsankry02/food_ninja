@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import '../../../core/constant/app_enums.dart';
 import 'provider.dart';
 
@@ -14,7 +15,7 @@ class LocalizationSuccess extends LocalizationState {
 
 class LocalizationNotifier extends Notifier<LocalizationState> {
   @override
-  LocalizationInitial build() {
+  LocalizationState build() {
     return LocalizationInitial();
   }
 
@@ -28,13 +29,15 @@ class LocalizationNotifier extends Notifier<LocalizationState> {
             state = LocalizationSuccess(isSelected: "ar");
           }
         }
-
+        break;
       case Localization.english:
         ref.read(prefsProvider).setString("lang", "en");
         state = LocalizationSuccess(isSelected: "en");
+        break;
       case Localization.arabic:
         ref.read(prefsProvider).setString("lang", "ar");
         state = LocalizationSuccess(isSelected: "ar");
+        break;
     }
   }
 }

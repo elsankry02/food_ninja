@@ -2,13 +2,13 @@ import 'dart:async';
 
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/router/router.dart';
 
 import '../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/extension/extension.dart';
+import '../../../../core/router/router.dart';
 import '../widget/otp_pin_put_widget.dart';
 
 @RoutePage()
@@ -85,7 +85,7 @@ class _OtpPageState extends State<OtpPage> {
                 ),
                 SizedBox(height: context.height * 0.020),
                 Text(
-                  'Enter 6-digit Verify code',
+                  context.kAppLocalizations.enter6digitverifycode,
                   style: context.kTextTheme.headlineSmall!.copyWith(
                     fontWeight: FontWeight.w700,
                     color: AppColors.kTitle,
@@ -97,7 +97,9 @@ class _OtpPageState extends State<OtpPage> {
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text: "Enter the OTP code sent to your email",
+                        text: context
+                            .kAppLocalizations
+                            .entertheotpcodesenttoyouremail,
                         style: context.kTextTheme.titleSmall!.copyWith(
                           fontWeight: FontWeight.w600,
                           color: AppColors.kGrey,
@@ -117,7 +119,7 @@ class _OtpPageState extends State<OtpPage> {
                 OtpPinPutWidget(
                   validator: (value) {
                     if (value == null || value.length < 6) {
-                      return "Code must be 6 digits";
+                      return context.kAppLocalizations.codemustbe6digits;
                     }
                     return null;
                   },
@@ -127,6 +129,7 @@ class _OtpPageState extends State<OtpPage> {
                 time > 0
                     ? Text(
                         textAlign: TextAlign.center,
+                        // TODO
                         "Resend OTP in 00:$time",
                         style: context.kTextTheme.labelLarge!.copyWith(
                           color: AppColors.kGrey,
@@ -142,7 +145,7 @@ class _OtpPageState extends State<OtpPage> {
                             context.height * 0.016,
                           ),
                           border: Border.all(color: AppColors.kBorder),
-                          title: "Resend OTP",
+                          title: context.kAppLocalizations.resendotp,
                           style: context.kTextTheme.titleSmall!.copyWith(
                             fontWeight: FontWeight.w600,
                             color: AppColors.kSecondaryGold,
@@ -154,7 +157,7 @@ class _OtpPageState extends State<OtpPage> {
                 SizedBox(height: context.height * 0.020),
                 UnconstrainedBox(
                   child: CustomPrimaryButton(
-                    title: 'Verify',
+                    title: context.kAppLocalizations.verify,
                     style: context.kTextTheme.titleSmall!.copyWith(
                       color: Colors.white,
                       fontWeight: FontWeight.w700,

@@ -1,12 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import '../../../../../core/router/router.dart';
 
 import '../../../../../core/components/custom_home_appbar.dart';
 import '../../../../../core/components/custom_product_card_widget.dart';
 import '../../../../../core/components/custom_snakbar.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
+import '../../../../../core/router/router.dart';
 import '../../../../data/models/beverages_model.dart';
 
 @RoutePage()
@@ -43,7 +43,7 @@ class _BeveragesPageState extends State<BeveragesPage> {
                 CustomHomeAppbar(searchController: searchController),
                 SizedBox(height: context.height * 0.020),
                 Text(
-                  'Beverages',
+                  context.kAppLocalizations.beverages,
                   style: context.kTextTheme.headlineSmall!.copyWith(
                     fontWeight: FontWeight.w600,
                   ),
@@ -53,7 +53,7 @@ class _BeveragesPageState extends State<BeveragesPage> {
                   child: GridView.builder(
                     physics: BouncingScrollPhysics(),
                     padding: EdgeInsets.zero,
-                    itemCount: beveragesItems.length,
+                    itemCount: beveragesItems(context).length,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       mainAxisExtent: context.height * 0.280,
@@ -61,7 +61,7 @@ class _BeveragesPageState extends State<BeveragesPage> {
                       crossAxisSpacing: context.height * 0.015,
                     ),
                     itemBuilder: (context, index) {
-                      final data = beveragesItems[index];
+                      final data = beveragesItems(context)[index];
                       return CustomProductCardWidget(
                         image: data.image,
                         title: data.title,
@@ -76,8 +76,10 @@ class _BeveragesPageState extends State<BeveragesPage> {
                             description: data.description,
                           ),
                         ),
-                        onTap: () =>
-                            ErrorMessage(context, message: "COMING SOON"),
+                        onTap: () => ErrorMessage(
+                          context,
+                          message: context.kAppLocalizations.comingsoon,
+                        ),
                       );
                     },
                   ),

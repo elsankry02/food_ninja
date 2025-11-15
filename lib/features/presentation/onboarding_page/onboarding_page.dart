@@ -1,13 +1,13 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../data/providers/provider.dart';
 
 import '../../../core/components/custom_primary_button.dart';
 import '../../../core/constant/app_colors.dart';
 import '../../../core/extension/extension.dart';
 import '../../../core/router/router.dart';
 import '../../data/models/onboarding_model.dart';
+import '../../data/providers/provider.dart';
 
 @RoutePage()
 class OnboardingPage extends ConsumerStatefulWidget {
@@ -72,7 +72,7 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
           ),
           UnconstrainedBox(
             child: CustomPrimaryButton(
-              title: 'Next',
+              title: context.kAppLocalizations.next,
               style: context.kTextTheme.titleMedium!.copyWith(
                 color: AppColors.kWhite,
                 fontWeight: FontWeight.w700,

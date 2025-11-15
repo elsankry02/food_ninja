@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+
 import '../../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../../core/components/custom_snakbar.dart';
 import '../../../../../core/constant/app_colors.dart';
@@ -38,7 +39,7 @@ class OrdersPage extends StatelessWidget {
                 ),
                 SizedBox(height: context.height * 0.010),
                 Text(
-                  "Orders",
+                  context.kAppLocalizations.orders,
                   style: context.kTextTheme.headlineSmall!.copyWith(
                     fontWeight: FontWeight.w700,
                     color: AppColors.kTitle,
@@ -48,9 +49,9 @@ class OrdersPage extends StatelessWidget {
                 Expanded(
                   child: ListView.builder(
                     padding: EdgeInsets.zero,
-                    itemCount: orderItems.length,
+                    itemCount: orderItems(context).length,
                     itemBuilder: (context, index) {
-                      final data = orderItems[index];
+                      final data = orderItems(context)[index];
                       return OrderStatusCardWidget(
                         imageOne: data.imageOne,
                         imageTwo: data.imageTwo,
@@ -58,10 +59,14 @@ class OrdersPage extends StatelessWidget {
                         price: data.price,
                         items: data.items,
                         code: data.code,
-                        cancelOntap: () =>
-                            ErrorMessage(context, message: "COMING SOON"),
-                        trackOrderOnTap: () =>
-                            ErrorMessage(context, message: "COMING SOON"),
+                        cancelOntap: () => ErrorMessage(
+                          context,
+                          message: context.kAppLocalizations.comingsoon,
+                        ),
+                        trackOrderOnTap: () => ErrorMessage(
+                          context,
+                          message: context.kAppLocalizations.comingsoon,
+                        ),
                       );
                     },
                   ),

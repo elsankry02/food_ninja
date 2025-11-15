@@ -1,3 +1,6 @@
+import 'package:flutter/widgets.dart';
+import '../../../core/extension/extension.dart';
+
 import '../../../core/constant/app_images.dart';
 
 class BeveragesModel {
@@ -12,53 +15,49 @@ class BeveragesModel {
   });
 }
 
-List<BeveragesModel> beveragesItems = [
-  BeveragesModel(
-    image: AppImages.kPepsiCan,
-    title: "Pepsi Can",
-    subTitle: "330ml, Price",
-    price: "\$4.99",
-    description:
-        "Pepsi is a refreshing carbonated soft drink with a bold cola flavor and just the right amount of sweetness. Perfect for cooling down on a hot day or pairing with your favorite meal.",
-  ),
-  BeveragesModel(
-    image: AppImages.kCocaColaCan,
-    title: "Coca Cola Can",
-    subTitle: "325ml, Price",
-    price: "\$4.99",
-    description:
-        "Coca-Cola delivers a timeless classic cola taste with a perfect balance of sweetness and carbonation. A favorite drink that refreshes and uplifts any occasion.",
-  ),
-  BeveragesModel(
-    image: AppImages.kDietCoca,
-    title: "Diet Coke",
-    subTitle: "355ml, Price",
-    price: "\$1.99",
-    description:
-        "Diet Coke offers the same great Coca-Cola taste with zero sugar and fewer calories. Light, crisp, and refreshing for any time of the day.",
-  ),
-  BeveragesModel(
-    image: AppImages.kSpriteCan,
-    title: "Sprite Can",
-    subTitle: "355ml, Price",
-    price: "\$1.50",
-    description:
-        "Sprite is a lemon-lime flavored soda that delivers a clean, crisp, and refreshing experience. Perfect for quenching your thirst with a burst of citrus flavor.",
-  ),
-  BeveragesModel(
-    image: AppImages.kAppleGrapeJuice,
-    title: "Apple & Grape Juice",
-    subTitle: "2l, Price",
-    price: "\$15.99",
-    description:
-        "A delicious blend of sweet apples and juicy grapes, this 2-liter bottle of natural fruit juice is rich in vitamins and perfect for sharing with family or friends.",
-  ),
-  BeveragesModel(
-    image: AppImages.kOrangeJuice,
-    title: "Orange Juice",
-    subTitle: "2l, Price",
-    price: "\$15.99",
-    description:
-        "Freshly squeezed orange juice packed with vitamin C and natural sweetness. Enjoy it chilled for a refreshing and healthy drink any time of day.",
-  ),
-];
+List<BeveragesModel> beveragesItems(BuildContext context) {
+  return [
+    BeveragesModel(
+      image: AppImages.kPepsiCan,
+      title: context.kAppLocalizations.pepsican,
+      subTitle: context.kAppLocalizations.pepsicansubtitle,
+      price: "\$4.99",
+      description: context.kAppLocalizations.pepsicandescription,
+    ),
+    BeveragesModel(
+      image: AppImages.kCocaColaCan,
+      title: context.kAppLocalizations.cocacolacan,
+      subTitle: context.kAppLocalizations.cocacolacansubtitle,
+      price: "\$4.99",
+      description: context.kAppLocalizations.cocacolacandescription,
+    ),
+    BeveragesModel(
+      image: AppImages.kDietCoca,
+      title: context.kAppLocalizations.dietcoke,
+      subTitle: context.kAppLocalizations.dietcokesubtitle,
+      price: "\$1.99",
+      description: context.kAppLocalizations.dietcokedescription,
+    ),
+    BeveragesModel(
+      image: AppImages.kSpriteCan,
+      title: context.kAppLocalizations.spritecan,
+      subTitle: context.kAppLocalizations.spritecansubtitle,
+      price: "\$1.50",
+      description: context.kAppLocalizations.spritecandescription,
+    ),
+    BeveragesModel(
+      image: AppImages.kAppleGrapeJuice,
+      title: context.kAppLocalizations.applegrapejuice,
+      subTitle: context.kAppLocalizations.applegrapejuicesubtitle,
+      price: "\$15.99",
+      description: context.kAppLocalizations.applegrapejuicedescription,
+    ),
+    BeveragesModel(
+      image: AppImages.kOrangeJuice,
+      title: context.kAppLocalizations.orangejuice,
+      subTitle: context.kAppLocalizations.orangejuicesubtitle,
+      price: "\$15.99",
+      description: context.kAppLocalizations.orangejuicedescription,
+    ),
+  ];
+}

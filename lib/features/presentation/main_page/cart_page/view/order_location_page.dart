@@ -41,7 +41,7 @@ class OrderLocationPage extends StatelessWidget {
               ),
               SizedBox(height: context.height * 0.020),
               Text(
-                'Order Location',
+                context.kAppLocalizations.orderlocation,
                 style: context.kTextTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w700,
                   color: AppColors.kTitle,
@@ -58,7 +58,7 @@ class OrderLocationPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Order Location",
+                      context.kAppLocalizations.orderlocation,
                       style: context.kTextTheme.labelLarge!.copyWith(
                         color: AppColors.kGrey,
                       ),
@@ -94,7 +94,7 @@ class OrderLocationPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Deliver To",
+                      context.kAppLocalizations.deliverto,
                       style: context.kTextTheme.labelLarge!.copyWith(
                         color: AppColors.kGrey,
                       ),
@@ -121,12 +121,14 @@ class OrderLocationPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         CustomPrimaryButton(
-                          title: "set location",
+                          title: context.kAppLocalizations.setlocation,
                           style: context.kTextTheme.labelLarge!.copyWith(
                             color: AppColors.kSecondColor,
                           ),
-                          onTap: () =>
-                              ErrorMessage(context, message: "COMING SOON"),
+                          onTap: () => ErrorMessage(
+                            context,
+                            message: context.kAppLocalizations.comingsoon,
+                          ),
                         ),
                       ],
                     ),

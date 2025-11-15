@@ -1,14 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+
 import '../../../../../core/components/custom_primary_button.dart';
 import '../../../../../core/components/custom_snakbar.dart';
-import '../../../../data/models/groceries_model.dart';
-import '../widgets/cart_summary_widget.dart';
-
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
+import '../../../../data/models/groceries_model.dart';
 import '../widgets/cart_details_widget.dart';
+import '../widgets/cart_summary_widget.dart';
 
 @RoutePage()
 class CartPage extends StatefulWidget {
@@ -36,7 +36,7 @@ class _CartPageState extends State<CartPage> {
             child: Column(
               children: [
                 CustomPrimaryButton(
-                  title: "My Cart",
+                  title: context.kAppLocalizations.mycart,
                   padding: EdgeInsetsDirectional.only(
                     bottom: context.height * 0.025,
                   ),
@@ -55,12 +55,14 @@ class _CartPageState extends State<CartPage> {
                       top: context.height * 0.0,
                       bottom: context.height * 0.080,
                     ),
-                    itemCount: groceriesModel.length,
+                    itemCount: groceriesModel(context).length,
                     itemBuilder: (context, index) {
-                      final data = groceriesModel[index];
+                      final data = groceriesModel(context)[index];
                       return CartDetailsWidget(
-                        onPressed: () =>
-                            ErrorMessage(context, message: "COMING SOON"),
+                        onPressed: () => ErrorMessage(
+                          context,
+                          message: context.kAppLocalizations.comingsoon,
+                        ),
                         image: data.image,
                         title: data.title,
                         subtitle: data.subTitle,
@@ -90,7 +92,7 @@ class _CartPageState extends State<CartPage> {
             right: 20,
             bottom: 0,
             child: CustomPrimaryButton(
-              title: "Go to Checkout",
+              title: context.kAppLocalizations.gotocheckout,
               padding: EdgeInsets.symmetric(vertical: context.height * 0.020),
               gradient: LinearGradient(
                 colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],

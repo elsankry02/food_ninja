@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
                       Image.asset(AppImages.kLogo),
                       Text(
                         textAlign: TextAlign.center,
-                        'FoodNinja',
+                        context.kAppLocalizations.foodninja,
                         style: context.kTextTheme.displayMedium!.copyWith(
                           color: AppColors.kPrimaryColor,
                           fontWeight: FontWeight.w600,
@@ -63,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       Text(
                         textAlign: TextAlign.center,
-                        'Deliever Favorite Food',
+                        context.kAppLocalizations.delieverfavoritefood,
                         style: context.kTextTheme.titleSmall!.copyWith(
                           fontWeight: FontWeight.w700,
                         ),
@@ -71,14 +71,14 @@ class _LoginPageState extends State<LoginPage> {
                       SizedBox(height: context.height * 0.060),
                       Text(
                         textAlign: TextAlign.center,
-                        'Login To Your Account',
+                        context.kAppLocalizations.logintoyouraccount,
                         style: context.kTextTheme.titleLarge!.copyWith(
                           fontWeight: FontWeight.w700,
                         ),
                       ),
                       SizedBox(height: context.height * 0.040),
                       CustomTextFormField(
-                        hintText: 'Email',
+                        hintText: context.kAppLocalizations.email,
                         prefixIcon: SvgPicture.asset(
                           AppSvgs.kMessage,
                           fit: BoxFit.scaleDown,
@@ -91,11 +91,10 @@ class _LoginPageState extends State<LoginPage> {
                         enabledBorderColor: AppColors.kBorder,
                         focusedBorderColor: AppColors.kBorder,
                         controller: emailController,
-                        autofocus: true,
                       ),
                       SizedBox(height: context.height * 0.020),
                       CustomTextFormField(
-                        hintText: 'Password',
+                        hintText: context.kAppLocalizations.password,
                         hintStyle: context.kTextTheme.labelLarge!.copyWith(
                           fontWeight: FontWeight.w400,
                           color: Colors.grey,
@@ -129,7 +128,7 @@ class _LoginPageState extends State<LoginPage> {
                       SizedBox(height: context.height * 0.020),
                       Text(
                         textAlign: TextAlign.center,
-                        'Or Continue With',
+                        context.kAppLocalizations.orcontinuewith,
                         style: context.kTextTheme.titleSmall!.copyWith(
                           fontWeight: FontWeight.w700,
                         ),
@@ -139,16 +138,20 @@ class _LoginPageState extends State<LoginPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SocialConnectionWidget(
-                            onTap: () =>
-                                ErrorMessage(context, message: "COMING SOON"),
-                            titleSocial: 'Facebook',
+                            onTap: () => ErrorMessage(
+                              context,
+                              message: context.kAppLocalizations.comingsoon,
+                            ),
+                            titleSocial: context.kAppLocalizations.facebook,
                             imageSocial: AppSvgs.kFacebook,
                           ),
                           SizedBox(width: context.height * 0.021),
                           SocialConnectionWidget(
-                            onTap: () =>
-                                ErrorMessage(context, message: "COMING SOON"),
-                            titleSocial: 'Google',
+                            onTap: () => ErrorMessage(
+                              context,
+                              message: context.kAppLocalizations.comingsoon,
+                            ),
+                            titleSocial: context.kAppLocalizations.google,
                             imageSocial: AppSvgs.kGoogle,
                           ),
                         ],
@@ -156,7 +159,7 @@ class _LoginPageState extends State<LoginPage> {
                       SizedBox(height: context.height * 0.020),
                       UnconstrainedBox(
                         child: CustomPrimaryButton(
-                          title: 'Login',
+                          title: context.kAppLocalizations.login,
                           style: context.kTextTheme.titleSmall!.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.w700,
@@ -182,7 +185,8 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       SizedBox(height: context.height * 0.020),
                       CustomPrimaryButton(
-                        title: "Dont have an account? Sign up",
+                        title:
+                            context.kAppLocalizations.donthaveanaccountsignup,
                         style: context.kTextTheme.labelMedium!.copyWith(
                           fontWeight: FontWeight.w500,
                           color: AppColors.kPrimaryColor,

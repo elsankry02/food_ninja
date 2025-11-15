@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
 import '../../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../../core/components/custom_primary_button.dart';
 import '../../../../../core/components/custom_text_form_field.dart';
@@ -57,7 +58,7 @@ class _PersonalDetailsPageState extends State<PersonalDetailsPage> {
               ),
               SizedBox(height: context.height * 0.010),
               Text(
-                "Personal Details",
+                context.kAppLocalizations.personaldetails,
                 style: context.kTextTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w700,
                   color: AppColors.kTitle,
@@ -70,7 +71,7 @@ class _PersonalDetailsPageState extends State<PersonalDetailsPage> {
               ),
               SizedBox(height: context.height * 0.040),
               CustomTextFormField(
-                hintText: 'User Name',
+                hintText: context.kAppLocalizations.username,
                 prefixIcon: SvgPicture.asset(
                   AppSvgs.kProfile,
                   fit: BoxFit.scaleDown,
@@ -86,7 +87,7 @@ class _PersonalDetailsPageState extends State<PersonalDetailsPage> {
               ),
               SizedBox(height: context.height * 0.020),
               CustomTextFormField(
-                hintText: 'Full Name',
+                hintText: context.kAppLocalizations.fullname,
                 prefixIcon: SvgPicture.asset(
                   AppSvgs.kProfile,
                   fit: BoxFit.scaleDown,
@@ -102,7 +103,7 @@ class _PersonalDetailsPageState extends State<PersonalDetailsPage> {
               ),
               SizedBox(height: context.height * 0.020),
               CustomTextFormField(
-                hintText: 'Email',
+                hintText: context.kAppLocalizations.email,
                 prefixIcon: SvgPicture.asset(
                   AppSvgs.kMessage,
                   fit: BoxFit.scaleDown,
@@ -118,7 +119,7 @@ class _PersonalDetailsPageState extends State<PersonalDetailsPage> {
               ),
               SizedBox(height: context.height * 0.060),
               CustomPrimaryButton(
-                title: "Save",
+                title: context.kAppLocalizations.save,
                 style: context.kTextTheme.titleMedium!.copyWith(
                   fontWeight: FontWeight.w600,
                   color: AppColors.kWhite,

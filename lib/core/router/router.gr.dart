@@ -434,22 +434,6 @@ class ProfileRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [SetLocationPage]
-class SetLocationRoute extends PageRouteInfo<void> {
-  const SetLocationRoute({List<PageRouteInfo>? children})
-    : super(SetLocationRoute.name, initialChildren: children);
-
-  static const String name = 'SetLocationRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const SetLocationPage();
-    },
-  );
-}
-
-/// generated route for
 /// [SignUpPage]
 class SignUpRoute extends PageRouteInfo<void> {
   const SignUpRoute({List<PageRouteInfo>? children})

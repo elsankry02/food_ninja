@@ -1,5 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:readmore/readmore.dart';
+
 import '../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../core/components/custom_plus_and_minus.dart';
 import '../../../../core/components/custom_primary_button.dart';
@@ -8,7 +10,6 @@ import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/extension/extension.dart';
 import '../widget/product_details_appbar_widget.dart';
-import 'package:readmore/readmore.dart';
 
 @RoutePage()
 class ProductDetailsPage extends StatefulWidget {
@@ -69,10 +70,14 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                       if (isSelected) {
                         SuccessMessage(
                           context,
-                          message: "Removed from favorites",
+                          message:
+                              context.kAppLocalizations.removedfromfavorites,
                         );
                       } else {
-                        SuccessMessage(context, message: "Added to favorites");
+                        SuccessMessage(
+                          context,
+                          message: context.kAppLocalizations.addedtofavorites,
+                        );
                       }
                       setState(() {
                         isSelected = !isSelected;
@@ -109,7 +114,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
               Divider(color: AppColors.kBorder),
               SizedBox(height: context.height * 0.020),
               Text(
-                "Product Detail",
+                context.kAppLocalizations.productdetail,
                 style: context.kTextTheme.bodyLarge!.copyWith(
                   color: AppColors.kTitle,
                   fontWeight: FontWeight.w600,
@@ -128,8 +133,8 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                     color: AppColors.kSecondColor,
                     fontWeight: FontWeight.w500,
                   ),
-                  trimCollapsedText: 'Show more',
-                  trimExpandedText: ' Show less',
+                  trimCollapsedText: context.kAppLocalizations.showmore,
+                  trimExpandedText: context.kAppLocalizations.showless,
                   moreStyle: context.kTextTheme.labelMedium!.copyWith(
                     color: AppColors.kSecondColor,
                     fontWeight: FontWeight.w500,
@@ -143,7 +148,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
             right: 20,
             bottom: 20,
             child: CustomPrimaryButton(
-              title: "Add To Basket",
+              title: context.kAppLocalizations.addtobasket,
               style: context.kTextTheme.titleMedium!.copyWith(
                 fontWeight: FontWeight.w600,
                 color: AppColors.kWhite,
@@ -153,7 +158,10 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                 colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
               ),
               borderRadius: BorderRadius.circular(context.height * 0.015),
-              onTap: () => ErrorMessage(context, message: "COMING SOON"),
+              onTap: () => ErrorMessage(
+                context,
+                message: context.kAppLocalizations.comingsoon,
+              ),
             ),
           ),
         ],

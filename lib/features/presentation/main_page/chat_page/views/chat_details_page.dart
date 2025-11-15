@@ -60,7 +60,7 @@ class _ChatDetailsPageState extends State<ChatDetailsPage> {
             right: context.height * 0.020,
             bottom: context.height * 0.010,
             child: CustomTextFormField(
-              hintText: "Message",
+              hintText: context.kAppLocalizations.message,
               hintStyle: context.kTextTheme.labelLarge!.copyWith(
                 color: AppColors.kGrey,
               ),
@@ -71,7 +71,10 @@ class _ChatDetailsPageState extends State<ChatDetailsPage> {
               controller: messageController,
               suffixIcon: CustomIconButton(
                 icon: Icon(Icons.send_rounded, color: AppColors.kSecondColor),
-                onPressed: () => ErrorMessage(context, message: "COMING SOON"),
+                onPressed: () => ErrorMessage(
+                  context,
+                  message: context.kAppLocalizations.comingsoon,
+                ),
               ),
             ),
           ),

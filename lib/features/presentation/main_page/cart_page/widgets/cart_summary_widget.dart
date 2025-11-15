@@ -33,7 +33,7 @@ class CartSummaryWidget extends StatelessWidget {
           child: Column(
             children: [
               BuildRowWidget(
-                title: 'Sub-Total',
+                title: context.kAppLocalizations.subtotal,
                 subTitle: '120',
                 titleStyle: context.kTextTheme.titleSmall!.copyWith(
                   fontWeight: FontWeight.w600,
@@ -45,7 +45,7 @@ class CartSummaryWidget extends StatelessWidget {
                 ),
               ),
               BuildRowWidget(
-                title: 'Delivery Charge',
+                title: context.kAppLocalizations.deliverycharge,
                 subTitle: '10',
                 titleStyle: context.kTextTheme.titleSmall!.copyWith(
                   fontWeight: FontWeight.w600,
@@ -57,7 +57,7 @@ class CartSummaryWidget extends StatelessWidget {
                 ),
               ),
               BuildRowWidget(
-                title: 'Discount',
+                title: context.kAppLocalizations.discount,
                 subTitle: '20',
                 titleStyle: context.kTextTheme.titleSmall!.copyWith(
                   fontWeight: FontWeight.w600,
@@ -70,7 +70,7 @@ class CartSummaryWidget extends StatelessWidget {
               ),
               SizedBox(height: context.height * 0.010),
               BuildRowWidget(
-                title: 'Total',
+                title: context.kAppLocalizations.total,
                 subTitle: '150',
                 titleStyle: context.kTextTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w600,
@@ -83,7 +83,7 @@ class CartSummaryWidget extends StatelessWidget {
               ),
               SizedBox(height: context.height * 0.020),
               CustomPrimaryButton(
-                title: "Confirm Order",
+                title: context.kAppLocalizations.confirmorder,
                 style: context.kTextTheme.titleMedium!.copyWith(
                   fontWeight: FontWeight.w600,
                   color: AppColors.kSecondColor,
@@ -118,7 +118,7 @@ class BuildRowWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(title, style: titleStyle),
-        Text("\$ $subTitle", style: subTitleStyle),
+        Text("\$$subTitle", style: subTitleStyle),
       ],
     );
   }

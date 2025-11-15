@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import '../../../../../core/router/router.dart';
 
 import '../../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
+import '../../../../../core/router/router.dart';
 
 class ChatAppBarWidget extends StatelessWidget {
   const ChatAppBarWidget({super.key});
@@ -31,7 +31,7 @@ class ChatAppBarWidget extends StatelessWidget {
           ),
         ),
         subtitle: Text(
-          "Online",
+          context.kAppLocalizations.online,
           style: context.kTextTheme.labelMedium!.copyWith(
             color: AppColors.kGrey,
           ),

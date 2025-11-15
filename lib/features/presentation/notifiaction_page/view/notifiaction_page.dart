@@ -36,7 +36,7 @@ class NotifiactionPage extends StatelessWidget {
                 ),
                 SizedBox(height: context.height * 0.010),
                 Text(
-                  "Notification",
+                  context.kAppLocalizations.notification,
                   style: context.kTextTheme.headlineSmall!.copyWith(
                     fontWeight: FontWeight.w700,
                     color: AppColors.kTitle,
@@ -47,7 +47,7 @@ class NotifiactionPage extends StatelessWidget {
                   child: ListView(
                     children: [
                       Text(
-                        "No notification",
+                        context.kAppLocalizations.nonotification,
                         textAlign: TextAlign.center,
                         style: context.kTextTheme.titleMedium!.copyWith(
                           color: AppColors.kGrey,

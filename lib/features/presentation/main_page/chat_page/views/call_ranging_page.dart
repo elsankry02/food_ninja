@@ -1,13 +1,13 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../../../core/router/router.dart';
 
 import '../../../../../core/components/custom_snakbar.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/constant/app_svgs.dart';
 import '../../../../../core/extension/extension.dart';
+import '../../../../../core/router/router.dart';
 import '../widgets/volume_toggle_button_widget.dart';
 
 @RoutePage()
@@ -54,7 +54,7 @@ class _CallRangingPageState extends State<CallRangingPage> {
                   ),
                   SizedBox(height: context.height * 0.020),
                   Text(
-                    'Ringing . . .',
+                    context.kAppLocalizations.ringing,
                     textAlign: TextAlign.center,
                     style: context.kTextTheme.titleMedium!.copyWith(
                       color: AppColors.kGrey,
@@ -78,9 +78,15 @@ class _CallRangingPageState extends State<CallRangingPage> {
                   color: AppColors.kIconColor,
                   onPressed: () {
                     if (isSelected == true) {
-                      ErrorMessage(context, message: "Volume Up");
+                      ErrorMessage(
+                        context,
+                        message: context.kAppLocalizations.volumeup,
+                      );
                     } else {
-                      ErrorMessage(context, message: "Volume Off");
+                      ErrorMessage(
+                        context,
+                        message: context.kAppLocalizations.volumeoff,
+                      );
                     }
                     setState(() {
                       isSelected = !isSelected;

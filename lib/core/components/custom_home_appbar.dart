@@ -22,7 +22,7 @@ class CustomHomeAppbar extends StatelessWidget {
         ListTile(
           contentPadding: EdgeInsets.zero,
           title: Text(
-            'Find Your \nFavorite Food',
+            context.kAppLocalizations.findyourfavoritefood,
             style: context.kTextTheme.headlineLarge!.copyWith(
               fontWeight: FontWeight.w700,
               color: AppColors.kTitle,
@@ -51,7 +51,7 @@ class CustomHomeAppbar extends StatelessWidget {
         ListTile(
           contentPadding: EdgeInsets.zero,
           title: CustomTextFormField(
-            hintText: "What do you want to order?",
+            hintText: context.kAppLocalizations.whatdoyouwanttoorder,
             hintStyle: context.kTextTheme.labelMedium!.copyWith(
               fontWeight: FontWeight.w500,
               color: AppColors.kArowBackground,
@@ -68,7 +68,10 @@ class CustomHomeAppbar extends StatelessWidget {
             autofocus: false,
           ),
           trailing: GestureDetector(
-            onTap: () => ErrorMessage(context, message: "COMING SOON"),
+            onTap: () => ErrorMessage(
+              context,
+              message: context.kAppLocalizations.comingsoon,
+            ),
             child: Container(
               padding: EdgeInsets.symmetric(
                 horizontal: context.height * 0.016,

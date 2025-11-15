@@ -239,11 +239,11 @@ abstract class AppLocalizations {
   /// **'Enter 6-digit verification code'**
   String get enter6digitverifycode;
 
-  /// No description provided for @entertheotpcode_senttoyouremail.
+  /// No description provided for @entertheotpcodesenttoyouremail.
   ///
   /// In en, this message translates to:
   /// **'Enter the OTP code sent to your email'**
-  String get entertheotpcode_senttoyouremail;
+  String get entertheotpcodesenttoyouremail;
 
   /// No description provided for @codemustbe6digits.
   ///
@@ -395,17 +395,17 @@ abstract class AppLocalizations {
   /// **'Groceries'**
   String get groceries;
 
-  /// No description provided for @see_all.
+  /// No description provided for @seeall.
   ///
   /// In en, this message translates to:
   /// **'See All'**
-  String get see_all;
+  String get seeall;
 
-  /// No description provided for @add_all_to_cart.
+  /// No description provided for @addalltocart.
   ///
   /// In en, this message translates to:
   /// **'Add All to Cart'**
-  String get add_all_to_cart;
+  String get addalltocart;
 
   /// No description provided for @chatmessage.
   ///
@@ -644,7 +644,7 @@ abstract class AppLocalizations {
   /// No description provided for @specialdealforoctober.
   ///
   /// In en, this message translates to:
-  /// **'Special Deal for October'**
+  /// **'Special Deal for \nOctober'**
   String get specialdealforoctober;
 
   /// No description provided for @buynow.
@@ -962,7 +962,7 @@ abstract class AppLocalizations {
   /// No description provided for @findyourfavoritefood.
   ///
   /// In en, this message translates to:
-  /// **'Find Your Favorite Food'**
+  /// **'Find Your Favorite \nFood'**
   String get findyourfavoritefood;
 
   /// No description provided for @whatdoyouwanttoorder.
@@ -976,6 +976,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Online'**
   String get online;
+
+  /// No description provided for @deliverto.
+  ///
+  /// In en, this message translates to:
+  /// **'Deliver To'**
+  String get deliverto;
+
+  /// No description provided for @items.
+  ///
+  /// In en, this message translates to:
+  /// **'Items'**
+  String get items;
+
+  /// No description provided for @message.
+  ///
+  /// In en, this message translates to:
+  /// **'Message'**
+  String get message;
+
+  /// No description provided for @nomessageyet.
+  ///
+  /// In en, this message translates to:
+  /// **'No message yet'**
+  String get nomessageyet;
+
+  /// No description provided for @arabic.
+  ///
+  /// In en, this message translates to:
+  /// **'Arabic'**
+  String get arabic;
+
+  /// No description provided for @english.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get english;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

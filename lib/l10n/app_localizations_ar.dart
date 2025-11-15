@@ -81,7 +81,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get enter6digitverifycode => 'أدخل رمز التحقق المكون من 6 أرقام';
 
   @override
-  String get entertheotpcode_senttoyouremail => 'أدخل رمز التحقق المرسل إلى بريدك الإلكتروني';
+  String get entertheotpcodesenttoyouremail => 'أدخل رمز التحقق المرسل إلى بريدك الإلكتروني';
 
   @override
   String get codemustbe6digits => 'يجب أن يكون الرمز مكوناً من 6 أرقام';
@@ -159,10 +159,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get groceries => 'البقالة';
 
   @override
-  String get see_all => 'عرض الكل';
+  String get seeall => 'عرض الكل';
 
   @override
-  String get add_all_to_cart => 'أضف الكل إلى السلة';
+  String get addalltocart => 'أضف الكل إلى السلة';
 
   @override
   String get chatmessage => 'رسائل الدردشة';
@@ -282,7 +282,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get orangejuicedescription => 'عصير برتقال طازج معبأ بفيتامين سي والحلاوة الطبيعية. استمتع به بارداً لمشروب منعش وصحي في أي وقت من اليوم.';
 
   @override
-  String get specialdealforoctober => 'عرض خاص لشهر أكتوبر';
+  String get specialdealforoctober => 'عرض خاص لشهر \nأكتوبر';
 
   @override
   String get buynow => 'اشتري الآن';
@@ -396,7 +396,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get mayonnaisegglessdescription => 'مايونيز ناعم وكريمي بدون بيض، مثالي للسندويتشات، السلطات، والصلصات. مناسب للنباتيين';
 
   @override
-  String get roundcuteggnoodles => 'نودلز بالبيض مقطعة دائرياً';
+  String get roundcuteggnoodles => 'مكرونة اسباغيتي';
 
   @override
   String get roundcuteggnoodlessubtitle => '330مل، السعر';
@@ -432,7 +432,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get redappledescription => 'تفاح أحمر مقرمش وعصيري غني بالحلاوة الطبيعية. ممتاز للوجبات الخفيفة، الخبز، أو العصائر';
 
   @override
-  String get organicbananas => 'موز عضوي';
+  String get organicbananas => 'موز';
 
   @override
   String get organicbananassubtitle => '12كجم، السعر';
@@ -441,11 +441,29 @@ class AppLocalizationsAr extends AppLocalizations {
   String get organicbananasdescription => 'موز عضوي حلو طبيعي غني بالبوتاسيوم والألياف. مثالي للعصائر، الوجبات الخفيفة، والحلويات';
 
   @override
-  String get findyourfavoritefood => 'ابحث عن طعامك المفضل';
+  String get findyourfavoritefood => 'ابحث عن طعامك \nالمفضل';
 
   @override
   String get whatdoyouwanttoorder => 'ماذا تريد أن تطلب؟';
 
   @override
   String get online => 'متصل';
+
+  @override
+  String get deliverto => 'التوصيل إلى';
+
+  @override
+  String get items => 'العناصر';
+
+  @override
+  String get message => 'رسالة';
+
+  @override
+  String get nomessageyet => 'لا توجد رسائل بعد';
+
+  @override
+  String get arabic => 'العربية';
+
+  @override
+  String get english => 'الإنجليزية';
 }

@@ -75,13 +75,13 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
                       height: context.height * 0.045,
                       width: context.height * 0.045,
                     ),
-                    onPressed: () => Navigator.of(context).pop(),
+                    onPressed: () => context.router.maybePop(),
                   ),
                 ],
               ),
               SizedBox(height: context.height * 0.020),
               Text(
-                'Fill in your bio to get \nstarted',
+                context.kAppLocalizations.fillinyourbiotogetstarted,
                 style: context.kTextTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w700,
                   color: AppColors.kTitle,
@@ -89,7 +89,9 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
               ),
               SizedBox(height: context.height * 0.019),
               Text(
-                'This data will be displayed in your account \nprofile for security',
+                context
+                    .kAppLocalizations
+                    .thisdatawillbedisplayedyouraccountprofileforsecurity,
                 style: context.kTextTheme.labelMedium,
               ),
               SizedBox(height: context.height * 0.020),
@@ -116,7 +118,7 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
                 children: [
                   UploadPhotoWidget(
                     image: AppSvgs.kGallery,
-                    
+
                     onTap: () => fromGallery(),
                   ),
                   UploadPhotoWidget(
@@ -127,7 +129,7 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
               ),
               SizedBox(height: context.height * 0.020),
               CustomTextFormField(
-                hintText: 'User Name',
+                hintText: context.kAppLocalizations.username,
                 prefixIcon: SvgPicture.asset(
                   AppSvgs.kProfile,
                   fit: BoxFit.scaleDown,
@@ -143,7 +145,7 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
               ),
               SizedBox(height: context.height * 0.020),
               CustomTextFormField(
-                hintText: 'Full Name',
+                hintText: context.kAppLocalizations.fullname,
                 prefixIcon: SvgPicture.asset(
                   AppSvgs.kProfile,
                   fit: BoxFit.scaleDown,
@@ -160,7 +162,7 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
               SizedBox(height: context.height * 0.040),
               UnconstrainedBox(
                 child: CustomPrimaryButton(
-                  title: 'Next',
+                  title: context.kAppLocalizations.next,
                   style: context.kTextTheme.titleSmall!.copyWith(
                     color: Colors.white,
                     fontWeight: FontWeight.w700,

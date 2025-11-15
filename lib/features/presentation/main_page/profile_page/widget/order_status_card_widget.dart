@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../../../core/components/custom_primary_button.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/extension/extension.dart';
@@ -74,7 +75,7 @@ class OrderStatusCardWidget extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "$items Items",
+                  "${context.kAppLocalizations.items} $items",
                   style: context.kTextTheme.labelMedium!.copyWith(
                     fontWeight: FontWeight.w400,
                     color: AppColors.kGrey,
@@ -96,7 +97,7 @@ class OrderStatusCardWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CustomPrimaryButton(
-                title: "Track Order",
+                title: context.kAppLocalizations.trackorder,
                 style: context.kTextTheme.labelMedium!.copyWith(
                   fontWeight: FontWeight.w700,
                   color: AppColors.kWhite,
@@ -110,7 +111,7 @@ class OrderStatusCardWidget extends StatelessWidget {
                 onTap: trackOrderOnTap,
               ),
               CustomPrimaryButton(
-                title: "Cancel",
+                title: context.kAppLocalizations.cancel,
                 style: context.kTextTheme.labelMedium!.copyWith(
                   fontWeight: FontWeight.w700,
                   color: AppColors.kPrimaryColor,
