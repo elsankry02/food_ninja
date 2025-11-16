@@ -1012,6 +1012,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'English'**
   String get english;
+
+  /// No description provided for @resendOtpPrefix.
+  ///
+  /// In en, this message translates to:
+  /// **'Resend OTP in 00:'**
+  String get resendOtpPrefix;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -129,8 +129,7 @@ class _OtpPageState extends State<OtpPage> {
                 time > 0
                     ? Text(
                         textAlign: TextAlign.center,
-                        // TODO
-                        "Resend OTP in 00:$time",
+                        "${context.kAppLocalizations.resendOtpPrefix}$time",
                         style: context.kTextTheme.labelLarge!.copyWith(
                           color: AppColors.kGrey,
                         ),

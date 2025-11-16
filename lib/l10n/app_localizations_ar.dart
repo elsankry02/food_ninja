@@ -466,4 +466,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get english => 'الإنجليزية';
+
+  @override
+  String get resendOtpPrefix => 'أعد إرسال OTP خلال 00:';
 }

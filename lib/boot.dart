@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'features/data/providers/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'features/data/providers/provider.dart';
 
 Future<List<Override>> getOverrides() async {
   WidgetsFlutterBinding.ensureInitialized();

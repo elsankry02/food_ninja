@@ -1,16 +1,16 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:food_ninja/features/data/providers/provider.dart';
 
 import '../../../core/constant/app_enums.dart';
-import 'provider.dart';
 
 abstract class LocalizationState {}
 
 class LocalizationInitial extends LocalizationState {}
 
 class LocalizationSuccess extends LocalizationState {
-  final String isSelected;
+  final String isSelectedLang;
 
-  LocalizationSuccess({required this.isSelected});
+  LocalizationSuccess({required this.isSelectedLang});
 }
 
 class LocalizationNotifier extends Notifier<LocalizationState> {
@@ -20,24 +20,25 @@ class LocalizationNotifier extends Notifier<LocalizationState> {
   }
 
   localizationFunc(Localization localization) {
+    final prefs = ref.read(prefsProvider);
     switch (localization) {
       case Localization.initial:
-        if (ref.read(prefsProvider).getString("lang") != null) {
-          if (ref.read(prefsProvider).getString("lang") == "en") {
-            state = LocalizationSuccess(isSelected: "en");
+        if (prefs.getString("lang") != null) {
+          if (prefs.getString("lang") == "en") {
+            state = LocalizationSuccess(isSelectedLang: "en");
           } else {
-            state = LocalizationSuccess(isSelected: "ar");
+            state = LocalizationSuccess(isSelectedLang: "ar");
           }
         }
-        break;
+        return;
       case Localization.english:
-        ref.read(prefsProvider).setString("lang", "en");
-        state = LocalizationSuccess(isSelected: "en");
-        break;
+        prefs.setString("lang", "en");
+        state = LocalizationSuccess(isSelectedLang: "en");
+        return;
       case Localization.arabic:
-        ref.read(prefsProvider).setString("lang", "ar");
-        state = LocalizationSuccess(isSelected: "ar");
-        break;
+        prefs.setString("lang", "ar");
+        state = LocalizationSuccess(isSelectedLang: "ar");
+        return;
     }
   }
 }

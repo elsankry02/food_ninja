@@ -466,4 +466,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get english => 'English';
+
+  @override
+  String get resendOtpPrefix => 'Resend OTP in 00:';
 }

@@ -152,5 +152,6 @@
 "message": "رسالة",
 "nomessageyet": "لا توجد رسائل بعد",
 "arabic":"العربية",
-"english":"الإنجليزية"
+"english":"الإنجليزية",
+"resendOtpPrefix": "أعد إرسال OTP خلال 00:"
 }

@@ -3,9 +3,11 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:food_ninja/core/constant/app_colors.dart';
+import 'package:food_ninja/core/constant/app_enums.dart';
 import 'package:food_ninja/core/constant/app_images.dart';
 import 'package:food_ninja/core/extension/extension.dart';
 import 'package:food_ninja/core/router/router.dart';
+import 'package:food_ninja/features/data/providers/localization.dart';
 import 'package:food_ninja/features/data/providers/provider.dart';
 
 @RoutePage()
@@ -26,7 +28,11 @@ class _SplashPageState extends ConsumerState<SplashPage> {
   splashFoodNinja() {
     Future.delayed(const Duration(seconds: 2), () {
       final isSaved = ref.read(prefsProvider).getBool("isSaved");
-
+      // initial Localization
+      ref
+          .read(localizationProvider.notifier)
+          .localizationFunc(Localization.initial);
+      // Onboarding
       if (isSaved == true) {
         context.router.replace(SignUpRoute());
       } else {
@@ -48,7 +54,7 @@ class _SplashPageState extends ConsumerState<SplashPage> {
                 Image.asset(AppImages.kLogo),
                 Text(
                   textAlign: TextAlign.center,
-                  context.kAppLocalizations.foodninja,
+                  "FoodNinja",
                   style: context.kTextTheme.displayLarge!.copyWith(
                     color: AppColors.kPrimaryColor,
                     fontWeight: FontWeight.w900,
@@ -56,7 +62,7 @@ class _SplashPageState extends ConsumerState<SplashPage> {
                 ),
                 Text(
                   textAlign: TextAlign.center,
-                  context.kAppLocalizations.delieverfavoritefood,
+                  "Deliever Favorite Food",
                   style: context.kTextTheme.labelMedium!.copyWith(
                     fontWeight: FontWeight.w600,
                     color: AppColors.kTitle,

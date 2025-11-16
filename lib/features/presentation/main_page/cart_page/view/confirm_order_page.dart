@@ -62,7 +62,6 @@ class ConfirmOrderPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          //  TODO
                           context.kAppLocalizations.deliverto,
                           style: context.kTextTheme.labelLarge!.copyWith(
                             color: AppColors.kGrey,

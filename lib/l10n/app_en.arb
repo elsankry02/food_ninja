@@ -152,5 +152,6 @@
 "message": "Message",
 "nomessageyet": "No message yet",
 "arabic":"Arabic",
-"english":"English"
+"english":"English",
+"resendOtpPrefix": "Resend OTP in 00:"
 }

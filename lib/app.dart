@@ -12,10 +12,9 @@ class FoodNinja extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(localizationProvider);
-    final locale = (state is LocalizationSuccess)
-        ? Locale(state.isSelected)
+    final locale = state is LocalizationSuccess
+        ? Locale(state.isSelectedLang)
         : const Locale("en");
-
     return MaterialApp.router(
       routerConfig: router.config(),
       debugShowCheckedModeBanner: false,
