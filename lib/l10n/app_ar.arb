@@ -153,5 +153,9 @@
 "nomessageyet": "لا توجد رسائل بعد",
 "arabic":"العربية",
 "english":"الإنجليزية",
-"resendOtpPrefix": "أعد إرسال OTP خلال 00:"
+"resendOtpPrefix": "أعد إرسال OTP خلال 00:",
+"onboardingtitleone": "اعثر على طعامك المريح\nهنا",
+"onboardingsubtitleone": "هنا يمكنك العثور على طاهٍ أو وجبة تناسب كل\nالأذواق. استمتع!",
+"onboardingtitletwo": "فود نينجا هو حيث يعيش طعامك المريح",
+"onboardingsubtitletwo": "استمتع بتوصيل سريع وسلس للطعام إلى\nباب منزلك"
 }

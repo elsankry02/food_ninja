@@ -469,4 +469,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get resendOtpPrefix => 'Resend OTP in 00:';
+
+  @override
+  String get onboardingtitleone => 'Find your Comfort\nFood here';
+
+  @override
+  String get onboardingsubtitleone => 'Here You Can find a chef or dish for every\ntaste and color. Enjoy!';
+
+  @override
+  String get onboardingtitletwo => 'Food Ninja is Where Your\nComfort Food Lives';
+
+  @override
+  String get onboardingsubtitletwo => 'Enjoy a fast and smooth food delivery at\nyour doorstep';
 }

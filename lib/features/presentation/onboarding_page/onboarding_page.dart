@@ -39,19 +39,19 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
                   currentIndex = value;
                 });
               },
-              itemCount: onboardingItems.length,
+              itemCount: onboardingItems(context).length,
               itemBuilder: (context, index) => ListView(
                 children: [
                   SizedBox(height: context.height * 0.040),
                   Image.asset(
-                    onboardingItems[index].image,
+                    onboardingItems(context)[index].image,
                     height: context.height * 0.5,
                     fit: BoxFit.cover,
                   ),
                   SizedBox(height: context.height * 0.059),
                   Text(
                     textAlign: TextAlign.center,
-                    onboardingItems[index].subTitel,
+                    onboardingItems(context)[index].title,
                     style: context.kTextTheme.titleLarge!.copyWith(
                       fontWeight: FontWeight.w700,
                       color: AppColors.kTitle,
@@ -60,7 +60,7 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
                   SizedBox(height: context.height * 0.020),
                   Text(
                     textAlign: TextAlign.center,
-                    onboardingItems[index].titel,
+                    onboardingItems(context)[index].subTitle,
                     style: context.kTextTheme.labelMedium!.copyWith(
                       fontWeight: FontWeight.w400,
                     ),
@@ -88,7 +88,7 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
               ),
               borderRadius: BorderRadius.circular(context.height * 0.015),
               onTap: () {
-                if (currentIndex == onboardingItems.length - 1) {
+                if (currentIndex == onboardingItems(context).length - 1) {
                   context.router.push(SignUpRoute());
                   ref.read(prefsProvider).setBool("isSaved", true);
                 }

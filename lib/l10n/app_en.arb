@@ -153,5 +153,9 @@
 "nomessageyet": "No message yet",
 "arabic":"Arabic",
 "english":"English",
-"resendOtpPrefix": "Resend OTP in 00:"
+"resendOtpPrefix": "Resend OTP in 00:",
+"onboardingtitleone": "Find your Comfort\nFood here",
+"onboardingsubtitleone": "Here You Can find a chef or dish for every\ntaste and color. Enjoy!",
+"onboardingtitletwo": "Food Ninja is Where Your\nComfort Food Lives",
+"onboardingsubtitletwo": "Enjoy a fast and smooth food delivery at\nyour doorstep"
 }

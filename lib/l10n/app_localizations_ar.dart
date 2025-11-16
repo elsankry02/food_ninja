@@ -469,4 +469,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get resendOtpPrefix => 'أعد إرسال OTP خلال 00:';
+
+  @override
+  String get onboardingtitleone => 'اعثر على طعامك المريح\nهنا';
+
+  @override
+  String get onboardingsubtitleone => 'هنا يمكنك العثور على طاهٍ أو وجبة تناسب كل\nالأذواق. استمتع!';
+
+  @override
+  String get onboardingtitletwo => 'فود نينجا هو حيث يعيش طعامك المريح';
+
+  @override
+  String get onboardingsubtitletwo => 'استمتع بتوصيل سريع وسلس للطعام إلى\nباب منزلك';
 }

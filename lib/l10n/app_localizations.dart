@@ -1018,6 +1018,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Resend OTP in 00:'**
   String get resendOtpPrefix;
+
+  /// No description provided for @onboardingtitleone.
+  ///
+  /// In en, this message translates to:
+  /// **'Find your Comfort\nFood here'**
+  String get onboardingtitleone;
+
+  /// No description provided for @onboardingsubtitleone.
+  ///
+  /// In en, this message translates to:
+  /// **'Here You Can find a chef or dish for every\ntaste and color. Enjoy!'**
+  String get onboardingsubtitleone;
+
+  /// No description provided for @onboardingtitletwo.
+  ///
+  /// In en, this message translates to:
+  /// **'Food Ninja is Where Your\nComfort Food Lives'**
+  String get onboardingtitletwo;
+
+  /// No description provided for @onboardingsubtitletwo.
+  ///
+  /// In en, this message translates to:
+  /// **'Enjoy a fast and smooth food delivery at\nyour doorstep'**
+  String get onboardingsubtitletwo;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

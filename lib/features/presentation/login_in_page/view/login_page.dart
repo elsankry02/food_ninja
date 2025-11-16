@@ -55,17 +55,17 @@ class _LoginPageState extends State<LoginPage> {
                       Image.asset(AppImages.kLogo),
                       Text(
                         textAlign: TextAlign.center,
-                        context.kAppLocalizations.foodninja,
-                        style: context.kTextTheme.displayMedium!.copyWith(
+                        "FoodNinja",
+                        style: context.kTextTheme.displayLarge!.copyWith(
                           color: AppColors.kPrimaryColor,
-                          fontWeight: FontWeight.w600,
                         ),
                       ),
                       Text(
                         textAlign: TextAlign.center,
-                        context.kAppLocalizations.delieverfavoritefood,
-                        style: context.kTextTheme.titleSmall!.copyWith(
-                          fontWeight: FontWeight.w700,
+                        "Deliever Favorite Food",
+                        style: context.kTextTheme.labelMedium!.copyWith(
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.kTitle,
                         ),
                       ),
                       SizedBox(height: context.height * 0.060),

@@ -57,7 +57,6 @@ class _SplashPageState extends ConsumerState<SplashPage> {
                   "FoodNinja",
                   style: context.kTextTheme.displayLarge!.copyWith(
                     color: AppColors.kPrimaryColor,
-                    fontWeight: FontWeight.w900,
                   ),
                 ),
                 Text(
