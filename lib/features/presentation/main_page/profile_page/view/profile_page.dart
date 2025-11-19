@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:food_ninja/features/presentation/main_page/profile_page/widget/language_widget.dart';
+import 'package:food_ninja/features/presentation/main_page/profile_page/widget/theme_widget.dart';
 
 import '../../../../../core/components/custom_snakbar.dart';
 import '../../../../../core/constant/app_colors.dart';
@@ -50,6 +51,17 @@ class ProfilePage extends StatelessWidget {
                   context: context,
                   builder: (context) {
                     return LanguageWidget();
+                  },
+                ),
+              ),
+              ListTileItems(
+                title: "Theme",
+                leadingIcon: Icons.wb_sunny,
+                trailingIcon: Icons.arrow_forward_ios_rounded,
+                onTap: () => showModalBottomSheet(
+                  context: context,
+                  builder: (context) {
+                    return ThemeWidget();
                   },
                 ),
               ),
