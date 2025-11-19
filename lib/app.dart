@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:food_ninja/features/data/providers/localization.dart';
+import 'package:food_ninja/features/data/providers/localization_provider.dart';
 
 import 'core/constant/app_strings.dart';
 import 'core/router/router.dart';
@@ -12,9 +12,10 @@ class FoodNinja extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(localizationProvider);
+
     final locale = state is LocalizationSuccess
         ? Locale(state.isSelectedLang)
-        : const Locale("ar");
+        : const Locale("en");
     return MaterialApp.router(
       routerConfig: router.config(),
       debugShowCheckedModeBanner: false,

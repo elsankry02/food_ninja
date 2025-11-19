@@ -5,7 +5,7 @@ import 'package:food_ninja/core/components/custom_icon_button_pop.dart';
 import 'package:food_ninja/core/constant/app_colors.dart';
 import 'package:food_ninja/core/constant/app_enums.dart';
 import 'package:food_ninja/core/extension/extension.dart';
-import 'package:food_ninja/features/data/providers/localization.dart';
+import 'package:food_ninja/features/data/providers/localization_provider.dart';
 import 'package:food_ninja/features/data/providers/provider.dart';
 
 class LanguageWidget extends ConsumerStatefulWidget {
