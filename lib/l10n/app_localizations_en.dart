@@ -481,4 +481,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboardingsubtitletwo => 'Enjoy a fast and smooth food delivery at\nyour doorstep';
+
+  @override
+  String get otpSentSuccessfully => 'OTP sent successfully, please verify to continue';
+
+  @override
+  String get userRegisteredSuccessfully => 'User registered successfully';
 }

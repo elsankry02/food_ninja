@@ -253,12 +253,24 @@ class OrdersRoute extends PageRouteInfo<void> {
 /// generated route for
 /// [OtpPage]
 class OtpRoute extends PageRouteInfo<OtpRouteArgs> {
-  OtpRoute({Key? key, required bool isSelected, List<PageRouteInfo>? children})
-    : super(
-        OtpRoute.name,
-        args: OtpRouteArgs(key: key, isSelected: isSelected),
-        initialChildren: children,
-      );
+  OtpRoute({
+    Key? key,
+    required bool isSelected,
+    required ContentTybe contentTybe,
+    required TextEditingController phoneController,
+    required TextEditingController emailController,
+    List<PageRouteInfo>? children,
+  }) : super(
+         OtpRoute.name,
+         args: OtpRouteArgs(
+           key: key,
+           isSelected: isSelected,
+           contentTybe: contentTybe,
+           phoneController: phoneController,
+           emailController: emailController,
+         ),
+         initialChildren: children,
+       );
 
   static const String name = 'OtpRoute';
 
@@ -266,32 +278,59 @@ class OtpRoute extends PageRouteInfo<OtpRouteArgs> {
     name,
     builder: (data) {
       final args = data.argsAs<OtpRouteArgs>();
-      return OtpPage(key: args.key, isSelected: args.isSelected);
+      return OtpPage(
+        key: args.key,
+        isSelected: args.isSelected,
+        contentTybe: args.contentTybe,
+        phoneController: args.phoneController,
+        emailController: args.emailController,
+      );
     },
   );
 }
 
 class OtpRouteArgs {
-  const OtpRouteArgs({this.key, required this.isSelected});
+  const OtpRouteArgs({
+    this.key,
+    required this.isSelected,
+    required this.contentTybe,
+    required this.phoneController,
+    required this.emailController,
+  });
 
   final Key? key;
 
   final bool isSelected;
 
+  final ContentTybe contentTybe;
+
+  final TextEditingController phoneController;
+
+  final TextEditingController emailController;
+
   @override
   String toString() {
-    return 'OtpRouteArgs{key: $key, isSelected: $isSelected}';
+    return 'OtpRouteArgs{key: $key, isSelected: $isSelected, contentTybe: $contentTybe, phoneController: $phoneController, emailController: $emailController}';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     if (other is! OtpRouteArgs) return false;
-    return key == other.key && isSelected == other.isSelected;
+    return key == other.key &&
+        isSelected == other.isSelected &&
+        contentTybe == other.contentTybe &&
+        phoneController == other.phoneController &&
+        emailController == other.emailController;
   }
 
   @override
-  int get hashCode => key.hashCode ^ isSelected.hashCode;
+  int get hashCode =>
+      key.hashCode ^
+      isSelected.hashCode ^
+      contentTybe.hashCode ^
+      phoneController.hashCode ^
+      emailController.hashCode;
 }
 
 /// generated route for

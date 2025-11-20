@@ -481,4 +481,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get onboardingsubtitletwo => 'استمتع بتوصيل سريع وسلس للطعام إلى\nباب منزلك';
+
+  @override
+  String get otpSentSuccessfully => 'تم إرسال رمز التحقق بنجاح، يرجى التحقق للمتابعة';
+
+  @override
+  String get userRegisteredSuccessfully => 'تم تسجيل المستخدم بنجاح';
 }

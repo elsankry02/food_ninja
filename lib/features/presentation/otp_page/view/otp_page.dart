@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/core/constant/app_enums.dart';
 
 import '../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../core/components/custom_primary_button.dart';
@@ -14,7 +15,15 @@ import '../widget/otp_pin_put_widget.dart';
 @RoutePage()
 class OtpPage extends StatefulWidget {
   final bool isSelected;
-  const OtpPage({super.key, required this.isSelected});
+  final TextEditingController phoneController, emailController;
+  final ContentTybe contentTybe;
+  const OtpPage({
+    super.key,
+    required this.isSelected,
+    required this.contentTybe,
+    required this.phoneController,
+    required this.emailController,
+  });
 
   @override
   State<OtpPage> createState() => _OtpPageState();
@@ -22,6 +31,7 @@ class OtpPage extends StatefulWidget {
 
 class _OtpPageState extends State<OtpPage> {
   final formKey = GlobalKey<FormState>();
+  ContentTybe contentTybe = ContentTybe.email;
   final pinputController = TextEditingController();
 
   Timer? resendOTP;
@@ -106,7 +116,8 @@ class _OtpPageState extends State<OtpPage> {
                         ),
                       ),
                       TextSpan(
-                        text: "\nelsankry02@gmail.com",
+                        text:
+                            "\n${contentTybe == ContentTybe.email ? widget.emailController.text.trim() : widget.phoneController.text.trim()}",
                         style: context.kTextTheme.titleSmall!.copyWith(
                           fontWeight: FontWeight.w600,
                           color: AppColors.kSecondaryGold,

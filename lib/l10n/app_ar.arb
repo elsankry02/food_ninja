@@ -157,5 +157,7 @@
 "onboardingtitleone": "اعثر على طعامك المريح\nهنا",
 "onboardingsubtitleone": "هنا يمكنك العثور على طاهٍ أو وجبة تناسب كل\nالأذواق. استمتع!",
 "onboardingtitletwo": "فود نينجا هو حيث يعيش طعامك المريح",
-"onboardingsubtitletwo": "استمتع بتوصيل سريع وسلس للطعام إلى\nباب منزلك"
+"onboardingsubtitletwo": "استمتع بتوصيل سريع وسلس للطعام إلى\nباب منزلك",
+"otpSentSuccessfully": "تم إرسال رمز التحقق بنجاح، يرجى التحقق للمتابعة",
+"userRegisteredSuccessfully": "تم تسجيل المستخدم بنجاح"
 }

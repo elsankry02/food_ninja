@@ -50,6 +50,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: any
+  dio: ^5.9.0
 
 dev_dependencies:
   flutter_test:

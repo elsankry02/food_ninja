@@ -1042,6 +1042,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Enjoy a fast and smooth food delivery at\nyour doorstep'**
   String get onboardingsubtitletwo;
+
+  /// No description provided for @otpSentSuccessfully.
+  ///
+  /// In en, this message translates to:
+  /// **'OTP sent successfully, please verify to continue'**
+  String get otpSentSuccessfully;
+
+  /// No description provided for @userRegisteredSuccessfully.
+  ///
+  /// In en, this message translates to:
+  /// **'User registered successfully'**
+  String get userRegisteredSuccessfully;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -1,6 +1,26 @@
+import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:food_ninja/env.dart';
+import 'package:food_ninja/features/data/services/post/register_new_user_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final prefsProvider = Provider<SharedPreferences>((ref) {
   throw UnimplementedError();
+});
+final dioProvider = Provider<Dio>((ref) {
+  return Dio(
+    BaseOptions(
+      baseUrl: baseUrl,
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+    ),
+  );
+});
+
+final regRegisterNewUserServiceProvider = Provider<RegisterNewUserService>((
+  ref,
+) {
+  return RegisterNewUserService(dio: ref.read(dioProvider));
 });

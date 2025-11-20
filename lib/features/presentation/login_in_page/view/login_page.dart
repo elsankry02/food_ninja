@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:food_ninja/core/constant/app_enums.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/components/custom_snakbar.dart';
@@ -22,13 +23,14 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final emailController = TextEditingController();
-  final passwordController = TextEditingController();
+  final phoneController = TextEditingController();
+  ContentTybe contentTybe = ContentTybe.email;
   bool isPassword = false;
 
   @override
   void dispose() {
     emailController.dispose();
-    passwordController.dispose();
+    phoneController.dispose();
     super.dispose();
   }
 
@@ -93,39 +95,6 @@ class _LoginPageState extends State<LoginPage> {
                         controller: emailController,
                       ),
                       SizedBox(height: context.height * 0.020),
-                      CustomTextFormField(
-                        hintText: context.kAppLocalizations.password,
-                        hintStyle: context.kTextTheme.labelLarge!.copyWith(
-                          fontWeight: FontWeight.w400,
-                          color: Colors.grey,
-                        ),
-                        enabledBorderColor: AppColors.kBorder,
-                        focusedBorderColor: AppColors.kBorder,
-                        prefixIcon: SvgPicture.asset(
-                          AppSvgs.kLock,
-                          fit: BoxFit.scaleDown,
-                        ),
-                        cursorColor: AppColors.kGrey,
-                        controller: passwordController,
-                        obscureText: isPassword ? false : true,
-                        suffixIcon: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              isPassword = !isPassword;
-                            });
-                          },
-                          child: Icon(
-                            isPassword
-                                ? Icons.visibility
-                                : Icons.visibility_off,
-                            color: isPassword
-                                ? AppColors.kPrimaryColor
-                                : AppColors.kPrimaryColor,
-                          ),
-                        ),
-                      ),
-
-                      SizedBox(height: context.height * 0.020),
                       Text(
                         textAlign: TextAlign.center,
                         context.kAppLocalizations.orcontinuewith,
@@ -179,8 +148,14 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius: BorderRadius.circular(
                             context.height * 0.015,
                           ),
-                          onTap: () =>
-                              context.router.push(OtpRoute(isSelected: false)),
+                          onTap: () => context.router.push(
+                            OtpRoute(
+                              isSelected: false,
+                              contentTybe: contentTybe,
+                              phoneController: phoneController,
+                              emailController: emailController,
+                            ),
+                          ),
                         ),
                       ),
                       SizedBox(height: context.height * 0.020),
