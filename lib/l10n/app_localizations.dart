@@ -1043,17 +1043,83 @@ abstract class AppLocalizations {
   /// **'Enjoy a fast and smooth food delivery at\nyour doorstep'**
   String get onboardingsubtitletwo;
 
-  /// No description provided for @otpSentSuccessfully.
+  /// No description provided for @otpsentsuccessfully.
   ///
   /// In en, this message translates to:
   /// **'OTP sent successfully, please verify to continue'**
-  String get otpSentSuccessfully;
+  String get otpsentsuccessfully;
 
-  /// No description provided for @userRegisteredSuccessfully.
+  /// No description provided for @userregisteredsuccessfully.
   ///
   /// In en, this message translates to:
   /// **'User registered successfully'**
-  String get userRegisteredSuccessfully;
+  String get userregisteredsuccessfully;
+
+  /// No description provided for @deleteaccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Account'**
+  String get deleteaccount;
+
+  /// No description provided for @areyousureyouwanttodeleteyouraccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete your account?'**
+  String get areyousureyouwanttodeleteyouraccount;
+
+  /// No description provided for @delete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get delete;
+
+  /// No description provided for @close.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get close;
+
+  /// No description provided for @accountdeletedsuccessfully.
+  ///
+  /// In en, this message translates to:
+  /// **'Account deleted successfully'**
+  String get accountdeletedsuccessfully;
+
+  /// No description provided for @areyousureyouwanttologout.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to logout?'**
+  String get areyousureyouwanttologout;
+
+  /// No description provided for @namemustbeatleastcharacters.
+  ///
+  /// In en, this message translates to:
+  /// **'Name must be at least 4 characters'**
+  String get namemustbeatleastcharacters;
+
+  /// No description provided for @pleasechooseanavatarimage.
+  ///
+  /// In en, this message translates to:
+  /// **'Please choose an avatar image'**
+  String get pleasechooseanavatarimage;
+
+  /// No description provided for @pleaseenteraname.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a name'**
+  String get pleaseenteraname;
+
+  /// No description provided for @pleaseenteravalidemail.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid email'**
+  String get pleaseenteravalidemail;
+
+  /// No description provided for @emailmustcontainat.
+  ///
+  /// In en, this message translates to:
+  /// **'Email must contain @'**
+  String get emailmustcontainat;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

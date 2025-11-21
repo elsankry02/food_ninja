@@ -158,6 +158,17 @@
 "onboardingsubtitleone": "Here You Can find a chef or dish for every\ntaste and color. Enjoy!",
 "onboardingtitletwo": "Food Ninja is Where Your\nComfort Food Lives",
 "onboardingsubtitletwo": "Enjoy a fast and smooth food delivery at\nyour doorstep",
-"otpSentSuccessfully": "OTP sent successfully, please verify to continue",
-"userRegisteredSuccessfully": "User registered successfully"
+  "otpsentsuccessfully": "OTP sent successfully, please verify to continue",
+  "userregisteredsuccessfully": "User registered successfully",
+  "deleteaccount": "Delete Account",
+  "areyousureyouwanttodeleteyouraccount": "Are you sure you want to delete your account?",
+  "delete": "Delete",
+  "close": "Close",
+  "accountdeletedsuccessfully": "Account deleted successfully",
+  "areyousureyouwanttologout": "Are you sure you want to logout?",
+  "namemustbeatleastcharacters": "Name must be at least 4 characters",
+  "pleasechooseanavatarimage": "Please choose an avatar image",
+  "pleaseenteraname": "Please enter a name",
+  "pleaseenteravalidemail": "Please enter a valid email",
+  "emailmustcontainat": "Email must contain @"
 }

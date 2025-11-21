@@ -483,8 +483,41 @@ class AppLocalizationsEn extends AppLocalizations {
   String get onboardingsubtitletwo => 'Enjoy a fast and smooth food delivery at\nyour doorstep';
 
   @override
-  String get otpSentSuccessfully => 'OTP sent successfully, please verify to continue';
+  String get otpsentsuccessfully => 'OTP sent successfully, please verify to continue';
 
   @override
-  String get userRegisteredSuccessfully => 'User registered successfully';
+  String get userregisteredsuccessfully => 'User registered successfully';
+
+  @override
+  String get deleteaccount => 'Delete Account';
+
+  @override
+  String get areyousureyouwanttodeleteyouraccount => 'Are you sure you want to delete your account?';
+
+  @override
+  String get delete => 'Delete';
+
+  @override
+  String get close => 'Close';
+
+  @override
+  String get accountdeletedsuccessfully => 'Account deleted successfully';
+
+  @override
+  String get areyousureyouwanttologout => 'Are you sure you want to logout?';
+
+  @override
+  String get namemustbeatleastcharacters => 'Name must be at least 4 characters';
+
+  @override
+  String get pleasechooseanavatarimage => 'Please choose an avatar image';
+
+  @override
+  String get pleaseenteraname => 'Please enter a name';
+
+  @override
+  String get pleaseenteravalidemail => 'Please enter a valid email';
+
+  @override
+  String get emailmustcontainat => 'Email must contain @';
 }

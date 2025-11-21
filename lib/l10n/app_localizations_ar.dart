@@ -483,8 +483,41 @@ class AppLocalizationsAr extends AppLocalizations {
   String get onboardingsubtitletwo => 'استمتع بتوصيل سريع وسلس للطعام إلى\nباب منزلك';
 
   @override
-  String get otpSentSuccessfully => 'تم إرسال رمز التحقق بنجاح، يرجى التحقق للمتابعة';
+  String get otpsentsuccessfully => 'تم إرسال رمز التحقق بنجاح، يرجى التحقق للمتابعة';
 
   @override
-  String get userRegisteredSuccessfully => 'تم تسجيل المستخدم بنجاح';
+  String get userregisteredsuccessfully => 'تم تسجيل المستخدم بنجاح';
+
+  @override
+  String get deleteaccount => 'حذف الحساب';
+
+  @override
+  String get areyousureyouwanttodeleteyouraccount => 'هل أنت متأكد أنك تريد حذف حسابك؟';
+
+  @override
+  String get delete => 'حذف';
+
+  @override
+  String get close => 'إغلاق';
+
+  @override
+  String get accountdeletedsuccessfully => 'تم حذف الحساب بنجاح';
+
+  @override
+  String get areyousureyouwanttologout => 'هل أنت متأكد أنك تريد تسجيل الخروج؟';
+
+  @override
+  String get namemustbeatleastcharacters => 'يجب أن يتكون الاسم من 4 أحرف على الأقل';
+
+  @override
+  String get pleasechooseanavatarimage => 'الرجاء اختيار صورة رمزية';
+
+  @override
+  String get pleaseenteraname => 'الرجاء إدخال اسم';
+
+  @override
+  String get pleaseenteravalidemail => 'الرجاء إدخال بريد إلكتروني صالح';
+
+  @override
+  String get emailmustcontainat => 'يجب أن يحتوي البريد الإلكتروني على @';
 }

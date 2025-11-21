@@ -59,7 +59,7 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
       if (state is RegisterNewUserSuccess) {
         SuccessMessage(
           context,
-          message: context.kAppLocalizations.userRegisteredSuccessfully,
+          message: context.kAppLocalizations.userregisteredsuccessfully,
         );
         context.router.push(
           OtpRoute(
@@ -119,9 +119,13 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
                           hintText: context.kAppLocalizations.email,
                           validator: (value) {
                             if (value!.isEmpty) {
-                              return "please entera valid email";
+                              return context
+                                  .kAppLocalizations
+                                  .pleaseenteravalidemail;
                             } else if (!value.contains('@')) {
-                              return "email mustcontainat";
+                              return context
+                                  .kAppLocalizations
+                                  .emailmustcontainat;
                             }
                             return null;
                           },

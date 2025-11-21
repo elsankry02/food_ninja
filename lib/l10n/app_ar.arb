@@ -158,6 +158,17 @@
 "onboardingsubtitleone": "هنا يمكنك العثور على طاهٍ أو وجبة تناسب كل\nالأذواق. استمتع!",
 "onboardingtitletwo": "فود نينجا هو حيث يعيش طعامك المريح",
 "onboardingsubtitletwo": "استمتع بتوصيل سريع وسلس للطعام إلى\nباب منزلك",
-"otpSentSuccessfully": "تم إرسال رمز التحقق بنجاح، يرجى التحقق للمتابعة",
-"userRegisteredSuccessfully": "تم تسجيل المستخدم بنجاح"
+  "otpsentsuccessfully": "تم إرسال رمز التحقق بنجاح، يرجى التحقق للمتابعة",
+  "userregisteredsuccessfully": "تم تسجيل المستخدم بنجاح",
+  "deleteaccount": "حذف الحساب",
+  "areyousureyouwanttodeleteyouraccount": "هل أنت متأكد أنك تريد حذف حسابك؟",
+  "delete": "حذف",
+  "close": "إغلاق",
+  "accountdeletedsuccessfully": "تم حذف الحساب بنجاح",
+  "areyousureyouwanttologout": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+  "namemustbeatleastcharacters": "يجب أن يتكون الاسم من 4 أحرف على الأقل",
+  "pleasechooseanavatarimage": "الرجاء اختيار صورة رمزية",
+  "pleaseenteraname": "الرجاء إدخال اسم",
+  "pleaseenteravalidemail": "الرجاء إدخال بريد إلكتروني صالح",
+  "emailmustcontainat": "يجب أن يحتوي البريد الإلكتروني على @"
 }
