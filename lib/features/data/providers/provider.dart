@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:food_ninja/env.dart';
 import 'package:food_ninja/features/data/services/post/register_new_user_service.dart';
+import 'package:food_ninja/features/data/services/post/verify_otp_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final prefsProvider = Provider<SharedPreferences>((ref) {
@@ -23,4 +24,7 @@ final regRegisterNewUserServiceProvider = Provider<RegisterNewUserService>((
   ref,
 ) {
   return RegisterNewUserService(dio: ref.read(dioProvider));
+});
+final verifyOtpServiceProvider = Provider<VerifyOtpService>((ref) {
+  return VerifyOtpService(dio: ref.read(dioProvider));
 });

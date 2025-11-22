@@ -520,4 +520,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get emailmustcontainat => 'Email must contain @';
+
+  @override
+  String get invalidorexpiredotp => 'Invalid or expired OTP';
+
+  @override
+  String get authenticationsuccessful => 'Authentication successful';
 }

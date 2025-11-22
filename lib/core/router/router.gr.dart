@@ -255,7 +255,7 @@ class OrdersRoute extends PageRouteInfo<void> {
 class OtpRoute extends PageRouteInfo<OtpRouteArgs> {
   OtpRoute({
     Key? key,
-    required bool isSelected,
+    required bool isLogin,
     required ContentTybe contentTybe,
     required TextEditingController phoneController,
     required TextEditingController emailController,
@@ -264,7 +264,7 @@ class OtpRoute extends PageRouteInfo<OtpRouteArgs> {
          OtpRoute.name,
          args: OtpRouteArgs(
            key: key,
-           isSelected: isSelected,
+           isLogin: isLogin,
            contentTybe: contentTybe,
            phoneController: phoneController,
            emailController: emailController,
@@ -280,7 +280,7 @@ class OtpRoute extends PageRouteInfo<OtpRouteArgs> {
       final args = data.argsAs<OtpRouteArgs>();
       return OtpPage(
         key: args.key,
-        isSelected: args.isSelected,
+        isLogin: args.isLogin,
         contentTybe: args.contentTybe,
         phoneController: args.phoneController,
         emailController: args.emailController,
@@ -292,7 +292,7 @@ class OtpRoute extends PageRouteInfo<OtpRouteArgs> {
 class OtpRouteArgs {
   const OtpRouteArgs({
     this.key,
-    required this.isSelected,
+    required this.isLogin,
     required this.contentTybe,
     required this.phoneController,
     required this.emailController,
@@ -300,7 +300,7 @@ class OtpRouteArgs {
 
   final Key? key;
 
-  final bool isSelected;
+  final bool isLogin;
 
   final ContentTybe contentTybe;
 
@@ -310,7 +310,7 @@ class OtpRouteArgs {
 
   @override
   String toString() {
-    return 'OtpRouteArgs{key: $key, isSelected: $isSelected, contentTybe: $contentTybe, phoneController: $phoneController, emailController: $emailController}';
+    return 'OtpRouteArgs{key: $key, isLogin: $isLogin, contentTybe: $contentTybe, phoneController: $phoneController, emailController: $emailController}';
   }
 
   @override
@@ -318,7 +318,7 @@ class OtpRouteArgs {
     if (identical(this, other)) return true;
     if (other is! OtpRouteArgs) return false;
     return key == other.key &&
-        isSelected == other.isSelected &&
+        isLogin == other.isLogin &&
         contentTybe == other.contentTybe &&
         phoneController == other.phoneController &&
         emailController == other.emailController;
@@ -327,7 +327,7 @@ class OtpRouteArgs {
   @override
   int get hashCode =>
       key.hashCode ^
-      isSelected.hashCode ^
+      isLogin.hashCode ^
       contentTybe.hashCode ^
       phoneController.hashCode ^
       emailController.hashCode;

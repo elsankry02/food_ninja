@@ -1120,6 +1120,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Email must contain @'**
   String get emailmustcontainat;
+
+  /// No description provided for @invalidorexpiredotp.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid or expired OTP'**
+  String get invalidorexpiredotp;
+
+  /// No description provided for @authenticationsuccessful.
+  ///
+  /// In en, this message translates to:
+  /// **'Authentication successful'**
+  String get authenticationsuccessful;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

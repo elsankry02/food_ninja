@@ -2,34 +2,37 @@ import 'dart:async';
 
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:food_ninja/core/components/custom_snakbar.dart';
 import 'package:food_ninja/core/constant/app_enums.dart';
+import 'package:food_ninja/core/router/router.dart';
+import 'package:food_ninja/features/data/providers/post/verify_otp_provider.dart';
 
 import '../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/constant/app_colors.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/extension/extension.dart';
-import '../../../../core/router/router.dart';
 import '../widget/otp_pin_put_widget.dart';
 
 @RoutePage()
-class OtpPage extends StatefulWidget {
-  final bool isSelected;
+class OtpPage extends ConsumerStatefulWidget {
+  final bool isLogin;
   final TextEditingController phoneController, emailController;
   final ContentTybe contentTybe;
   const OtpPage({
     super.key,
-    required this.isSelected,
+    required this.isLogin,
     required this.contentTybe,
     required this.phoneController,
     required this.emailController,
   });
 
   @override
-  State<OtpPage> createState() => _OtpPageState();
+  ConsumerState<OtpPage> createState() => _OtpPageState();
 }
 
-class _OtpPageState extends State<OtpPage> {
+class _OtpPageState extends ConsumerState<OtpPage> {
   final formKey = GlobalKey<FormState>();
   ContentTybe contentTybe = ContentTybe.email;
   final pinputController = TextEditingController();
@@ -64,8 +67,41 @@ class _OtpPageState extends State<OtpPage> {
     super.dispose();
   }
 
+  Future<void> verifyOtp() async {
+    if (!formKey.currentState!.validate()) return;
+    final notifier = ref.read(verifyOtpProvider.notifier);
+    final isEmail = widget.contentTybe == ContentTybe.email;
+    await notifier.verifyOtp(
+      authMethod: contentTybe.name,
+      email: isEmail ? widget.emailController.text.trim() : null,
+      otp: pinputController.text.trim(),
+      phone: isEmail ? null : widget.phoneController.text.trim(),
+      phonePrefix: isEmail ? null : "+20",
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    final state = ref.watch(verifyOtpProvider);
+    ref.listen(verifyOtpProvider, (_, state) {
+      if (state is VerifyOtpFailure) {
+        ErrorMessage(context, message: state.errMessage);
+        return;
+      }
+      if (state is VerifyOtpSuccess) {
+        final isLogin = widget.isLogin;
+        if (isLogin == true) {
+          context.router.replace(MainRoute());
+          SuccessMessage(context, message: context.kAppLocalizations.save);
+        } else {
+          context.router.push(SignupProcessRoute());
+          SuccessMessage(
+            context,
+            message: context.kAppLocalizations.authenticationsuccessful,
+          );
+        }
+      }
+    });
     return Scaffold(
       body: Stack(
         children: [
@@ -128,6 +164,15 @@ class _OtpPageState extends State<OtpPage> {
                 ),
                 SizedBox(height: context.height * 0.040),
                 OtpPinPutWidget(
+                  onChanged: (value) {
+                    if (value.length == 6) {
+                      final notifier = ref.read(verifyOtpProvider.notifier);
+                      notifier.verifyOtp(
+                        authMethod: contentTybe.name,
+                        otp: value,
+                      );
+                    }
+                  },
                   validator: (value) {
                     if (value == null || value.length < 6) {
                       return context.kAppLocalizations.codemustbe6digits;
@@ -182,15 +227,8 @@ class _OtpPageState extends State<OtpPage> {
                       colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
                     ),
                     borderRadius: BorderRadius.circular(context.height * 0.015),
-                    onTap: () {
-                      if (formKey.currentState!.validate()) {
-                        if (widget.isSelected == false) {
-                          context.router.replace(MainRoute());
-                        } else {
-                          context.router.push(SignupProcessRoute());
-                        }
-                      }
-                    },
+                    isLoading: state is VerifyOtpLoading,
+                    onTap: verifyOtp,
                   ),
                 ),
               ],

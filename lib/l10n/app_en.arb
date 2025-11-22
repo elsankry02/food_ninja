@@ -170,5 +170,7 @@
   "pleasechooseanavatarimage": "Please choose an avatar image",
   "pleaseenteraname": "Please enter a name",
   "pleaseenteravalidemail": "Please enter a valid email",
-  "emailmustcontainat": "Email must contain @"
+  "emailmustcontainat": "Email must contain @",
+  "invalidorexpiredotp": "Invalid or expired OTP",
+  "authenticationsuccessful": "Authentication successful"
 }

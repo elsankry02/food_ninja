@@ -170,5 +170,7 @@
   "pleasechooseanavatarimage": "الرجاء اختيار صورة رمزية",
   "pleaseenteraname": "الرجاء إدخال اسم",
   "pleaseenteravalidemail": "الرجاء إدخال بريد إلكتروني صالح",
-  "emailmustcontainat": "يجب أن يحتوي البريد الإلكتروني على @"
+  "emailmustcontainat": "يجب أن يحتوي البريد الإلكتروني على @",
+  "invalidorexpiredotp": "رمز التحقق غير صالح أو منتهي",
+  "authenticationsuccessful": "تم التحقق بنجاح"
 }

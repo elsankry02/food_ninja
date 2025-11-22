@@ -150,7 +150,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           onTap: () => context.router.push(
                             OtpRoute(
-                              isSelected: false,
+                              isLogin: false,
                               contentTybe: contentTybe,
                               phoneController: phoneController,
                               emailController: emailController,

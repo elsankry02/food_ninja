@@ -520,4 +520,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get emailmustcontainat => 'يجب أن يحتوي البريد الإلكتروني على @';
+
+  @override
+  String get invalidorexpiredotp => 'رمز التحقق غير صالح أو منتهي';
+
+  @override
+  String get authenticationsuccessful => 'تم التحقق بنجاح';
 }

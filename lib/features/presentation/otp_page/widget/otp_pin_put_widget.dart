@@ -6,7 +6,7 @@ import '../../../../core/extension/extension.dart';
 
 class OtpPinPutWidget extends StatelessWidget {
   final TextEditingController? pinputController;
-  final void Function(String)? onChanged;
+  final void Function(String value)? onChanged;
   final String? Function(String? value)? validator;
   const OtpPinPutWidget({
     super.key,
