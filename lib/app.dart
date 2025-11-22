@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:food_ninja/core/constant/app_theme.dart';
+import 'package:food_ninja/features/data/providers/change_theme_provider.dart';
 import 'package:food_ninja/features/data/providers/localization_provider.dart';
 
-import 'core/constant/app_strings.dart';
 import 'core/router/router.dart';
 import 'l10n/app_localizations.dart';
 
@@ -12,6 +13,9 @@ class FoodNinja extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(localizationProvider);
+    ref.watch(changeThemeProvider);
+    final notifier = ref.read(changeThemeProvider.notifier);
+    final currentTheme = notifier.currentTheme;
     final locale = state is LocalizationSuccess
         ? Locale(state.isSelectedLang)
         : const Locale("en");
@@ -19,9 +23,11 @@ class FoodNinja extends ConsumerWidget {
       routerConfig: router.config(),
       debugShowCheckedModeBanner: false,
       locale: locale,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: currentTheme ? ThemeMode.light : ThemeMode.dark,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      theme: ThemeData(fontFamily: kGilroy),
     );
   }
 }

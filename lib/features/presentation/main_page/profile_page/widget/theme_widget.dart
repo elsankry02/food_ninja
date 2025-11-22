@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:food_ninja/core/components/custom_icon_button_pop.dart';
 import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/constant/app_enums.dart';
 import 'package:food_ninja/core/extension/extension.dart';
 import 'package:food_ninja/features/data/providers/change_theme_provider.dart';
-import 'package:food_ninja/features/data/providers/provider.dart';
 
 class ThemeWidget extends ConsumerStatefulWidget {
   const ThemeWidget({super.key});
@@ -15,19 +13,11 @@ class ThemeWidget extends ConsumerStatefulWidget {
 }
 
 class _ThemeWidgetState extends ConsumerState<ThemeWidget> {
-  late bool isSelectedTheme;
-  getLang() {
-    isSelectedTheme = ref.read(prefsProvider).getBool("changeTheme") ?? true;
-  }
-
-  @override
-  void initState() {
-    getLang();
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
+    ref.watch(changeThemeProvider);
+    final notifier = ref.read(changeThemeProvider.notifier);
+    final currentTheme = notifier.currentTheme;
     return Container(
       padding: EdgeInsets.symmetric(vertical: context.height * 0.010),
       decoration: BoxDecoration(),
@@ -35,18 +25,13 @@ class _ThemeWidgetState extends ConsumerState<ThemeWidget> {
         mainAxisSize: MainAxisSize.min,
         children: [
           ListTile(
-            onTap: () {
-              ref
-                  .read(changeThemeProvider.notifier)
-                  .changeThemeFunc(ChangeTheme.light);
-              setState(() {
-                isSelectedTheme = true;
-              });
+            onTap: () async {
+              await notifier.setTheme(value: true);
             },
             title: Text("Light Theme"),
             trailing: CustomIconButton(
               icon: Icon(
-                isSelectedTheme == true
+                currentTheme == true
                     ? Icons.radio_button_checked
                     : Icons.radio_button_unchecked,
                 color: AppColors.kPrimaryColor,
@@ -55,18 +40,13 @@ class _ThemeWidgetState extends ConsumerState<ThemeWidget> {
           ),
           Divider(color: AppColors.kBorder),
           ListTile(
-            onTap: () {
-              ref
-                  .read(changeThemeProvider.notifier)
-                  .changeThemeFunc(ChangeTheme.dark);
-              setState(() {
-                isSelectedTheme = false;
-              });
+            onTap: () async {
+              await notifier.setTheme(value: false);
             },
             title: Text("Dark Theme"),
             trailing: CustomIconButton(
               icon: Icon(
-                isSelectedTheme == false
+                currentTheme == false
                     ? Icons.radio_button_checked
                     : Icons.radio_button_unchecked,
                 color: AppColors.kPrimaryColor,
