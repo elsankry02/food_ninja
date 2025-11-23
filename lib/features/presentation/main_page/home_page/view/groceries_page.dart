@@ -46,6 +46,7 @@ class _GroceriesPageState extends State<GroceriesPage> {
                   context.kAppLocalizations.groceries,
                   style: context.kTextTheme.headlineSmall!.copyWith(
                     fontWeight: FontWeight.w600,
+                    color: context.kChangeTheme.hintColor,
                   ),
                 ),
                 SizedBox(height: context.height * 0.010),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+
 import '../../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../../core/components/custom_plus_and_minus.dart';
-
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/extension/extension.dart';
 
@@ -27,8 +27,8 @@ class CartDetailsWidget extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: context.height * 0.015),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(context.height * 0.022),
-        color: AppColors.kWhite,
-        border: Border.all(color: AppColors.kBorder),
+        color: context.kChangeTheme.primaryColor,
+        border: Border.all(color: context.kChangeTheme.primaryColorLight),
       ),
       child: ListTile(
         contentPadding: EdgeInsets.zero,
@@ -52,7 +52,7 @@ class CartDetailsWidget extends StatelessWidget {
                     Text(
                       title,
                       style: context.kTextTheme.titleMedium!.copyWith(
-                        color: AppColors.kTitle,
+                        color: context.kChangeTheme.hintColor,
                         fontWeight: FontWeight.w600,
                       ),
                     ),

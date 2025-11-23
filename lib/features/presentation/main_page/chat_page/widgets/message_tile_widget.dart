@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/constant/app_colors.dart';
 
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
@@ -18,8 +17,11 @@ class MessageTileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.symmetric(horizontal: context.height * 0.015),
       decoration: BoxDecoration(
-        border: Border(bottom: BorderSide(color: AppColors.kBorder)),
+        color: context.kChangeTheme.primaryColor,
+        borderRadius: BorderRadius.circular(15),
+        border: Border.all(color: context.kChangeTheme.primaryColorLight),
       ),
       child: ListTile(
         onTap: onTap,
@@ -35,6 +37,7 @@ class MessageTileWidget extends StatelessWidget {
               title,
               style: context.kTextTheme.titleSmall!.copyWith(
                 fontWeight: FontWeight.w700,
+                color: context.kChangeTheme.hintColor,
               ),
             ),
             Text(

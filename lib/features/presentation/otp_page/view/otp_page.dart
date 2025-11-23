@@ -134,7 +134,7 @@ class _OtpPageState extends ConsumerState<OtpPage> {
                   context.kAppLocalizations.enter6digitverifycode,
                   style: context.kTextTheme.headlineSmall!.copyWith(
                     fontWeight: FontWeight.w700,
-                    color: AppColors.kTitle,
+                    color: context.kChangeTheme.hintColor,
                   ),
                 ),
                 SizedBox(height: context.height * 0.020),

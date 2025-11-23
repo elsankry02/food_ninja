@@ -51,7 +51,7 @@ class _MainPageState extends State<MainPage> {
               });
             },
             currentIndex: currentIndex,
-            backgroundColor: AppColors.kWhite,
+            backgroundColor: context.kChangeTheme.primaryColor,
             selectedItemColor: AppColors.kSecondColor,
             unselectedItemColor: Color(0xffA5EEC5),
             items: [
@@ -66,7 +66,7 @@ class _MainPageState extends State<MainPage> {
                 title: Text(
                   context.kAppLocalizations.home,
                   style: context.kTextTheme.labelMedium!.copyWith(
-                    color: AppColors.kTitle,
+                    color: context.kChangeTheme.hintColor,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -76,7 +76,7 @@ class _MainPageState extends State<MainPage> {
                 title: Text(
                   context.kAppLocalizations.chat,
                   style: context.kTextTheme.labelMedium!.copyWith(
-                    color: AppColors.kTitle,
+                    color: context.kChangeTheme.hintColor,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -90,7 +90,7 @@ class _MainPageState extends State<MainPage> {
                 title: Text(
                   context.kAppLocalizations.cart,
                   style: context.kTextTheme.labelMedium!.copyWith(
-                    color: AppColors.kTitle,
+                    color: context.kChangeTheme.hintColor,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -100,7 +100,7 @@ class _MainPageState extends State<MainPage> {
                 title: Text(
                   context.kAppLocalizations.favourite,
                   style: context.kTextTheme.labelMedium!.copyWith(
-                    color: AppColors.kTitle,
+                    color: context.kChangeTheme.hintColor,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -110,7 +110,7 @@ class _MainPageState extends State<MainPage> {
                 title: Text(
                   context.kAppLocalizations.profile,
                   style: context.kTextTheme.labelMedium!.copyWith(
-                    color: AppColors.kTitle,
+                    color: context.kChangeTheme.hintColor,
                     fontWeight: FontWeight.w600,
                   ),
                 ),

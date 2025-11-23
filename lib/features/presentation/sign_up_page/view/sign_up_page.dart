@@ -103,7 +103,7 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
                           "Deliever Favorite Food",
                           style: context.kTextTheme.labelMedium!.copyWith(
                             fontWeight: FontWeight.w600,
-                            color: AppColors.kTitle,
+                            color: context.kChangeTheme.hintColor,
                           ),
                         ),
                         SizedBox(height: context.height * 0.060),
@@ -117,12 +117,14 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
                         SizedBox(height: context.height * 0.040),
                         CustomTextFormField(
                           hintText: context.kAppLocalizations.email,
+                          filled: true,
+                          fillColor: context.kChangeTheme.primaryColor,
                           validator: (value) {
                             if (value!.isEmpty) {
                               return context
                                   .kAppLocalizations
                                   .pleaseenteravalidemail;
-                            } else if (!value.contains('@')) {
+                            } else if (!value.contains('@gmail.com')) {
                               return context
                                   .kAppLocalizations
                                   .emailmustcontainat;
@@ -138,8 +140,10 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
                             fontWeight: FontWeight.w400,
                             color: Colors.grey,
                           ),
-                          enabledBorderColor: AppColors.kBorder,
-                          focusedBorderColor: AppColors.kBorder,
+                          enabledBorderColor:
+                              context.kChangeTheme.primaryColorLight,
+                          focusedBorderColor:
+                              context.kChangeTheme.primaryColorLight,
                           controller: emailController,
                         ),
                         SizedBox(height: context.height * 0.040),

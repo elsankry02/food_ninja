@@ -27,8 +27,8 @@ class FavouriteDetailsWidget extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(context.height * 0.022),
-          color: AppColors.kWhite,
-          border: Border.all(color: AppColors.kBorder),
+          color: context.kChangeTheme.primaryColor,
+          border: Border.all(color: context.kChangeTheme.primaryColorLight),
         ),
         child: ListTile(
           contentPadding: EdgeInsets.zero,
@@ -56,7 +56,7 @@ class FavouriteDetailsWidget extends StatelessWidget {
                       Text(
                         title,
                         style: context.kTextTheme.titleMedium!.copyWith(
-                          color: AppColors.kTitle,
+                          color: context.kChangeTheme.hintColor,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -72,7 +72,7 @@ class FavouriteDetailsWidget extends StatelessWidget {
                   Text(
                     price,
                     style: context.kTextTheme.titleMedium!.copyWith(
-                      color: AppColors.kTitle,
+                      color: context.kChangeTheme.hintColor,
                       fontWeight: FontWeight.w600,
                     ),
                   ),

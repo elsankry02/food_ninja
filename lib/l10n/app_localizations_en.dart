@@ -165,7 +165,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get addalltocart => 'Add All to Cart';
 
   @override
-  String get chatmessage => 'Chat Messages';
+  String get chatmessage => 'Chat Message';
 
   @override
   String get callrangingpage => 'Calling';
@@ -519,7 +519,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pleaseenteravalidemail => 'Please enter a valid email';
 
   @override
-  String get emailmustcontainat => 'Email must contain @';
+  String get emailmustcontainat => 'Email must contain @gmail.com';
 
   @override
   String get invalidorexpiredotp => 'Invalid or expired OTP';

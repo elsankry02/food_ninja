@@ -41,11 +41,14 @@ class _CartPageState extends State<CartPage> {
                     bottom: context.height * 0.025,
                   ),
                   border: Border(
-                    bottom: BorderSide(color: AppColors.kBorder, width: 2),
+                    bottom: BorderSide(
+                      color: context.kChangeTheme.primaryColorLight,
+                      width: 2,
+                    ),
                   ),
                   style: context.kTextTheme.titleLarge!.copyWith(
                     fontWeight: FontWeight.w700,
-                    color: AppColors.kTitle,
+                    color: context.kChangeTheme.hintColor,
                   ),
                 ),
                 Expanded(

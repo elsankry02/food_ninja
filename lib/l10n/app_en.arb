@@ -52,7 +52,7 @@
 "groceries": "Groceries",
 "seeall": "See All",
 "addalltocart": "Add All to Cart",
-"chatmessage": "Chat Messages",
+"chatmessage": "Chat Message",
 "callrangingpage": "Calling",
 "ringing": "Ringing...",
 "volumeup": "Volume Up",
@@ -170,7 +170,7 @@
   "pleasechooseanavatarimage": "Please choose an avatar image",
   "pleaseenteraname": "Please enter a name",
   "pleaseenteravalidemail": "Please enter a valid email",
-  "emailmustcontainat": "Email must contain @",
+  "emailmustcontainat": "Email must contain @gmail.com",
   "invalidorexpiredotp": "Invalid or expired OTP",
   "authenticationsuccessful": "Authentication successful"
 }

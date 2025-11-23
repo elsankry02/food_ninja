@@ -84,7 +84,7 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
                 context.kAppLocalizations.fillinyourbiotogetstarted,
                 style: context.kTextTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w700,
-                  color: AppColors.kTitle,
+                  color: context.kChangeTheme.hintColor,
                 ),
               ),
               SizedBox(height: context.height * 0.019),
@@ -92,7 +92,9 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
                 context
                     .kAppLocalizations
                     .thisdatawillbedisplayedyouraccountprofileforsecurity,
-                style: context.kTextTheme.labelMedium,
+                style: context.kTextTheme.labelMedium!.copyWith(
+                  color: context.kChangeTheme.hintColor,
+                ),
               ),
               SizedBox(height: context.height * 0.020),
               UnconstrainedBox(
@@ -139,8 +141,10 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
                   fontWeight: FontWeight.w400,
                   color: Colors.grey,
                 ),
-                enabledBorderColor: AppColors.kBorder,
-                focusedBorderColor: AppColors.kBorder,
+                filled: true,
+                fillColor: context.kChangeTheme.primaryColor,
+                enabledBorderColor: context.kChangeTheme.primaryColorLight,
+                focusedBorderColor: context.kChangeTheme.primaryColorLight,
                 controller: usernameController,
               ),
               SizedBox(height: context.height * 0.020),
@@ -155,8 +159,10 @@ class _SignupProcessPageState extends State<SignupProcessPage> {
                   fontWeight: FontWeight.w400,
                   color: Colors.grey,
                 ),
-                enabledBorderColor: AppColors.kBorder,
-                focusedBorderColor: AppColors.kBorder,
+                filled: true,
+                fillColor: context.kChangeTheme.primaryColor,
+                enabledBorderColor: context.kChangeTheme.primaryColorLight,
+                focusedBorderColor: context.kChangeTheme.primaryColorLight,
                 controller: fullNameController,
               ),
               SizedBox(height: context.height * 0.040),

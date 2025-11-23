@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../core/constant/app_colors.dart';
 import '../../../../core/extension/extension.dart';
 
 class SocialConnectionWidget extends StatelessWidget {
@@ -25,7 +24,8 @@ class SocialConnectionWidget extends StatelessWidget {
           vertical: context.height * 0.016,
         ),
         decoration: BoxDecoration(
-          border: Border.all(color: AppColors.kBorder),
+          color: context.kChangeTheme.primaryColor,
+          border: Border.all(color: context.kChangeTheme.primaryColorLight),
           borderRadius: BorderRadius.circular(context.height * 0.022),
         ),
         child: Row(
@@ -36,7 +36,7 @@ class SocialConnectionWidget extends StatelessWidget {
               titleSocial,
               style: context.kTextTheme.titleSmall!.copyWith(
                 fontWeight: FontWeight.w500,
-                color: AppColors.kTitle,
+                color: context.kChangeTheme.hintColor,
               ),
             ),
           ],

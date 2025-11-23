@@ -85,13 +85,17 @@ class _LoginPageState extends State<LoginPage> {
                           AppSvgs.kMessage,
                           fit: BoxFit.scaleDown,
                         ),
+                        filled: true,
+                        fillColor: context.kChangeTheme.primaryColor,
                         cursorColor: AppColors.kGrey,
                         hintStyle: context.kTextTheme.labelLarge!.copyWith(
                           fontWeight: FontWeight.w400,
                           color: Colors.grey,
                         ),
-                        enabledBorderColor: AppColors.kBorder,
-                        focusedBorderColor: AppColors.kBorder,
+                        enabledBorderColor:
+                            context.kChangeTheme.primaryColorLight,
+                        focusedBorderColor:
+                            context.kChangeTheme.primaryColorLight,
                         controller: emailController,
                       ),
                       SizedBox(height: context.height * 0.020),

@@ -62,12 +62,12 @@ class _ChatDetailsPageState extends State<ChatDetailsPage> {
             child: CustomTextFormField(
               hintText: context.kAppLocalizations.message,
               hintStyle: context.kTextTheme.labelLarge!.copyWith(
-                color: AppColors.kGrey,
+                color: context.kChangeTheme.hintColor,
               ),
-              enabledBorderColor: AppColors.kBorder,
-              focusedBorderColor: AppColors.kBorder,
+              enabledBorderColor: context.kChangeTheme.primaryColorLight,
+              focusedBorderColor: context.kChangeTheme.primaryColorLight,
               filled: true,
-              fillColor: AppColors.kWhite,
+              fillColor: context.kChangeTheme.primaryColor,
               controller: messageController,
               suffixIcon: CustomIconButton(
                 icon: Icon(Icons.send_rounded, color: AppColors.kSecondColor),

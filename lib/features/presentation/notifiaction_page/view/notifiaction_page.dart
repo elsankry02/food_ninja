@@ -39,7 +39,7 @@ class NotifiactionPage extends StatelessWidget {
                   context.kAppLocalizations.notification,
                   style: context.kTextTheme.headlineSmall!.copyWith(
                     fontWeight: FontWeight.w700,
-                    color: AppColors.kTitle,
+                    color: context.kChangeTheme.hintColor,
                   ),
                 ),
                 SizedBox(height: context.height * 0.020),

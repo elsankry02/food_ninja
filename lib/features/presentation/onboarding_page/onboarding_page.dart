@@ -54,7 +54,7 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
                     onboardingItems(context)[index].title,
                     style: context.kTextTheme.titleLarge!.copyWith(
                       fontWeight: FontWeight.w700,
-                      color: AppColors.kTitle,
+                      color: context.kChangeTheme.hintColor,
                     ),
                   ),
                   SizedBox(height: context.height * 0.020),
@@ -63,6 +63,7 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
                     onboardingItems(context)[index].subTitle,
                     style: context.kTextTheme.labelMedium!.copyWith(
                       fontWeight: FontWeight.w400,
+                      color: context.kChangeTheme.hintColor,
                     ),
                   ),
                   SizedBox(height: context.height * 0.042),

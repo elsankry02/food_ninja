@@ -64,7 +64,7 @@ class _SplashPageState extends ConsumerState<SplashPage> {
                   "Deliever Favorite Food",
                   style: context.kTextTheme.labelMedium!.copyWith(
                     fontWeight: FontWeight.w600,
-                    color: AppColors.kTitle,
+                    color: context.kChangeTheme.hintColor,
                   ),
                 ),
               ],

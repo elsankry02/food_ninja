@@ -36,8 +36,8 @@ class CustomProductCardWidget extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(context.height * 0.018),
-          color: AppColors.kWhite,
-          border: Border.all(color: AppColors.kBorder),
+          color: context.kChangeTheme.primaryColor,
+          border: Border.all(color: context.kChangeTheme.primaryColorLight),
         ),
         child: Column(
           crossAxisAlignment: crossAxisAlignment,
@@ -51,8 +51,10 @@ class CustomProductCardWidget extends StatelessWidget {
             SizedBox(height: context.height * 0.022),
             Text(
               title,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: context.kTextTheme.titleMedium!.copyWith(
-                color: AppColors.kTitle,
+                color: context.kChangeTheme.hintColor,
                 fontWeight: FontWeight.w600,
               ),
             ),
@@ -75,7 +77,7 @@ class CustomProductCardWidget extends StatelessWidget {
                     price,
                     style: context.kTextTheme.titleMedium!.copyWith(
                       fontWeight: FontWeight.w600,
-                      color: AppColors.kTitle,
+                      color: context.kChangeTheme.hintColor,
                     ),
                   ),
                   CustomIconAdd(onTap: onTap),

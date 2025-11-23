@@ -410,7 +410,7 @@ abstract class AppLocalizations {
   /// No description provided for @chatmessage.
   ///
   /// In en, this message translates to:
-  /// **'Chat Messages'**
+  /// **'Chat Message'**
   String get chatmessage;
 
   /// No description provided for @callrangingpage.
@@ -1118,7 +1118,7 @@ abstract class AppLocalizations {
   /// No description provided for @emailmustcontainat.
   ///
   /// In en, this message translates to:
-  /// **'Email must contain @'**
+  /// **'Email must contain @gmail.com'**
   String get emailmustcontainat;
 
   /// No description provided for @invalidorexpiredotp.

@@ -519,7 +519,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get pleaseenteravalidemail => 'الرجاء إدخال بريد إلكتروني صالح';
 
   @override
-  String get emailmustcontainat => 'يجب أن يحتوي البريد الإلكتروني على @';
+  String get emailmustcontainat => 'يجب أن يحتوي البريد الإلكتروني على @gmail.com';
 
   @override
   String get invalidorexpiredotp => 'رمز التحقق غير صالح أو منتهي';

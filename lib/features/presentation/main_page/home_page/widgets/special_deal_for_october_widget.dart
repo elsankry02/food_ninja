@@ -21,8 +21,9 @@ class SpecialDealForOctoberWidget extends StatelessWidget {
         horizontal: context.height * 0.005,
       ),
       decoration: BoxDecoration(
+        color: context.kChangeTheme.primaryColor,
         borderRadius: BorderRadius.circular(context.height * 0.012),
-        border: Border.all(color: AppColors.kBorder),
+        border: Border.all(color: context.kChangeTheme.primaryColorLight),
       ),
       child: Stack(
         children: [

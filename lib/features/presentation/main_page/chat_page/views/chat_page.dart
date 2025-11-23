@@ -1,8 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/core/router/router.dart';
+import 'package:food_ninja/features/presentation/main_page/chat_page/widgets/message_tile_widget.dart';
 
 import '../../../../../core/components/custom_primary_button.dart';
-import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
 
@@ -36,25 +37,16 @@ class _ChatPageState extends State<ChatPage> {
                   padding: EdgeInsetsDirectional.only(
                     bottom: context.height * 0.025,
                   ),
-                  border: Border(
-                    bottom: BorderSide(color: AppColors.kBorder, width: 2),
-                  ),
                   style: context.kTextTheme.titleLarge!.copyWith(
                     fontWeight: FontWeight.w700,
-                    color: AppColors.kTitle,
+                    color: context.kChangeTheme.hintColor,
                   ),
                 ),
-                Expanded(
-                  child: CustomPrimaryButton(
-                    title: context.kAppLocalizations.nomessageyet,
-                    padding: EdgeInsetsDirectional.only(
-                      bottom: context.height * 0.025,
-                    ),
-                    style: context.kTextTheme.titleMedium!.copyWith(
-                      fontWeight: FontWeight.w500,
-                      color: AppColors.kGrey,
-                    ),
-                  ),
+                MessageTileWidget(
+                  title: 'Mohamed Ibrahim',
+                  subTitle: 'Your Order Just Arrived',
+                  time: '22:00',
+                  onTap: () => context.router.push(ChatDetailsRoute()),
                 ),
               ],
             ),

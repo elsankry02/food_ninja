@@ -7,6 +7,7 @@ class ChangeThemeInitial extends ChangeThemeState {}
 
 class ChangeThemeNotifier extends Notifier<ChangeThemeState> {
   bool currentTheme = false;
+
   @override
   ChangeThemeState build() {
     getTheme();

@@ -77,7 +77,6 @@ class _HomePageState extends State<HomePage> {
                       image: data.image,
                       title: data.title,
                       subTitle: data.subTitle,
-
                       price: data.price,
                       margin: EdgeInsetsDirectional.only(
                         end: context.height * 0.015,

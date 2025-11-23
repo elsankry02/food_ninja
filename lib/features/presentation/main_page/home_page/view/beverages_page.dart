@@ -46,6 +46,7 @@ class _BeveragesPageState extends State<BeveragesPage> {
                   context.kAppLocalizations.beverages,
                   style: context.kTextTheme.headlineSmall!.copyWith(
                     fontWeight: FontWeight.w600,
+                    color: context.kChangeTheme.hintColor,
                   ),
                 ),
                 SizedBox(height: context.height * 0.010),

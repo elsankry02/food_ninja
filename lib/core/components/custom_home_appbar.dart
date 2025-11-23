@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../constant/app_colors.dart';
 import '../constant/app_images.dart';
 import '../constant/app_svgs.dart';
 import '../extension/extension.dart';
@@ -25,7 +24,7 @@ class CustomHomeAppbar extends StatelessWidget {
             context.kAppLocalizations.findyourfavoritefood,
             style: context.kTextTheme.headlineLarge!.copyWith(
               fontWeight: FontWeight.w700,
-              color: AppColors.kTitle,
+              color: context.kChangeTheme.hintColor,
             ),
           ),
           trailing: GestureDetector(
@@ -36,8 +35,11 @@ class CustomHomeAppbar extends StatelessWidget {
                 vertical: context.height * 0.014,
               ),
               decoration: BoxDecoration(
-                color: AppColors.kWhite,
+                color: context.kChangeTheme.primaryColor,
                 borderRadius: BorderRadius.circular(context.height * 0.015),
+                border: Border.all(
+                  color: context.kChangeTheme.primaryColorLight,
+                ),
               ),
               child: Image.asset(
                 AppImages.kIconNotification,
@@ -54,18 +56,17 @@ class CustomHomeAppbar extends StatelessWidget {
             hintText: context.kAppLocalizations.whatdoyouwanttoorder,
             hintStyle: context.kTextTheme.labelMedium!.copyWith(
               fontWeight: FontWeight.w500,
-              color: AppColors.kArowBackground,
+              color: context.kChangeTheme.hintColor,
             ),
             prefixIcon: Icon(
               FontAwesomeIcons.magnifyingGlass,
-              color: AppColors.kArowBack,
+              color: context.kChangeTheme.hintColor,
             ),
-            enabledBorderColor: AppColors.kTextFiledColor ?? Colors.transparent,
-            focusedBorderColor: AppColors.kTextFiledColor ?? Colors.transparent,
+            enabledBorderColor: context.kChangeTheme.primaryColorLight,
+            focusedBorderColor: context.kChangeTheme.primaryColorLight,
             filled: true,
-            fillColor: AppColors.kTextFiledColor,
+            fillColor: context.kChangeTheme.primaryColor,
             controller: searchController,
-            autofocus: false,
           ),
           trailing: GestureDetector(
             onTap: () => ErrorMessage(
@@ -78,8 +79,11 @@ class CustomHomeAppbar extends StatelessWidget {
                 vertical: context.height * 0.018,
               ),
               decoration: BoxDecoration(
-                color: AppColors.kTextFiledColor,
+                color: context.kChangeTheme.primaryColor,
                 borderRadius: BorderRadius.circular(context.height * 0.015),
+                border: Border.all(
+                  color: context.kChangeTheme.primaryColorLight,
+                ),
               ),
               child: SvgPicture.asset(AppSvgs.kFilter),
             ),

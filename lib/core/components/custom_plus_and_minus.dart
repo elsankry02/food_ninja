@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../constant/app_colors.dart';
+
 import '../constant/app_images.dart';
 import '../extension/extension.dart';
 
@@ -31,7 +31,7 @@ class CustomPlusAndMinus extends StatelessWidget {
               count,
               style: context.kTextTheme.titleMedium!.copyWith(
                 fontWeight: FontWeight.w600,
-                color: AppColors.kTitle,
+                color: context.kChangeTheme.hintColor,
               ),
             ),
             SizedBox(width: context.height * 0.016),
@@ -45,7 +45,7 @@ class CustomPlusAndMinus extends StatelessWidget {
           price,
           style: context.kTextTheme.titleMedium!.copyWith(
             fontWeight: FontWeight.w600,
-            color: AppColors.kTitle,
+            color: context.kChangeTheme.hintColor,
           ),
         ),
       ],

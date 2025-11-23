@@ -57,14 +57,16 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                   Text(
                     widget.title,
                     style: context.kTextTheme.headlineSmall!.copyWith(
-                      color: AppColors.kTitle,
+                      color: context.kChangeTheme.hintColor,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
                   CustomIconButton(
                     icon: Icon(
                       isSelected ? Icons.favorite : Icons.favorite_border,
-                      color: isSelected ? AppColors.kRed : AppColors.kTitle,
+                      color: isSelected
+                          ? AppColors.kRed
+                          : context.kChangeTheme.primaryColorLight,
                     ),
                     onPressed: () {
                       if (isSelected) {
@@ -111,15 +113,16 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                 price: widget.price,
               ),
               SizedBox(height: context.height * 0.020),
-              Divider(color: AppColors.kBorder),
+              Divider(color: context.kChangeTheme.primaryColorLight),
               SizedBox(height: context.height * 0.020),
               Text(
                 context.kAppLocalizations.productdetail,
                 style: context.kTextTheme.bodyLarge!.copyWith(
-                  color: AppColors.kTitle,
+                  color: context.kChangeTheme.hintColor,
                   fontWeight: FontWeight.w600,
                 ),
               ),
+              SizedBox(height: context.height * 0.010),
               DefaultTextStyle(
                 style: context.kTextTheme.labelMedium!.copyWith(
                   color: AppColors.kGrey,

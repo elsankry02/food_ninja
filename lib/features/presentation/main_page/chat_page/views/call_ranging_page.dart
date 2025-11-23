@@ -49,7 +49,7 @@ class _CallRangingPageState extends State<CallRangingPage> {
                     'Mohamed Ibrahim',
                     textAlign: TextAlign.center,
                     style: context.kTextTheme.headlineMedium!.copyWith(
-                      color: AppColors.kTitle,
+                      color: context.kChangeTheme.hintColor,
                     ),
                   ),
                   SizedBox(height: context.height * 0.020),
@@ -57,7 +57,7 @@ class _CallRangingPageState extends State<CallRangingPage> {
                     context.kAppLocalizations.ringing,
                     textAlign: TextAlign.center,
                     style: context.kTextTheme.titleMedium!.copyWith(
-                      color: AppColors.kGrey,
+                      color: context.kChangeTheme.hintColor,
                     ),
                   ),
                 ],

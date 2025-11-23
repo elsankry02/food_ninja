@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../core/constant/app_colors.dart';
 import '../../../../core/extension/extension.dart';
 
 class UploadPhotoWidget extends StatelessWidget {
@@ -19,8 +18,9 @@ class UploadPhotoWidget extends StatelessWidget {
           vertical: context.height * 0.016,
         ),
         decoration: BoxDecoration(
+          color: context.kChangeTheme.primaryColor,
           borderRadius: BorderRadius.circular(context.height * 0.022),
-          border: Border.all(color: AppColors.kBorder),
+          border: Border.all(color: context.kChangeTheme.primaryColorLight),
         ),
         child: SvgPicture.asset(
           image,
