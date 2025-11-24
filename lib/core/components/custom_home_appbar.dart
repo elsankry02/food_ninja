@@ -68,6 +68,7 @@ class CustomHomeAppbar extends StatelessWidget {
             fillColor: context.kChangeTheme.primaryColor,
             controller: searchController,
           ),
+          // TODO : later (FillterPage)
           trailing: GestureDetector(
             onTap: () => ErrorMessage(
               context,
