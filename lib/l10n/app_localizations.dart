@@ -1150,6 +1150,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Dark Theme'**
   String get darkTheme;
+
+  /// No description provided for @otpresentsuccessfully.
+  ///
+  /// In en, this message translates to:
+  /// **'OTP resent successfully'**
+  String get otpresentsuccessfully;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

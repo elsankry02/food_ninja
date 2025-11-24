@@ -175,5 +175,6 @@
   "authenticationsuccessful": "تم التحقق بنجاح",
   "theme": "الثيم",
    "lightTheme": "الثيم الفاتح",
-  "darkTheme": "الثيم الداكن"
+  "darkTheme": "الثيم الداكن",
+  "otpresentsuccessfully": "تم إعادة إرسال رمز التحقق بنجاح"
 }

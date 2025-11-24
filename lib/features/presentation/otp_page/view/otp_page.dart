@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:food_ninja/core/components/custom_snakbar.dart';
 import 'package:food_ninja/core/constant/app_enums.dart';
 import 'package:food_ninja/core/router/router.dart';
+import 'package:food_ninja/features/data/providers/post/resend_otp_provider.dart';
 import 'package:food_ninja/features/data/providers/post/verify_otp_provider.dart';
 
 import '../../../../core/components/custom_icon_button_pop.dart';
@@ -34,9 +35,7 @@ class OtpPage extends ConsumerStatefulWidget {
 
 class _OtpPageState extends ConsumerState<OtpPage> {
   final formKey = GlobalKey<FormState>();
-  ContentTybe contentTybe = ContentTybe.email;
   final pinputController = TextEditingController();
-
   Timer? resendOTP;
   int time = 60;
 
@@ -72,12 +71,28 @@ class _OtpPageState extends ConsumerState<OtpPage> {
     final notifier = ref.read(verifyOtpProvider.notifier);
     final isEmail = widget.contentTybe == ContentTybe.email;
     await notifier.verifyOtp(
-      authMethod: contentTybe.name,
-      email: isEmail ? widget.emailController.text.trim() : null,
+      authMethod: widget.contentTybe.name,
       otp: pinputController.text.trim(),
+      email: isEmail ? widget.emailController.text.trim() : null,
       phone: isEmail ? null : widget.phoneController.text.trim(),
       phonePrefix: isEmail ? null : "+20",
     );
+  }
+
+  Future<void> resendOtp() async {
+    final notifier = ref.read(resendOtpProvider.notifier);
+    final isEmail = widget.contentTybe == ContentTybe.email;
+    await notifier.resendOtp(
+      authMethod: widget.contentTybe.name,
+      email: isEmail ? widget.emailController.text.trim() : null,
+      phone: isEmail ? null : widget.phoneController.text.trim(),
+      phonePrefix: isEmail ? null : "+20",
+    );
+    SuccessMessage(
+      context,
+      message: context.kAppLocalizations.otpresentsuccessfully,
+    );
+    startTimer();
   }
 
   @override
@@ -90,7 +105,7 @@ class _OtpPageState extends ConsumerState<OtpPage> {
       }
       if (state is VerifyOtpSuccess) {
         final isLogin = widget.isLogin;
-        if (isLogin == true) {
+        if (isLogin == false) {
           context.router.replace(MainRoute());
           SuccessMessage(context, message: context.kAppLocalizations.save);
         } else {
@@ -153,7 +168,7 @@ class _OtpPageState extends ConsumerState<OtpPage> {
                       ),
                       TextSpan(
                         text:
-                            "\n${contentTybe == ContentTybe.email ? widget.emailController.text.trim() : widget.phoneController.text.trim()}",
+                            "\n${widget.contentTybe == ContentTybe.email ? widget.emailController.text.trim() : widget.phoneController.text.trim()}",
                         style: context.kTextTheme.titleSmall!.copyWith(
                           fontWeight: FontWeight.w600,
                           color: AppColors.kSecondaryGold,
@@ -164,18 +179,28 @@ class _OtpPageState extends ConsumerState<OtpPage> {
                 ),
                 SizedBox(height: context.height * 0.040),
                 OtpPinPutWidget(
-                  onChanged: (value) {
+                  onChanged: (value) async {
                     if (value.length == 6) {
                       final notifier = ref.read(verifyOtpProvider.notifier);
-                      notifier.verifyOtp(
-                        authMethod: contentTybe.name,
-                        otp: value,
+                      final isEmail = widget.contentTybe == ContentTybe.email;
+                      await notifier.verifyOtp(
+                        authMethod: widget.contentTybe.name,
+                        otp: pinputController.text.trim(),
+                        email: isEmail
+                            ? widget.emailController.text.trim()
+                            : null,
+                        phone: isEmail
+                            ? null
+                            : widget.phoneController.text.trim(),
+                        phonePrefix: isEmail ? null : "+20",
                       );
                     }
                   },
                   validator: (value) {
-                    if (value == null || value.length < 6) {
-                      return context.kAppLocalizations.codemustbe6digits;
+                    if (value!.isEmpty) {
+                      return "Please enter the OTP";
+                    } else if (value.length < 6) {
+                      return "OTP must be 6 digits";
                     }
                     return null;
                   },
@@ -205,7 +230,7 @@ class _OtpPageState extends ConsumerState<OtpPage> {
                             fontWeight: FontWeight.w600,
                             color: AppColors.kSecondaryGold,
                           ),
-                          onTap: () => startTimer(),
+                          onTap: () => resendOtp(),
                         ),
                       ),
 

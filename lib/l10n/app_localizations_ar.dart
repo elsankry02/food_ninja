@@ -535,4 +535,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get darkTheme => 'الثيم الداكن';
+
+  @override
+  String get otpresentsuccessfully => 'تم إعادة إرسال رمز التحقق بنجاح';
 }

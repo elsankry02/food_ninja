@@ -535,4 +535,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get darkTheme => 'Dark Theme';
+
+  @override
+  String get otpresentsuccessfully => 'OTP resent successfully';
 }

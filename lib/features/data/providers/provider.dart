@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:food_ninja/env.dart';
 import 'package:food_ninja/features/data/services/post/register_new_user_service.dart';
+import 'package:food_ninja/features/data/services/post/resend_otp_service.dart';
 import 'package:food_ninja/features/data/services/post/verify_otp_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -13,6 +14,7 @@ final dioProvider = Provider<Dio>((ref) {
     BaseOptions(
       baseUrl: baseUrl,
       headers: {
+        "Authorization": "Bearer {token}",
         "Content-Type": "application/json",
         "Accept": "application/json",
       },
@@ -27,4 +29,7 @@ final regRegisterNewUserServiceProvider = Provider<RegisterNewUserService>((
 });
 final verifyOtpServiceProvider = Provider<VerifyOtpService>((ref) {
   return VerifyOtpService(dio: ref.read(dioProvider));
+});
+final resendOtpServiceProvider = Provider<ResendOtpService>((ref) {
+  return ResendOtpService(dio: ref.read(dioProvider));
 });

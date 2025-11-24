@@ -1,21 +1,19 @@
 import 'package:dio/dio.dart';
 
-class VerifyOtpService {
+class ResendOtpService {
   final Dio dio;
 
-  VerifyOtpService({required this.dio});
-  Future<void> verifyOtp({
+  ResendOtpService({required this.dio});
+  Future<void> resendOtp({
     required String authMethod,
-    String? otp,
     String? phonePrefix,
     String? email,
     String? phone,
   }) async {
     await dio.post(
-      "/auth/verify-otp",
+      "/auth/resend-otp",
       data: {
         "auth_method": authMethod,
-        if (otp != null) "otp": otp,
         if (phonePrefix != null) "phone_prefix": phonePrefix,
         if (email != null) "email": email,
         if (phone != null) "phone": phone,

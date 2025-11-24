@@ -34,10 +34,10 @@ final router = AppRouter();
 class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
-    AutoRoute(page: SplashRoute.page),
+    AutoRoute(page: SplashRoute.page, initial: true),
     AutoRoute(page: SignUpRoute.page),
     AutoRoute(page: FavouriteRoute.page),
-    AutoRoute(page: SignupProcessRoute.page, initial: true),
+    AutoRoute(page: SignupProcessRoute.page),
     AutoRoute(page: OtpRoute.page),
     AutoRoute(page: OrdersRoute.page),
     AutoRoute(page: OnboardingRoute.page),

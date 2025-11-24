@@ -175,6 +175,7 @@
   "authenticationsuccessful": "Authentication successful",
   "theme": "Theme",
   "lightTheme": "Light Theme",
-  "darkTheme": "Dark Theme"
+  "darkTheme": "Dark Theme",
+  "otpresentsuccessfully": "OTP resent successfully"
 
 }
