@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:food_ninja/core/components/custom_icon_button_pop.dart';
@@ -43,10 +42,15 @@ class _LanguageWidgetState extends ConsumerState<LanguageWidget> {
               setState(() {
                 isSelectedLang = "ar";
               });
-              context.router.maybePop();
             },
             leading: Text("🇸🇦", style: context.kTextTheme.titleMedium),
-            title: Text(context.kAppLocalizations.arabic),
+            title: Text(
+              context.kAppLocalizations.arabic,
+              style: context.kTextTheme.titleMedium!.copyWith(
+                color: context.kChangeTheme.hintColor,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
             trailing: CustomIconButton(
               icon: Icon(
                 isSelectedLang == "ar"
@@ -56,7 +60,7 @@ class _LanguageWidgetState extends ConsumerState<LanguageWidget> {
               ),
             ),
           ),
-          Divider(color: AppColors.kBorder),
+          Divider(color: context.kChangeTheme.primaryColorLight),
           ListTile(
             onTap: () {
               ref
@@ -65,10 +69,15 @@ class _LanguageWidgetState extends ConsumerState<LanguageWidget> {
               setState(() {
                 isSelectedLang = "en";
               });
-              context.router.maybePop();
             },
             leading: Text("🇺🇸", style: context.kTextTheme.titleMedium),
-            title: Text(context.kAppLocalizations.english),
+            title: Text(
+              context.kAppLocalizations.english,
+              style: context.kTextTheme.titleMedium!.copyWith(
+                color: context.kChangeTheme.hintColor,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
             trailing: CustomIconButton(
               icon: Icon(
                 isSelectedLang == "en"

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import '../../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../../core/components/custom_payment_widget.dart';
 import '../../../../../core/components/custom_snakbar.dart';
-import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/constant/app_svgs.dart';
 import '../../../../../core/extension/extension.dart';
@@ -61,7 +60,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                 context.kAppLocalizations.paymentmethods,
                 style: context.kTextTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w700,
-                  color: AppColors.kTitle,
+                  color: context.kChangeTheme.hintColor,
                 ),
               ),
               SizedBox(height: context.height * 0.040),

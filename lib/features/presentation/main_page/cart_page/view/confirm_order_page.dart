@@ -46,7 +46,7 @@ class ConfirmOrderPage extends StatelessWidget {
                 context.kAppLocalizations.confirmorder,
                 style: context.kTextTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w700,
-                  color: AppColors.kTitle,
+                  color: context.kChangeTheme.hintColor,
                 ),
               ),
               SizedBox(height: context.height * 0.020),
@@ -54,7 +54,7 @@ class ConfirmOrderPage extends StatelessWidget {
                 padding: EdgeInsets.all(context.height * 0.020),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(22),
-                  color: AppColors.kWhite,
+                  color: context.kChangeTheme.primaryColor,
                 ),
                 child: Column(
                   children: [
@@ -88,7 +88,7 @@ class ConfirmOrderPage extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: context.kTextTheme.titleSmall!.copyWith(
                               fontWeight: FontWeight.w500,
-                              color: AppColors.kTitle,
+                              color: context.kChangeTheme.hintColor,
                             ),
                           ),
                         ),
@@ -102,7 +102,7 @@ class ConfirmOrderPage extends StatelessWidget {
                 padding: EdgeInsets.all(context.height * 0.020),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(22),
-                  color: AppColors.kWhite,
+                  color: context.kChangeTheme.primaryColor,
                 ),
                 child: Column(
                   children: [
@@ -134,7 +134,7 @@ class ConfirmOrderPage extends StatelessWidget {
                           "2121 6352 8465 ****",
                           style: context.kTextTheme.titleSmall!.copyWith(
                             fontWeight: FontWeight.w500,
-                            color: AppColors.kTitle,
+                            color: context.kChangeTheme.hintColor,
                           ),
                         ),
                       ],

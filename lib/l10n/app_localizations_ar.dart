@@ -228,7 +228,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get donthaveanaccountsignup => 'ليس لديك حساب؟ سجل الآن';
 
   @override
-  String get pepsican => 'بيبسي علبة';
+  String get pepsican => 'بيبسي';
 
   @override
   String get pepsicansubtitle => '330مل، السعر';
@@ -237,7 +237,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get pepsicandescription => 'بيبسي مشروب غازي منعش بنكهة الكولا الجريئة والكمية المناسبة من الحلاوة. مثالي للتبريد في يوم حار أو مع وجبتك المفضلة.';
 
   @override
-  String get cocacolacan => 'كوكا كولا علبة';
+  String get cocacolacan => 'كوكا كولا';
 
   @override
   String get cocacolacansubtitle => '325مل، السعر';
@@ -255,7 +255,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get dietcokedescription => 'دايت كوك يقدم نفس طعم كوكا كولا الرائع بدون سكر وسعرات أقل. خفيف ومنعش في أي وقت من اليوم.';
 
   @override
-  String get spritecan => 'سبرايت علبة';
+  String get spritecan => 'سبرايت';
 
   @override
   String get spritecansubtitle => '355مل، السعر';
@@ -315,13 +315,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get enjoyafastandsmoothfooddeliveryatyourdoorstep => 'استمتع بتوصيل طعام سريع وسلس إلى بابك';
 
   @override
-  String get beefbone => 'عظم بقري';
+  String get beefbone => 'لحم بقري';
 
   @override
   String get beefbonesubtitle => '1كجم، السعر';
 
   @override
-  String get beefbonedescription => 'عظام بقري طازجة غنية بالنكهة، مثالية لعمل الشوربات والمرق. غنية بالمغذيات ومثالية للوصفات المطبوخة ببطء';
+  String get beefbonedescription => 'لحم بقري طازجة غنية بالنكهة، مثالية لعمل الشوربات والمرق. غنية بالمغذيات ومثالية للوصفات المطبوخة ببطء';
 
   @override
   String get broilerchicken => 'دجاج برويلر';
@@ -526,4 +526,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get authenticationsuccessful => 'تم التحقق بنجاح';
+
+  @override
+  String get theme => 'الثيم';
+
+  @override
+  String get lightTheme => 'الثيم الفاتح';
+
+  @override
+  String get darkTheme => 'الثيم الداكن';
 }

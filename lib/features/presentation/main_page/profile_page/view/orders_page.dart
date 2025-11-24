@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../../core/components/custom_snakbar.dart';
-import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
 import '../../../../data/models/order_model.dart';
@@ -42,7 +41,7 @@ class OrdersPage extends StatelessWidget {
                   context.kAppLocalizations.orders,
                   style: context.kTextTheme.headlineSmall!.copyWith(
                     fontWeight: FontWeight.w700,
-                    color: AppColors.kTitle,
+                    color: context.kChangeTheme.hintColor,
                   ),
                 ),
                 SizedBox(height: context.height * 0.020),

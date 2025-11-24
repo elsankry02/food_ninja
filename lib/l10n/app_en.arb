@@ -172,5 +172,9 @@
   "pleaseenteravalidemail": "Please enter a valid email",
   "emailmustcontainat": "Email must contain @gmail.com",
   "invalidorexpiredotp": "Invalid or expired OTP",
-  "authenticationsuccessful": "Authentication successful"
+  "authenticationsuccessful": "Authentication successful",
+  "theme": "Theme",
+  "lightTheme": "Light Theme",
+  "darkTheme": "Dark Theme"
+
 }

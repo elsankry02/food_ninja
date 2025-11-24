@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../constant/app_colors.dart';
 import '../extension/extension.dart';
 import 'custom_text_form_field.dart';
 
@@ -25,8 +24,8 @@ class PaymentsContainer extends StatelessWidget {
           vertical: context.height * 0.020,
         ),
         decoration: BoxDecoration(
-          color: AppColors.kWhite,
-          border: Border.all(color: AppColors.kBorder),
+          color: context.kChangeTheme.primaryColor,
+          border: Border.all(color: context.kChangeTheme.primaryColorLight),
           borderRadius: BorderRadius.circular(context.height * 0.022),
         ),
         child: Row(
@@ -36,8 +35,9 @@ class PaymentsContainer extends StatelessWidget {
             SizedBox(
               width: context.height * 0.250,
               child: CustomTextFormField(
-                enabledBorderColor: AppColors.kBorder,
-                focusedBorderColor: AppColors.kBorder,
+                keyboardType: TextInputType.number,
+                enabledBorderColor: context.kChangeTheme.primaryColorLight,
+                focusedBorderColor: context.kChangeTheme.primaryColorLight,
                 hintText: "2121 6352 8465 ****",
                 controller: controller,
               ),

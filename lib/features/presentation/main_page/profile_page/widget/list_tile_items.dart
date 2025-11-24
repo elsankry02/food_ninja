@@ -6,8 +6,6 @@ class ListTileItems extends StatelessWidget {
   final IconData? leadingIcon, trailingIcon;
   final TextAlign? textAlign;
   final String title;
-  final EdgeInsetsGeometry? padding;
-  final BorderRadiusGeometry? borderRadius;
   final Color? iconColor, titleColor, backgroungColor;
   final void Function()? onTap;
   const ListTileItems({
@@ -20,17 +18,19 @@ class ListTileItems extends StatelessWidget {
     this.onTap,
     this.textAlign,
     this.backgroungColor,
-    this.padding,
-    this.borderRadius,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: padding,
+      padding: EdgeInsetsDirectional.symmetric(
+        horizontal: context.height * 0.010,
+      ),
+      margin: EdgeInsetsDirectional.only(bottom: context.height * 0.008),
       decoration: BoxDecoration(
         color: backgroungColor,
-        borderRadius: borderRadius,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: context.kChangeTheme.primaryColorLight),
       ),
       child: ListTile(
         onTap: onTap,

@@ -28,7 +28,13 @@ class _ThemeWidgetState extends ConsumerState<ThemeWidget> {
             onTap: () async {
               await notifier.setTheme(value: true);
             },
-            title: Text("Light Theme"),
+            title: Text(
+              context.kAppLocalizations.lightTheme,
+              style: context.kTextTheme.titleMedium!.copyWith(
+                color: context.kChangeTheme.hintColor,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
             trailing: CustomIconButton(
               icon: Icon(
                 currentTheme == true
@@ -38,12 +44,18 @@ class _ThemeWidgetState extends ConsumerState<ThemeWidget> {
               ),
             ),
           ),
-          Divider(color: AppColors.kBorder),
+          Divider(color: context.kChangeTheme.primaryColorLight),
           ListTile(
             onTap: () async {
               await notifier.setTheme(value: false);
             },
-            title: Text("Dark Theme"),
+            title: Text(
+              context.kAppLocalizations.darkTheme,
+              style: context.kTextTheme.titleMedium!.copyWith(
+                color: context.kChangeTheme.hintColor,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
             trailing: CustomIconButton(
               icon: Icon(
                 currentTheme == false

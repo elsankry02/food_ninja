@@ -44,7 +44,7 @@ class OrderLocationPage extends StatelessWidget {
                 context.kAppLocalizations.orderlocation,
                 style: context.kTextTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.w700,
-                  color: AppColors.kTitle,
+                  color: context.kChangeTheme.hintColor,
                 ),
               ),
               SizedBox(height: context.height * 0.020),
@@ -52,7 +52,7 @@ class OrderLocationPage extends StatelessWidget {
                 padding: EdgeInsets.all(context.height * 0.020),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(22),
-                  color: AppColors.kWhite,
+                  color: context.kChangeTheme.primaryColor,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -74,7 +74,7 @@ class OrderLocationPage extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: context.kTextTheme.titleSmall!.copyWith(
                               fontWeight: FontWeight.w500,
-                              color: AppColors.kTitle,
+                              color: context.kChangeTheme.hintColor,
                             ),
                           ),
                         ),
@@ -88,7 +88,7 @@ class OrderLocationPage extends StatelessWidget {
                 padding: EdgeInsets.all(context.height * 0.020),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(22),
-                  color: AppColors.kWhite,
+                  color: context.kChangeTheme.primaryColor,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -110,7 +110,7 @@ class OrderLocationPage extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: context.kTextTheme.titleSmall!.copyWith(
                               fontWeight: FontWeight.w500,
-                              color: AppColors.kTitle,
+                              color: context.kChangeTheme.hintColor,
                             ),
                           ),
                         ),

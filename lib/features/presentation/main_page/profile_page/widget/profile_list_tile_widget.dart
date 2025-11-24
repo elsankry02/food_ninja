@@ -21,14 +21,14 @@ class ProfileListTileWidget extends StatelessWidget {
         ),
       ),
       title: Text(
-        "Afsar Hossen",
+        "Mohamed Ibarhim",
         style: context.kTextTheme.titleLarge!.copyWith(
-          color: AppColors.kTitle,
+          color: context.kChangeTheme.hintColor,
           fontWeight: FontWeight.w600,
         ),
       ),
       subtitle: Text(
-        "Imshuvo97@gmail.com",
+        "elsankary02@gmail.com",
         style: context.kTextTheme.titleMedium!.copyWith(
           color: AppColors.kGrey,
           fontWeight: FontWeight.w600,

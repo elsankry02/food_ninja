@@ -526,4 +526,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get authenticationsuccessful => 'Authentication successful';
+
+  @override
+  String get theme => 'Theme';
+
+  @override
+  String get lightTheme => 'Light Theme';
+
+  @override
+  String get darkTheme => 'Dark Theme';
 }

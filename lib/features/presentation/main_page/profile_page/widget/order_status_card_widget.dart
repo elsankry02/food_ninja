@@ -22,10 +22,16 @@ class OrderStatusCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsetsDirectional.only(bottom: context.height * 0.020),
-      padding: EdgeInsetsDirectional.only(bottom: context.height * 0.020),
+      margin: EdgeInsetsDirectional.only(bottom: context.height * 0.010),
+      padding: EdgeInsetsDirectional.only(
+        start: context.height * 0.020,
+        end: context.height * 0.020,
+        bottom: context.height * 0.020,
+      ),
       decoration: BoxDecoration(
-        border: Border(bottom: BorderSide(color: AppColors.kGrey)),
+        color: context.kChangeTheme.primaryColor,
+        border: Border.all(color: context.kChangeTheme.primaryColorLight),
+        borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
         children: [
@@ -56,7 +62,7 @@ class OrderStatusCardWidget extends StatelessWidget {
               title,
               style: context.kTextTheme.titleSmall!.copyWith(
                 fontWeight: FontWeight.w700,
-                color: AppColors.kTitle,
+                color: context.kChangeTheme.hintColor,
               ),
             ),
             subtitle: Row(
@@ -65,7 +71,7 @@ class OrderStatusCardWidget extends StatelessWidget {
                   "\$$price",
                   style: context.kTextTheme.titleSmall!.copyWith(
                     fontWeight: FontWeight.w700,
-                    color: AppColors.kTitle,
+                    color: context.kChangeTheme.hintColor,
                   ),
                 ),
                 Text(
