@@ -7,8 +7,8 @@ import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
 import '../../../../data/models/groceries_model.dart';
+import '../widgets/bottom_sheet_widget.dart';
 import '../widgets/cart_details_widget.dart';
-import '../widgets/cart_summary_widget.dart';
 
 @RoutePage()
 class CartPage extends StatefulWidget {
@@ -106,9 +106,10 @@ class _CartPageState extends State<CartPage> {
               ),
               borderRadius: BorderRadius.circular(context.height * 0.015),
               onTap: () => showModalBottomSheet(
+                isDismissible: false,
                 context: context,
                 builder: (context) {
-                  return CartSummaryWidget();
+                  return BottomSheetWidget();
                 },
               ),
             ),

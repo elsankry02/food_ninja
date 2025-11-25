@@ -458,7 +458,7 @@ abstract class AppLocalizations {
   /// No description provided for @total.
   ///
   /// In en, this message translates to:
-  /// **'Total'**
+  /// **'Total Cost'**
   String get total;
 
   /// No description provided for @confirmorder.
@@ -1156,6 +1156,90 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'OTP resent successfully'**
   String get otpresentsuccessfully;
+
+  /// No description provided for @oopsorderfailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Oops! Order Failed'**
+  String get oopsorderfailed;
+
+  /// No description provided for @somethingwentterriblywrong.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went terribly wrong.'**
+  String get somethingwentterriblywrong;
+
+  /// No description provided for @pleasetryagain.
+  ///
+  /// In en, this message translates to:
+  /// **'Please try again'**
+  String get pleasetryagain;
+
+  /// No description provided for @backtohome.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to home'**
+  String get backtohome;
+
+  /// No description provided for @yourorderaccepted.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Order has been accepted'**
+  String get yourorderaccepted;
+
+  /// No description provided for @youritemsplaced.
+  ///
+  /// In en, this message translates to:
+  /// **'Your items have been placed and are on their way to being processed.'**
+  String get youritemsplaced;
+
+  /// No description provided for @selectmethod.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Method'**
+  String get selectmethod;
+
+  /// No description provided for @checkout.
+  ///
+  /// In en, this message translates to:
+  /// **'Checkout'**
+  String get checkout;
+
+  /// No description provided for @confirmation.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirmation'**
+  String get confirmation;
+
+  /// No description provided for @placeorder.
+  ///
+  /// In en, this message translates to:
+  /// **'Place Order'**
+  String get placeorder;
+
+  /// No description provided for @byplacinganorderyouagreetoour.
+  ///
+  /// In en, this message translates to:
+  /// **'By placing an order you agree to our'**
+  String get byplacinganorderyouagreetoour;
+
+  /// No description provided for @conditions.
+  ///
+  /// In en, this message translates to:
+  /// **'Conditions'**
+  String get conditions;
+
+  /// No description provided for @and.
+  ///
+  /// In en, this message translates to:
+  /// **' And '**
+  String get and;
+
+  /// No description provided for @terms.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms'**
+  String get terms;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

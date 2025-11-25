@@ -60,7 +60,7 @@
 "subtotal": "Subtotal",
 "deliverycharge": "Delivery Charge",
 "discount": "Discount",
-"total": "Total",
+"total": "Total Cost",
 "confirmorder": "Confirm Order",
 "paymentmethod": "Payment Method",
 "orderlocation": "Order Location",
@@ -176,6 +176,20 @@
   "theme": "Theme",
   "lightTheme": "Light Theme",
   "darkTheme": "Dark Theme",
-  "otpresentsuccessfully": "OTP resent successfully"
+  "otpresentsuccessfully": "OTP resent successfully",
+"oopsorderfailed": "Oops! Order Failed",
+"somethingwentterriblywrong": "Something went terribly wrong.",
+"pleasetryagain": "Please try again",
+"backtohome": "Back to home",
+"yourorderaccepted": "Your Order has been accepted",
+"youritemsplaced": "Your items have been placed and are on their way to being processed.",
+"selectmethod": "Select Method",
+"checkout": "Checkout",
+"confirmation": "Confirmation",
+"placeorder": "Place Order",
+"byplacinganorderyouagreetoour": "By placing an order you agree to our",
+"conditions": "Conditions",
+"and": " And ",
+"terms": "Terms"
 
 }

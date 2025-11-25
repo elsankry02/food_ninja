@@ -189,7 +189,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get discount => 'الخصم';
 
   @override
-  String get total => 'الإجمالي';
+  String get total => 'إجمالي التكلفة';
 
   @override
   String get confirmorder => 'تأكيد الطلب';
@@ -538,4 +538,46 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get otpresentsuccessfully => 'تم إعادة إرسال رمز التحقق بنجاح';
+
+  @override
+  String get oopsorderfailed => 'عفوًا! فشل الطلب';
+
+  @override
+  String get somethingwentterriblywrong => 'حدث خطأ فادح.';
+
+  @override
+  String get pleasetryagain => 'يرجى المحاولة مرة أخرى';
+
+  @override
+  String get backtohome => 'العودة إلى الرئيسية';
+
+  @override
+  String get yourorderaccepted => 'تم قبول طلبك';
+
+  @override
+  String get youritemsplaced => 'تم تقديم طلبك، وهو الآن قيد المعالجة';
+
+  @override
+  String get selectmethod => 'اختر الطريقة';
+
+  @override
+  String get checkout => 'الدفع';
+
+  @override
+  String get confirmation => 'تأكيد';
+
+  @override
+  String get placeorder => 'تقديم الطلب';
+
+  @override
+  String get byplacinganorderyouagreetoour => 'بإرسال الطلب، أنت توافق على';
+
+  @override
+  String get conditions => 'الشروط';
+
+  @override
+  String get and => ' و ';
+
+  @override
+  String get terms => 'الأحكام';
 }

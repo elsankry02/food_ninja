@@ -189,7 +189,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get discount => 'Discount';
 
   @override
-  String get total => 'Total';
+  String get total => 'Total Cost';
 
   @override
   String get confirmorder => 'Confirm Order';
@@ -538,4 +538,46 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get otpresentsuccessfully => 'OTP resent successfully';
+
+  @override
+  String get oopsorderfailed => 'Oops! Order Failed';
+
+  @override
+  String get somethingwentterriblywrong => 'Something went terribly wrong.';
+
+  @override
+  String get pleasetryagain => 'Please try again';
+
+  @override
+  String get backtohome => 'Back to home';
+
+  @override
+  String get yourorderaccepted => 'Your Order has been accepted';
+
+  @override
+  String get youritemsplaced => 'Your items have been placed and are on their way to being processed.';
+
+  @override
+  String get selectmethod => 'Select Method';
+
+  @override
+  String get checkout => 'Checkout';
+
+  @override
+  String get confirmation => 'Confirmation';
+
+  @override
+  String get placeorder => 'Place Order';
+
+  @override
+  String get byplacinganorderyouagreetoour => 'By placing an order you agree to our';
+
+  @override
+  String get conditions => 'Conditions';
+
+  @override
+  String get and => ' And ';
+
+  @override
+  String get terms => 'Terms';
 }
