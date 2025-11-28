@@ -152,7 +152,7 @@ abstract class AppLocalizations {
   /// No description provided for @username.
   ///
   /// In en, this message translates to:
-  /// **'Username'**
+  /// **'User name'**
   String get username;
 
   /// No description provided for @fullname.
@@ -1240,6 +1240,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Terms'**
   String get terms;
+
+  /// No description provided for @usernameisrequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Username is required'**
+  String get usernameisrequired;
+
+  /// No description provided for @usernamemustbeatleast3chars.
+  ///
+  /// In en, this message translates to:
+  /// **'Username must be at least 3 characters'**
+  String get usernamemustbeatleast3chars;
+
+  /// No description provided for @fullnameisrequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Fullname is required'**
+  String get fullnameisrequired;
+
+  /// No description provided for @fullnamemustbeatleast3chars.
+  ///
+  /// In en, this message translates to:
+  /// **'Fullname must be at least 3 characters'**
+  String get fullnamemustbeatleast3chars;
+
+  /// No description provided for @pleaseselectaprofileimage.
+  ///
+  /// In en, this message translates to:
+  /// **'Please select a profile image from the camera or gallery'**
+  String get pleaseselectaprofileimage;
+
+  /// No description provided for @profilecompletedsuccessfully.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile completed successfully'**
+  String get profilecompletedsuccessfully;
+
+  /// No description provided for @welcomebackloginsuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome back! You have logged in successfully.'**
+  String get welcomebackloginsuccess;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

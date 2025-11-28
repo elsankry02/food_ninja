@@ -107,7 +107,10 @@ class _OtpPageState extends ConsumerState<OtpPage> {
         final isLogin = widget.isLogin;
         if (isLogin == false) {
           context.router.replace(MainRoute());
-          SuccessMessage(context, message: context.kAppLocalizations.save);
+          SuccessMessage(
+            context,
+            message: context.kAppLocalizations.welcomebackloginsuccess,
+          );
         } else {
           context.router.push(SignupProcessRoute());
           SuccessMessage(

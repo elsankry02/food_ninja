@@ -17,7 +17,7 @@ class VerifyOtpFailure extends VerifyOtpState {
 
 class VerifyOtpSuccess extends VerifyOtpState {}
 
-class VerifyOtpNotifier extends Notifier<VerifyOtpState> {
+class VerifyOtpNotifier extends AutoDisposeNotifier<VerifyOtpState> {
   @override
   VerifyOtpState build() {
     return VerifyOtpInitial();
@@ -33,13 +33,15 @@ class VerifyOtpNotifier extends Notifier<VerifyOtpState> {
     final provider = ref.read(verifyOtpServiceProvider);
     state = VerifyOtpLoading();
     try {
-      await provider.verifyOtp(
+      final auth = await provider.verifyOtp(
         authMethod: authMethod,
         otp: otp,
         phonePrefix: phonePrefix,
         email: email,
         phone: phone,
       );
+      ref.read(prefsProvider).setString(kToken, auth.token);
+      ref.invalidate(dioProvider);
       state = VerifyOtpSuccess();
     } on Exception catch (e) {
       if (e is DioException) {
@@ -50,6 +52,7 @@ class VerifyOtpNotifier extends Notifier<VerifyOtpState> {
   }
 }
 
-final verifyOtpProvider = NotifierProvider<VerifyOtpNotifier, VerifyOtpState>(
-  VerifyOtpNotifier.new,
-);
+final verifyOtpProvider =
+    NotifierProvider.autoDispose<VerifyOtpNotifier, VerifyOtpState>(
+      VerifyOtpNotifier.new,
+    );

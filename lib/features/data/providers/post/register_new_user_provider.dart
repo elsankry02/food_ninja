@@ -17,7 +17,7 @@ class RegisterNewUserFailure extends RegisterNewUserState {
 
 class RegisterNewUserSuccess extends RegisterNewUserState {}
 
-class RegisterNewUserNotifier extends Notifier<RegisterNewUserState> {
+class RegisterNewUserNotifier extends AutoDisposeNotifier<RegisterNewUserState> {
   @override
   RegisterNewUserState build() {
     return RegisterNewUserInitial();
@@ -51,6 +51,6 @@ class RegisterNewUserNotifier extends Notifier<RegisterNewUserState> {
 }
 
 final registerNewUserProvider =
-    NotifierProvider<RegisterNewUserNotifier, RegisterNewUserState>(
+    NotifierProvider.autoDispose<RegisterNewUserNotifier, RegisterNewUserState>(
       RegisterNewUserNotifier.new,
     );

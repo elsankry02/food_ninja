@@ -11,14 +11,14 @@ class CompleteProfileService {
   Future<void> completeProfile({
     required String name,
     required String username,
-    required File avatar,
+    File? file,
   }) async {
     await dio.post(
       kCompleteProfile,
       data: FormData.fromMap({
         'name': name,
         'username': username,
-        'avatar': await MultipartFile.fromFile(avatar.path),
+        if (file != null) 'avatar': await MultipartFile.fromFile(file.path),
       }),
     );
   }

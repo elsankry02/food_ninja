@@ -9,7 +9,7 @@
 "alreadyhaveanaccountlogin": "Already have an account? Login",
 "fillinyourbiotogetstarted": "Fill in your bio to get started",
 "thisdatawillbedisplayedyouraccountprofileforsecurity": "This data will be displayed in your account profile for security",
-"username": "Username",
+"username": "User name",
 "fullname": "Full Name",
 "next": "Next",
 "setyourlocation": "Set your location",
@@ -190,6 +190,14 @@
 "byplacinganorderyouagreetoour": "By placing an order you agree to our",
 "conditions": "Conditions",
 "and": " And ",
-"terms": "Terms"
+"terms": "Terms",
+  "usernameisrequired": "Username is required",
+  "usernamemustbeatleast3chars": "Username must be at least 3 characters",
+   "fullnameisrequired": "Fullname is required",
+  "fullnamemustbeatleast3chars": "Fullname must be at least 3 characters",
+  "pleaseselectaprofileimage": "Please select a profile image from the camera or gallery",
+   "profilecompletedsuccessfully": "Profile completed successfully",
+   "welcomebackloginsuccess": "Welcome back! You have logged in successfully."
+   
 
 }

@@ -1,18 +1,19 @@
 import 'package:dio/dio.dart';
 import 'package:food_ninja/core/constant/app_strings.dart';
+import 'package:food_ninja/features/data/models/get/user_model.dart';
 
 class VerifyOtpService {
   final Dio dio;
 
   VerifyOtpService({required this.dio});
-  Future<void> verifyOtp({
+  Future<UserModel> verifyOtp({
     required String authMethod,
     String? otp,
     String? phonePrefix,
     String? email,
     String? phone,
   }) async {
-    await dio.post(
+    final response = await dio.post(
       kVerifyOtp,
       data: {
         "auth_method": authMethod,
@@ -22,5 +23,7 @@ class VerifyOtpService {
         if (phone != null) "phone": phone,
       },
     );
+    final data = response.data as Map<String, dynamic>;
+    return UserModel.fromJson(data);
   }
 }

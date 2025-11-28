@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:food_ninja/core/constant/app_colors.dart';
 import 'package:food_ninja/core/constant/app_enums.dart';
 import 'package:food_ninja/core/constant/app_images.dart';
+import 'package:food_ninja/core/constant/app_strings.dart';
 import 'package:food_ninja/core/extension/extension.dart';
 import 'package:food_ninja/core/router/router.dart';
 import 'package:food_ninja/features/data/providers/localization_provider.dart';
@@ -27,13 +28,19 @@ class _SplashPageState extends ConsumerState<SplashPage> {
 
   splashFoodNinja() {
     Future.delayed(const Duration(seconds: 2), () {
-      final isSaved = ref.read(prefsProvider).getBool("isSaved");
+      final prefs = ref.read(prefsProvider);
+      final onBoarding = prefs.getBool("isSaved");
+      final token = prefs.getString(kToken);
+
       // initial Localization
       ref
           .read(localizationProvider.notifier)
           .localizationFunc(Localization.initial);
-      // Onboarding
-      if (isSaved == true) {
+      if (token != null) {
+        context.router.replace(MainRoute());
+        return;
+      }
+      if (onBoarding == true) {
         context.router.replace(SignUpRoute());
       } else {
         context.router.replace(OnboardingRoute());

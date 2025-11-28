@@ -58,8 +58,11 @@ class _LoginPageState extends ConsumerState<LoginPage> {
         return;
       }
       if (state is ResendOtpSuccess) {
-        SuccessMessage(context, message: "OTP resent successfully");
-        context.router.push(
+        SuccessMessage(
+          context,
+          message: context.kAppLocalizations.otpresentsuccessfully,
+        );
+        context.router.replace(
           OtpRoute(
             isLogin: false,
             contentTybe: contentTybe,

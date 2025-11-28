@@ -190,5 +190,12 @@
 "byplacinganorderyouagreetoour": "بإرسال الطلب، أنت توافق على",
 "conditions": "الشروط",
 "and": " و ",
-"terms": "الأحكام"
+"terms": "الأحكام",
+  "usernameisrequired": "اسم المستخدم مطلوب",
+  "usernamemustbeatleast3chars": "يجب أن يكون اسم المستخدم 3 أحرف على الأقل",
+    "fullnameisrequired": "الاسم الكامل مطلوب",
+  "fullnamemustbeatleast3chars": "يجب أن يكون الاسم الكامل 3 أحرف على الأقل",
+  "pleaseselectaprofileimage": "يرجى اختيار صورة شخصية من الكاميرا أو المعرض",
+  "profilecompletedsuccessfully": "اكتمل الملف الشخصي بنجاح",
+  "welcomebackloginsuccess": "أهلاً بعودتك! تم تسجيل الدخول بنجاح."
 }

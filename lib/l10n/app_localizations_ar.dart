@@ -580,4 +580,25 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get terms => 'الأحكام';
+
+  @override
+  String get usernameisrequired => 'اسم المستخدم مطلوب';
+
+  @override
+  String get usernamemustbeatleast3chars => 'يجب أن يكون اسم المستخدم 3 أحرف على الأقل';
+
+  @override
+  String get fullnameisrequired => 'الاسم الكامل مطلوب';
+
+  @override
+  String get fullnamemustbeatleast3chars => 'يجب أن يكون الاسم الكامل 3 أحرف على الأقل';
+
+  @override
+  String get pleaseselectaprofileimage => 'يرجى اختيار صورة شخصية من الكاميرا أو المعرض';
+
+  @override
+  String get profilecompletedsuccessfully => 'اكتمل الملف الشخصي بنجاح';
+
+  @override
+  String get welcomebackloginsuccess => 'أهلاً بعودتك! تم تسجيل الدخول بنجاح.';
 }

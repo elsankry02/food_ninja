@@ -36,7 +36,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get thisdatawillbedisplayedyouraccountprofileforsecurity => 'This data will be displayed in your account profile for security';
 
   @override
-  String get username => 'Username';
+  String get username => 'User name';
 
   @override
   String get fullname => 'Full Name';
@@ -580,4 +580,25 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get terms => 'Terms';
+
+  @override
+  String get usernameisrequired => 'Username is required';
+
+  @override
+  String get usernamemustbeatleast3chars => 'Username must be at least 3 characters';
+
+  @override
+  String get fullnameisrequired => 'Fullname is required';
+
+  @override
+  String get fullnamemustbeatleast3chars => 'Fullname must be at least 3 characters';
+
+  @override
+  String get pleaseselectaprofileimage => 'Please select a profile image from the camera or gallery';
+
+  @override
+  String get profilecompletedsuccessfully => 'Profile completed successfully';
+
+  @override
+  String get welcomebackloginsuccess => 'Welcome back! You have logged in successfully.';
 }

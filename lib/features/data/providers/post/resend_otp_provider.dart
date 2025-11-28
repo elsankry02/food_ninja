@@ -17,7 +17,7 @@ class ResendOtpFailure extends ResendOtpState {
 
 class ResendOtpSuccess extends ResendOtpState {}
 
-class ResendOtpNotifier extends Notifier<ResendOtpState> {
+class ResendOtpNotifier extends AutoDisposeNotifier<ResendOtpState> {
   @override
   ResendOtpState build() {
     return ResendOtpInitial();
@@ -48,6 +48,7 @@ class ResendOtpNotifier extends Notifier<ResendOtpState> {
   }
 }
 
-final resendOtpProvider = NotifierProvider<ResendOtpNotifier, ResendOtpState>(
-  ResendOtpNotifier.new,
-);
+final resendOtpProvider =
+    NotifierProvider.autoDispose<ResendOtpNotifier, ResendOtpState>(
+      ResendOtpNotifier.new,
+    );
