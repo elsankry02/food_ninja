@@ -42,7 +42,7 @@ class ResendOtpNotifier extends Notifier<ResendOtpState> {
     } on Exception catch (e) {
       if (e is DioException) {
         final data = e.response!.data;
-        state = ResendOtpFailure(errMessage: data[message]);
+        state = ResendOtpFailure(errMessage: data[kMessage]);
       }
     }
   }

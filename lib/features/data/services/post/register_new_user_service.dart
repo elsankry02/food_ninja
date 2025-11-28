@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:food_ninja/core/constant/app_strings.dart';
 
 class RegisterNewUserService {
   final Dio dio;
@@ -12,7 +13,7 @@ class RegisterNewUserService {
     String? prefix,
   }) async {
     await dio.post(
-      "/auth/register",
+      kRegisterNewUser,
       data: {
         "auth_method": authMethod,
         if (phonePrefix != null) "phone_prefix": phonePrefix,

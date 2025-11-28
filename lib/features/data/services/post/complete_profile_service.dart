@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:food_ninja/core/constant/app_strings.dart';
 
 class CompleteProfileService {
   final Dio dio;
@@ -13,7 +14,7 @@ class CompleteProfileService {
     required File avatar,
   }) async {
     await dio.post(
-      "/auth/complete-profile",
+      kCompleteProfile,
       data: FormData.fromMap({
         'name': name,
         'username': username,

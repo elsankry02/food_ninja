@@ -44,7 +44,7 @@ class RegisterNewUserNotifier extends Notifier<RegisterNewUserState> {
     } on Exception catch (e) {
       if (e is DioException) {
         final data = e.response!.data;
-        state = RegisterNewUserFailure(errMessage: data[message]);
+        state = RegisterNewUserFailure(errMessage: data[kMessage]);
       }
     }
   }

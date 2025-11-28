@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:food_ninja/core/constant/app_strings.dart';
 
 class VerifyOtpService {
   final Dio dio;
@@ -12,7 +13,7 @@ class VerifyOtpService {
     String? phone,
   }) async {
     await dio.post(
-      "/auth/verify-otp",
+      kVerifyOtp,
       data: {
         "auth_method": authMethod,
         if (otp != null) "otp": otp,

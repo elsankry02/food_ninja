@@ -44,7 +44,7 @@ class VerifyOtpNotifier extends Notifier<VerifyOtpState> {
     } on Exception catch (e) {
       if (e is DioException) {
         final data = e.response!.data;
-        state = VerifyOtpFailure(errMessage: data[message]);
+        state = VerifyOtpFailure(errMessage: data[kMessage]);
       }
     }
   }

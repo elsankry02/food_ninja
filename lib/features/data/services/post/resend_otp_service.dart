@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:food_ninja/core/constant/app_strings.dart';
 
 class ResendOtpService {
   final Dio dio;
@@ -11,7 +12,7 @@ class ResendOtpService {
     String? phone,
   }) async {
     await dio.post(
-      "/auth/resend-otp",
+      kResendOtp,
       data: {
         "auth_method": authMethod,
         if (phonePrefix != null) "phone_prefix": phonePrefix,
