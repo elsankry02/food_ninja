@@ -2,8 +2,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:food_ninja/core/components/custom_icon_button_pop.dart';
 import 'package:food_ninja/core/constant/app_enums.dart';
 import 'package:food_ninja/features/data/providers/post/resend_otp_provider.dart';
+import 'package:food_ninja/features/presentation/main_page/profile_page/widget/language_widget.dart';
 
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/components/custom_snakbar.dart';
@@ -86,6 +88,19 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                   fit: BoxFit.cover,
                   AppImages.kOnboardingPattern,
                   width: double.infinity,
+                ),
+                Positioned(
+                  top: 40,
+                  right: 20,
+                  child: CustomIconButton(
+                    icon: Icon(Icons.language, color: AppColors.kPrimaryColor),
+                    onPressed: () => showModalBottomSheet(
+                      context: context,
+                      builder: (context) {
+                        return LanguageWidget();
+                      },
+                    ),
+                  ),
                 ),
                 Center(
                   child: Padding(
