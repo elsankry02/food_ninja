@@ -1,12 +1,12 @@
 import 'package:dio/dio.dart';
 import 'package:food_ninja/core/constant/app_strings.dart';
-import 'package:food_ninja/features/data/models/get/user_model.dart';
+import 'package:food_ninja/features/data/models/post/authentication_model.dart';
 
 class VerifyOtpService {
   final Dio dio;
 
   VerifyOtpService({required this.dio});
-  Future<UserModel> verifyOtp({
+  Future<AuthenticationModel> verifyOtp({
     required String authMethod,
     String? otp,
     String? phonePrefix,
@@ -24,6 +24,6 @@ class VerifyOtpService {
       },
     );
     final data = response.data as Map<String, dynamic>;
-    return UserModel.fromJson(data);
+    return AuthenticationModel.fromJson(data);
   }
 }

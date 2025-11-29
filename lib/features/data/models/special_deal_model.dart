@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../core/extension/extension.dart';
 
-import '../../../core/constant/app_colors.dart';
 import '../../../core/constant/app_images.dart';
+import '../../../core/extension/extension.dart';
 
 class SpecialDealModel {
   final String image;
@@ -25,22 +24,22 @@ List<SpecialDealModel> specialDealItems(BuildContext context) {
       image: AppImages.kEggChickenRed,
       title: context.kAppLocalizations.specialdealforoctober,
       buttonTitle: context.kAppLocalizations.buynow,
-      ordernowColor: AppColors.kSecondColor,
-      specialColor: AppColors.kSecondColor,
+      ordernowColor: context.kChangeTheme.hintColor,
+      specialColor: context.kChangeTheme.hintColor,
     ),
     SpecialDealModel(
       image: AppImages.kRice,
       title: context.kAppLocalizations.specialdealforoctober,
-      buttonTitle: context.kAppLocalizations.ordernow,
-      ordernowColor: AppColors.kOrderNowTwo,
-      specialColor: AppColors.kOrderNowTwo,
+      buttonTitle: context.kAppLocalizations.buynow,
+      ordernowColor: context.kChangeTheme.hintColor,
+      specialColor: context.kChangeTheme.hintColor,
     ),
     SpecialDealModel(
       image: AppImages.kPulses,
       title: context.kAppLocalizations.specialdealforoctober,
       buttonTitle: context.kAppLocalizations.buynow,
-      ordernowColor: AppColors.kSecondColor,
-      specialColor: AppColors.kSecondColor,
+      ordernowColor: context.kChangeTheme.hintColor,
+      specialColor: context.kChangeTheme.hintColor,
     ),
   ];
 }

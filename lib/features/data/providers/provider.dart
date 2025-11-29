@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:food_ninja/core/constant/app_strings.dart';
 import 'package:food_ninja/env.dart';
+import 'package:food_ninja/features/data/services/get/get_user_service.dart';
 import 'package:food_ninja/features/data/services/post/complete_profile_service.dart';
 import 'package:food_ninja/features/data/services/post/register_new_user_service.dart';
 import 'package:food_ninja/features/data/services/post/resend_otp_service.dart';
@@ -42,4 +43,7 @@ final resendOtpServiceProvider = Provider<ResendOtpService>((ref) {
 });
 final completeProfileServiceProvider = Provider<CompleteProfileService>((ref) {
   return CompleteProfileService(dio: ref.read(dioProvider));
+});
+final getUserServiceProvider = Provider<GetUserService>((ref) {
+  return GetUserService(dio: ref.read(dioProvider));
 });

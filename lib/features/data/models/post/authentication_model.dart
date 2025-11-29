@@ -1,21 +1,26 @@
-class UserModel {
-  String token;
-  User user;
-  bool registrationComplete;
+class AuthenticationModel {
+  final String message;
+  final String token;
+  final User user;
+  final bool registrationComplete;
 
-  UserModel({
+  AuthenticationModel({
+    required this.message,
     required this.token,
     required this.user,
     required this.registrationComplete,
   });
 
-  factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
-    token: json["token"],
-    user: User.fromJson(json["user"]),
-    registrationComplete: json["registration_complete"],
-  );
+  factory AuthenticationModel.fromJson(Map<String, dynamic> json) =>
+      AuthenticationModel(
+        message: json["message"],
+        token: json["token"],
+        user: User.fromJson(json["user"]),
+        registrationComplete: json["registration_complete"],
+      );
 
   Map<String, dynamic> toJson() => {
+    "message": message,
     "token": token,
     "user": user.toJson(),
     "registration_complete": registrationComplete,
@@ -23,29 +28,29 @@ class UserModel {
 }
 
 class User {
-  int id;
-  dynamic username;
-  dynamic name;
-  String avatarUrl;
-  dynamic blurhash;
-  dynamic phone;
-  String email;
-  String hostStatus;
-  dynamic liveSessionType;
-  bool isLearning;
-  bool isShown;
-  bool isLive;
-  int fansCount;
-  int postsCount;
-  int pioneersCount;
-  bool isCompleteProfile;
-  bool isVerified;
-  bool isExpert;
-  DateTime createdAt;
-  DateTime updatedAt;
-  String socialRelation;
-  String shareUrl;
-  String deepLink;
+  final int id;
+  final String? username;
+  final String? name;
+  final String? avatarUrl;
+  final dynamic blurhash;
+  final String phone;
+  final String email;
+  final String hostStatus;
+  final dynamic liveSessionType;
+  final bool isLearning;
+  final bool isShown;
+  final bool isLive;
+  final int fansCount;
+  final int postsCount;
+  final int pioneersCount;
+  final bool isCompleteProfile;
+  final bool isVerified;
+  final bool isExpert;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+  final String socialRelation;
+  final String shareUrl;
+  final String deepLink;
 
   User({
     required this.id,

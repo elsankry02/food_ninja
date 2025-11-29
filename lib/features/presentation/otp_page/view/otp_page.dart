@@ -112,7 +112,7 @@ class _OtpPageState extends ConsumerState<OtpPage> {
             message: context.kAppLocalizations.welcomebackloginsuccess,
           );
         } else {
-          context.router.push(SignupProcessRoute());
+          context.router.replace(SignupProcessRoute());
           SuccessMessage(
             context,
             message: context.kAppLocalizations.authenticationsuccessful,

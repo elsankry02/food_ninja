@@ -50,7 +50,7 @@ class SpecialDealForOctoberWidget extends StatelessWidget {
                   ),
                   CustomPrimaryButton(
                     title: data.buttonTitle,
-                    backGroundColor: AppColors.kWhite,
+                    backGroundColor: context.kChangeTheme.primaryColor,
                     borderRadius: BorderRadius.circular(context.height * 0.006),
                     border: Border.all(color: AppColors.kBorder),
                     padding: EdgeInsets.symmetric(
