@@ -197,7 +197,14 @@
   "fullnamemustbeatleast3chars": "Fullname must be at least 3 characters",
   "pleaseselectaprofileimage": "Please select a profile image from the camera or gallery",
    "profilecompletedsuccessfully": "Profile completed successfully",
-   "welcomebackloginsuccess": "Welcome back! You have logged in successfully."
+   "welcomebackloginsuccess": "Welcome back! You have logged in successfully.",
+   "accounthasbeendeletedsuccessfully": "Account has been deleted successfully",
+     "confirmdelete": "Confirm Delete",
+  "confirmdeletemessage": "Are you sure you want to delete your account?",
+  "confirmlogout": "Confirm Logout",
+  "areyousurelogout": "Are you sure you want to log out?",
+  "confirm": "Confirm",
+  "loggedoutsuccessfully": "Logged out successfully"
    
 
 }

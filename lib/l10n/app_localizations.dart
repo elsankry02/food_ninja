@@ -1282,6 +1282,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Welcome back! You have logged in successfully.'**
   String get welcomebackloginsuccess;
+
+  /// No description provided for @accounthasbeendeletedsuccessfully.
+  ///
+  /// In en, this message translates to:
+  /// **'Account has been deleted successfully'**
+  String get accounthasbeendeletedsuccessfully;
+
+  /// No description provided for @confirmdelete.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Delete'**
+  String get confirmdelete;
+
+  /// No description provided for @confirmdeletemessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete your account?'**
+  String get confirmdeletemessage;
+
+  /// No description provided for @confirmlogout.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Logout'**
+  String get confirmlogout;
+
+  /// No description provided for @areyousurelogout.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to log out?'**
+  String get areyousurelogout;
+
+  /// No description provided for @confirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm'**
+  String get confirm;
+
+  /// No description provided for @loggedoutsuccessfully.
+  ///
+  /// In en, this message translates to:
+  /// **'Logged out successfully'**
+  String get loggedoutsuccessfully;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

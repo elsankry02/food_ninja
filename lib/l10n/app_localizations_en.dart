@@ -601,4 +601,25 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get welcomebackloginsuccess => 'Welcome back! You have logged in successfully.';
+
+  @override
+  String get accounthasbeendeletedsuccessfully => 'Account has been deleted successfully';
+
+  @override
+  String get confirmdelete => 'Confirm Delete';
+
+  @override
+  String get confirmdeletemessage => 'Are you sure you want to delete your account?';
+
+  @override
+  String get confirmlogout => 'Confirm Logout';
+
+  @override
+  String get areyousurelogout => 'Are you sure you want to log out?';
+
+  @override
+  String get confirm => 'Confirm';
+
+  @override
+  String get loggedoutsuccessfully => 'Logged out successfully';
 }

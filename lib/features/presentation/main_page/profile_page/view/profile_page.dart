@@ -1,6 +1,13 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_phoenix/flutter_phoenix.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:food_ninja/core/constant/app_strings.dart';
+import 'package:food_ninja/features/data/providers/delete/delete_account_provider.dart';
+import 'package:food_ninja/features/data/providers/post/logout_provider.dart';
+import 'package:food_ninja/features/data/providers/provider.dart';
+import 'package:food_ninja/features/presentation/main_page/profile_page/widget/dialog_widget.dart';
 import 'package:food_ninja/features/presentation/main_page/profile_page/widget/language_widget.dart';
 import 'package:food_ninja/features/presentation/main_page/profile_page/widget/theme_widget.dart';
 
@@ -13,8 +20,31 @@ import '../widget/list_tile_items.dart';
 import '../widget/profile_list_tile_widget.dart';
 
 @RoutePage()
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends ConsumerStatefulWidget {
   const ProfilePage({super.key});
+
+  @override
+  ConsumerState<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends ConsumerState<ProfilePage> {
+  Future<void> removeToken() async {
+    await ref.read(prefsProvider).remove(kToken);
+  }
+
+  Future<void> deleteAccount() async {
+    final notifier = ref.read(deleteAccountProvider.notifier);
+    await notifier.deleteAccount();
+    await removeToken();
+    Phoenix.rebirth(context);
+  }
+
+  Future<void> logOut() async {
+    final notifier = ref.read(logOutProvider.notifier);
+    await notifier.logOut();
+    await removeToken();
+    Phoenix.rebirth(context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +61,7 @@ class ProfilePage extends StatelessWidget {
             ),
             children: [
               ProfileListTileWidget(),
-              SizedBox(height: context.height * 0.030),
+              SizedBox(height: context.height * 0.015),
               ListTileItems(
                 backgroungColor: context.kChangeTheme.primaryColor,
                 title: context.kAppLocalizations.personaldetails,
@@ -108,36 +138,93 @@ class ProfilePage extends StatelessWidget {
                   message: context.kAppLocalizations.comingsoon,
                 ),
               ),
-              ListTileItems(
-                backgroungColor: context.kChangeTheme.primaryColor,
-                title: context.kAppLocalizations.deleteanaccount,
-                leadingIcon: Icons.delete,
-                trailingIcon: Icons.arrow_forward_ios_rounded,
-                titleColor: AppColors.kRed,
-                iconColor: AppColors.kRed,
-                onTap: () => ErrorMessage(
-                  context,
-                  message: context.kAppLocalizations.comingsoon,
-                ),
+              Consumer(
+                builder: (BuildContext context, WidgetRef ref, Widget? child) {
+                  ref.listen(deleteAccountProvider, (_, state) {
+                    if (state is DeleteAccountFailure) {
+                      ErrorMessage(context, message: state.errMessage);
+                      return;
+                    }
+                    if (state is DeleteAccountSuccess) {
+                      context.router.replace(LoginRoute());
+                      SuccessMessage(
+                        context,
+                        message: context
+                            .kAppLocalizations
+                            .accountdeletedsuccessfully,
+                      );
+                    }
+                  });
+                  return ListTileItems(
+                    backgroungColor: context.kChangeTheme.primaryColor,
+                    title: context.kAppLocalizations.deleteanaccount,
+                    leadingIcon: Icons.delete,
+                    trailingIcon: Icons.arrow_forward_ios_rounded,
+                    titleColor: AppColors.kRed,
+                    iconColor: AppColors.kRed,
+                    onTap: () => showDialog(
+                      context: context,
+                      builder: (context) {
+                        return DialogWidget(
+                          title: context.kAppLocalizations.confirmdelete,
+                          content: context
+                              .kAppLocalizations
+                              .areyousureyouwanttodeleteyouraccount,
+                          confirmTitle: context.kAppLocalizations.confirm,
+                          cancelTitle: context.kAppLocalizations.cancel,
+                          color: AppColors.kRed,
+                          confirmOnTap: () => deleteAccount(),
+                        );
+                      },
+                    ),
+                  );
+                },
               ),
             ],
           ),
-          Positioned(
-            left: 20,
-            right: 20,
-            bottom: 0,
-            child: ListTileItems(
-              title: context.kAppLocalizations.logout,
-              backgroungColor: context.kChangeTheme.primaryColorLight,
-              textAlign: TextAlign.center,
-              leadingIcon: Icons.logout,
-              titleColor: AppColors.kSecondColor,
-              iconColor: AppColors.kSecondColor,
-              onTap: () => ErrorMessage(
-                context,
-                message: context.kAppLocalizations.comingsoon,
-              ),
-            ),
+          Consumer(
+            builder: (BuildContext context, WidgetRef ref, Widget? child) {
+              ref.listen(logOutProvider, (_, state) {
+                if (state is LogoutFailure) {
+                  ErrorMessage(context, message: state.errMessage);
+                  return;
+                }
+                if (state is LogoutSuccess) {
+                  context.router.replace(LoginRoute());
+                  SuccessMessage(
+                    context,
+                    message: context.kAppLocalizations.loggedoutsuccessfully,
+                  );
+                }
+              });
+              return Positioned(
+                left: 20,
+                right: 20,
+                bottom: 0,
+                child: ListTileItems(
+                  title: context.kAppLocalizations.logout,
+                  backgroungColor: context.kChangeTheme.primaryColorLight,
+                  textAlign: TextAlign.center,
+                  leadingIcon: Icons.logout,
+                  titleColor: AppColors.kSecondColor,
+                  iconColor: AppColors.kSecondColor,
+                  onTap: () => showDialog(
+                    context: context,
+                    builder: (context) {
+                      return DialogWidget(
+                        title: context.kAppLocalizations.confirmlogout,
+                        content:
+                            context.kAppLocalizations.areyousureyouwanttologout,
+                        confirmTitle: context.kAppLocalizations.confirm,
+                        cancelTitle: context.kAppLocalizations.cancel,
+                        color: AppColors.kPrimaryColor,
+                        confirmOnTap: () => logOut(),
+                      );
+                    },
+                  ),
+                ),
+              );
+            },
           ),
         ],
       ),

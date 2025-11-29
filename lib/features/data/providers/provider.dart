@@ -4,8 +4,10 @@ import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:food_ninja/core/constant/app_strings.dart';
 import 'package:food_ninja/env.dart';
+import 'package:food_ninja/features/data/services/delete/delete_account_service.dart';
 import 'package:food_ninja/features/data/services/get/get_user_service.dart';
 import 'package:food_ninja/features/data/services/post/complete_profile_service.dart';
+import 'package:food_ninja/features/data/services/post/logout_service.dart';
 import 'package:food_ninja/features/data/services/post/register_new_user_service.dart';
 import 'package:food_ninja/features/data/services/post/resend_otp_service.dart';
 import 'package:food_ninja/features/data/services/post/verify_otp_service.dart';
@@ -46,4 +48,10 @@ final completeProfileServiceProvider = Provider<CompleteProfileService>((ref) {
 });
 final getUserServiceProvider = Provider<GetUserService>((ref) {
   return GetUserService(dio: ref.read(dioProvider));
+});
+final deleteAccountServiceProvider = Provider<DeleteAccountService>((ref) {
+  return DeleteAccountService(dio: ref.read(dioProvider));
+});
+final logOutServiceProvider = Provider<LogOutService>((ref) {
+  return LogOutService(dio: ref.read(dioProvider));
 });

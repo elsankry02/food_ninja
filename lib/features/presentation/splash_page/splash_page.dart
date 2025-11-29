@@ -41,7 +41,7 @@ class _SplashPageState extends ConsumerState<SplashPage> {
         return;
       }
       if (onBoarding == true) {
-        context.router.replace(SignUpRoute());
+        context.router.replace(LoginRoute());
       } else {
         context.router.replace(OnboardingRoute());
       }

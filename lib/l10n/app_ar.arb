@@ -197,5 +197,12 @@
   "fullnamemustbeatleast3chars": "يجب أن يكون الاسم الكامل 3 أحرف على الأقل",
   "pleaseselectaprofileimage": "يرجى اختيار صورة شخصية من الكاميرا أو المعرض",
   "profilecompletedsuccessfully": "اكتمل الملف الشخصي بنجاح",
-  "welcomebackloginsuccess": "أهلاً بعودتك! تم تسجيل الدخول بنجاح."
+  "welcomebackloginsuccess": "أهلاً بعودتك! تم تسجيل الدخول بنجاح.",
+  "accounthasbeendeletedsuccessfully": "تم حذف الحساب بنجاح",
+  "confirmdelete": "تأكيد الحذف",
+  "confirmdeletemessage": "هل أنت متأكد أنك تريد حذف حسابك؟",
+  "confirmlogout": "تأكيد تسجيل الخروج",
+  "areyousurelogout": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+  "confirm": "تأكيد",
+  "loggedoutsuccessfully": "تم تسجيل الخروج بنجاح"
 }

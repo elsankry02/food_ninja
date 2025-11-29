@@ -33,7 +33,7 @@ class User {
   final String? name;
   final String? avatarUrl;
   final dynamic blurhash;
-  final String phone;
+  final String? phone;
   final String email;
   final String hostStatus;
   final dynamic liveSessionType;

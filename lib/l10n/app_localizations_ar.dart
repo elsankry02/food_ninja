@@ -601,4 +601,25 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get welcomebackloginsuccess => 'أهلاً بعودتك! تم تسجيل الدخول بنجاح.';
+
+  @override
+  String get accounthasbeendeletedsuccessfully => 'تم حذف الحساب بنجاح';
+
+  @override
+  String get confirmdelete => 'تأكيد الحذف';
+
+  @override
+  String get confirmdeletemessage => 'هل أنت متأكد أنك تريد حذف حسابك؟';
+
+  @override
+  String get confirmlogout => 'تأكيد تسجيل الخروج';
+
+  @override
+  String get areyousurelogout => 'هل أنت متأكد أنك تريد تسجيل الخروج؟';
+
+  @override
+  String get confirm => 'تأكيد';
+
+  @override
+  String get loggedoutsuccessfully => 'تم تسجيل الخروج بنجاح';
 }

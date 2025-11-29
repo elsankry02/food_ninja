@@ -38,33 +38,6 @@ class _LanguageWidgetState extends ConsumerState<LanguageWidget> {
             onTap: () {
               ref
                   .read(localizationProvider.notifier)
-                  .localizationFunc(Localization.arabic);
-              setState(() {
-                isSelectedLang = "ar";
-              });
-            },
-            leading: Text("🇸🇦", style: context.kTextTheme.titleMedium),
-            title: Text(
-              context.kAppLocalizations.arabic,
-              style: context.kTextTheme.titleMedium!.copyWith(
-                color: context.kChangeTheme.hintColor,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            trailing: CustomIconButton(
-              icon: Icon(
-                isSelectedLang == "ar"
-                    ? Icons.radio_button_checked
-                    : Icons.radio_button_unchecked,
-                color: AppColors.kPrimaryColor,
-              ),
-            ),
-          ),
-          Divider(color: context.kChangeTheme.primaryColorLight),
-          ListTile(
-            onTap: () {
-              ref
-                  .read(localizationProvider.notifier)
                   .localizationFunc(Localization.english);
               setState(() {
                 isSelectedLang = "en";
@@ -81,6 +54,33 @@ class _LanguageWidgetState extends ConsumerState<LanguageWidget> {
             trailing: CustomIconButton(
               icon: Icon(
                 isSelectedLang == "en"
+                    ? Icons.radio_button_checked
+                    : Icons.radio_button_unchecked,
+                color: AppColors.kPrimaryColor,
+              ),
+            ),
+          ),
+          Divider(color: context.kChangeTheme.primaryColorLight),
+          ListTile(
+            onTap: () {
+              ref
+                  .read(localizationProvider.notifier)
+                  .localizationFunc(Localization.arabic);
+              setState(() {
+                isSelectedLang = "ar";
+              });
+            },
+            leading: Text("🇸🇦", style: context.kTextTheme.titleMedium),
+            title: Text(
+              context.kAppLocalizations.arabic,
+              style: context.kTextTheme.titleMedium!.copyWith(
+                color: context.kChangeTheme.hintColor,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            trailing: CustomIconButton(
+              icon: Icon(
+                isSelectedLang == "ar"
                     ? Icons.radio_button_checked
                     : Icons.radio_button_unchecked,
                 color: AppColors.kPrimaryColor,
