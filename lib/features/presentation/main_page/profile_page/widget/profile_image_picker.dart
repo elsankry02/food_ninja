@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+
 import '../../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/extension/extension.dart';
 
 class ProfileImagePickerWidget extends StatelessWidget {
-  final String image;
+  final Widget? image;
   final void Function()? onPressed;
   const ProfileImagePickerWidget({
     super.key,
@@ -19,11 +20,10 @@ class ProfileImagePickerWidget extends StatelessWidget {
         alignment: Alignment.bottomRight,
         children: [
           ClipOval(
-            child: Image.asset(
-              image,
+            child: SizedBox(
               width: context.height * 0.180,
               height: context.height * 0.180,
-              fit: BoxFit.cover,
+              child: image, // 💥 هنا أصبح widget
             ),
           ),
           Container(

@@ -11,6 +11,7 @@ class CompleteProfileService {
   Future<void> completeProfile({
     required String name,
     required String username,
+    String? email,
     File? file,
   }) async {
     await dio.post(
@@ -19,6 +20,7 @@ class CompleteProfileService {
         'name': name,
         'username': username,
         if (file != null) 'avatar': await MultipartFile.fromFile(file.path),
+        if (email != null) 'email': email,
       }),
     );
   }

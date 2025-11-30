@@ -7,25 +7,11 @@ import 'package:food_ninja/features/data/providers/get/get_user_provider.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/extension/extension.dart';
 
-class ProfileListTileWidget extends ConsumerStatefulWidget {
+class ProfileListTileWidget extends ConsumerWidget {
   const ProfileListTileWidget({super.key});
 
   @override
-  ConsumerState<ProfileListTileWidget> createState() =>
-      _ProfileListTileWidgetState();
-}
-
-class _ProfileListTileWidgetState extends ConsumerState<ProfileListTileWidget> {
-  @override
-  void initState() {
-    Future.microtask(() {
-      ref.read(getUserProvider.notifier).getUser();
-    });
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(getUserProvider);
     if (state is GetUserSuccess) {
       return ListTile(
@@ -33,7 +19,7 @@ class _ProfileListTileWidgetState extends ConsumerState<ProfileListTileWidget> {
         leading: ClipRRect(
           borderRadius: BorderRadius.circular(context.height * 0.015),
           child: CachedNetworkImage(
-            imageUrl: state.userModel.avatarUrl ?? AppImages.kPlaceHolder,
+            imageUrl: state.userModel.avatarUrl ?? AppImages.kImageNetwork,
             height: context.height * 0.070,
             width: context.height * 0.070,
             fit: BoxFit.cover,
@@ -46,14 +32,14 @@ class _ProfileListTileWidgetState extends ConsumerState<ProfileListTileWidget> {
           ),
         ),
         title: Text(
-          state.userModel.name ?? "Guest",
+          state.userModel.name,
           style: context.kTextTheme.titleLarge!.copyWith(
             color: context.kChangeTheme.hintColor,
             fontWeight: FontWeight.w600,
           ),
         ),
         subtitle: Text(
-          state.userModel.email,
+          state.userModel.username,
           style: context.kTextTheme.titleMedium!.copyWith(
             color: AppColors.kGrey,
             fontWeight: FontWeight.w600,

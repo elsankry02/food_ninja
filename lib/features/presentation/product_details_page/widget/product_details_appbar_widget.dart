@@ -25,23 +25,26 @@ class ProductDetailsAppbarWidget extends StatelessWidget {
           ),
           onPressed: () => context.router.maybePop(),
         ),
-        Container(
-          padding: EdgeInsets.symmetric(horizontal: 1, vertical: 1),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(22),
-            color: context.kChangeTheme.primaryColor,
-            border: Border.all(color: context.kChangeTheme.primaryColorLight),
-          ),
-          child: CustomIconButton(
-            icon: SvgPicture.asset(
-              AppSvgs.kShare,
-              fit: BoxFit.scaleDown,
-              height: context.height * 0.024,
-              width: context.height * 0.024,
+        SizedBox(
+          height: context.height * 0.045,
+          width: context.height * 0.045,
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(22),
+              color: context.kChangeTheme.primaryColor,
+              border: Border.all(color: context.kChangeTheme.primaryColorLight),
             ),
-            onPressed: () => ErrorMessage(
-              context,
-              message: context.kAppLocalizations.comingsoon,
+            child: CustomIconButton(
+              icon: SvgPicture.asset(
+                AppSvgs.kShare,
+                fit: BoxFit.scaleDown,
+                height: context.height * 0.020,
+                width: context.height * 0.020,
+              ),
+              onPressed: () => ErrorMessage(
+                context,
+                message: context.kAppLocalizations.comingsoon,
+              ),
             ),
           ),
         ),

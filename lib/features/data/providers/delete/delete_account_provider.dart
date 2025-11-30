@@ -33,7 +33,9 @@ class DeleteAccountNotifier extends Notifier<DeleteAccountState> {
       if (e is DioException) {
         final data = e.response!.data;
         state = DeleteAccountFailure(errMessage: data[kMessage]);
+        return;
       }
+      state = DeleteAccountFailure(errMessage: e.toString());
     }
   }
 }

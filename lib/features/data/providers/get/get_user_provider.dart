@@ -23,6 +23,9 @@ class GetUserSuccess extends GetUserState {
 }
 
 class GetUserNotifier extends Notifier<GetUserState> {
+  GetUserModel? _userModel;
+  GetUserModel? get userModel => _userModel;
+
   @override
   GetUserState build() {
     return GetUserInitial();
@@ -33,13 +36,15 @@ class GetUserNotifier extends Notifier<GetUserState> {
     state = GetUserLoading();
     try {
       final getUser = await provider.getUser();
-
+      _userModel = getUser;
       state = GetUserSuccess(userModel: getUser);
     } on Exception catch (e) {
       if (e is DioException) {
         final data = e.response!.data;
         state = GetUserFailure(errMessage: data[kMessage]);
+        return;
       }
+      state = GetUserFailure(errMessage: e.toString());
     }
   }
 }

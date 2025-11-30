@@ -1,7 +1,7 @@
 class GetUserModel {
   final int id;
-  final String? username;
-  final String? name;
+  final String username;
+  final String name;
   final String? avatarUrl;
   final String? phone;
   final dynamic blurhash;

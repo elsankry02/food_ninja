@@ -204,7 +204,8 @@
   "confirmlogout": "Confirm Logout",
   "areyousurelogout": "Are you sure you want to log out?",
   "confirm": "Confirm",
-  "loggedoutsuccessfully": "Logged out successfully"
+  "loggedoutsuccessfully": "Logged out successfully",
+  "profileupdatedsuccessfully": "Profile updated successfully"
    
 
 }

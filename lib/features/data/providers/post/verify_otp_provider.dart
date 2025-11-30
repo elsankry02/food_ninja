@@ -47,6 +47,7 @@ class VerifyOtpNotifier extends AutoDisposeNotifier<VerifyOtpState> {
       if (e is DioException) {
         final data = e.response!.data;
         state = VerifyOtpFailure(errMessage: data[kMessage]);
+        return;
       }
     }
   }

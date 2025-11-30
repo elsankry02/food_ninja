@@ -6,7 +6,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_ninja/core/components/custom_snakbar.dart';
 import 'package:food_ninja/features/data/providers/post/complete_profile_provider.dart';
-import 'package:food_ninja/features/data/providers/provider.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../../../core/components/custom_icon_button_pop.dart';
@@ -65,8 +64,6 @@ class _SignupProcessPageState extends ConsumerState<SignupProcessPage> {
         message: context.kAppLocalizations.pleaseselectaprofileimage,
       );
       return;
-    } else {
-      ref.read(prefsProvider).setString("file", file!.path);
     }
     final notifier = ref.read(completeProfileProvider.notifier);
     await notifier.completeProfile(
@@ -181,10 +178,7 @@ class _SignupProcessPageState extends ConsumerState<SignupProcessPage> {
                     }
                     return null;
                   },
-                  prefixIcon: SvgPicture.asset(
-                    AppSvgs.kProfile,
-                    fit: BoxFit.scaleDown,
-                  ),
+                  prefixIcon: Icon(Icons.alternate_email),
                   cursorColor: AppColors.kGrey,
                   hintStyle: context.kTextTheme.labelLarge!.copyWith(
                     fontWeight: FontWeight.w400,

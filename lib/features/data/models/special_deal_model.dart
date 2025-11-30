@@ -41,5 +41,19 @@ List<SpecialDealModel> specialDealItems(BuildContext context) {
       ordernowColor: context.kChangeTheme.hintColor,
       specialColor: context.kChangeTheme.hintColor,
     ),
+    SpecialDealModel(
+      image: AppImages.kSpriteCan,
+      title: context.kAppLocalizations.specialdealforoctober,
+      buttonTitle: context.kAppLocalizations.buynow,
+      ordernowColor: context.kChangeTheme.hintColor,
+      specialColor: context.kChangeTheme.hintColor,
+    ),
+    SpecialDealModel(
+      image: AppImages.kPepsiCan,
+      title: context.kAppLocalizations.specialdealforoctober,
+      buttonTitle: context.kAppLocalizations.buynow,
+      ordernowColor: context.kChangeTheme.hintColor,
+      specialColor: context.kChangeTheme.hintColor,
+    ),
   ];
 }

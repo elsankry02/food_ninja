@@ -61,4 +61,6 @@ class AppImages {
 
   // ================== Colors / Others ==================
   static const kMintDark = 'assets/images/Mint_Dark.png';
+  static const kImageNetwork =
+      "https://firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png";
 }

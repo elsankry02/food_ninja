@@ -33,7 +33,9 @@ class LogoutNotifier extends Notifier<LogoutState> {
       if (e is DioException) {
         final data = e.response!.data;
         state = LogoutFailure(errMessage: data[kMessage]);
+        return;
       }
+      state = LogoutFailure(errMessage: e.toString());
     }
   }
 }

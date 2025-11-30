@@ -43,6 +43,7 @@ class ResendOtpNotifier extends AutoDisposeNotifier<ResendOtpState> {
       if (e is DioException) {
         final data = e.response!.data;
         state = ResendOtpFailure(errMessage: data[kMessage]);
+        return;
       }
     }
   }

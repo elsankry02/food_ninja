@@ -17,7 +17,8 @@ class RegisterNewUserFailure extends RegisterNewUserState {
 
 class RegisterNewUserSuccess extends RegisterNewUserState {}
 
-class RegisterNewUserNotifier extends AutoDisposeNotifier<RegisterNewUserState> {
+class RegisterNewUserNotifier
+    extends AutoDisposeNotifier<RegisterNewUserState> {
   @override
   RegisterNewUserState build() {
     return RegisterNewUserInitial();
@@ -45,7 +46,9 @@ class RegisterNewUserNotifier extends AutoDisposeNotifier<RegisterNewUserState> 
       if (e is DioException) {
         final data = e.response!.data;
         state = RegisterNewUserFailure(errMessage: data[kMessage]);
+        return;
       }
+      state = RegisterNewUserFailure(errMessage: e.toString());
     }
   }
 }

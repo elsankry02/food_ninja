@@ -28,18 +28,25 @@ class CompleteProfileNotifier extends Notifier<CompleteProfileState> {
   Future<void> completeProfile({
     required String name,
     required String username,
+    String? email,
     File? file,
   }) async {
     final provider = ref.read(completeProfileServiceProvider);
     state = CompleteProfileLoading();
     try {
-      await provider.completeProfile(name: name, username: username);
+      await provider.completeProfile(
+        name: name,
+        username: username,
+        email: email,
+      );
       state = CompleteProfileSuccess();
     } on Exception catch (e) {
       if (e is DioException) {
         final data = e.response!.data;
         state = CompleteProfileFailure(errMessage: data[kMessage]);
+        return;
       }
+      state = CompleteProfileFailure(errMessage: e.toString());
     }
   }
 }

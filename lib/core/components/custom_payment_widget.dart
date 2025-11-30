@@ -36,8 +36,8 @@ class PaymentsContainer extends StatelessWidget {
               width: context.height * 0.250,
               child: CustomTextFormField(
                 keyboardType: TextInputType.number,
-                enabledBorderColor: context.kChangeTheme.primaryColorLight,
-                focusedBorderColor: context.kChangeTheme.primaryColorLight,
+                enabledBorderColor: context.kChangeTheme.hintColor,
+                focusedBorderColor: context.kChangeTheme.hintColor,
                 hintText: "2121 6352 8465 ****",
                 controller: controller,
               ),

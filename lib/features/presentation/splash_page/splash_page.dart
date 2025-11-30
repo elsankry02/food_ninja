@@ -5,9 +5,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:food_ninja/core/constant/app_colors.dart';
 import 'package:food_ninja/core/constant/app_enums.dart';
 import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/constant/app_strings.dart';
 import 'package:food_ninja/core/extension/extension.dart';
 import 'package:food_ninja/core/router/router.dart';
+import 'package:food_ninja/features/data/providers/get/get_user_provider.dart';
 import 'package:food_ninja/features/data/providers/localization_provider.dart';
 import 'package:food_ninja/features/data/providers/provider.dart';
 
@@ -22,34 +22,33 @@ class SplashPage extends ConsumerStatefulWidget {
 class _SplashPageState extends ConsumerState<SplashPage> {
   @override
   void initState() {
-    splashFoodNinja();
-    super.initState();
-  }
-
-  splashFoodNinja() {
-    Future.delayed(const Duration(seconds: 2), () {
-      final prefs = ref.read(prefsProvider);
-      final onBoarding = prefs.getBool("isSaved");
-      final token = prefs.getString(kToken);
-
-      // initial Localization
+    Future.microtask(() {
       ref
           .read(localizationProvider.notifier)
           .localizationFunc(Localization.initial);
-      if (token != null) {
-        context.router.replace(MainRoute());
-        return;
-      }
-      if (onBoarding == true) {
-        context.router.replace(LoginRoute());
-      } else {
-        context.router.replace(OnboardingRoute());
-      }
+      ref.read(getUserProvider.notifier).getUser();
     });
+    super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    final prefs = ref.read(prefsProvider);
+    final state = ref.watch(getUserProvider);
+    ref.listen(getUserProvider, (_, state) {
+      if (state is GetUserFailure) {
+        final onBoarding = prefs.getBool("isSaved");
+        if (onBoarding == true) {
+          context.router.replace(LoginRoute());
+        } else {
+          context.router.replace(OnboardingRoute());
+          return;
+        }
+      }
+      if (state is GetUserSuccess) {
+        context.router.replace(MainRoute());
+      }
+    });
     return Scaffold(
       body: Stack(
         children: [
@@ -74,6 +73,12 @@ class _SplashPageState extends ConsumerState<SplashPage> {
                     color: context.kChangeTheme.hintColor,
                   ),
                 ),
+                SizedBox(height: context.height * 0.030),
+                state is GetUserLoading
+                    ? CircularProgressIndicator(
+                        color: context.kChangeTheme.hintColor,
+                      )
+                    : SizedBox(),
               ],
             ),
           ),

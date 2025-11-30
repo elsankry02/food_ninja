@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:food_ninja/core/constant/app_strings.dart';
@@ -36,14 +35,14 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
     final notifier = ref.read(deleteAccountProvider.notifier);
     await notifier.deleteAccount();
     await removeToken();
-    Phoenix.rebirth(context);
+    context.router.replace(LoginRoute());
   }
 
   Future<void> logOut() async {
     final notifier = ref.read(logOutProvider.notifier);
     await notifier.logOut();
     await removeToken();
-    Phoenix.rebirth(context);
+    context.router.replace(LoginRoute());
   }
 
   @override
@@ -146,7 +145,6 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                       return;
                     }
                     if (state is DeleteAccountSuccess) {
-                      context.router.replace(LoginRoute());
                       SuccessMessage(
                         context,
                         message: context
@@ -190,7 +188,6 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                   return;
                 }
                 if (state is LogoutSuccess) {
-                  context.router.replace(LoginRoute());
                   SuccessMessage(
                     context,
                     message: context.kAppLocalizations.loggedoutsuccessfully,

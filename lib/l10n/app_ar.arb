@@ -204,5 +204,6 @@
   "confirmlogout": "تأكيد تسجيل الخروج",
   "areyousurelogout": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
   "confirm": "تأكيد",
-  "loggedoutsuccessfully": "تم تسجيل الخروج بنجاح"
+  "loggedoutsuccessfully": "تم تسجيل الخروج بنجاح",
+  "profileupdatedsuccessfully": "تم تحديث الملف الشخصي بنجاح"
 }
