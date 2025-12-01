@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
-import '../../../core/extension/extension.dart';
 
 import '../../../core/constant/app_images.dart';
+import '../../../core/extension/extension.dart';
 
 class GroceriesModel {
   final String image, title, subTitle, price, description;
@@ -36,7 +36,7 @@ List<GroceriesModel> groceriesModel(BuildContext context) {
       title: context.kAppLocalizations.rice,
       subTitle: context.kAppLocalizations.ricesubtitle,
       price: r"$2.99",
-      description: context.kAppLocalizations.ricedescription,
+      description: context.kAppLocalizations.ricedsescription,
     ),
     GroceriesModel(
       image: AppImages.kPulses,

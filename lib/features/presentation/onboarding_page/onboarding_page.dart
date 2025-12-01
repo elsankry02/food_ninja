@@ -90,7 +90,7 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
               borderRadius: BorderRadius.circular(context.height * 0.015),
               onTap: () {
                 if (currentIndex == onboardingItems(context).length - 1) {
-                  context.router.push(SignUpRoute());
+                  context.router.push(LoginRoute());
                   ref.read(prefsProvider).setBool("isSaved", true);
                 }
                 pageController.animateToPage(

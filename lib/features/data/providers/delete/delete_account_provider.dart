@@ -29,6 +29,7 @@ class DeleteAccountNotifier extends Notifier<DeleteAccountState> {
     try {
       await provider.deleteAccount();
       state = DeleteAccountSuccess();
+      ref.invalidate(dioProvider);
     } on Exception catch (e) {
       if (e is DioException) {
         final data = e.response!.data;

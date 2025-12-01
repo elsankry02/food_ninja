@@ -28,13 +28,14 @@ class CompleteProfileNotifier extends Notifier<CompleteProfileState> {
   Future<void> completeProfile({
     required String name,
     required String username,
-    String? email,
     File? file,
+    String? email,
   }) async {
     final provider = ref.read(completeProfileServiceProvider);
     state = CompleteProfileLoading();
     try {
       await provider.completeProfile(
+        file: file,
         name: name,
         username: username,
         email: email,

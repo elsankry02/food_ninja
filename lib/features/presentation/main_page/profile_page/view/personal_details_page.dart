@@ -54,6 +54,7 @@ class _PersonalDetailsPageState extends ConsumerState<PersonalDetailsPage> {
     usernameController.text = notifier.username;
     nameController.text = notifier.name;
     emailController.text = notifier.email;
+    file = null;
   }
 
   Future<void> gallery() async {

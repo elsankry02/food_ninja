@@ -234,16 +234,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get pepsicansubtitle => '330مل، السعر';
 
   @override
-  String get pepsicandescription => 'بيبسي مشروب غازي منعش بنكهة الكولا الجريئة والكمية المناسبة من الحلاوة. مثالي للتبريد في يوم حار أو مع وجبتك المفضلة.';
-
-  @override
   String get cocacolacan => 'كوكا كولا';
 
   @override
   String get cocacolacansubtitle => '325مل، السعر';
-
-  @override
-  String get cocacolacandescription => 'كوكا كولا تقدم طعم الكولا الكلاسيكي مع توازن مثالي بين الحلاوة والغاز. مشروب مفضل ينعش ويرفع المزاج في أي مناسبة.';
 
   @override
   String get dietcoke => 'دايت كوك';
@@ -252,16 +246,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get dietcokesubtitle => '355مل، السعر';
 
   @override
-  String get dietcokedescription => 'دايت كوك يقدم نفس طعم كوكا كولا الرائع بدون سكر وسعرات أقل. خفيف ومنعش في أي وقت من اليوم.';
-
-  @override
   String get spritecan => 'سبرايت';
 
   @override
   String get spritecansubtitle => '355مل، السعر';
-
-  @override
-  String get spritecandescription => 'سبرايت مشروب بنكهة الليمون واللايم يقدم تجربة نظيفة ومنعشة. مثالي لإرواء العطش مع نفحة من نكهة الحمضيات.';
 
   @override
   String get applegrapejuice => 'عصير التفاح والعنب';
@@ -270,16 +258,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get applegrapejuicesubtitle => '2 لتر، السعر';
 
   @override
-  String get applegrapejuicedescription => 'مزيج لذيذ من التفاح الحلو والعنب العصيري، زجاجة 2 لتر غنية بالفيتامينات ومثالية للمشاركة مع العائلة أو الأصدقاء.';
-
-  @override
   String get orangejuice => 'عصير البرتقال';
 
   @override
   String get orangejuicesubtitle => '2 لتر، السعر';
-
-  @override
-  String get orangejuicedescription => 'عصير برتقال طازج معبأ بفيتامين سي والحلاوة الطبيعية. استمتع به بارداً لمشروب منعش وصحي في أي وقت من اليوم.';
 
   @override
   String get specialdealforoctober => 'عرض خاص لشهر \nأكتوبر';
@@ -321,16 +303,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get beefbonesubtitle => '1كجم، السعر';
 
   @override
-  String get beefbonedescription => 'لحم بقري طازجة غنية بالنكهة، مثالية لعمل الشوربات والمرق. غنية بالمغذيات ومثالية للوصفات المطبوخة ببطء';
-
-  @override
-  String get broilerchicken => 'دجاج برويلر';
+  String get broilerchicken => 'Broiler Chicken';
 
   @override
   String get broilerchickensubtitle => '1كجم، السعر';
-
-  @override
-  String get broilerchickendescription => 'دجاج برويلر طري وعصيري، رائع للشوي أو القلي. مصدره من مزارع عالية الجودة لوجبة لذيذة';
 
   @override
   String get rice => 'أرز';
@@ -339,16 +315,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get ricesubtitle => '1كجم، السعر';
 
   @override
-  String get ricedescription => 'أرز طويل الحبة عالي الجودة يطهى منفوش وعطر. مثالي للوجبات اليومية، البرياني، أو الأرز المقلي';
-
-  @override
   String get pulses => 'بقوليات';
 
   @override
   String get pulsessubtitle => '1كجم، السعر';
-
-  @override
-  String get pulsesdescription => 'بقوليات غنية بالبروتين ومغذيات. مثالية للشوربات والسلطات والأطباق التقليدية. 100% طبيعي وعضوي';
 
   @override
   String get eggchickenred => 'بيض دجاج أحمر';
@@ -357,16 +327,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get eggchickenredsubtitle => '4 حبات، السعر';
 
   @override
-  String get eggchickenreddescription => 'بيض دجاج أحمر طازج ذو طعم غني وقيمة غذائية عالية. مثالي للفطور، الخبز، أو الطهي';
-
-  @override
   String get eggchickenwhite => 'بيض دجاج أبيض';
 
   @override
   String get eggchickenwhitesubtitle => '180جم، السعر';
-
-  @override
-  String get eggchickenwhitedescription => 'بيض دجاج أبيض طازج ذو طعم خفيف، مثالي للوجبات اليومية والوصفات. غني بالبروتين والعناصر الغذائية الأساسية';
 
   @override
   String get eggpasta => 'معكرونة بالبيض';
@@ -375,16 +339,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get eggpastasubtitle => '30جم، السعر';
 
   @override
-  String get eggpastadescription => 'معكرونة كلاسيكية مصنوعة بالبيض الحقيقي لملمس غني وسلس. تُطهى بسرعة وتناسب أي صلصة';
-
-  @override
   String get eggnoodles => 'نودلز بالبيض';
 
   @override
   String get eggnoodlessubtitle => '2ل، السعر';
-
-  @override
-  String get eggnoodlesdescription => 'نودلز بالبيض لذيذة وطرية مصنوعة من مكونات عالية الجودة. مثالية للقلي السريع، الحساء، أو الأطباق الآسيوية';
 
   @override
   String get mayonnaiseggless => 'مايونيز بدون بيض';
@@ -393,16 +351,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get mayonnaisegglesssubtitle => '325مل، السعر';
 
   @override
-  String get mayonnaisegglessdescription => 'مايونيز ناعم وكريمي بدون بيض، مثالي للسندويتشات، السلطات، والصلصات. مناسب للنباتيين';
-
-  @override
   String get roundcuteggnoodles => 'مكرونة اسباغيتي';
 
   @override
   String get roundcuteggnoodlessubtitle => '330مل، السعر';
-
-  @override
-  String get roundcuteggnoodlesdescription => 'نودلز بالبيض مقطعة دائرياً لعشاق النكهة الغنية والملمس المتماسك. ممتازة للشوربات أو الوجبات السريعة';
 
   @override
   String get ginger => 'زنجبيل';
@@ -411,16 +363,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get gingersubtitle => '250جم، السعر';
 
   @override
-  String get gingerdescription => 'زنجبيل طازج وعطري يستخدم في الطبخ والعلاجات الطبيعية. يضيف نكهة وحارة وفوائد صحية للوجبات';
-
-  @override
   String get bellpeppered => 'فلفل أحمر';
 
   @override
   String get bellpepperredsubtitle => '1كجم، السعر';
-
-  @override
-  String get bellpeppereddescription => 'فلفل أحمر زاهي غني بالفيتامينات ومضادات الأكسدة. حلو ومقرمش، مثالي للسلطات والشوي والقلي';
 
   @override
   String get redapple => 'تفاح أحمر';
@@ -429,16 +375,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get redapplesubtitle => '1كجم، السعر';
 
   @override
-  String get redappledescription => 'تفاح أحمر مقرمش وعصيري غني بالحلاوة الطبيعية. ممتاز للوجبات الخفيفة، الخبز، أو العصائر';
-
-  @override
   String get organicbananas => 'موز';
 
   @override
   String get organicbananassubtitle => '12كجم، السعر';
-
-  @override
-  String get organicbananasdescription => 'موز عضوي حلو طبيعي غني بالبوتاسيوم والألياف. مثالي للعصائر، الوجبات الخفيفة، والحلويات';
 
   @override
   String get findyourfavoritefood => 'ابحث عن طعامك \nالمفضل';
@@ -622,4 +562,67 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get loggedoutsuccessfully => 'تم تسجيل الخروج بنجاح';
+
+  @override
+  String get profileupdatedsuccessfully => 'تم تحديث الملف الشخصي بنجاح';
+
+  @override
+  String get pepsidescription => 'بيبسي مشروب غازي منعش بنكهة الكولا الجريئة التي تمنحك انتعاشاً فورياً في الأيام الحارة. يحتوي على الكمية المثالية من الحلاوة لتكملة وجبتك المفضلة. مشروب محبوب من جميع الأعمار ويضفي شعوراً بالمتعة مع كل رشفة. يمكن تناوله في أي وقت من اليوم كخيار منعش وسريع لإرواء العطش. تصميم العبوة العملي يجعله مناسباً لأخذها معك في أي مكان.';
+
+  @override
+  String get cocacoladescription => 'كوكا كولا تقدم الطعم الكلاسيكي للكولا بتوازن مثالي بين الحلاوة والغاز. مشروب ينعش ويزيد المزاج في أي مناسبة، سواء كنت في المنزل أو في الخارج. يمكن تناوله بمفرده أو مع الوجبات الخفيفة ليعزز من مذاقها. محبوب من الأطفال والكبار على حد سواء. يوفر تجربة شراب غنية ولذيذة في كل مرة.';
+
+  @override
+  String get dietcokedescription => 'دايت كوك يقدم نفس الطعم الرائع لكوكا كولا بدون سكر وسعرات حرارية أقل. مشروب خفيف ومنعش، مثالي لمن يرغبون في تقليل استهلاك السكر دون التضحية بالنكهة. يمكن تناوله في أي وقت من اليوم، ويعتبر خياراً صحياً بين المشروبات الغازية. يمنح إحساساً بالانتعاش والطاقة. تصميم العبوة عملي وسهل الحمل.';
+
+  @override
+  String get spritedescription => 'سبرايت مشروب فوار منعش بنكهة الليمون واللايم الطبيعية. يمنح شعوراً بالنقاء والانتعاش مع كل رشفة، مثالي للأيام الحارة والوجبات الخفيفة. يحتوي على غاز متوازن يعطي إحساساً بالبهجة والطاقة. مناسب لجميع الأعمار ويضيف لمسة منعشة لكل وجبة. يمكن الاستمتاع به بمفرده أو مع الطعام.';
+
+  @override
+  String get applegrapejuicedescription => 'مزيج عصير التفاح الحلو والعنب العصيري غني بالفيتامينات والمعادن الأساسية. زجاجة 2 لتر مثالية لمشاركة العائلة والأصدقاء في كل مناسبة. يمنحك طعماً طبيعياً ولذيذاً مع كل رشفة، ويعزز الصحة والطاقة. مناسب للأطفال والكبار ويعتبر خياراً ممتازاً للإفطار أو كوجبة خفيفة. خالي من المواد الصناعية، ويحتفظ بالنكهة الطبيعية للفواكه.';
+
+  @override
+  String get orangejuicedescription => 'عصير برتقال طازج مليء بفيتامين سي الطبيعي والحلاوة المميزة. مناسب للاستمتاع بمشروب صحي منعش في أي وقت من اليوم. يعزز المناعة ويمنح طاقة طبيعية للأطفال والكبار. يمكن تناوله بمفرده أو مع الوجبات لزيادة الانتعاش والنكهة. مصنوع بعناية للحفاظ على الطعم الطبيعي والقيمة الغذائية.';
+
+  @override
+  String get beefbonedescription => 'لحم بقري طازج وغني بالنكهة، مثالي للشوربات والمرق والوصفات المطبوخة ببطء. يحتوي على بروتين عالي الجودة ومغذيات أساسية للجسم. يضيف طعماً عميقاً وغنياً لكل وجبة. يمكن استخدامه في الطهي اليومي أو المناسبات الخاصة. جودة عالية تضمن نكهة طبيعية وطراوة ممتازة عند الطهي.';
+
+  @override
+  String get broilerchickendescription => 'دجاج برويلر طري وعصيري، مثالي للشوي أو القلي. مصدره من مزارع عالية الجودة لضمان طعام صحي ولذيذ. غني بالبروتين ويضيف مذاقاً رائعاً للوجبات اليومية. يمكن تحضيره بطرق متنوعة ليناسب جميع الأذواق. يضمن تجربة طعام ممتعة ولذيذة مع كل وجبة.';
+
+  @override
+  String get ricedsescription => 'أرز طويل الحبة عالي الجودة يطهى منفوشاً وعطراً. مثالي للوجبات اليومية، البرياني، أو الأرز المقلي. يمنح طعماً متوازناً وقواماً ممتازاً لكل وصفة. غني بالنشويات ويمنح شعوراً بالشبع. يمكن استخدامه مع جميع أنواع الأطباق لإضافة لمسة مميزة ومغذية.';
+
+  @override
+  String get pulsesdescription => 'بقوليات غنية بالبروتين والعناصر الغذائية الأساسية. مناسبة للشوربات، السلطات، والأطباق التقليدية. طبيعية 100% وعضوية لتضمن صحة أفضل. تمنح الطاقة والانتعاش للجسم وتعتبر خياراً غذائياً متوازناً. يمكن دمجها بسهولة في وجبات متنوعة لإضافة قيمة غذائية عالية.';
+
+  @override
+  String get eggchickenreddescription => 'بيض دجاج أحمر طازج ذو طعم غني وقيمة غذائية عالية. مثالي للفطور، الخبز، أو الطهي اليومي. غني بالبروتينات الأساسية والمعادن الضرورية للجسم. يمنح وجباتك مذاقاً طبيعياً ولذيذاً. منتج عالي الجودة يضمن سلامة الغذاء والطعم الرائع في كل مرة.';
+
+  @override
+  String get eggchickenwhitedescription => 'بيض دجاج أبيض طازج ذو طعم خفيف ولذيذ. غني بالبروتين والعناصر الغذائية الأساسية. مناسب للوجبات اليومية والوصفات المختلفة. يمنح شعوراً بالشبع والطاقة. منتج طبيعي وآمن مع قيمة غذائية عالية تناسب جميع أفراد الأسرة.';
+
+  @override
+  String get eggpastadescription => 'معكرونة بالبيض كلاسيكية مصنوعة من بيض حقيقي لملمس غني وسلس. تُطهى بسرعة وتناسب جميع أنواع الصلصات. تمنح وجبتك نكهة لذيذة ومميزة. يمكن تقديمها كوجبة رئيسية أو جانبية. منتج عالي الجودة يضمن الطعم المثالي والقوام الممتاز.';
+
+  @override
+  String get eggnoodlesdescription => 'نودلز بالبيض طرية ولذيذة مصنوعة من مكونات عالية الجودة. مثالية للقلي السريع، الحساء، والأطباق الآسيوية. تمنح طعماً غنياً ونكهة مميزة لكل وجبة. يمكن تناولها بمفردها أو مع الصلصات المختلفة. منتج طبيعي يضمن جودة الطهي وملمس ممتاز.';
+
+  @override
+  String get mayonnaisegglessdescription => 'مايونيز بدون بيض ناعم وكريمي، مثالي للسندويتشات، السلطات، والصلصات. مناسب للنباتيين ويمنح نكهة سلسة ومميزة. يضيف لمسة غنية للطعام دون التأثير على القوام. يمكن استخدامه مع جميع أنواع الأطعمة لإثراء الطعم. منتج صحي وطبيعي لضمان أفضل جودة.';
+
+  @override
+  String get roundcuteggnoodlesdescription => 'مكرونة اسباغيتي بالبيض مقطعة دائرياً لعشاق النكهة الغنية والملمس المتماسك. ممتازة للشوربات أو الوجبات السريعة. تمنح كل طبق تجربة طعام مميزة. يمكن دمجها مع الصلصات أو الحساء لإضفاء مذاق مميز. منتج عالي الجودة لطعام شهي ومغذي.';
+
+  @override
+  String get gingerdescription => 'زنجبيل طازج وعطري يستخدم في الطهي والعلاجات الطبيعية. يضيف نكهة حارة وفوائد صحية متعددة. يعزز الهضم ويزيد من نشاط الجسم. مناسب للطهي، العصائر، أو المشروبات الساخنة. منتج طبيعي يضمن الجودة والنكهة المميزة لكل وجبة.';
+
+  @override
+  String get bellpeppereddescription => 'فلفل أحمر زاهي غني بالفيتامينات ومضادات الأكسدة. حلو ومقرمش، مثالي للسلطات، الشوي، والقلي. يضيف لوناً جذاباً ونكهة غنية للطعام. غني بالعناصر الغذائية المهمة للصحة. منتج طبيعي عالي الجودة يضمن مذاقاً رائعاً ومظهرًا جميلاً للطبق.';
+
+  @override
+  String get redappledescription => 'تفاح أحمر مقرمش وعصيري غني بالحلاوة الطبيعية. مناسب للوجبات الخفيفة، الخبز، أو العصائر. يمنح طاقة وفوائد غذائية عالية للأطفال والكبار. يحتوي على مضادات أكسدة طبيعية تعزز الصحة. يمكن تناوله مباشرة أو استخدامه في وصفات متنوعة.';
+
+  @override
+  String get organicbananasdescription => 'موز عضوي طبيعي وحلو، غني بالبوتاسيوم والألياف. مثالي للعصائر، الوجبات الخفيفة، والحلويات. يمنح طاقة سريعة وصحية للجسم. منتج طبيعي وآمن لجميع الأعمار. يمكن تناوله مباشرة أو دمجه في وصفات متعددة لإثراء الطعم والفائدة.';
 }

@@ -545,12 +545,6 @@ abstract class AppLocalizations {
   /// **'330ml, Price'**
   String get pepsicansubtitle;
 
-  /// No description provided for @pepsicandescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Pepsi is a refreshing carbonated drink with bold cola flavor and just the right amount of sweetness. Perfect for cooling down on a hot day or with your favorite meal.'**
-  String get pepsicandescription;
-
   /// No description provided for @cocacolacan.
   ///
   /// In en, this message translates to:
@@ -562,12 +556,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'325ml, Price'**
   String get cocacolacansubtitle;
-
-  /// No description provided for @cocacolacandescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Coca Cola delivers the classic cola taste with perfect balance of sweetness and carbonation. A favorite drink that refreshes and uplifts any occasion.'**
-  String get cocacolacandescription;
 
   /// No description provided for @dietcoke.
   ///
@@ -581,12 +569,6 @@ abstract class AppLocalizations {
   /// **'355ml, Price'**
   String get dietcokesubtitle;
 
-  /// No description provided for @dietcokedescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Diet Coke offers the same great Coca-Cola taste with zero sugar and fewer calories. Light and refreshing anytime.'**
-  String get dietcokedescription;
-
   /// No description provided for @spritecan.
   ///
   /// In en, this message translates to:
@@ -598,12 +580,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'355ml, Price'**
   String get spritecansubtitle;
-
-  /// No description provided for @spritecandescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Sprite is a lemon-lime soda that delivers a clean, crisp and refreshing experience. Perfect to quench your thirst with a citrus burst.'**
-  String get spritecandescription;
 
   /// No description provided for @applegrapejuice.
   ///
@@ -617,12 +593,6 @@ abstract class AppLocalizations {
   /// **'2L, Price'**
   String get applegrapejuicesubtitle;
 
-  /// No description provided for @applegrapejuicedescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Delicious blend of sweet apples and juicy grapes. 2L bottle full of vitamins, ideal for sharing with family or friends.'**
-  String get applegrapejuicedescription;
-
   /// No description provided for @orangejuice.
   ///
   /// In en, this message translates to:
@@ -634,12 +604,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'2L, Price'**
   String get orangejuicesubtitle;
-
-  /// No description provided for @orangejuicedescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Freshly squeezed orange juice packed with vitamin C and natural sweetness. Enjoy chilled for a refreshing healthy drink anytime.'**
-  String get orangejuicedescription;
 
   /// No description provided for @specialdealforoctober.
   ///
@@ -719,12 +683,6 @@ abstract class AppLocalizations {
   /// **'1kg, Price'**
   String get beefbonesubtitle;
 
-  /// No description provided for @beefbonedescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Fresh beef bones rich in flavor, perfect for soups and broths. High in nutrients, ideal for slow-cooked recipes.'**
-  String get beefbonedescription;
-
   /// No description provided for @broilerchicken.
   ///
   /// In en, this message translates to:
@@ -736,12 +694,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'1kg, Price'**
   String get broilerchickensubtitle;
-
-  /// No description provided for @broilerchickendescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Tender and juicy broiler chicken, great for roasting, grilling or frying. Sourced from premium quality farms for delicious meals.'**
-  String get broilerchickendescription;
 
   /// No description provided for @rice.
   ///
@@ -755,12 +707,6 @@ abstract class AppLocalizations {
   /// **'1kg, Price'**
   String get ricesubtitle;
 
-  /// No description provided for @ricedescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Finest quality long-grain rice, fluffy and aromatic. Perfect for daily meals, biryani, or fried rice.'**
-  String get ricedescription;
-
   /// No description provided for @pulses.
   ///
   /// In en, this message translates to:
@@ -772,12 +718,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'1kg, Price'**
   String get pulsessubtitle;
-
-  /// No description provided for @pulsesdescription.
-  ///
-  /// In en, this message translates to:
-  /// **'High-protein pulses packed with nutrients. Ideal for soups, salads, and traditional dishes. 100% natural and organic.'**
-  String get pulsesdescription;
 
   /// No description provided for @eggchickenred.
   ///
@@ -791,12 +731,6 @@ abstract class AppLocalizations {
   /// **'4pcs, Price'**
   String get eggchickenredsubtitle;
 
-  /// No description provided for @eggchickenreddescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Farm-fresh red chicken eggs, rich in taste and nutrition. Perfect for breakfast, baking, or cooking.'**
-  String get eggchickenreddescription;
-
   /// No description provided for @eggchickenwhite.
   ///
   /// In en, this message translates to:
@@ -808,12 +742,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'180g, Price'**
   String get eggchickenwhitesubtitle;
-
-  /// No description provided for @eggchickenwhitedescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Fresh white chicken eggs with mild taste, ideal for daily meals and recipes. High in protein and essential nutrients.'**
-  String get eggchickenwhitedescription;
 
   /// No description provided for @eggpasta.
   ///
@@ -827,12 +755,6 @@ abstract class AppLocalizations {
   /// **'30g, Price'**
   String get eggpastasubtitle;
 
-  /// No description provided for @eggpastadescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Classic egg pasta made with real eggs for rich smooth texture. Cooks quickly and pairs perfectly with any sauce.'**
-  String get eggpastadescription;
-
   /// No description provided for @eggnoodles.
   ///
   /// In en, this message translates to:
@@ -844,12 +766,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'2L, Price'**
   String get eggnoodlessubtitle;
-
-  /// No description provided for @eggnoodlesdescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Delicious soft egg noodles made with high-quality ingredients. Perfect for stir-fries, soups, or Asian dishes.'**
-  String get eggnoodlesdescription;
 
   /// No description provided for @mayonnaiseggless.
   ///
@@ -863,12 +779,6 @@ abstract class AppLocalizations {
   /// **'325ml, Price'**
   String get mayonnaisegglesssubtitle;
 
-  /// No description provided for @mayonnaisegglessdescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Smooth creamy eggless mayonnaise, perfect for sandwiches, salads, and dips. Suitable for vegetarians.'**
-  String get mayonnaisegglessdescription;
-
   /// No description provided for @roundcuteggnoodles.
   ///
   /// In en, this message translates to:
@@ -880,12 +790,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'330ml, Price'**
   String get roundcuteggnoodlessubtitle;
-
-  /// No description provided for @roundcuteggnoodlesdescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Round-cut egg noodles for those who love rich flavor and firm texture. Great for soups or quick meals.'**
-  String get roundcuteggnoodlesdescription;
 
   /// No description provided for @ginger.
   ///
@@ -899,12 +803,6 @@ abstract class AppLocalizations {
   /// **'250g, Price'**
   String get gingersubtitle;
 
-  /// No description provided for @gingerdescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Fresh aromatic ginger root for cooking and natural remedies. Adds spice, flavor, and health benefits.'**
-  String get gingerdescription;
-
   /// No description provided for @bellpeppered.
   ///
   /// In en, this message translates to:
@@ -916,12 +814,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'1kg, Price'**
   String get bellpepperredsubtitle;
-
-  /// No description provided for @bellpeppereddescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Bright red bell peppers full of vitamins and antioxidants. Sweet, crunchy, perfect for salads, grilling, or stir-fries.'**
-  String get bellpeppereddescription;
 
   /// No description provided for @redapple.
   ///
@@ -935,12 +827,6 @@ abstract class AppLocalizations {
   /// **'1kg, Price'**
   String get redapplesubtitle;
 
-  /// No description provided for @redappledescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Crisp juicy red apples full of natural sweetness. Great for snacking, baking, or juicing.'**
-  String get redappledescription;
-
   /// No description provided for @organicbananas.
   ///
   /// In en, this message translates to:
@@ -952,12 +838,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'12kg, Price'**
   String get organicbananassubtitle;
-
-  /// No description provided for @organicbananasdescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Naturally sweet organic bananas, rich in potassium and fiber. Ideal for smoothies, snacks, and desserts.'**
-  String get organicbananasdescription;
 
   /// No description provided for @findyourfavoritefood.
   ///
@@ -1324,6 +1204,132 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Logged out successfully'**
   String get loggedoutsuccessfully;
+
+  /// No description provided for @profileupdatedsuccessfully.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile updated successfully'**
+  String get profileupdatedsuccessfully;
+
+  /// No description provided for @pepsidescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Pepsi is a refreshing carbonated drink with a bold cola flavor that instantly revitalizes you on hot days. It has the perfect amount of sweetness to complement your favorite meals. Loved by all ages, it brings joy with every sip. Can be enjoyed anytime as a quick and refreshing thirst-quencher. Its practical packaging makes it easy to take anywhere.'**
+  String get pepsidescription;
+
+  /// No description provided for @cocacoladescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Coca-Cola delivers the classic cola taste with a perfect balance of sweetness and fizz. It refreshes and lifts your mood on any occasion, whether at home or outdoors. Can be enjoyed alone or with snacks to enhance their flavor. Loved by both children and adults. Provides a rich and delicious drinking experience every time.'**
+  String get cocacoladescription;
+
+  /// No description provided for @dietcokedescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Diet Coke offers the same great Coca-Cola taste without sugar and with fewer calories. A light and refreshing drink, perfect for those who want to reduce sugar intake without sacrificing flavor. Can be enjoyed anytime and is a healthier choice among sodas. Provides a sense of refreshment and energy. The practical packaging makes it convenient to carry.'**
+  String get dietcokedescription;
+
+  /// No description provided for @spritedescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Sprite is a refreshing fizzy drink with natural lemon and lime flavors. Provides a sense of purity and refreshment with every sip, perfect for hot days and light meals. Contains balanced carbonation for a joyful feeling. Suitable for all ages and adds a refreshing touch to any meal. Can be enjoyed alone or with food.'**
+  String get spritedescription;
+
+  /// No description provided for @applegrapejuicedescription.
+  ///
+  /// In en, this message translates to:
+  /// **'A delicious blend of sweet apple and juicy grapes, rich in essential vitamins and minerals. The 2-liter bottle is perfect for sharing with family and friends. Offers a natural and tasty flavor with every sip, enhancing health and energy. Suitable for both kids and adults, making it an excellent choice for breakfast or a light snack. Free from artificial additives, preserving the natural fruit taste.'**
+  String get applegrapejuicedescription;
+
+  /// No description provided for @orangejuicedescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Fresh orange juice packed with natural vitamin C and a sweet, refreshing taste. Perfect for enjoying a healthy, revitalizing drink any time of the day. Boosts immunity and provides natural energy for both children and adults. Can be enjoyed alone or with meals to increase freshness and flavor. Carefully prepared to preserve natural taste and nutritional value.'**
+  String get orangejuicedescription;
+
+  /// No description provided for @beefbonedescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Fresh beef bones, rich in flavor, ideal for soups, broths, and slow-cooked recipes. High in protein and essential nutrients for the body. Adds deep, rich taste to any meal. Can be used for daily cooking or special occasions. High-quality product ensures natural flavor and excellent tenderness when cooked.'**
+  String get beefbonedescription;
+
+  /// No description provided for @broilerchickendescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Tender and juicy broiler chicken, perfect for grilling or frying. Sourced from high-quality farms to ensure healthy and delicious meat. Rich in protein and enhances the flavor of daily meals. Can be prepared in various ways to suit all tastes. Guarantees a delightful and tasty eating experience with every meal.'**
+  String get broilerchickendescription;
+
+  /// No description provided for @ricedsescription.
+  ///
+  /// In en, this message translates to:
+  /// **'High-quality long-grain rice that cooks fluffy and aromatic. Perfect for daily meals, biryani, or fried rice. Provides a balanced taste and excellent texture for every recipe. Rich in carbohydrates and offers a satisfying meal. Can be paired with all types of dishes for a nutritious and delicious touch.'**
+  String get ricedsescription;
+
+  /// No description provided for @pulsesdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Pulses rich in protein and essential nutrients. Suitable for soups, salads, and traditional dishes. 100% natural and organic for better health. Provides energy and refreshment, making it a balanced nutritional choice. Easily incorporated into a variety of meals to add high nutritional value.'**
+  String get pulsesdescription;
+
+  /// No description provided for @eggchickenreddescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Fresh red chicken eggs with a rich taste and high nutritional value. Ideal for breakfast, baking, or daily cooking. Packed with essential proteins and minerals for the body. Adds natural and delicious flavor to your meals. High-quality product ensures food safety and excellent taste every time.'**
+  String get eggchickenreddescription;
+
+  /// No description provided for @eggchickenwhitedescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Fresh white chicken eggs with a light, delicious flavor. Rich in protein and essential nutrients. Suitable for daily meals and various recipes. Provides a feeling of fullness and energy. Natural and safe product with high nutritional value suitable for the whole family.'**
+  String get eggchickenwhitedescription;
+
+  /// No description provided for @eggpastadescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Classic egg pasta made from real eggs for a rich and smooth texture. Cooks quickly and pairs well with all types of sauces. Gives your meal a delicious and distinctive taste. Can be served as a main or side dish. High-quality product ensures perfect taste and excellent texture.'**
+  String get eggpastadescription;
+
+  /// No description provided for @eggnoodlesdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Soft and tasty egg noodles made from high-quality ingredients. Perfect for quick stir-frying, soups, and Asian dishes. Provides a rich taste and distinctive flavor to every meal. Can be enjoyed alone or with various sauces. Natural product guarantees excellent cooking quality and texture.'**
+  String get eggnoodlesdescription;
+
+  /// No description provided for @mayonnaisegglessdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Eggless mayonnaise, smooth and creamy, perfect for sandwiches, salads, and sauces. Suitable for vegetarians and provides a rich, smooth flavor. Adds a delicious touch without affecting texture. Can be used with all types of food to enhance taste. Healthy and natural product ensuring the best quality.'**
+  String get mayonnaisegglessdescription;
+
+  /// No description provided for @roundcuteggnoodlesdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Round-cut egg spaghetti for lovers of rich flavor and firm texture. Excellent for soups or quick meals. Provides a unique dining experience with every dish. Can be combined with sauces or broths to enhance taste. High-quality product ensures a delicious and nutritious meal.'**
+  String get roundcuteggnoodlesdescription;
+
+  /// No description provided for @gingerdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Fresh and aromatic ginger, used in cooking and natural remedies. Adds a spicy flavor and multiple health benefits. Improves digestion and boosts energy. Suitable for cooking, juices, or hot drinks. Natural product ensures quality and distinctive flavor for every meal.'**
+  String get gingerdescription;
+
+  /// No description provided for @bellpeppereddescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Bright red bell peppers rich in vitamins and antioxidants. Sweet and crunchy, perfect for salads, grilling, and frying. Adds attractive color and rich flavor to dishes. Packed with essential nutrients for health. High-quality natural product ensures great taste and visual appeal.'**
+  String get bellpeppereddescription;
+
+  /// No description provided for @redappledescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Crisp and juicy red apples rich in natural sweetness. Perfect for snacks, baking, or juices. Provides energy and high nutritional benefits for children and adults. Contains natural antioxidants that promote health. Can be eaten directly or used in various recipes.'**
+  String get redappledescription;
+
+  /// No description provided for @organicbananasdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Natural sweet organic bananas, rich in potassium and fiber. Ideal for smoothies, snacks, and desserts. Provides quick and healthy energy for the body. Safe and natural product suitable for all ages. Can be eaten directly or incorporated into various recipes to enhance taste and nutrition.'**
+  String get organicbananasdescription;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

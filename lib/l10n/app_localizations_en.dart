@@ -234,16 +234,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pepsicansubtitle => '330ml, Price';
 
   @override
-  String get pepsicandescription => 'Pepsi is a refreshing carbonated drink with bold cola flavor and just the right amount of sweetness. Perfect for cooling down on a hot day or with your favorite meal.';
-
-  @override
   String get cocacolacan => 'Coca Cola Can';
 
   @override
   String get cocacolacansubtitle => '325ml, Price';
-
-  @override
-  String get cocacolacandescription => 'Coca Cola delivers the classic cola taste with perfect balance of sweetness and carbonation. A favorite drink that refreshes and uplifts any occasion.';
 
   @override
   String get dietcoke => 'Diet Coke';
@@ -252,16 +246,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dietcokesubtitle => '355ml, Price';
 
   @override
-  String get dietcokedescription => 'Diet Coke offers the same great Coca-Cola taste with zero sugar and fewer calories. Light and refreshing anytime.';
-
-  @override
   String get spritecan => 'Sprite Can';
 
   @override
   String get spritecansubtitle => '355ml, Price';
-
-  @override
-  String get spritecandescription => 'Sprite is a lemon-lime soda that delivers a clean, crisp and refreshing experience. Perfect to quench your thirst with a citrus burst.';
 
   @override
   String get applegrapejuice => 'Apple & Grape Juice';
@@ -270,16 +258,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get applegrapejuicesubtitle => '2L, Price';
 
   @override
-  String get applegrapejuicedescription => 'Delicious blend of sweet apples and juicy grapes. 2L bottle full of vitamins, ideal for sharing with family or friends.';
-
-  @override
   String get orangejuice => 'Orange Juice';
 
   @override
   String get orangejuicesubtitle => '2L, Price';
-
-  @override
-  String get orangejuicedescription => 'Freshly squeezed orange juice packed with vitamin C and natural sweetness. Enjoy chilled for a refreshing healthy drink anytime.';
 
   @override
   String get specialdealforoctober => 'Special Deal for \nOctober';
@@ -321,16 +303,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get beefbonesubtitle => '1kg, Price';
 
   @override
-  String get beefbonedescription => 'Fresh beef bones rich in flavor, perfect for soups and broths. High in nutrients, ideal for slow-cooked recipes.';
-
-  @override
   String get broilerchicken => 'Broiler Chicken';
 
   @override
   String get broilerchickensubtitle => '1kg, Price';
-
-  @override
-  String get broilerchickendescription => 'Tender and juicy broiler chicken, great for roasting, grilling or frying. Sourced from premium quality farms for delicious meals.';
 
   @override
   String get rice => 'Rice';
@@ -339,16 +315,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get ricesubtitle => '1kg, Price';
 
   @override
-  String get ricedescription => 'Finest quality long-grain rice, fluffy and aromatic. Perfect for daily meals, biryani, or fried rice.';
-
-  @override
   String get pulses => 'Pulses';
 
   @override
   String get pulsessubtitle => '1kg, Price';
-
-  @override
-  String get pulsesdescription => 'High-protein pulses packed with nutrients. Ideal for soups, salads, and traditional dishes. 100% natural and organic.';
 
   @override
   String get eggchickenred => 'Egg Chicken Red';
@@ -357,16 +327,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get eggchickenredsubtitle => '4pcs, Price';
 
   @override
-  String get eggchickenreddescription => 'Farm-fresh red chicken eggs, rich in taste and nutrition. Perfect for breakfast, baking, or cooking.';
-
-  @override
   String get eggchickenwhite => 'Egg Chicken White';
 
   @override
   String get eggchickenwhitesubtitle => '180g, Price';
-
-  @override
-  String get eggchickenwhitedescription => 'Fresh white chicken eggs with mild taste, ideal for daily meals and recipes. High in protein and essential nutrients.';
 
   @override
   String get eggpasta => 'Egg Pasta';
@@ -375,16 +339,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get eggpastasubtitle => '30g, Price';
 
   @override
-  String get eggpastadescription => 'Classic egg pasta made with real eggs for rich smooth texture. Cooks quickly and pairs perfectly with any sauce.';
-
-  @override
   String get eggnoodles => 'Egg Noodles';
 
   @override
   String get eggnoodlessubtitle => '2L, Price';
-
-  @override
-  String get eggnoodlesdescription => 'Delicious soft egg noodles made with high-quality ingredients. Perfect for stir-fries, soups, or Asian dishes.';
 
   @override
   String get mayonnaiseggless => 'Eggless Mayonnaise';
@@ -393,16 +351,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mayonnaisegglesssubtitle => '325ml, Price';
 
   @override
-  String get mayonnaisegglessdescription => 'Smooth creamy eggless mayonnaise, perfect for sandwiches, salads, and dips. Suitable for vegetarians.';
-
-  @override
   String get roundcuteggnoodles => 'Round-Cut Egg Noodles';
 
   @override
   String get roundcuteggnoodlessubtitle => '330ml, Price';
-
-  @override
-  String get roundcuteggnoodlesdescription => 'Round-cut egg noodles for those who love rich flavor and firm texture. Great for soups or quick meals.';
 
   @override
   String get ginger => 'Ginger';
@@ -411,16 +363,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get gingersubtitle => '250g, Price';
 
   @override
-  String get gingerdescription => 'Fresh aromatic ginger root for cooking and natural remedies. Adds spice, flavor, and health benefits.';
-
-  @override
   String get bellpeppered => 'Bell Pepper Red';
 
   @override
   String get bellpepperredsubtitle => '1kg, Price';
-
-  @override
-  String get bellpeppereddescription => 'Bright red bell peppers full of vitamins and antioxidants. Sweet, crunchy, perfect for salads, grilling, or stir-fries.';
 
   @override
   String get redapple => 'Red Apple';
@@ -429,16 +375,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get redapplesubtitle => '1kg, Price';
 
   @override
-  String get redappledescription => 'Crisp juicy red apples full of natural sweetness. Great for snacking, baking, or juicing.';
-
-  @override
   String get organicbananas => 'Organic Bananas';
 
   @override
   String get organicbananassubtitle => '12kg, Price';
-
-  @override
-  String get organicbananasdescription => 'Naturally sweet organic bananas, rich in potassium and fiber. Ideal for smoothies, snacks, and desserts.';
 
   @override
   String get findyourfavoritefood => 'Find Your Favorite \nFood';
@@ -622,4 +562,67 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get loggedoutsuccessfully => 'Logged out successfully';
+
+  @override
+  String get profileupdatedsuccessfully => 'Profile updated successfully';
+
+  @override
+  String get pepsidescription => 'Pepsi is a refreshing carbonated drink with a bold cola flavor that instantly revitalizes you on hot days. It has the perfect amount of sweetness to complement your favorite meals. Loved by all ages, it brings joy with every sip. Can be enjoyed anytime as a quick and refreshing thirst-quencher. Its practical packaging makes it easy to take anywhere.';
+
+  @override
+  String get cocacoladescription => 'Coca-Cola delivers the classic cola taste with a perfect balance of sweetness and fizz. It refreshes and lifts your mood on any occasion, whether at home or outdoors. Can be enjoyed alone or with snacks to enhance their flavor. Loved by both children and adults. Provides a rich and delicious drinking experience every time.';
+
+  @override
+  String get dietcokedescription => 'Diet Coke offers the same great Coca-Cola taste without sugar and with fewer calories. A light and refreshing drink, perfect for those who want to reduce sugar intake without sacrificing flavor. Can be enjoyed anytime and is a healthier choice among sodas. Provides a sense of refreshment and energy. The practical packaging makes it convenient to carry.';
+
+  @override
+  String get spritedescription => 'Sprite is a refreshing fizzy drink with natural lemon and lime flavors. Provides a sense of purity and refreshment with every sip, perfect for hot days and light meals. Contains balanced carbonation for a joyful feeling. Suitable for all ages and adds a refreshing touch to any meal. Can be enjoyed alone or with food.';
+
+  @override
+  String get applegrapejuicedescription => 'A delicious blend of sweet apple and juicy grapes, rich in essential vitamins and minerals. The 2-liter bottle is perfect for sharing with family and friends. Offers a natural and tasty flavor with every sip, enhancing health and energy. Suitable for both kids and adults, making it an excellent choice for breakfast or a light snack. Free from artificial additives, preserving the natural fruit taste.';
+
+  @override
+  String get orangejuicedescription => 'Fresh orange juice packed with natural vitamin C and a sweet, refreshing taste. Perfect for enjoying a healthy, revitalizing drink any time of the day. Boosts immunity and provides natural energy for both children and adults. Can be enjoyed alone or with meals to increase freshness and flavor. Carefully prepared to preserve natural taste and nutritional value.';
+
+  @override
+  String get beefbonedescription => 'Fresh beef bones, rich in flavor, ideal for soups, broths, and slow-cooked recipes. High in protein and essential nutrients for the body. Adds deep, rich taste to any meal. Can be used for daily cooking or special occasions. High-quality product ensures natural flavor and excellent tenderness when cooked.';
+
+  @override
+  String get broilerchickendescription => 'Tender and juicy broiler chicken, perfect for grilling or frying. Sourced from high-quality farms to ensure healthy and delicious meat. Rich in protein and enhances the flavor of daily meals. Can be prepared in various ways to suit all tastes. Guarantees a delightful and tasty eating experience with every meal.';
+
+  @override
+  String get ricedsescription => 'High-quality long-grain rice that cooks fluffy and aromatic. Perfect for daily meals, biryani, or fried rice. Provides a balanced taste and excellent texture for every recipe. Rich in carbohydrates and offers a satisfying meal. Can be paired with all types of dishes for a nutritious and delicious touch.';
+
+  @override
+  String get pulsesdescription => 'Pulses rich in protein and essential nutrients. Suitable for soups, salads, and traditional dishes. 100% natural and organic for better health. Provides energy and refreshment, making it a balanced nutritional choice. Easily incorporated into a variety of meals to add high nutritional value.';
+
+  @override
+  String get eggchickenreddescription => 'Fresh red chicken eggs with a rich taste and high nutritional value. Ideal for breakfast, baking, or daily cooking. Packed with essential proteins and minerals for the body. Adds natural and delicious flavor to your meals. High-quality product ensures food safety and excellent taste every time.';
+
+  @override
+  String get eggchickenwhitedescription => 'Fresh white chicken eggs with a light, delicious flavor. Rich in protein and essential nutrients. Suitable for daily meals and various recipes. Provides a feeling of fullness and energy. Natural and safe product with high nutritional value suitable for the whole family.';
+
+  @override
+  String get eggpastadescription => 'Classic egg pasta made from real eggs for a rich and smooth texture. Cooks quickly and pairs well with all types of sauces. Gives your meal a delicious and distinctive taste. Can be served as a main or side dish. High-quality product ensures perfect taste and excellent texture.';
+
+  @override
+  String get eggnoodlesdescription => 'Soft and tasty egg noodles made from high-quality ingredients. Perfect for quick stir-frying, soups, and Asian dishes. Provides a rich taste and distinctive flavor to every meal. Can be enjoyed alone or with various sauces. Natural product guarantees excellent cooking quality and texture.';
+
+  @override
+  String get mayonnaisegglessdescription => 'Eggless mayonnaise, smooth and creamy, perfect for sandwiches, salads, and sauces. Suitable for vegetarians and provides a rich, smooth flavor. Adds a delicious touch without affecting texture. Can be used with all types of food to enhance taste. Healthy and natural product ensuring the best quality.';
+
+  @override
+  String get roundcuteggnoodlesdescription => 'Round-cut egg spaghetti for lovers of rich flavor and firm texture. Excellent for soups or quick meals. Provides a unique dining experience with every dish. Can be combined with sauces or broths to enhance taste. High-quality product ensures a delicious and nutritious meal.';
+
+  @override
+  String get gingerdescription => 'Fresh and aromatic ginger, used in cooking and natural remedies. Adds a spicy flavor and multiple health benefits. Improves digestion and boosts energy. Suitable for cooking, juices, or hot drinks. Natural product ensures quality and distinctive flavor for every meal.';
+
+  @override
+  String get bellpeppereddescription => 'Bright red bell peppers rich in vitamins and antioxidants. Sweet and crunchy, perfect for salads, grilling, and frying. Adds attractive color and rich flavor to dishes. Packed with essential nutrients for health. High-quality natural product ensures great taste and visual appeal.';
+
+  @override
+  String get redappledescription => 'Crisp and juicy red apples rich in natural sweetness. Perfect for snacks, baking, or juices. Provides energy and high nutritional benefits for children and adults. Contains natural antioxidants that promote health. Can be eaten directly or used in various recipes.';
+
+  @override
+  String get organicbananasdescription => 'Natural sweet organic bananas, rich in potassium and fiber. Ideal for smoothies, snacks, and desserts. Provides quick and healthy energy for the body. Safe and natural product suitable for all ages. Can be eaten directly or incorporated into various recipes to enhance taste and nutrition.';
 }

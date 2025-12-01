@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
-import '../../../core/extension/extension.dart';
 
 import '../../../core/constant/app_images.dart';
+import '../../../core/extension/extension.dart';
 
 class BeveragesModel {
   final String image, title, subTitle, price, description;
@@ -22,14 +22,14 @@ List<BeveragesModel> beveragesItems(BuildContext context) {
       title: context.kAppLocalizations.pepsican,
       subTitle: context.kAppLocalizations.pepsicansubtitle,
       price: "\$4.99",
-      description: context.kAppLocalizations.pepsicandescription,
+      description: context.kAppLocalizations.pepsidescription,
     ),
     BeveragesModel(
       image: AppImages.kCocaColaCan,
       title: context.kAppLocalizations.cocacolacan,
       subTitle: context.kAppLocalizations.cocacolacansubtitle,
       price: "\$4.99",
-      description: context.kAppLocalizations.cocacolacandescription,
+      description: context.kAppLocalizations.cocacoladescription,
     ),
     BeveragesModel(
       image: AppImages.kDietCoca,
@@ -43,7 +43,7 @@ List<BeveragesModel> beveragesItems(BuildContext context) {
       title: context.kAppLocalizations.spritecan,
       subTitle: context.kAppLocalizations.spritecansubtitle,
       price: "\$1.50",
-      description: context.kAppLocalizations.spritecandescription,
+      description: context.kAppLocalizations.spritedescription,
     ),
     BeveragesModel(
       image: AppImages.kAppleGrapeJuice,

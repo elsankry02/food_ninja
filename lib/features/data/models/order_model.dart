@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
-import '../../../core/extension/extension.dart';
 
 import '../../../core/constant/app_images.dart';
+import '../../../core/extension/extension.dart';
 
 class OrderModel {
   final String imageOne, imageTwo, title, price, items, code;

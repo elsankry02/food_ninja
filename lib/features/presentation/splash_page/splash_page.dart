@@ -1,10 +1,10 @@
-// ignore_for_file: use_build_context_synchronously
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:food_ninja/core/constant/app_colors.dart';
 import 'package:food_ninja/core/constant/app_enums.dart';
 import 'package:food_ninja/core/constant/app_images.dart';
+import 'package:food_ninja/core/constant/app_strings.dart';
 import 'package:food_ninja/core/extension/extension.dart';
 import 'package:food_ninja/core/router/router.dart';
 import 'package:food_ninja/features/data/providers/get/get_user_provider.dart';
@@ -42,11 +42,14 @@ class _SplashPageState extends ConsumerState<SplashPage> {
           context.router.replace(LoginRoute());
         } else {
           context.router.replace(OnboardingRoute());
-          return;
         }
+        return;
       }
       if (state is GetUserSuccess) {
-        context.router.replace(MainRoute());
+        final token = prefs.getString(kToken);
+        if (token != null) {
+          context.router.replace(MainRoute());
+        }
       }
     });
     return Scaffold(

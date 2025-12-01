@@ -29,6 +29,7 @@ class LogoutNotifier extends Notifier<LogoutState> {
     try {
       await provider.logOut();
       state = LogoutSuccess();
+      ref.invalidate(dioProvider);
     } on Exception catch (e) {
       if (e is DioException) {
         final data = e.response!.data;
