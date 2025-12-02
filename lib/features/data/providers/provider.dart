@@ -2,16 +2,17 @@ import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:food_ninja/core/constant/app_strings.dart';
-import 'package:food_ninja/env.dart';
-import 'package:food_ninja/features/data/services/delete/delete_account_service.dart';
-import 'package:food_ninja/features/data/services/get/get_user_service.dart';
-import 'package:food_ninja/features/data/services/post/complete_profile_service.dart';
-import 'package:food_ninja/features/data/services/post/logout_service.dart';
-import 'package:food_ninja/features/data/services/post/register_new_user_service.dart';
-import 'package:food_ninja/features/data/services/post/resend_otp_service.dart';
-import 'package:food_ninja/features/data/services/post/verify_otp_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../../core/constant/app_strings.dart';
+import '../../../env.dart';
+import '../services/delete/delete_account_service.dart';
+import '../services/get/get_user_service.dart';
+import '../services/post/complete_profile_service.dart';
+import '../services/post/logout_service.dart';
+import '../services/post/register_new_user_service.dart';
+import '../services/post/resend_otp_service.dart';
+import '../services/post/verify_otp_service.dart';
 
 final prefsProvider = Provider<SharedPreferences>((ref) {
   throw UnimplementedError();

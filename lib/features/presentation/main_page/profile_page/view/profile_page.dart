@@ -2,21 +2,21 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:food_ninja/core/constant/app_strings.dart';
-import 'package:food_ninja/features/data/providers/delete/delete_account_provider.dart';
-import 'package:food_ninja/features/data/providers/post/logout_provider.dart';
-import 'package:food_ninja/features/data/providers/provider.dart';
-import 'package:food_ninja/features/presentation/main_page/profile_page/widget/dialog_widget.dart';
-import 'package:food_ninja/features/presentation/main_page/profile_page/widget/language_widget.dart';
-import 'package:food_ninja/features/presentation/main_page/profile_page/widget/theme_widget.dart';
 
 import '../../../../../core/components/custom_snakbar.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
+import '../../../../../core/constant/app_strings.dart';
 import '../../../../../core/extension/extension.dart';
 import '../../../../../core/router/router.dart';
+import '../../../../data/providers/delete/delete_account_provider.dart';
+import '../../../../data/providers/post/logout_provider.dart';
+import '../../../../data/providers/provider.dart';
+import '../widget/dialog_widget.dart';
+import '../widget/language_widget.dart';
 import '../widget/list_tile_items.dart';
 import '../widget/profile_list_tile_widget.dart';
+import '../widget/theme_widget.dart';
 
 @RoutePage()
 class ProfilePage extends ConsumerStatefulWidget {

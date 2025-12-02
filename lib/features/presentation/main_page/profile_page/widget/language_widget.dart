@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:food_ninja/core/components/custom_icon_button_pop.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/constant/app_enums.dart';
-import 'package:food_ninja/core/extension/extension.dart';
-import 'package:food_ninja/features/data/providers/localization_provider.dart';
-import 'package:food_ninja/features/data/providers/provider.dart';
+
+import '../../../../../core/components/custom_icon_button_pop.dart';
+import '../../../../../core/constant/app_colors.dart';
+import '../../../../../core/constant/app_enums.dart';
+import '../../../../../core/extension/extension.dart';
+import '../../../../data/providers/localization_provider.dart';
+import '../../../../data/providers/provider.dart';
 
 class LanguageWidget extends ConsumerStatefulWidget {
   const LanguageWidget({super.key});

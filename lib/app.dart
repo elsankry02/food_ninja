@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:food_ninja/core/constant/app_theme.dart';
-import 'package:food_ninja/features/data/providers/change_theme_provider.dart';
-import 'package:food_ninja/features/data/providers/localization_provider.dart';
 
+import 'core/constant/app_theme.dart';
 import 'core/router/router.dart';
+import 'features/data/providers/change_theme_provider.dart';
+import 'features/data/providers/localization_provider.dart';
 import 'l10n/app_localizations.dart';
 
 class FoodNinja extends ConsumerWidget {
@@ -18,7 +18,7 @@ class FoodNinja extends ConsumerWidget {
     final currentTheme = notifier.currentTheme;
     final locale = state is LocalizationSuccess
         ? Locale(state.isSelectedLang)
-        : const Locale("en");
+        : const Locale("ar");
     return MaterialApp.router(
       routerConfig: router.config(),
       debugShowCheckedModeBanner: false,

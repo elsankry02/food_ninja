@@ -1,11 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/features/data/providers/get/get_user_provider.dart';
 
 import '../../../../../core/constant/app_colors.dart';
+import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
+import '../../../../data/providers/get/get_user_provider.dart';
 
 class ProfileListTileWidget extends ConsumerStatefulWidget {
   const ProfileListTileWidget({super.key});

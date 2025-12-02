@@ -1,15 +1,15 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/components/custom_icon_button_pop.dart';
-import 'package:food_ninja/core/components/custom_snakbar.dart';
-import 'package:food_ninja/features/presentation/main_page/favourite_page/widget/favourite_dialog_widget.dart';
 
+import '../../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../../core/components/custom_primary_button.dart';
+import '../../../../../core/components/custom_snakbar.dart';
 import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
 import '../../../../../core/router/router.dart';
+import '../../favourite_page/widget/favourite_dialog_widget.dart';
 
 class BottomSheetWidget extends StatelessWidget {
   const BottomSheetWidget({super.key});

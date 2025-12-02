@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/router/router.dart';
-import 'package:food_ninja/features/presentation/main_page/chat_page/widgets/message_tile_widget.dart';
 
 import '../../../../../core/components/custom_primary_button.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
+import '../../../../../core/router/router.dart';
+import '../widgets/message_tile_widget.dart';
 
 @RoutePage()
 class ChatPage extends StatefulWidget {

@@ -2,8 +2,9 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:food_ninja/core/constant/app_strings.dart';
-import 'package:food_ninja/features/data/providers/provider.dart';
+
+import '../../../../core/constant/app_strings.dart';
+import '../provider.dart';
 
 abstract class CompleteProfileState {}
 

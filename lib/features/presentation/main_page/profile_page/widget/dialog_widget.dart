@@ -1,7 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/components/custom_primary_button.dart';
-import 'package:food_ninja/core/extension/extension.dart';
+
+import '../../../../../core/components/custom_primary_button.dart';
+import '../../../../../core/extension/extension.dart';
 
 class DialogWidget extends StatelessWidget {
   final String title, content, confirmTitle, cancelTitle;

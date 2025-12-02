@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:food_ninja/features/data/providers/provider.dart';
+
+import 'provider.dart';
 
 abstract class ChangeThemeState {}
 

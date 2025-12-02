@@ -1,15 +1,16 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/constant/app_enums.dart';
-import 'package:food_ninja/core/constant/app_images.dart';
-import 'package:food_ninja/core/constant/app_strings.dart';
-import 'package:food_ninja/core/extension/extension.dart';
-import 'package:food_ninja/core/router/router.dart';
-import 'package:food_ninja/features/data/providers/get/get_user_provider.dart';
-import 'package:food_ninja/features/data/providers/localization_provider.dart';
-import 'package:food_ninja/features/data/providers/provider.dart';
+
+import '../../../core/constant/app_colors.dart';
+import '../../../core/constant/app_enums.dart';
+import '../../../core/constant/app_images.dart';
+import '../../../core/constant/app_strings.dart';
+import '../../../core/extension/extension.dart';
+import '../../../core/router/router.dart';
+import '../../data/providers/get/get_user_provider.dart';
+import '../../data/providers/localization_provider.dart';
+import '../../data/providers/provider.dart';
 
 @RoutePage()
 class SplashPage extends ConsumerStatefulWidget {

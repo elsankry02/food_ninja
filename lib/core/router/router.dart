@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/constant/app_enums.dart';
 
 import '../../features/presentation/login_in_page/view/login_page.dart';
 import '../../features/presentation/main_page/cart_page/view/cart_page.dart';
@@ -25,6 +24,7 @@ import '../../features/presentation/product_details_page/view/product_details_pa
 import '../../features/presentation/sign_up_page/view/sign_up_page.dart';
 import '../../features/presentation/sign_up_page/view/signup_process_page.dart';
 import '../../features/presentation/splash_page/splash_page.dart';
+import '../constant/app_enums.dart';
 
 part 'router.gr.dart';
 

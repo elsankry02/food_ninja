@@ -3,17 +3,17 @@ import 'dart:async';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:food_ninja/core/components/custom_snakbar.dart';
-import 'package:food_ninja/core/constant/app_enums.dart';
-import 'package:food_ninja/core/router/router.dart';
-import 'package:food_ninja/features/data/providers/post/resend_otp_provider.dart';
-import 'package:food_ninja/features/data/providers/post/verify_otp_provider.dart';
 
 import '../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../core/components/custom_primary_button.dart';
+import '../../../../core/components/custom_snakbar.dart';
 import '../../../../core/constant/app_colors.dart';
+import '../../../../core/constant/app_enums.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/extension/extension.dart';
+import '../../../../core/router/router.dart';
+import '../../../data/providers/post/resend_otp_provider.dart';
+import '../../../data/providers/post/verify_otp_provider.dart';
 import '../widget/otp_pin_put_widget.dart';
 
 @RoutePage()
@@ -201,9 +201,9 @@ class _OtpPageState extends ConsumerState<OtpPage> {
                   },
                   validator: (value) {
                     if (value!.isEmpty) {
-                      return "Please enter the OTP";
+                      return context.kAppLocalizations.pleaseentertheotp;
                     } else if (value.length < 6) {
-                      return "OTP must be 6 digits";
+                      return context.kAppLocalizations.otpmustbe6digits;
                     }
                     return null;
                   },

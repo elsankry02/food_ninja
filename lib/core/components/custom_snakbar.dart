@@ -12,7 +12,6 @@ ErrorMessage(BuildContext context, {required String message}) {
 // Success Message
 SuccessMessage(BuildContext context, {required String message}) {
   showTopSnackBar(
-    
     Overlay.of(context),
     CustomSnackBar.success(message: message),
   );

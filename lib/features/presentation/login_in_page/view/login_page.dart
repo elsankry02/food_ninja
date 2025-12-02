@@ -2,19 +2,19 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:food_ninja/core/components/custom_icon_button_pop.dart';
-import 'package:food_ninja/core/constant/app_enums.dart';
-import 'package:food_ninja/features/data/providers/post/resend_otp_provider.dart';
-import 'package:food_ninja/features/presentation/main_page/profile_page/widget/language_widget.dart';
 
+import '../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../core/components/custom_primary_button.dart';
 import '../../../../core/components/custom_snakbar.dart';
 import '../../../../core/components/custom_text_form_field.dart';
 import '../../../../core/constant/app_colors.dart';
+import '../../../../core/constant/app_enums.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/constant/app_svgs.dart';
 import '../../../../core/extension/extension.dart';
 import '../../../../core/router/router.dart';
+import '../../../data/providers/post/resend_otp_provider.dart';
+import '../../main_page/profile_page/widget/language_widget.dart';
 import '../widget/social_connection_widget.dart';
 
 @RoutePage()
@@ -111,14 +111,14 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                         Image.asset(AppImages.kLogo),
                         Text(
                           textAlign: TextAlign.center,
-                          "FoodNinja",
+                          context.kAppLocalizations.foodninja,
                           style: context.kTextTheme.displayLarge!.copyWith(
                             color: AppColors.kPrimaryColor,
                           ),
                         ),
                         Text(
                           textAlign: TextAlign.center,
-                          "Deliever Favorite Food",
+                          context.kAppLocalizations.delieverfavoritefood,
                           style: context.kTextTheme.labelMedium!.copyWith(
                             fontWeight: FontWeight.w600,
                             color: AppColors.kTitle,

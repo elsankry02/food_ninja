@@ -23,7 +23,7 @@ class ProfileImagePickerWidget extends StatelessWidget {
             child: SizedBox(
               width: context.height * 0.180,
               height: context.height * 0.180,
-              child: image, // 💥 هنا أصبح widget
+              child: image,
             ),
           ),
           Container(

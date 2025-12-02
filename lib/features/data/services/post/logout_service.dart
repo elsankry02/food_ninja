@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:food_ninja/core/constant/app_strings.dart';
+
+import '../../../../core/constant/app_strings.dart';
 
 class LogOutService {
   final Dio dio;

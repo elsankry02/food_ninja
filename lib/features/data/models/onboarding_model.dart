@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/extension/extension.dart';
+import '../../../core/extension/extension.dart';
 
 import '../../../core/constant/app_images.dart';
 

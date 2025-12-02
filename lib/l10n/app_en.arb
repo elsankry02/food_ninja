@@ -173,13 +173,13 @@
 "terms": "Terms",
   "usernameisrequired": "Username is required",
   "usernamemustbeatleast3chars": "Username must be at least 3 characters",
-   "fullnameisrequired": "Fullname is required",
+  "fullnameisrequired": "Fullname is required",
   "fullnamemustbeatleast3chars": "Fullname must be at least 3 characters",
   "pleaseselectaprofileimage": "Please select a profile image from the camera or gallery",
-   "profilecompletedsuccessfully": "Profile completed successfully",
-   "welcomebackloginsuccess": "Welcome back! You have logged in successfully.",
-   "accounthasbeendeletedsuccessfully": "Account has been deleted successfully",
-     "confirmdelete": "Confirm Delete",
+  "profilecompletedsuccessfully": "Profile completed successfully",
+  "welcomebackloginsuccess": "Welcome back! You have logged in successfully.",
+  "accounthasbeendeletedsuccessfully": "Account has been deleted successfully",
+  "confirmdelete": "Confirm Delete",
   "confirmdeletemessage": "Are you sure you want to delete your account?",
   "confirmlogout": "Confirm Logout",
   "areyousurelogout": "Are you sure you want to log out?",
@@ -205,5 +205,7 @@
   "gingerdescription": "Fresh and aromatic ginger, used in cooking and natural remedies. Adds a spicy flavor and multiple health benefits. Improves digestion and boosts energy. Suitable for cooking, juices, or hot drinks. Natural product ensures quality and distinctive flavor for every meal.",
   "bellpeppereddescription": "Bright red bell peppers rich in vitamins and antioxidants. Sweet and crunchy, perfect for salads, grilling, and frying. Adds attractive color and rich flavor to dishes. Packed with essential nutrients for health. High-quality natural product ensures great taste and visual appeal.",
   "redappledescription": "Crisp and juicy red apples rich in natural sweetness. Perfect for snacks, baking, or juices. Provides energy and high nutritional benefits for children and adults. Contains natural antioxidants that promote health. Can be eaten directly or used in various recipes.",
-  "organicbananasdescription": "Natural sweet organic bananas, rich in potassium and fiber. Ideal for smoothies, snacks, and desserts. Provides quick and healthy energy for the body. Safe and natural product suitable for all ages. Can be eaten directly or incorporated into various recipes to enhance taste and nutrition."
+  "organicbananasdescription": "Natural sweet organic bananas, rich in potassium and fiber. Ideal for smoothies, snacks, and desserts. Provides quick and healthy energy for the body. Safe and natural product suitable for all ages. Can be eaten directly or incorporated into various recipes to enhance taste and nutrition.",
+  "otpmustbe6digits": "otp must be 6 digits",
+  "pleaseentertheotp": "please enter the otp"
 }

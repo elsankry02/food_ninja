@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/constant/app_strings.dart';
+
+import 'app_colors.dart';
+import 'app_strings.dart';
 
 class AppTheme {
   static final lightTheme = ThemeData(
