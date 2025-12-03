@@ -63,7 +63,7 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
           context,
           message: context.kAppLocalizations.userregisteredsuccessfully,
         );
-        context.router.replace(
+        context.router.push(
           OtpRoute(
             isLogin: true,
             contentTybe: contentTybe,

@@ -259,6 +259,7 @@ class _OtpPageState extends ConsumerState<OtpPage> {
                     onTap: verifyOtp,
                   ),
                 ),
+                SizedBox(height: context.height * 0.020),
               ],
             ),
           ),

@@ -18,7 +18,7 @@ class LanguageWidget extends ConsumerStatefulWidget {
 class _LanguageWidgetState extends ConsumerState<LanguageWidget> {
   late String isSelectedLang;
   getLang() {
-    isSelectedLang = ref.read(prefsProvider).getString("lang") ?? "en";
+    isSelectedLang = ref.read(prefsProvider).getString("lang") ?? "ar";
   }
 
   @override

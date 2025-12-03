@@ -64,7 +64,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
           context,
           message: context.kAppLocalizations.otpresentsuccessfully,
         );
-        context.router.replace(
+        context.router.push(
           OtpRoute(
             isLogin: false,
             contentTybe: contentTybe,
