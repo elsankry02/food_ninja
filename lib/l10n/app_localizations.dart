@@ -62,8 +62,7 @@ import 'app_localizations_en.dart';
 /// be consistent with the languages listed in the AppLocalizations.supportedLocales
 /// property.
 abstract class AppLocalizations {
-  AppLocalizations(String locale)
-    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  AppLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -71,8 +70,7 @@ abstract class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  static const LocalizationsDelegate<AppLocalizations> delegate =
-      _AppLocalizationsDelegate();
+  static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -84,18 +82,17 @@ abstract class AppLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
-      <LocalizationsDelegate<dynamic>>[
-        delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ];
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
+    delegate,
+    GlobalMaterialLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+  ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('ar'),
-    Locale('en'),
+    Locale('en')
   ];
 
   /// No description provided for @delieverfavoritefood.
@@ -887,13 +884,13 @@ abstract class AppLocalizations {
   /// No description provided for @arabic.
   ///
   /// In en, this message translates to:
-  /// **'Arabic'**
+  /// **'ar'**
   String get arabic;
 
   /// No description provided for @english.
   ///
   /// In en, this message translates to:
-  /// **'English'**
+  /// **'en'**
   String get english;
 
   /// No description provided for @resendOtpPrefix.
@@ -1345,10 +1342,105 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'please enter the otp'**
   String get pleaseentertheotp;
+
+  /// No description provided for @filters.
+  ///
+  /// In en, this message translates to:
+  /// **'Filters'**
+  String get filters;
+
+  /// No description provided for @categories.
+  ///
+  /// In en, this message translates to:
+  /// **'Categories'**
+  String get categories;
+
+  /// No description provided for @eggs.
+  ///
+  /// In en, this message translates to:
+  /// **'Eggs'**
+  String get eggs;
+
+  /// No description provided for @noodlesandpasta.
+  ///
+  /// In en, this message translates to:
+  /// **'Noodles & Pasta'**
+  String get noodlesandpasta;
+
+  /// No description provided for @chipsandcrisps.
+  ///
+  /// In en, this message translates to:
+  /// **'Chips & Crisps'**
+  String get chipsandcrisps;
+
+  /// No description provided for @fastfood.
+  ///
+  /// In en, this message translates to:
+  /// **'Fast Food'**
+  String get fastfood;
+
+  /// No description provided for @brand.
+  ///
+  /// In en, this message translates to:
+  /// **'Brand'**
+  String get brand;
+
+  /// No description provided for @individualcollection.
+  ///
+  /// In en, this message translates to:
+  /// **'Individual Collection'**
+  String get individualcollection;
+
+  /// No description provided for @cocola.
+  ///
+  /// In en, this message translates to:
+  /// **'Cocola'**
+  String get cocola;
+
+  /// No description provided for @ifad.
+  ///
+  /// In en, this message translates to:
+  /// **'Ifad'**
+  String get ifad;
+
+  /// No description provided for @kazifarmas.
+  ///
+  /// In en, this message translates to:
+  /// **'Kazi Farmas'**
+  String get kazifarmas;
+
+  /// No description provided for @applyfilter.
+  ///
+  /// In en, this message translates to:
+  /// **'Apply Filter'**
+  String get applyfilter;
+
+  /// No description provided for @freshfruitsvegetablestitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Fresh Fruits and Vegetables'**
+  String get freshfruitsvegetablestitle;
+
+  /// No description provided for @freshfruitsvegetablesdescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Fresh fruits and vegetables are carefully selected to ensure top quality and freshness. They provide essential vitamins, minerals, and fiber for a healthy lifestyle. Perfect for salads, cooking, or snacking. Sourced locally whenever possible to support sustainable farming. Enjoy the natural taste and vibrant colors in every bite.'**
+  String get freshfruitsvegetablesdescription;
+
+  /// No description provided for @freshfruitsvegetablessubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'1kg, Price'**
+  String get freshfruitsvegetablessubtitle;
+
+  /// No description provided for @addedtocart.
+  ///
+  /// In en, this message translates to:
+  /// **'Added to cart'**
+  String get addedtocart;
 }
 
-class _AppLocalizationsDelegate
-    extends LocalizationsDelegate<AppLocalizations> {
+class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
   const _AppLocalizationsDelegate();
 
   @override
@@ -1357,26 +1449,25 @@ class _AppLocalizationsDelegate
   }
 
   @override
-  bool isSupported(Locale locale) =>
-      <String>['ar', 'en'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['ar', 'en'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
 }
 
 AppLocalizations lookupAppLocalizations(Locale locale) {
+
+
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'ar':
-      return AppLocalizationsAr();
-    case 'en':
-      return AppLocalizationsEn();
+    case 'ar': return AppLocalizationsAr();
+    case 'en': return AppLocalizationsEn();
   }
 
   throw FlutterError(
     'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
     'an issue with the localizations generation tool. Please file an issue '
     'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.',
+    'that was used.'
   );
 }

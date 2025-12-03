@@ -6,8 +6,9 @@ import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/extension/extension.dart';
 
 class CartDetailsWidget extends StatelessWidget {
-  final String image, title, subtitle, price, count;
+  final String image, title, subtitle, price;
   final void Function()? minusOnTap, plusOnTap, onPressed;
+  final int count;
   const CartDetailsWidget({
     super.key,
     required this.image,
@@ -16,7 +17,7 @@ class CartDetailsWidget extends StatelessWidget {
     required this.price,
     this.minusOnTap,
     this.plusOnTap,
-    required this.count,
+    this.count = 1,
     this.onPressed,
   });
 

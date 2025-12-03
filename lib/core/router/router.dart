@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/features/presentation/main_page/home_page/view/filters_page.dart';
 
 import '../../features/presentation/login_in_page/view/login_page.dart';
 import '../../features/presentation/main_page/cart_page/view/cart_page.dart';
@@ -56,6 +57,7 @@ class AppRouter extends RootStackRouter {
     AutoRoute(page: PaymentMethodRoute.page),
     AutoRoute(page: LoginRoute.page),
     AutoRoute(page: MainRoute.page),
+    AutoRoute(page: FiltersRoute.page),
     AutoRoute(page: NotifiactionRoute.page),
   ];
 }

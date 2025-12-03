@@ -1,5 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:food_ninja/features/data/models/explore_model.dart';
+import 'package:food_ninja/features/presentation/main_page/home_page/widgets/filter_items_widget.dart';
 
 import '../../../../../core/components/custom_home_appbar.dart';
 import '../../../../../core/components/custom_primary_button.dart';
@@ -23,6 +25,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final searchController = TextEditingController();
+  int count = 1;
   @override
   void dispose() {
     searchController.dispose();
@@ -81,9 +84,9 @@ class _HomePageState extends State<HomePage> {
                       margin: EdgeInsetsDirectional.only(
                         end: context.height * 0.015,
                       ),
-                      onTap: () => ErrorMessage(
+                      onTap: () => SuccessMessage(
                         context,
-                        message: context.kAppLocalizations.comingsoon,
+                        message: context.kAppLocalizations.addedtocart,
                       ),
                       containerOnTap: () => context.router.push(
                         ProductDetailsRoute(
@@ -120,6 +123,29 @@ class _HomePageState extends State<HomePage> {
               ),
               SizedBox(height: context.height * 0.020),
               SizedBox(
+                height: context.height * 0.110,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: exploreModel(context).length,
+                  itemBuilder: (context, index) {
+                    final data = exploreModel(context)[index];
+                    return FilterItem(
+                      data: data,
+                      onTap: () => context.router.push(
+                        ProductDetailsRoute(
+                          image: data.image,
+                          title: data.title,
+                          subTitle: data.subTitle ?? "",
+                          price: data.price ?? "",
+                          description: data.description ?? "",
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+              SizedBox(height: context.height * 0.020),
+              SizedBox(
                 height: context.height * 0.280,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -143,9 +169,9 @@ class _HomePageState extends State<HomePage> {
                           description: data.description,
                         ),
                       ),
-                      onTap: () => ErrorMessage(
+                      onTap: () => SuccessMessage(
                         context,
-                        message: context.kAppLocalizations.comingsoon,
+                        message: context.kAppLocalizations.addedtocart,
                       ),
                     );
                   },

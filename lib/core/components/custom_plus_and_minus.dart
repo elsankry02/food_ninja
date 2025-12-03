@@ -4,6 +4,9 @@ import '../constant/app_images.dart';
 import '../extension/extension.dart';
 
 class CustomPlusAndMinus extends StatelessWidget {
+  final void Function()? minusOnTap, plusOnTap;
+  final String price;
+  final int count;
   const CustomPlusAndMinus({
     super.key,
     required this.minusOnTap,
@@ -11,9 +14,6 @@ class CustomPlusAndMinus extends StatelessWidget {
     required this.plusOnTap,
     required this.price,
   });
-
-  final void Function()? minusOnTap, plusOnTap;
-  final String count, price;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class CustomPlusAndMinus extends StatelessWidget {
             ),
             SizedBox(width: context.height * 0.016),
             Text(
-              count,
+              count.toString(),
               style: context.kTextTheme.titleMedium!.copyWith(
                 fontWeight: FontWeight.w600,
                 color: context.kChangeTheme.hintColor,

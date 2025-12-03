@@ -57,6 +57,7 @@ class AppImages {
   static const kOrderOops = 'assets/images/order-oops.png';
   static const kOrderAccepted = 'assets/images/order-accepted.png';
   static const kMeatandFish = 'assets/images/meat-and-fish.png';
+  static const kFreshFruits = 'assets/images/fresh-fruits.png';
   // ================== Colors / Others ==================
   static const kMintDark = 'assets/images/Mint_Dark.png';
 }

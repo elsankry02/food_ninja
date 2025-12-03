@@ -19,8 +19,6 @@ class CartPage extends StatefulWidget {
 }
 
 class _CartPageState extends State<CartPage> {
-  int count = 1;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,16 +68,16 @@ class _CartPageState extends State<CartPage> {
                         title: data.title,
                         subtitle: data.subTitle,
                         price: data.price,
-                        count: "$count",
+                        count: data.count,
                         plusOnTap: () {
                           setState(() {
-                            count++;
+                            data.count++;
                           });
                         },
                         minusOnTap: () {
-                          if (count > 1) {
+                          if (data.count > 1) {
                             setState(() {
-                              count--;
+                              data.count--;
                             });
                           }
                         },

@@ -5,13 +5,14 @@ import '../../../core/extension/extension.dart';
 
 class BeveragesModel {
   final String image, title, subTitle, price, description;
-
+  int count;
   BeveragesModel({
     required this.image,
     required this.title,
     required this.subTitle,
     required this.price,
     required this.description,
+    this.count = 1,
   });
 }
 

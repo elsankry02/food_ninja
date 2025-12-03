@@ -7,7 +7,6 @@ import '../constant/app_images.dart';
 import '../constant/app_svgs.dart';
 import '../extension/extension.dart';
 import '../router/router.dart';
-import 'custom_snakbar.dart';
 import 'custom_text_form_field.dart';
 
 class CustomHomeAppbar extends StatelessWidget {
@@ -68,12 +67,8 @@ class CustomHomeAppbar extends StatelessWidget {
             fillColor: context.kChangeTheme.primaryColor,
             controller: searchController,
           ),
-          // TODO : later (FillterPage)
           trailing: GestureDetector(
-            onTap: () => ErrorMessage(
-              context,
-              message: context.kAppLocalizations.comingsoon,
-            ),
+            onTap: () => context.router.push(FiltersRoute()),
             child: Container(
               padding: EdgeInsets.symmetric(
                 horizontal: context.height * 0.016,

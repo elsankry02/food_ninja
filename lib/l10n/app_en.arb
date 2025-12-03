@@ -131,8 +131,8 @@
 "items": "Items",
 "message": "Message",
 "nomessageyet": "No message yet",
-"arabic":"Arabic",
-"english":"English",
+"arabic":"ar",
+"english":"en",
 "resendOtpPrefix": "Resend OTP in 00:",
 "onboardingtitleone": "Find your Comfort\nFood here",
 "onboardingsubtitleone": "Here You Can find a chef or dish for every\ntaste and color. Enjoy!",
@@ -207,5 +207,23 @@
   "redappledescription": "Crisp and juicy red apples rich in natural sweetness. Perfect for snacks, baking, or juices. Provides energy and high nutritional benefits for children and adults. Contains natural antioxidants that promote health. Can be eaten directly or used in various recipes.",
   "organicbananasdescription": "Natural sweet organic bananas, rich in potassium and fiber. Ideal for smoothies, snacks, and desserts. Provides quick and healthy energy for the body. Safe and natural product suitable for all ages. Can be eaten directly or incorporated into various recipes to enhance taste and nutrition.",
   "otpmustbe6digits": "otp must be 6 digits",
-  "pleaseentertheotp": "please enter the otp"
+  "pleaseentertheotp": "please enter the otp",
+  "filters": "Filters",
+  "categories": "Categories",
+  "eggs": "Eggs",
+  "noodlesandpasta": "Noodles & Pasta",
+  "chipsandcrisps": "Chips & Crisps",
+  "fastfood": "Fast Food",
+  "brand": "Brand",
+  "individualcollection": "Individual Collection",
+  "cocola": "Cocola",
+  "ifad": "Ifad",
+  "kazifarmas": "Kazi Farmas",
+  "applyfilter": "Apply Filter",
+  "freshfruitsvegetablestitle": "Fresh Fruits and Vegetables",
+  "freshfruitsvegetablesdescription": "Fresh fruits and vegetables are carefully selected to ensure top quality and freshness. They provide essential vitamins, minerals, and fiber for a healthy lifestyle. Perfect for salads, cooking, or snacking. Sourced locally whenever possible to support sustainable farming. Enjoy the natural taste and vibrant colors in every bite.",
+  "freshfruitsvegetablessubtitle":"1kg, Price",
+  "addedtocart": "Added to cart"
+
+
 }

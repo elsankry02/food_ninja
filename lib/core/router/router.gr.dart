@@ -123,6 +123,22 @@ class FavouriteRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [FiltersPage]
+class FiltersRoute extends PageRouteInfo<void> {
+  const FiltersRoute({List<PageRouteInfo>? children})
+    : super(FiltersRoute.name, initialChildren: children);
+
+  static const String name = 'FiltersRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const FiltersPage();
+    },
+  );
+}
+
+/// generated route for
 /// [GroceriesPage]
 class GroceriesRoute extends PageRouteInfo<void> {
   const GroceriesRoute({List<PageRouteInfo>? children})

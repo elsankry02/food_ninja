@@ -14,14 +14,3 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
-showDialog(
-context: context,
-builder: (context) {
-return FavouriteDialog(
-image: AppImages.kOrderAccepted,
-title: context.kAppLocalizations.yourorderaccepted,
-subTitle: context.kAppLocalizations.youritemsplaced,
-buttonTitle: context.kAppLocalizations.trackorder,
-);
-},
-),

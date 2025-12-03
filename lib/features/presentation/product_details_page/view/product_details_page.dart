@@ -66,7 +66,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                       isSelected ? Icons.favorite : Icons.favorite_border,
                       color: isSelected
                           ? AppColors.kRed
-                          : context.kChangeTheme.primaryColorLight,
+                          : context.kChangeTheme.hintColor,
                     ),
                     onPressed: () {
                       if (isSelected) {
@@ -97,7 +97,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
               ),
               SizedBox(height: context.height * 0.030),
               CustomPlusAndMinus(
-                count: "$count",
+                count: count,
                 plusOnTap: () {
                   setState(() {
                     count++;
@@ -161,9 +161,9 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                 colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
               ),
               borderRadius: BorderRadius.circular(context.height * 0.015),
-              onTap: () => ErrorMessage(
+              onTap: () => SuccessMessage(
                 context,
-                message: context.kAppLocalizations.comingsoon,
+                message: context.kAppLocalizations.addedtocart,
               ),
             ),
           ),

@@ -51,8 +51,8 @@ class _PersonalDetailsPageState extends ConsumerState<PersonalDetailsPage> {
   void userData() {
     final notifier = ref.read(getUserProvider.notifier).userModel;
     if (notifier == null) return;
-    usernameController.text = notifier.username;
-    nameController.text = notifier.name;
+    usernameController.text = notifier.username ?? "";
+    nameController.text = notifier.name ?? "";
     emailController.text = notifier.email;
     file = null;
   }

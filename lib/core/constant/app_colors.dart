@@ -18,4 +18,6 @@ abstract class AppColors {
   static const kBlack = Color(0xff000000);
   static const kRed = Color(0xffFF4B4B);
   static const kOrderNowTwo = Color(0xff6B3A5B);
+  static const kPulses = Color(0xfffef1e4);
+  static const kRice = Color(0xffe5f3ea);
 }

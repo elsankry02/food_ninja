@@ -1,6 +1,5 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
-
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -34,8 +33,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get fillinyourbiotogetstarted => 'Fill in your bio to get started';
 
   @override
-  String get thisdatawillbedisplayedyouraccountprofileforsecurity =>
-      'This data will be displayed in your account profile for security';
+  String get thisdatawillbedisplayedyouraccountprofileforsecurity => 'This data will be displayed in your account profile for security';
 
   @override
   String get username => 'User name';
@@ -83,8 +81,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get enter6digitverifycode => 'Enter 6-digit verification code';
 
   @override
-  String get entertheotpcodesenttoyouremail =>
-      'Enter the OTP code sent to your email';
+  String get entertheotpcodesenttoyouremail => 'Enter the OTP code sent to your email';
 
   @override
   String get codemustbe6digits => 'Code must be 6 digits';
@@ -291,16 +288,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get findyourcomfortfoodhere => 'Find your comfort food here';
 
   @override
-  String get hereyoucanfindacheforforalltasteandcolorenjoy =>
-      'Here you can find a chef or dish for every taste and color. Enjoy!';
+  String get hereyoucanfindacheforforalltasteandcolorenjoy => 'Here you can find a chef or dish for every taste and color. Enjoy!';
 
   @override
-  String get foodninjaiswhereyourcomfortfoodlives =>
-      'Food Ninja is where your comfort food lives';
+  String get foodninjaiswhereyourcomfortfoodlives => 'Food Ninja is where your comfort food lives';
 
   @override
-  String get enjoyafastandsmoothfooddeliveryatyourdoorstep =>
-      'Enjoy a fast and smooth food delivery at your doorstep';
+  String get enjoyafastandsmoothfooddeliveryatyourdoorstep => 'Enjoy a fast and smooth food delivery at your doorstep';
 
   @override
   String get beefbone => 'Beef Bone';
@@ -408,10 +402,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get nomessageyet => 'No message yet';
 
   @override
-  String get arabic => 'Arabic';
+  String get arabic => 'ar';
 
   @override
-  String get english => 'English';
+  String get english => 'en';
 
   @override
   String get resendOtpPrefix => 'Resend OTP in 00:';
@@ -420,20 +414,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get onboardingtitleone => 'Find your Comfort\nFood here';
 
   @override
-  String get onboardingsubtitleone =>
-      'Here You Can find a chef or dish for every\ntaste and color. Enjoy!';
+  String get onboardingsubtitleone => 'Here You Can find a chef or dish for every\ntaste and color. Enjoy!';
 
   @override
-  String get onboardingtitletwo =>
-      'Food Ninja is Where Your\nComfort Food Lives';
+  String get onboardingtitletwo => 'Food Ninja is Where Your\nComfort Food Lives';
 
   @override
-  String get onboardingsubtitletwo =>
-      'Enjoy a fast and smooth food delivery at\nyour doorstep';
+  String get onboardingsubtitletwo => 'Enjoy a fast and smooth food delivery at\nyour doorstep';
 
   @override
-  String get otpsentsuccessfully =>
-      'OTP sent successfully, please verify to continue';
+  String get otpsentsuccessfully => 'OTP sent successfully, please verify to continue';
 
   @override
   String get userregisteredsuccessfully => 'User registered successfully';
@@ -442,8 +432,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get deleteaccount => 'Delete Account';
 
   @override
-  String get areyousureyouwanttodeleteyouraccount =>
-      'Are you sure you want to delete your account?';
+  String get areyousureyouwanttodeleteyouraccount => 'Are you sure you want to delete your account?';
 
   @override
   String get delete => 'Delete';
@@ -458,8 +447,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get areyousureyouwanttologout => 'Are you sure you want to logout?';
 
   @override
-  String get namemustbeatleastcharacters =>
-      'Name must be at least 4 characters';
+  String get namemustbeatleastcharacters => 'Name must be at least 4 characters';
 
   @override
   String get pleasechooseanavatarimage => 'Please choose an avatar image';
@@ -507,8 +495,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get yourorderaccepted => 'Your Order has been accepted';
 
   @override
-  String get youritemsplaced =>
-      'Your items have been placed and are on their way to being processed.';
+  String get youritemsplaced => 'Your items have been placed and are on their way to being processed.';
 
   @override
   String get selectmethod => 'Select Method';
@@ -523,8 +510,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get placeorder => 'Place Order';
 
   @override
-  String get byplacinganorderyouagreetoour =>
-      'By placing an order you agree to our';
+  String get byplacinganorderyouagreetoour => 'By placing an order you agree to our';
 
   @override
   String get conditions => 'Conditions';
@@ -539,37 +525,31 @@ class AppLocalizationsEn extends AppLocalizations {
   String get usernameisrequired => 'Username is required';
 
   @override
-  String get usernamemustbeatleast3chars =>
-      'Username must be at least 3 characters';
+  String get usernamemustbeatleast3chars => 'Username must be at least 3 characters';
 
   @override
   String get fullnameisrequired => 'Fullname is required';
 
   @override
-  String get fullnamemustbeatleast3chars =>
-      'Fullname must be at least 3 characters';
+  String get fullnamemustbeatleast3chars => 'Fullname must be at least 3 characters';
 
   @override
-  String get pleaseselectaprofileimage =>
-      'Please select a profile image from the camera or gallery';
+  String get pleaseselectaprofileimage => 'Please select a profile image from the camera or gallery';
 
   @override
   String get profilecompletedsuccessfully => 'Profile completed successfully';
 
   @override
-  String get welcomebackloginsuccess =>
-      'Welcome back! You have logged in successfully.';
+  String get welcomebackloginsuccess => 'Welcome back! You have logged in successfully.';
 
   @override
-  String get accounthasbeendeletedsuccessfully =>
-      'Account has been deleted successfully';
+  String get accounthasbeendeletedsuccessfully => 'Account has been deleted successfully';
 
   @override
   String get confirmdelete => 'Confirm Delete';
 
   @override
-  String get confirmdeletemessage =>
-      'Are you sure you want to delete your account?';
+  String get confirmdeletemessage => 'Are you sure you want to delete your account?';
 
   @override
   String get confirmlogout => 'Confirm Logout';
@@ -587,88 +567,116 @@ class AppLocalizationsEn extends AppLocalizations {
   String get profileupdatedsuccessfully => 'Profile updated successfully';
 
   @override
-  String get pepsidescription =>
-      'Pepsi is a refreshing carbonated drink with a bold cola flavor that instantly revitalizes you on hot days. It has the perfect amount of sweetness to complement your favorite meals. Loved by all ages, it brings joy with every sip. Can be enjoyed anytime as a quick and refreshing thirst-quencher. Its practical packaging makes it easy to take anywhere.';
+  String get pepsidescription => 'Pepsi is a refreshing carbonated drink with a bold cola flavor that instantly revitalizes you on hot days. It has the perfect amount of sweetness to complement your favorite meals. Loved by all ages, it brings joy with every sip. Can be enjoyed anytime as a quick and refreshing thirst-quencher. Its practical packaging makes it easy to take anywhere.';
 
   @override
-  String get cocacoladescription =>
-      'Coca-Cola delivers the classic cola taste with a perfect balance of sweetness and fizz. It refreshes and lifts your mood on any occasion, whether at home or outdoors. Can be enjoyed alone or with snacks to enhance their flavor. Loved by both children and adults. Provides a rich and delicious drinking experience every time.';
+  String get cocacoladescription => 'Coca-Cola delivers the classic cola taste with a perfect balance of sweetness and fizz. It refreshes and lifts your mood on any occasion, whether at home or outdoors. Can be enjoyed alone or with snacks to enhance their flavor. Loved by both children and adults. Provides a rich and delicious drinking experience every time.';
 
   @override
-  String get dietcokedescription =>
-      'Diet Coke offers the same great Coca-Cola taste without sugar and with fewer calories. A light and refreshing drink, perfect for those who want to reduce sugar intake without sacrificing flavor. Can be enjoyed anytime and is a healthier choice among sodas. Provides a sense of refreshment and energy. The practical packaging makes it convenient to carry.';
+  String get dietcokedescription => 'Diet Coke offers the same great Coca-Cola taste without sugar and with fewer calories. A light and refreshing drink, perfect for those who want to reduce sugar intake without sacrificing flavor. Can be enjoyed anytime and is a healthier choice among sodas. Provides a sense of refreshment and energy. The practical packaging makes it convenient to carry.';
 
   @override
-  String get spritedescription =>
-      'Sprite is a refreshing fizzy drink with natural lemon and lime flavors. Provides a sense of purity and refreshment with every sip, perfect for hot days and light meals. Contains balanced carbonation for a joyful feeling. Suitable for all ages and adds a refreshing touch to any meal. Can be enjoyed alone or with food.';
+  String get spritedescription => 'Sprite is a refreshing fizzy drink with natural lemon and lime flavors. Provides a sense of purity and refreshment with every sip, perfect for hot days and light meals. Contains balanced carbonation for a joyful feeling. Suitable for all ages and adds a refreshing touch to any meal. Can be enjoyed alone or with food.';
 
   @override
-  String get applegrapejuicedescription =>
-      'A delicious blend of sweet apple and juicy grapes, rich in essential vitamins and minerals. The 2-liter bottle is perfect for sharing with family and friends. Offers a natural and tasty flavor with every sip, enhancing health and energy. Suitable for both kids and adults, making it an excellent choice for breakfast or a light snack. Free from artificial additives, preserving the natural fruit taste.';
+  String get applegrapejuicedescription => 'A delicious blend of sweet apple and juicy grapes, rich in essential vitamins and minerals. The 2-liter bottle is perfect for sharing with family and friends. Offers a natural and tasty flavor with every sip, enhancing health and energy. Suitable for both kids and adults, making it an excellent choice for breakfast or a light snack. Free from artificial additives, preserving the natural fruit taste.';
 
   @override
-  String get orangejuicedescription =>
-      'Fresh orange juice packed with natural vitamin C and a sweet, refreshing taste. Perfect for enjoying a healthy, revitalizing drink any time of the day. Boosts immunity and provides natural energy for both children and adults. Can be enjoyed alone or with meals to increase freshness and flavor. Carefully prepared to preserve natural taste and nutritional value.';
+  String get orangejuicedescription => 'Fresh orange juice packed with natural vitamin C and a sweet, refreshing taste. Perfect for enjoying a healthy, revitalizing drink any time of the day. Boosts immunity and provides natural energy for both children and adults. Can be enjoyed alone or with meals to increase freshness and flavor. Carefully prepared to preserve natural taste and nutritional value.';
 
   @override
-  String get beefbonedescription =>
-      'Fresh beef bones, rich in flavor, ideal for soups, broths, and slow-cooked recipes. High in protein and essential nutrients for the body. Adds deep, rich taste to any meal. Can be used for daily cooking or special occasions. High-quality product ensures natural flavor and excellent tenderness when cooked.';
+  String get beefbonedescription => 'Fresh beef bones, rich in flavor, ideal for soups, broths, and slow-cooked recipes. High in protein and essential nutrients for the body. Adds deep, rich taste to any meal. Can be used for daily cooking or special occasions. High-quality product ensures natural flavor and excellent tenderness when cooked.';
 
   @override
-  String get broilerchickendescription =>
-      'Tender and juicy broiler chicken, perfect for grilling or frying. Sourced from high-quality farms to ensure healthy and delicious meat. Rich in protein and enhances the flavor of daily meals. Can be prepared in various ways to suit all tastes. Guarantees a delightful and tasty eating experience with every meal.';
+  String get broilerchickendescription => 'Tender and juicy broiler chicken, perfect for grilling or frying. Sourced from high-quality farms to ensure healthy and delicious meat. Rich in protein and enhances the flavor of daily meals. Can be prepared in various ways to suit all tastes. Guarantees a delightful and tasty eating experience with every meal.';
 
   @override
-  String get ricedsescription =>
-      'High-quality long-grain rice that cooks fluffy and aromatic. Perfect for daily meals, biryani, or fried rice. Provides a balanced taste and excellent texture for every recipe. Rich in carbohydrates and offers a satisfying meal. Can be paired with all types of dishes for a nutritious and delicious touch.';
+  String get ricedsescription => 'High-quality long-grain rice that cooks fluffy and aromatic. Perfect for daily meals, biryani, or fried rice. Provides a balanced taste and excellent texture for every recipe. Rich in carbohydrates and offers a satisfying meal. Can be paired with all types of dishes for a nutritious and delicious touch.';
 
   @override
-  String get pulsesdescription =>
-      'Pulses rich in protein and essential nutrients. Suitable for soups, salads, and traditional dishes. 100% natural and organic for better health. Provides energy and refreshment, making it a balanced nutritional choice. Easily incorporated into a variety of meals to add high nutritional value.';
+  String get pulsesdescription => 'Pulses rich in protein and essential nutrients. Suitable for soups, salads, and traditional dishes. 100% natural and organic for better health. Provides energy and refreshment, making it a balanced nutritional choice. Easily incorporated into a variety of meals to add high nutritional value.';
 
   @override
-  String get eggchickenreddescription =>
-      'Fresh red chicken eggs with a rich taste and high nutritional value. Ideal for breakfast, baking, or daily cooking. Packed with essential proteins and minerals for the body. Adds natural and delicious flavor to your meals. High-quality product ensures food safety and excellent taste every time.';
+  String get eggchickenreddescription => 'Fresh red chicken eggs with a rich taste and high nutritional value. Ideal for breakfast, baking, or daily cooking. Packed with essential proteins and minerals for the body. Adds natural and delicious flavor to your meals. High-quality product ensures food safety and excellent taste every time.';
 
   @override
-  String get eggchickenwhitedescription =>
-      'Fresh white chicken eggs with a light, delicious flavor. Rich in protein and essential nutrients. Suitable for daily meals and various recipes. Provides a feeling of fullness and energy. Natural and safe product with high nutritional value suitable for the whole family.';
+  String get eggchickenwhitedescription => 'Fresh white chicken eggs with a light, delicious flavor. Rich in protein and essential nutrients. Suitable for daily meals and various recipes. Provides a feeling of fullness and energy. Natural and safe product with high nutritional value suitable for the whole family.';
 
   @override
-  String get eggpastadescription =>
-      'Classic egg pasta made from real eggs for a rich and smooth texture. Cooks quickly and pairs well with all types of sauces. Gives your meal a delicious and distinctive taste. Can be served as a main or side dish. High-quality product ensures perfect taste and excellent texture.';
+  String get eggpastadescription => 'Classic egg pasta made from real eggs for a rich and smooth texture. Cooks quickly and pairs well with all types of sauces. Gives your meal a delicious and distinctive taste. Can be served as a main or side dish. High-quality product ensures perfect taste and excellent texture.';
 
   @override
-  String get eggnoodlesdescription =>
-      'Soft and tasty egg noodles made from high-quality ingredients. Perfect for quick stir-frying, soups, and Asian dishes. Provides a rich taste and distinctive flavor to every meal. Can be enjoyed alone or with various sauces. Natural product guarantees excellent cooking quality and texture.';
+  String get eggnoodlesdescription => 'Soft and tasty egg noodles made from high-quality ingredients. Perfect for quick stir-frying, soups, and Asian dishes. Provides a rich taste and distinctive flavor to every meal. Can be enjoyed alone or with various sauces. Natural product guarantees excellent cooking quality and texture.';
 
   @override
-  String get mayonnaisegglessdescription =>
-      'Eggless mayonnaise, smooth and creamy, perfect for sandwiches, salads, and sauces. Suitable for vegetarians and provides a rich, smooth flavor. Adds a delicious touch without affecting texture. Can be used with all types of food to enhance taste. Healthy and natural product ensuring the best quality.';
+  String get mayonnaisegglessdescription => 'Eggless mayonnaise, smooth and creamy, perfect for sandwiches, salads, and sauces. Suitable for vegetarians and provides a rich, smooth flavor. Adds a delicious touch without affecting texture. Can be used with all types of food to enhance taste. Healthy and natural product ensuring the best quality.';
 
   @override
-  String get roundcuteggnoodlesdescription =>
-      'Round-cut egg spaghetti for lovers of rich flavor and firm texture. Excellent for soups or quick meals. Provides a unique dining experience with every dish. Can be combined with sauces or broths to enhance taste. High-quality product ensures a delicious and nutritious meal.';
+  String get roundcuteggnoodlesdescription => 'Round-cut egg spaghetti for lovers of rich flavor and firm texture. Excellent for soups or quick meals. Provides a unique dining experience with every dish. Can be combined with sauces or broths to enhance taste. High-quality product ensures a delicious and nutritious meal.';
 
   @override
-  String get gingerdescription =>
-      'Fresh and aromatic ginger, used in cooking and natural remedies. Adds a spicy flavor and multiple health benefits. Improves digestion and boosts energy. Suitable for cooking, juices, or hot drinks. Natural product ensures quality and distinctive flavor for every meal.';
+  String get gingerdescription => 'Fresh and aromatic ginger, used in cooking and natural remedies. Adds a spicy flavor and multiple health benefits. Improves digestion and boosts energy. Suitable for cooking, juices, or hot drinks. Natural product ensures quality and distinctive flavor for every meal.';
 
   @override
-  String get bellpeppereddescription =>
-      'Bright red bell peppers rich in vitamins and antioxidants. Sweet and crunchy, perfect for salads, grilling, and frying. Adds attractive color and rich flavor to dishes. Packed with essential nutrients for health. High-quality natural product ensures great taste and visual appeal.';
+  String get bellpeppereddescription => 'Bright red bell peppers rich in vitamins and antioxidants. Sweet and crunchy, perfect for salads, grilling, and frying. Adds attractive color and rich flavor to dishes. Packed with essential nutrients for health. High-quality natural product ensures great taste and visual appeal.';
 
   @override
-  String get redappledescription =>
-      'Crisp and juicy red apples rich in natural sweetness. Perfect for snacks, baking, or juices. Provides energy and high nutritional benefits for children and adults. Contains natural antioxidants that promote health. Can be eaten directly or used in various recipes.';
+  String get redappledescription => 'Crisp and juicy red apples rich in natural sweetness. Perfect for snacks, baking, or juices. Provides energy and high nutritional benefits for children and adults. Contains natural antioxidants that promote health. Can be eaten directly or used in various recipes.';
 
   @override
-  String get organicbananasdescription =>
-      'Natural sweet organic bananas, rich in potassium and fiber. Ideal for smoothies, snacks, and desserts. Provides quick and healthy energy for the body. Safe and natural product suitable for all ages. Can be eaten directly or incorporated into various recipes to enhance taste and nutrition.';
+  String get organicbananasdescription => 'Natural sweet organic bananas, rich in potassium and fiber. Ideal for smoothies, snacks, and desserts. Provides quick and healthy energy for the body. Safe and natural product suitable for all ages. Can be eaten directly or incorporated into various recipes to enhance taste and nutrition.';
 
   @override
   String get otpmustbe6digits => 'otp must be 6 digits';
 
   @override
   String get pleaseentertheotp => 'please enter the otp';
+
+  @override
+  String get filters => 'Filters';
+
+  @override
+  String get categories => 'Categories';
+
+  @override
+  String get eggs => 'Eggs';
+
+  @override
+  String get noodlesandpasta => 'Noodles & Pasta';
+
+  @override
+  String get chipsandcrisps => 'Chips & Crisps';
+
+  @override
+  String get fastfood => 'Fast Food';
+
+  @override
+  String get brand => 'Brand';
+
+  @override
+  String get individualcollection => 'Individual Collection';
+
+  @override
+  String get cocola => 'Cocola';
+
+  @override
+  String get ifad => 'Ifad';
+
+  @override
+  String get kazifarmas => 'Kazi Farmas';
+
+  @override
+  String get applyfilter => 'Apply Filter';
+
+  @override
+  String get freshfruitsvegetablestitle => 'Fresh Fruits and Vegetables';
+
+  @override
+  String get freshfruitsvegetablesdescription => 'Fresh fruits and vegetables are carefully selected to ensure top quality and freshness. They provide essential vitamins, minerals, and fiber for a healthy lifestyle. Perfect for salads, cooking, or snacking. Sourced locally whenever possible to support sustainable farming. Enjoy the natural taste and vibrant colors in every bite.';
+
+  @override
+  String get freshfruitsvegetablessubtitle => '1kg, Price';
+
+  @override
+  String get addedtocart => 'Added to cart';
 }

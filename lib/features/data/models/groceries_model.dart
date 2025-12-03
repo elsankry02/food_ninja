@@ -5,13 +5,14 @@ import '../../../core/extension/extension.dart';
 
 class GroceriesModel {
   final String image, title, subTitle, price, description;
-
+  int count;
   GroceriesModel({
     required this.image,
     required this.title,
     required this.subTitle,
     required this.price,
     required this.description,
+    this.count = 1,
   });
 }
 
@@ -31,20 +32,7 @@ List<GroceriesModel> groceriesModel(BuildContext context) {
       price: r"$4.99",
       description: context.kAppLocalizations.broilerchickendescription,
     ),
-    GroceriesModel(
-      image: AppImages.kRice,
-      title: context.kAppLocalizations.rice,
-      subTitle: context.kAppLocalizations.ricesubtitle,
-      price: r"$2.99",
-      description: context.kAppLocalizations.ricedsescription,
-    ),
-    GroceriesModel(
-      image: AppImages.kPulses,
-      title: context.kAppLocalizations.pulses,
-      subTitle: context.kAppLocalizations.pulsessubtitle,
-      price: r"$4.99",
-      description: context.kAppLocalizations.pulsesdescription,
-    ),
+
     GroceriesModel(
       image: AppImages.kEggChickenRed,
       title: context.kAppLocalizations.eggchickenred,
