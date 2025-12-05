@@ -84,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                       margin: EdgeInsetsDirectional.only(
                         end: context.height * 0.015,
                       ),
-                      onTap: () => SuccessMessage(
+                      onTap: () => successMessage(
                         context,
                         message: context.kAppLocalizations.addedtocart,
                       ),
@@ -169,7 +169,7 @@ class _HomePageState extends State<HomePage> {
                           description: data.description,
                         ),
                       ),
-                      onTap: () => SuccessMessage(
+                      onTap: () => successMessage(
                         context,
                         message: context.kAppLocalizations.addedtocart,
                       ),

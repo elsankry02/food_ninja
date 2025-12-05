@@ -77,7 +77,7 @@ class _BeveragesPageState extends State<BeveragesPage> {
                             description: data.description,
                           ),
                         ),
-                        onTap: () => ErrorMessage(
+                        onTap: () => errorMessage(
                           context,
                           message: context.kAppLocalizations.comingsoon,
                         ),

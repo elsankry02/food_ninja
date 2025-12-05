@@ -25,7 +25,7 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
           itemBuilder: (context, index, _) {
             return SpecialDealForOctoberWidget(
               index: index,
-              onTap: () => ErrorMessage(
+              onTap: () => errorMessage(
                 context,
                 message: context.kAppLocalizations.comingsoon,
               ),

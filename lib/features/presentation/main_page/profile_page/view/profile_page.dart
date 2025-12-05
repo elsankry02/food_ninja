@@ -28,8 +28,8 @@ class ProfilePage extends ConsumerStatefulWidget {
 
 class _ProfilePageState extends ConsumerState<ProfilePage> {
   Future<void> removeToken() async {
-    await ref.read(prefsProvider).remove(kToken);
     context.router.replace(LoginRoute());
+    await ref.read(prefsProvider).remove(kToken);
   }
 
   Future<void> deleteAccount() async {
@@ -131,7 +131,7 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                 trailingIcon: Icons.arrow_forward_ios_rounded,
                 iconColor: context.kChangeTheme.hintColor,
                 titleColor: context.kChangeTheme.hintColor,
-                onTap: () => ErrorMessage(
+                onTap: () => errorMessage(
                   context,
                   message: context.kAppLocalizations.comingsoon,
                 ),
@@ -140,11 +140,11 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                 builder: (BuildContext context, WidgetRef ref, Widget? child) {
                   ref.listen(deleteAccountProvider, (_, state) {
                     if (state is DeleteAccountFailure) {
-                      ErrorMessage(context, message: state.errMessage);
+                      errorMessage(context, message: state.errMessage);
                       return;
                     }
                     if (state is DeleteAccountSuccess) {
-                      SuccessMessage(
+                      successMessage(
                         context,
                         message: context
                             .kAppLocalizations
@@ -183,11 +183,11 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
             builder: (BuildContext context, WidgetRef ref, Widget? child) {
               ref.listen(logOutProvider, (_, state) {
                 if (state is LogoutFailure) {
-                  ErrorMessage(context, message: state.errMessage);
+                  errorMessage(context, message: state.errMessage);
                   return;
                 }
                 if (state is LogoutSuccess) {
-                  SuccessMessage(
+                  successMessage(
                     context,
                     message: context.kAppLocalizations.loggedoutsuccessfully,
                   );

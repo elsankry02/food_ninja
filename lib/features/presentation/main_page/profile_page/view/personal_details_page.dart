@@ -89,12 +89,12 @@ class _PersonalDetailsPageState extends ConsumerState<PersonalDetailsPage> {
     final state = ref.watch(completeProfileProvider);
     ref.listen(completeProfileProvider, (_, state) {
       if (state is CompleteProfileFailure) {
-        ErrorMessage(context, message: state.errMessage);
+        errorMessage(context, message: state.errMessage);
         return;
       }
       if (state is CompleteProfileSuccess) {
         ref.read(getUserProvider.notifier).getUser();
-        SuccessMessage(
+        successMessage(
           context,
           message: context.kAppLocalizations.profilecompletedsuccessfully,
         );

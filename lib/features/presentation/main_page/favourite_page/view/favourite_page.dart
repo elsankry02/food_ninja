@@ -90,7 +90,7 @@ class FavouritePage extends StatelessWidget {
                 colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
               ),
               borderRadius: BorderRadius.circular(context.height * 0.015),
-              onTap: () => SuccessMessage(
+              onTap: () => successMessage(
                 context,
                 message: context.kAppLocalizations.yourorderaccepted,
               ),

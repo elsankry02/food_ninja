@@ -88,7 +88,7 @@ class _OtpPageState extends ConsumerState<OtpPage> {
       phone: isEmail ? null : widget.phoneController.text.trim(),
       phonePrefix: isEmail ? null : "+20",
     );
-    SuccessMessage(
+    successMessage(
       context,
       message: context.kAppLocalizations.otpresentsuccessfully,
     );
@@ -100,20 +100,20 @@ class _OtpPageState extends ConsumerState<OtpPage> {
     final state = ref.watch(verifyOtpProvider);
     ref.listen(verifyOtpProvider, (_, state) {
       if (state is VerifyOtpFailure) {
-        ErrorMessage(context, message: state.errMessage);
+        errorMessage(context, message: state.errMessage);
         return;
       }
       if (state is VerifyOtpSuccess) {
         final isLogin = widget.isLogin;
         if (isLogin == false) {
           context.router.replace(MainRoute());
-          SuccessMessage(
+          successMessage(
             context,
             message: context.kAppLocalizations.welcomebackloginsuccess,
           );
         } else {
           context.router.replace(SignupProcessRoute());
-          SuccessMessage(
+          successMessage(
             context,
             message: context.kAppLocalizations.authenticationsuccessful,
           );

@@ -41,7 +41,7 @@ class ProductDetailsAppbarWidget extends StatelessWidget {
                 height: context.height * 0.020,
                 width: context.height * 0.020,
               ),
-              onPressed: () => ErrorMessage(
+              onPressed: () => errorMessage(
                 context,
                 message: context.kAppLocalizations.comingsoon,
               ),

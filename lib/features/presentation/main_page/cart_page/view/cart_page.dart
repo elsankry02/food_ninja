@@ -60,7 +60,7 @@ class _CartPageState extends State<CartPage> {
                     itemBuilder: (context, index) {
                       final data = groceriesModel(context)[index];
                       return CartDetailsWidget(
-                        onPressed: () => ErrorMessage(
+                        onPressed: () => errorMessage(
                           context,
                           message: context.kAppLocalizations.comingsoon,
                         ),

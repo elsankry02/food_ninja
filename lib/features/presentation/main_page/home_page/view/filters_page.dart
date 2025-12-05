@@ -193,7 +193,7 @@ class _FiltersPageState extends State<FiltersPage> {
                 color: AppColors.kWhite,
               ),
               borderRadius: BorderRadius.circular(context.height * 0.015),
-              onTap: () => ErrorMessage(
+              onTap: () => errorMessage(
                 context,
                 message: context.kAppLocalizations.comingsoon,
               ),

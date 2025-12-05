@@ -55,11 +55,11 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
     final state = ref.watch(registerNewUserProvider);
     ref.listen(registerNewUserProvider, (_, state) {
       if (state is RegisterNewUserFailure) {
-        ErrorMessage(context, message: state.errMessage);
+        errorMessage(context, message: state.errMessage);
         return;
       }
       if (state is RegisterNewUserSuccess) {
-        SuccessMessage(
+        successMessage(
           context,
           message: context.kAppLocalizations.userregisteredsuccessfully,
         );
@@ -108,7 +108,7 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
                         Image.asset(AppImages.kLogo),
                         Text(
                           textAlign: TextAlign.center,
-                          context.kAppLocalizations.foodninja,
+                          "FoodNinja",
                           style: context.kTextTheme.displayLarge!.copyWith(
                             color: AppColors.kPrimaryColor,
                           ),

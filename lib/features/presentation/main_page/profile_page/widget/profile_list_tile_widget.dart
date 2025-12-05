@@ -23,19 +23,19 @@ class _ProfileListTileWidgetState extends ConsumerState<ProfileListTileWidget> {
     return ListTile(
       contentPadding: EdgeInsets.zero,
       leading: ClipRRect(
-        borderRadius: BorderRadius.circular(context.height * 0.015),
+        borderRadius: BorderRadius.circular(context.height * 0.150),
         child: notifier?.avatarUrl != null
             ? CachedNetworkImage(
                 imageUrl: notifier!.avatarUrl!,
                 height: context.height * 0.070,
                 width: context.height * 0.070,
                 fit: BoxFit.cover,
-                placeholder: (context, url) => UnconstrainedBox(
-                  child: CircularProgressIndicator(
-                    color: context.kChangeTheme.hintColor,
-                  ),
+                errorWidget: (context, url, error) => Image.asset(
+                  AppImages.kMintDark,
+                  height: context.height * 0.070,
+                  width: context.height * 0.070,
+                  fit: BoxFit.cover,
                 ),
-                errorWidget: (context, url, error) => Icon(Icons.error),
               )
             : Image.asset(AppImages.kMintDark),
       ),

@@ -66,7 +66,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
               SizedBox(height: context.height * 0.040),
               PaymentsContainer(
                 payment: AppSvgs.kPaypal,
-                onTap: () => ErrorMessage(
+                onTap: () => errorMessage(
                   context,
                   message: context.kAppLocalizations.comingsoon,
                 ),
@@ -75,7 +75,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
               SizedBox(height: context.height * 0.020),
               PaymentsContainer(
                 payment: AppSvgs.kVisa,
-                onTap: () => ErrorMessage(
+                onTap: () => errorMessage(
                   context,
                   message: context.kAppLocalizations.comingsoon,
                 ),
@@ -84,7 +84,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
               SizedBox(height: context.height * 0.020),
               PaymentsContainer(
                 payment: AppSvgs.kPayoneer,
-                onTap: () => ErrorMessage(
+                onTap: () => errorMessage(
                   context,
                   message: context.kAppLocalizations.comingsoon,
                 ),

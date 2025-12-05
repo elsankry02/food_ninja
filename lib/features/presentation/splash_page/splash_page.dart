@@ -5,7 +5,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/constant/app_colors.dart';
 import '../../../core/constant/app_enums.dart';
 import '../../../core/constant/app_images.dart';
-import '../../../core/constant/app_strings.dart';
 import '../../../core/extension/extension.dart';
 import '../../../core/router/router.dart';
 import '../../data/providers/get/get_user_provider.dart';
@@ -47,9 +46,10 @@ class _SplashPageState extends ConsumerState<SplashPage> {
         return;
       }
       if (state is GetUserSuccess) {
-        final token = prefs.getString(kToken);
-        if (token != null) {
+        if (state.userModel.isCompleteProfile) {
           context.router.replace(MainRoute());
+        } else {
+          context.router.replaceAll([LoginRoute(), SignupProcessRoute()]);
         }
       }
     });

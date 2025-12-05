@@ -87,7 +87,7 @@ class BottomSheetWidget extends StatelessWidget {
                         color: context.kChangeTheme.hintColor,
                       ),
                       recognizer: TapGestureRecognizer()
-                        ..onTap = () => ErrorMessage(
+                        ..onTap = () => errorMessage(
                           context,
                           message: context.kAppLocalizations.comingsoon,
                         ),
@@ -106,7 +106,7 @@ class BottomSheetWidget extends StatelessWidget {
                         color: context.kChangeTheme.hintColor,
                       ),
                       recognizer: TapGestureRecognizer()
-                        ..onTap = () => ErrorMessage(
+                        ..onTap = () => errorMessage(
                           context,
                           message: context.kAppLocalizations.comingsoon,
                         ),

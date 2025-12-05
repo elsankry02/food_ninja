@@ -58,11 +58,11 @@ class OrdersPage extends StatelessWidget {
                         price: data.price,
                         items: data.items,
                         code: data.code,
-                        cancelOntap: () => ErrorMessage(
+                        cancelOntap: () => errorMessage(
                           context,
                           message: context.kAppLocalizations.comingsoon,
                         ),
-                        trackOrderOnTap: () => ErrorMessage(
+                        trackOrderOnTap: () => errorMessage(
                           context,
                           message: context.kAppLocalizations.comingsoon,
                         ),

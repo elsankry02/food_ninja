@@ -77,7 +77,7 @@ class _GroceriesPageState extends State<GroceriesPage> {
                             description: data.description,
                           ),
                         ),
-                        onTap: () => ErrorMessage(
+                        onTap: () => errorMessage(
                           context,
                           message: context.kAppLocalizations.comingsoon,
                         ),

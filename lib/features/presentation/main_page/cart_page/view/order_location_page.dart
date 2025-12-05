@@ -125,7 +125,7 @@ class OrderLocationPage extends StatelessWidget {
                           style: context.kTextTheme.labelLarge!.copyWith(
                             color: AppColors.kSecondColor,
                           ),
-                          onTap: () => ErrorMessage(
+                          onTap: () => errorMessage(
                             context,
                             message: context.kAppLocalizations.comingsoon,
                           ),

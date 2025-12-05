@@ -70,13 +70,13 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                     ),
                     onPressed: () {
                       if (isSelected) {
-                        SuccessMessage(
+                        successMessage(
                           context,
                           message:
                               context.kAppLocalizations.removedfromfavorites,
                         );
                       } else {
-                        SuccessMessage(
+                        successMessage(
                           context,
                           message: context.kAppLocalizations.addedtofavorites,
                         );
@@ -161,7 +161,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                 colors: [AppColors.kPrimaryColor, AppColors.kSecondColor],
               ),
               borderRadius: BorderRadius.circular(context.height * 0.015),
-              onTap: () => SuccessMessage(
+              onTap: () => successMessage(
                 context,
                 message: context.kAppLocalizations.addedtocart,
               ),

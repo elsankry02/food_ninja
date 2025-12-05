@@ -78,12 +78,12 @@ class _CallRangingPageState extends State<CallRangingPage> {
                   color: AppColors.kIconColor,
                   onPressed: () {
                     if (isSelected == true) {
-                      ErrorMessage(
+                      errorMessage(
                         context,
                         message: context.kAppLocalizations.volumeup,
                       );
                     } else {
-                      ErrorMessage(
+                      errorMessage(
                         context,
                         message: context.kAppLocalizations.volumeoff,
                       );

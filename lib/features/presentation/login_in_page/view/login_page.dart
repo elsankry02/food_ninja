@@ -56,11 +56,11 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     final state = ref.watch(resendOtpProvider);
     ref.listen(resendOtpProvider, (_, state) {
       if (state is ResendOtpFailure) {
-        ErrorMessage(context, message: state.errMessage);
+        errorMessage(context, message: state.errMessage);
         return;
       }
       if (state is ResendOtpSuccess) {
-        SuccessMessage(
+        successMessage(
           context,
           message: context.kAppLocalizations.otpresentsuccessfully,
         );
@@ -111,7 +111,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                         Image.asset(AppImages.kLogo),
                         Text(
                           textAlign: TextAlign.center,
-                          context.kAppLocalizations.foodninja,
+                          "FoodNinja",
                           style: context.kTextTheme.displayLarge!.copyWith(
                             color: AppColors.kPrimaryColor,
                           ),
@@ -177,7 +177,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             SocialConnectionWidget(
-                              onTap: () => ErrorMessage(
+                              onTap: () => errorMessage(
                                 context,
                                 message: context.kAppLocalizations.comingsoon,
                               ),
@@ -186,7 +186,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                             ),
                             SizedBox(width: context.height * 0.021),
                             SocialConnectionWidget(
-                              onTap: () => ErrorMessage(
+                              onTap: () => errorMessage(
                                 context,
                                 message: context.kAppLocalizations.comingsoon,
                               ),

@@ -71,7 +71,7 @@ class _ChatDetailsPageState extends State<ChatDetailsPage> {
               controller: messageController,
               suffixIcon: CustomIconButton(
                 icon: Icon(Icons.send_rounded, color: AppColors.kSecondColor),
-                onPressed: () => ErrorMessage(
+                onPressed: () => errorMessage(
                   context,
                   message: context.kAppLocalizations.comingsoon,
                 ),

@@ -59,7 +59,7 @@ class _SignupProcessPageState extends ConsumerState<SignupProcessPage> {
   Future<void> completeProfile() async {
     if (!formKey.currentState!.validate()) return;
     if (file == null) {
-      ErrorMessage(
+      errorMessage(
         context,
         message: context.kAppLocalizations.pleaseselectaprofileimage,
       );
@@ -67,8 +67,8 @@ class _SignupProcessPageState extends ConsumerState<SignupProcessPage> {
     }
     final notifier = ref.read(completeProfileProvider.notifier);
     await notifier.completeProfile(
-      name: usernameController.text.trim(),
-      username: fullNameController.text.trim(),
+      name: fullNameController.text.trim(),
+      username: usernameController.text.trim(),
       file: file,
     );
   }
@@ -78,16 +78,16 @@ class _SignupProcessPageState extends ConsumerState<SignupProcessPage> {
     final state = ref.watch(completeProfileProvider);
     ref.listen(completeProfileProvider, (_, state) {
       if (state is CompleteProfileFailure) {
-        ErrorMessage(context, message: state.errMessage);
+        errorMessage(context, message: state.errMessage);
         return;
       }
       if (state is CompleteProfileSuccess) {
-        SuccessMessage(
+        successMessage(
           context,
           message: context.kAppLocalizations.profilecompletedsuccessfully,
         );
+        context.router.replace(MainRoute());
       }
-      context.router.replace(MainRoute());
     });
     return Scaffold(
       body: Stack(
