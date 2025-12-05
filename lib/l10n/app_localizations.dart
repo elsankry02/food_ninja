@@ -884,13 +884,13 @@ abstract class AppLocalizations {
   /// No description provided for @arabic.
   ///
   /// In en, this message translates to:
-  /// **'ar'**
+  /// **'Arabic'**
   String get arabic;
 
   /// No description provided for @english.
   ///
   /// In en, this message translates to:
-  /// **'en'**
+  /// **'English'**
   String get english;
 
   /// No description provided for @resendOtpPrefix.

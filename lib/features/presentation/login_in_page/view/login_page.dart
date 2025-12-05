@@ -121,7 +121,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                           context.kAppLocalizations.delieverfavoritefood,
                           style: context.kTextTheme.labelMedium!.copyWith(
                             fontWeight: FontWeight.w600,
-                            color: AppColors.kTitle,
+                            color: context.kChangeTheme.hintColor,
                           ),
                         ),
                         SizedBox(height: context.height * 0.060),

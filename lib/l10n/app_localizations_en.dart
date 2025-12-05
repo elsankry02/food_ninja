@@ -402,10 +402,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get nomessageyet => 'No message yet';
 
   @override
-  String get arabic => 'ar';
+  String get arabic => 'Arabic';
 
   @override
-  String get english => 'en';
+  String get english => 'English';
 
   @override
   String get resendOtpPrefix => 'Resend OTP in 00:';
