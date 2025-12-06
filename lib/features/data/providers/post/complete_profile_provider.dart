@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:food_ninja/features/data/models/post/complete_profile_model.dart';
+import 'package:food_ninja/features/data/models/get/get_user_model.dart';
 
 import '../../../../core/constant/app_strings.dart';
 import '../provider.dart';
@@ -20,9 +20,9 @@ class CompleteProfileFailure extends CompleteProfileState {
 }
 
 class CompleteProfileSuccess extends CompleteProfileState {
-  final CompleteProfileModel user;
+  final GetUserModel userModel;
 
-  CompleteProfileSuccess({required this.user});
+  CompleteProfileSuccess({required this.userModel});
 }
 
 class CompleteProfileNotifier extends Notifier<CompleteProfileState> {
@@ -46,7 +46,7 @@ class CompleteProfileNotifier extends Notifier<CompleteProfileState> {
         username: username,
         email: email,
       );
-      state = CompleteProfileSuccess(user: userData);
+      state = CompleteProfileSuccess(userModel: userData);
     } on Exception catch (e) {
       if (e is DioException) {
         final data = e.response!.data;

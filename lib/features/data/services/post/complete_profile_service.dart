@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:food_ninja/features/data/models/post/complete_profile_model.dart';
+import 'package:food_ninja/features/data/models/get/get_user_model.dart';
 
 import '../../../../core/constant/app_strings.dart';
 
@@ -10,7 +10,7 @@ class CompleteProfileService {
 
   CompleteProfileService({required this.dio});
 
-  Future<CompleteProfileModel> completeProfile({
+  Future<GetUserModel> completeProfile({
     required String name,
     required String username,
     String? email,
@@ -26,6 +26,6 @@ class CompleteProfileService {
       }),
     );
     final data = response.data;
-    return CompleteProfileModel.fromJson(data);
+    return GetUserModel.fromJson(data);
   }
 }
