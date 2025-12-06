@@ -25,7 +25,7 @@ class CompleteProfileService {
         if (email != null) 'email': email,
       }),
     );
-    final data = response.data;
+    final data = response.data["user"] as Map<String, dynamic>;
     return GetUserModel.fromJson(data);
   }
 }

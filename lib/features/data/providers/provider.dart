@@ -17,7 +17,7 @@ import '../services/post/verify_otp_service.dart';
 final prefsProvider = Provider<SharedPreferences>((ref) {
   throw UnimplementedError();
 });
-final dioProvider = Provider<Dio>((ref) {
+final dioProvider = Provider.autoDispose<Dio>((ref) {
   final prefs = ref.read(prefsProvider);
   final token = prefs.getString(kToken);
   log("Token : $token");

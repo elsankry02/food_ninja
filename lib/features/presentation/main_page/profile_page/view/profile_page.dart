@@ -28,8 +28,8 @@ class ProfilePage extends ConsumerStatefulWidget {
 
 class _ProfilePageState extends ConsumerState<ProfilePage> {
   Future<void> removeToken() async {
-    context.router.replace(LoginRoute());
     await ref.read(prefsProvider).remove(kToken);
+    context.router.replace(LoginRoute());
   }
 
   Future<void> deleteAccount() async {

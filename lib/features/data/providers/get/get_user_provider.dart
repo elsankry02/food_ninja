@@ -32,6 +32,10 @@ class GetUserNotifier extends Notifier<GetUserState> {
     return GetUserInitial();
   }
 
+  void updateUser(GetUserModel getUserModel) {
+    _userModel = getUserModel;
+  }
+
   Future<void> getUser() async {
     final provider = ref.read(getUserServiceProvider);
     state = GetUserLoading();

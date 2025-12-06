@@ -11,9 +11,9 @@ class GetUserModel {
   final bool isLearning;
   final bool isShown;
   final bool isLive;
-  final int fansCount;
-  final int postsCount;
-  final int pioneersCount;
+  final int? fansCount;
+  final int? postsCount;
+  final int? pioneersCount;
   final bool isCompleteProfile;
   final bool isVerified;
   final bool isExpert;
