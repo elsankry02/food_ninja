@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:food_ninja/features/data/models/post/complete_profile_model.dart';
 
 import '../../../../core/constant/app_strings.dart';
 import '../provider.dart';
@@ -18,7 +19,11 @@ class CompleteProfileFailure extends CompleteProfileState {
   CompleteProfileFailure({required this.errMessage});
 }
 
-class CompleteProfileSuccess extends CompleteProfileState {}
+class CompleteProfileSuccess extends CompleteProfileState {
+  final CompleteProfileModel user;
+
+  CompleteProfileSuccess({required this.user});
+}
 
 class CompleteProfileNotifier extends Notifier<CompleteProfileState> {
   @override
@@ -35,13 +40,13 @@ class CompleteProfileNotifier extends Notifier<CompleteProfileState> {
     final provider = ref.read(completeProfileServiceProvider);
     state = CompleteProfileLoading();
     try {
-      await provider.completeProfile(
+      final userData = await provider.completeProfile(
         file: file,
         name: name,
         username: username,
         email: email,
       );
-      state = CompleteProfileSuccess();
+      state = CompleteProfileSuccess(user: userData);
     } on Exception catch (e) {
       if (e is DioException) {
         final data = e.response!.data;

@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:food_ninja/features/data/models/post/complete_profile_model.dart';
 
 import '../../../../core/constant/app_strings.dart';
 
@@ -9,13 +10,13 @@ class CompleteProfileService {
 
   CompleteProfileService({required this.dio});
 
-  Future<void> completeProfile({
+  Future<CompleteProfileModel> completeProfile({
     required String name,
     required String username,
     String? email,
     File? file,
   }) async {
-    await dio.post(
+    final response = await dio.post(
       kCompleteProfile,
       data: FormData.fromMap({
         'name': name,
@@ -24,5 +25,7 @@ class CompleteProfileService {
         if (email != null) 'email': email,
       }),
     );
+    final data = response.data;
+    return CompleteProfileModel.fromJson(data);
   }
 }

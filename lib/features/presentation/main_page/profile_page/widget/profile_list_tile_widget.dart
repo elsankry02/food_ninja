@@ -27,13 +27,13 @@ class _ProfileListTileWidgetState extends ConsumerState<ProfileListTileWidget> {
         child: notifier?.avatarUrl != null
             ? CachedNetworkImage(
                 imageUrl: notifier!.avatarUrl!,
-                height: context.height * 0.070,
-                width: context.height * 0.070,
+                height: context.height * 0.060,
+                width: context.height * 0.060,
                 fit: BoxFit.cover,
                 errorWidget: (context, url, error) => Image.asset(
                   AppImages.kMintDark,
-                  height: context.height * 0.070,
-                  width: context.height * 0.070,
+                  height: context.height * 0.060,
+                  width: context.height * 0.060,
                   fit: BoxFit.cover,
                 ),
               )
