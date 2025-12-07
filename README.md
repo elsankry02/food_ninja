@@ -9,24 +9,24 @@ Food Ninja is a modern, high-performance Flutter application designed to deliver
 
 ## 🚀 Tech Stack
 
-Flutter & Dart – Cross-platform development for Android & iOS using a single codebase.
+**Flutter & Dart** – Cross-platform development for Android & iOS using a single codebase.
 
-MVVM Architecture – Clean code structure for easy maintenance and scalability.
+**MVVM Architecture** – Clean code structure for easy maintenance and scalability.
 
-Riverpod – Robust state management with stability and testability.
+**Riverpod** – Robust state management with stability and testability.
 
-Dio – Efficient HTTP client for API requests.
+**Dio** – Efficient HTTP client for API requests.
 
-AutoRoute – Type-safe and scalable navigation system.
+**AutoRoute** – Type-safe and scalable navigation system.
 
-Localization – Multi-language support (Arabic & English).
+**Localization** – Multi-language support (Arabic & English).
 
-Auth API Integration – Backend integration for Login, Register, Logout, and Complete Profile flows.
+**Auth API Integration** – Backend integration for Login, Register, Logout, and Complete Profile flows.
 
-Dynamic Theme (Light & Dark Mode) – Instant theme switching based on user preference.
+**Dynamic Theme (Light & Dark Mode)** – Instant theme switching based on user preference.
 
 ## Key Features ✨
-## Authentication 🔐
+# Authentication 🔐
 
 User registration & login.
 
@@ -36,7 +36,7 @@ Complete profile after registration.
 
 Secure logout.
 
-## Food Browsing 🍽️
+# Food Browsing 🍽️
 
 Explore food categories.
 
@@ -44,7 +44,7 @@ View detailed product pages.
 
 Smooth favorite/unfavorite system.
 
-## Cart & Orders 🛒
+# Cart & Orders 🛒
 
 Add items to cart.
 
@@ -54,19 +54,19 @@ Auto price calculation.
 
 Checkout flow.
 
-## Favorites ❤️
+# Favorites ❤️
 
 Add/remove favorite meals.
 
 Organized favorites list.
 
-## Search & Filtering 🔍
+# Search & Filtering 🔍
 
 Search by name.
 
 Filter by category, rating, or price.
 
-## User Profile 👤
+# User Profile 👤
 
 Update personal info.
 
@@ -74,7 +74,7 @@ Change profile picture.
 
 Manage account details.
 
-## UI/UX 🎨
+# UI/UX 🎨
 
 Smooth modern design.
 
@@ -82,7 +82,7 @@ Light & Dark Mode support.
 
 Clean animations and transitions.
 
-## Why Food Ninja Stands Out 💡
+# Why Food Ninja Stands Out 💡
 
 Clean MVVM architecture with Riverpod.
 
@@ -94,7 +94,7 @@ Strong authentication integration via Dio.
 
 Multi-language & multi-theme user experience.
 
-## Future Enhancements 🔮
+# Future Enhancements 🔮
 
 Online payment integration (Paymob / Stripe).
 
