@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:food_ninja/features/data/models/get/get_user_model.dart';
+import '../../models/get/get_user_model.dart';
 
 import '../../../../core/constant/app_strings.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_ninja/core/constant/app_colors.dart';
-import 'package:food_ninja/core/extension/extension.dart';
-import 'package:food_ninja/features/data/models/explore_model.dart';
+import '../../../../../core/constant/app_colors.dart';
+import '../../../../../core/extension/extension.dart';
+import '../../../../data/models/explore_model.dart';
 
 class FilterItem extends StatelessWidget {
   final void Function()? onTap;

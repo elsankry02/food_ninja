@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:food_ninja/features/data/models/explore_model.dart';
-import 'package:food_ninja/features/presentation/main_page/home_page/widgets/filter_items_widget.dart';
+import '../../../../data/models/explore_model.dart';
+import '../widgets/filter_items_widget.dart';
 
 import '../../../../../core/components/custom_home_appbar.dart';
 import '../../../../../core/components/custom_primary_button.dart';
