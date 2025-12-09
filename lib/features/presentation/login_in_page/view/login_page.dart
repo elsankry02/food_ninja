@@ -62,7 +62,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
       if (state is ResendOtpSuccess) {
         successMessage(
           context,
-          message: context.kAppLocalizations.userloggedinsuccessfully,
+          message: context.kAppLocalizations.otpresentsuccessfully,
         );
         context.router.push(
           OtpRoute(

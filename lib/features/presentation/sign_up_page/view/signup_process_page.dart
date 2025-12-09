@@ -4,6 +4,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:food_ninja/features/data/providers/auth/get/get_user_provider.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../../../core/components/custom_icon_button_pop.dart';
@@ -86,6 +87,7 @@ class _SignupProcessPageState extends ConsumerState<SignupProcessPage> {
           context,
           message: context.kAppLocalizations.profilecompletedsuccessfully,
         );
+        ref.read(getUserProvider.notifier).getUser();
         context.router.replace(MainRoute());
       }
     });

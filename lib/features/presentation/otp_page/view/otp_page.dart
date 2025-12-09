@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:food_ninja/features/data/providers/auth/get/get_user_provider.dart';
 
 import '../../../../core/components/custom_icon_button_pop.dart';
 import '../../../../core/components/custom_primary_button.dart';
@@ -111,6 +112,7 @@ class _OtpPageState extends ConsumerState<OtpPage> {
             context,
             message: context.kAppLocalizations.welcomebackloginsuccess,
           );
+          ref.read(getUserProvider.notifier).getUser();
           return;
         } else {
           context.router.replace(SignupProcessRoute());
@@ -220,7 +222,6 @@ class _OtpPageState extends ConsumerState<OtpPage> {
                           onTap: () => resendOtp(),
                         ),
                       ),
-
                 SizedBox(height: context.height * 0.020),
                 UnconstrainedBox(
                   child: CustomPrimaryButton(

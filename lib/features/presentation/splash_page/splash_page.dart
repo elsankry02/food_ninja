@@ -46,7 +46,7 @@ class _SplashPageState extends ConsumerState<SplashPage> {
         return;
       }
       if (state is GetUserSuccess) {
-        if (state.userModel.isCompleteProfile) {
+        if (state.userModel.isCompleteProfile ?? false) {
           context.router.replace(MainRoute());
         } else {
           context.router.replaceAll([LoginRoute(), SignupProcessRoute()]);

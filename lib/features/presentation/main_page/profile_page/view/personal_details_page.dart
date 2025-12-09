@@ -53,7 +53,7 @@ class _PersonalDetailsPageState extends ConsumerState<PersonalDetailsPage> {
     if (notifier == null) return;
     usernameController.text = notifier.username ?? "";
     nameController.text = notifier.name ?? "";
-    emailController.text = notifier.email;
+    emailController.text = notifier.email ?? "";
     file = null;
   }
 
