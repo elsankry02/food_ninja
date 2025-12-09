@@ -12,8 +12,8 @@ import '../../../../core/constant/app_enums.dart';
 import '../../../../core/constant/app_images.dart';
 import '../../../../core/extension/extension.dart';
 import '../../../../core/router/router.dart';
-import '../../../data/providers/post/resend_otp_provider.dart';
-import '../../../data/providers/post/verify_otp_provider.dart';
+import '../../../data/providers/auth/post/resend_otp_provider.dart';
+import '../../../data/providers/auth/post/verify_otp_provider.dart';
 import '../widget/otp_pin_put_widget.dart';
 
 @RoutePage()
@@ -111,6 +111,7 @@ class _OtpPageState extends ConsumerState<OtpPage> {
             context,
             message: context.kAppLocalizations.welcomebackloginsuccess,
           );
+          return;
         } else {
           context.router.replace(SignupProcessRoute());
           successMessage(
@@ -182,23 +183,6 @@ class _OtpPageState extends ConsumerState<OtpPage> {
                 ),
                 SizedBox(height: context.height * 0.040),
                 OtpPinPutWidget(
-                  onChanged: (value) async {
-                    if (value.length == 6) {
-                      final notifier = ref.read(verifyOtpProvider.notifier);
-                      final isEmail = widget.contentTybe == ContentTybe.email;
-                      await notifier.verifyOtp(
-                        authMethod: widget.contentTybe.name,
-                        otp: pinputController.text.trim(),
-                        email: isEmail
-                            ? widget.emailController.text.trim()
-                            : null,
-                        phone: isEmail
-                            ? null
-                            : widget.phoneController.text.trim(),
-                        phonePrefix: isEmail ? null : "+20",
-                      );
-                    }
-                  },
                   validator: (value) {
                     if (value!.isEmpty) {
                       return context.kAppLocalizations.pleaseentertheotp;

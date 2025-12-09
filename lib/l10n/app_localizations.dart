@@ -1438,6 +1438,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Added to cart'**
   String get addedtocart;
+
+  /// No description provided for @userloggedinsuccessfully.
+  ///
+  /// In en, this message translates to:
+  /// **'User logged in successfully'**
+  String get userloggedinsuccessfully;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

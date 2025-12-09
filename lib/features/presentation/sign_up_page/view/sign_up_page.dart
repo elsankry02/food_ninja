@@ -13,7 +13,7 @@ import '../../../../core/constant/app_images.dart';
 import '../../../../core/constant/app_svgs.dart';
 import '../../../../core/extension/extension.dart';
 import '../../../../core/router/router.dart';
-import '../../../data/providers/post/register_new_user_provider.dart';
+import '../../../data/providers/auth/post/register_new_user_provider.dart';
 import '../../main_page/profile_page/widget/language_widget.dart';
 
 @RoutePage()

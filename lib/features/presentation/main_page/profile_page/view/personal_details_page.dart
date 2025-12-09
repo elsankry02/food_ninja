@@ -14,8 +14,8 @@ import '../../../../../core/constant/app_colors.dart';
 import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/constant/app_svgs.dart';
 import '../../../../../core/extension/extension.dart';
-import '../../../../data/providers/get/get_user_provider.dart';
-import '../../../../data/providers/post/complete_profile_provider.dart';
+import '../../../../data/providers/auth/get/get_user_provider.dart';
+import '../../../../data/providers/auth/post/complete_profile_provider.dart';
 import '../widget/profile_image_picker.dart';
 
 @RoutePage()

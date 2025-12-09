@@ -1,33 +1,4 @@
-class AuthenticationModel {
-  final String message;
-  final String token;
-  final User user;
-  final bool registrationComplete;
-
-  AuthenticationModel({
-    required this.message,
-    required this.token,
-    required this.user,
-    required this.registrationComplete,
-  });
-
-  factory AuthenticationModel.fromJson(Map<String, dynamic> json) =>
-      AuthenticationModel(
-        message: json["message"],
-        token: json["token"],
-        user: User.fromJson(json["user"]),
-        registrationComplete: json["registration_complete"],
-      );
-
-  Map<String, dynamic> toJson() => {
-    "message": message,
-    "token": token,
-    "user": user.toJson(),
-    "registration_complete": registrationComplete,
-  };
-}
-
-class User {
+class GetUserModel {
   final int id;
   final String? username;
   final String? name;
@@ -35,7 +6,7 @@ class User {
   final dynamic blurhash;
   final String? phone;
   final String email;
-  final String hostStatus;
+  final String? hostStatus;
   final dynamic liveSessionType;
   final bool isLearning;
   final bool isShown;
@@ -48,11 +19,11 @@ class User {
   final bool isExpert;
   final DateTime createdAt;
   final DateTime updatedAt;
-  final String socialRelation;
-  final String shareUrl;
-  final String deepLink;
+  final String? socialRelation;
+  final String? shareUrl;
+  final String? deepLink;
 
-  User({
+  GetUserModel({
     required this.id,
     required this.username,
     required this.name,
@@ -78,7 +49,7 @@ class User {
     required this.deepLink,
   });
 
-  factory User.fromJson(Map<String, dynamic> json) => User(
+  factory GetUserModel.fromJson(Map<String, dynamic> json) => GetUserModel(
     id: json["id"],
     username: json["username"],
     name: json["name"],

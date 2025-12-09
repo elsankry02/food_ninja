@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import '../../../../core/constant/app_strings.dart';
-import '../../models/get/get_user_model.dart';
+import '../../models/auth/get/get_user_model.dart';
 
 class GetUserService {
   final Dio dio;

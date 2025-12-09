@@ -679,4 +679,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get addedtocart => 'تم الإضافة إلى السلة';
+
+  @override
+  String get userloggedinsuccessfully => 'تم تسجيل الدخول بنجاح';
 }

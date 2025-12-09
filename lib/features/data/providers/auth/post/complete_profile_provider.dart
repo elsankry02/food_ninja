@@ -4,8 +4,8 @@ import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../get/get_user_provider.dart';
 
-import '../../../../core/constant/app_strings.dart';
-import '../provider.dart';
+import '../../../../../core/constant/app_strings.dart';
+import '../../provider.dart';
 
 abstract class CompleteProfileState {}
 

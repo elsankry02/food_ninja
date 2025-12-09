@@ -13,7 +13,7 @@ import '../../../../core/constant/app_images.dart';
 import '../../../../core/constant/app_svgs.dart';
 import '../../../../core/extension/extension.dart';
 import '../../../../core/router/router.dart';
-import '../../../data/providers/post/resend_otp_provider.dart';
+import '../../../data/providers/auth/post/resend_otp_provider.dart';
 import '../../main_page/profile_page/widget/language_widget.dart';
 import '../widget/social_connection_widget.dart';
 
@@ -62,7 +62,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
       if (state is ResendOtpSuccess) {
         successMessage(
           context,
-          message: context.kAppLocalizations.otpresentsuccessfully,
+          message: context.kAppLocalizations.userloggedinsuccessfully,
         );
         context.router.push(
           OtpRoute(
@@ -72,7 +72,6 @@ class _LoginPageState extends ConsumerState<LoginPage> {
             emailController: emailController,
           ),
         );
-        return;
       }
     });
     return Scaffold(

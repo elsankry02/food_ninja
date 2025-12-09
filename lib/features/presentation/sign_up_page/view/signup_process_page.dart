@@ -15,7 +15,7 @@ import '../../../../core/constant/app_images.dart';
 import '../../../../core/constant/app_svgs.dart';
 import '../../../../core/extension/extension.dart';
 import '../../../../core/router/router.dart';
-import '../../../data/providers/post/complete_profile_provider.dart';
+import '../../../data/providers/auth/post/complete_profile_provider.dart';
 import '../widget/upload_photo_widget.dart';
 
 @RoutePage()

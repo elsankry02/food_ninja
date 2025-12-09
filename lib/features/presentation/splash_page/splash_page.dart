@@ -7,7 +7,7 @@ import '../../../core/constant/app_enums.dart';
 import '../../../core/constant/app_images.dart';
 import '../../../core/extension/extension.dart';
 import '../../../core/router/router.dart';
-import '../../data/providers/get/get_user_provider.dart';
+import '../../data/providers/auth/get/get_user_provider.dart';
 import '../../data/providers/localization_provider.dart';
 import '../../data/providers/provider.dart';
 
