@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:food_ninja/features/data/models/auth/post/authentication_model.dart';
+import '../../models/auth/post/authentication_model.dart';
 
 import '../../../../core/constant/app_strings.dart';
 
