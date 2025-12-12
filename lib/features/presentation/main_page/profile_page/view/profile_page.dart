@@ -2,6 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:food_ninja/features/data/providers/auth/get/get_user_provider.dart';
+import 'package:food_ninja/features/data/providers/auth/post/complete_profile_provider.dart';
 
 import '../../../../../core/components/custom_snakbar.dart';
 import '../../../../../core/constant/app_colors.dart';
@@ -27,26 +29,35 @@ class ProfilePage extends ConsumerStatefulWidget {
 }
 
 class _ProfilePageState extends ConsumerState<ProfilePage> {
+  @override
+  void initState() {
+    Future.microtask(() {
+      ref.read(getUserProvider.notifier).getUser();
+    });
+    super.initState();
+  }
+
   Future<void> removeToken() async {
     await ref.read(prefsProvider).remove(kToken);
+    context.router.replaceAll([SplashRoute()]);
   }
 
   Future<void> deleteAccount() async {
     final notifier = ref.read(deleteAccountProvider.notifier);
     await notifier.deleteAccount();
     await removeToken();
-    context.router.replace(SignUpRoute());
   }
 
   Future<void> logOut() async {
     final notifier = ref.read(logOutProvider.notifier);
     await notifier.logOut();
     await removeToken();
-    context.router.replace(LoginRoute());
   }
 
   @override
   Widget build(BuildContext context) {
+    ref.watch(getUserProvider);
+    ref.watch(completeProfileProvider);
     return Scaffold(
       body: Stack(
         children: [

@@ -18,7 +18,7 @@ class DeleteAccountFailure extends DeleteAccountState {
 
 class DeleteAccountSuccess extends DeleteAccountState {}
 
-class DeleteAccountNotifier extends AutoDisposeNotifier<DeleteAccountState> {
+class DeleteAccountNotifier extends Notifier<DeleteAccountState> {
   @override
   DeleteAccountState build() {
     return DeleteAccountInitial();
@@ -42,6 +42,6 @@ class DeleteAccountNotifier extends AutoDisposeNotifier<DeleteAccountState> {
 }
 
 final deleteAccountProvider =
-    NotifierProvider.autoDispose<DeleteAccountNotifier, DeleteAccountState>(
+    NotifierProvider<DeleteAccountNotifier, DeleteAccountState>(
       DeleteAccountNotifier.new,
     );

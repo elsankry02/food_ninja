@@ -17,6 +17,14 @@ class ProfileListTileWidget extends ConsumerStatefulWidget {
 
 class _ProfileListTileWidgetState extends ConsumerState<ProfileListTileWidget> {
   @override
+  void initState() {
+    Future.microtask(() {
+      ref.read(getUserProvider.notifier).getUser();
+    });
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final notifier = ref.read(getUserProvider.notifier).userModel;
     ref.watch(getUserProvider);

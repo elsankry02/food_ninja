@@ -138,7 +138,7 @@ class _PersonalDetailsPageState extends ConsumerState<PersonalDetailsPage> {
                   image: file == null
                       ? Image.asset(AppImages.kMintDark, fit: BoxFit.cover)
                       : Image.file(file!, fit: BoxFit.cover),
-                  onPressed: () => camera(),
+                  onPressed: () => gallery(),
                 ),
                 SizedBox(height: context.height * 0.040),
 

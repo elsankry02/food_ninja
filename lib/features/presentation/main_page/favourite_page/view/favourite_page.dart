@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../../core/components/custom_primary_button.dart';
 import '../../../../../core/components/custom_snakbar.dart';
@@ -11,9 +12,14 @@ import '../../../../data/models/beverages_model.dart';
 import '../widget/favourite_details_widget.dart';
 
 @RoutePage()
-class FavouritePage extends StatelessWidget {
+class FavouritePage extends ConsumerStatefulWidget {
   const FavouritePage({super.key});
 
+  @override
+  ConsumerState<FavouritePage> createState() => _FavouritePageState();
+}
+
+class _FavouritePageState extends ConsumerState<FavouritePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

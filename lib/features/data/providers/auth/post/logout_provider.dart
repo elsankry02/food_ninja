@@ -18,7 +18,7 @@ class LogoutFailure extends LogoutState {
 
 class LogoutSuccess extends LogoutState {}
 
-class LogoutNotifier extends AutoDisposeNotifier<LogoutState> {
+class LogoutNotifier extends Notifier<LogoutState> {
   @override
   LogoutState build() {
     return LogoutInitial();
@@ -41,7 +41,6 @@ class LogoutNotifier extends AutoDisposeNotifier<LogoutState> {
   }
 }
 
-final logOutProvider =
-    NotifierProvider.autoDispose<LogoutNotifier, LogoutState>(
-      LogoutNotifier.new,
-    );
+final logOutProvider = NotifierProvider<LogoutNotifier, LogoutState>(
+  LogoutNotifier.new,
+);

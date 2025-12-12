@@ -18,7 +18,7 @@ class FoodNinja extends ConsumerWidget {
     final currentTheme = notifier.currentTheme;
     final locale = state is LocalizationSuccess
         ? Locale(state.isSelectedLang)
-        : const Locale("ar");
+        : const Locale("en");
     return MaterialApp.router(
       routerConfig: router.config(),
       debugShowCheckedModeBanner: false,
