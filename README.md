@@ -108,3 +108,4 @@ Web & Desktop support.
 AI-based personalized recommendations.
 
 Advanced security & 2FA.
+final baseUrl = "https://invesier.com/api/v1";
