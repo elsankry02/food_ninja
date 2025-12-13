@@ -1,7 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import '../../../../data/models/explore_model.dart';
-import '../widgets/filter_items_widget.dart';
 
 import '../../../../../core/components/custom_home_appbar.dart';
 import '../../../../../core/components/custom_primary_button.dart';
@@ -12,8 +10,10 @@ import '../../../../../core/constant/app_images.dart';
 import '../../../../../core/extension/extension.dart';
 import '../../../../../core/router/router.dart';
 import '../../../../data/models/beverages_model.dart';
+import '../../../../data/models/explore_model.dart';
 import '../../../../data/models/groceries_model.dart';
 import '../widgets/carousel_slider_widget.dart';
+import '../widgets/filter_items_widget.dart';
 
 @RoutePage()
 class HomePage extends StatefulWidget {

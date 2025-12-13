@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import '../../models/auth/post/authentication_model.dart';
 
 import '../../../../core/constant/app_strings.dart';
+import '../../models/auth/post/authentication_model.dart';
 
 class VerifyOtpService {
   final Dio dio;

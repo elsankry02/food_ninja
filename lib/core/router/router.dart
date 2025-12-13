@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import '../../features/presentation/main_page/home_page/view/filters_page.dart';
 
 import '../../features/presentation/login_in_page/view/login_page.dart';
 import '../../features/presentation/main_page/cart_page/view/cart_page.dart';
@@ -12,6 +11,7 @@ import '../../features/presentation/main_page/chat_page/views/chat_details_page.
 import '../../features/presentation/main_page/chat_page/views/chat_page.dart';
 import '../../features/presentation/main_page/favourite_page/view/favourite_page.dart';
 import '../../features/presentation/main_page/home_page/view/beverages_page.dart';
+import '../../features/presentation/main_page/home_page/view/filters_page.dart';
 import '../../features/presentation/main_page/home_page/view/groceries_page.dart';
 import '../../features/presentation/main_page/home_page/view/home_page.dart';
 import '../../features/presentation/main_page/main_page.dart';

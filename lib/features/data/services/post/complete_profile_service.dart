@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import '../../models/auth/get/get_user_model.dart';
 
 import '../../../../core/constant/app_strings.dart';
+import '../../models/auth/get/get_user_model.dart';
 
 class CompleteProfileService {
   final Dio dio;
