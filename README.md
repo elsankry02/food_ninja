@@ -109,3 +109,4 @@ Web & Desktop support.
 AI-based personalized recommendations.
 
 Advanced security & 2FA.
+
