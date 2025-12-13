@@ -1,7 +1,6 @@
 ## Food Ninja App Overview 🍔
 
-Image
-
+![Image](https://github.com/user-attachments/assets/5468d74b-b86a-4b47-8d2c-7351f38181d2)
 
 ## Food Ninja App
 
