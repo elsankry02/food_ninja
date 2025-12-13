@@ -1,7 +1,6 @@
 ## Food Ninja App Overview 🍔
 
-Image
-
+![Image](https://github.com/user-attachments/assets/5468d74b-b86a-4b47-8d2c-7351f38181d2)
 
 ## Food Ninja App
 
@@ -109,4 +108,8 @@ Web & Desktop support.
 AI-based personalized recommendations.
 
 Advanced security & 2FA.
+<<<<<<< HEAD
 
+=======
+final baseUrl = "https://invesier.com/api/v1";
+>>>>>>> 25ff59dfd3979fcea52ae48e7ce61e6e2287fd56
